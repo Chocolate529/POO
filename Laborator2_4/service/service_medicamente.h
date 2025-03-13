@@ -6,7 +6,7 @@
 #define SERVICE_MEDICAMENTE_H
 
 #include "../domain/lista.h"
-
+///struct ca sa nu fie stateless care contine entitatile
 void adaugaMedicamentService(VectorDynamic* v, int cod, char* nume, float concentratie, int cantitate);
 void actualizeazaMedicamentService(VectorDynamic* v, int cod, char* numeNou, float concentratieNoua);
 void stergeMedicamentService(VectorDynamic* v, int cod);

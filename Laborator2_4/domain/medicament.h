@@ -3,7 +3,8 @@
 //
 
 #ifndef MEDICAMENT_H
-#define MEDICAMENT_H
+#define MEDICAMENT_H'
+///adaugare gettere si settere
 typedef struct {
     int cod;
     char nume[50];

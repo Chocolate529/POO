@@ -6,13 +6,14 @@
 #define LISTA_H
 
 #include "medicament.h"
-
+///abstractizare lista si separare CRUD intr un repo
+///schimbare perror in return
 typedef struct {
     Medicament* medicamente;
     int size;
     int capacity;
 } VectorDynamic;
-
+///d
 void initVector(VectorDynamic* v, int capacity);
 void resizeVector(VectorDynamic* v);
 void adaugaMedicament(VectorDynamic* v, int cod, char* nume, float concentratie, int cantitate);
