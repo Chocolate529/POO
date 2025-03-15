@@ -6,7 +6,7 @@
 #define CONSOLA_H
 
 #include "../domain/lista.h"
-
+#define NUMAR_COMENZI 9
 void run();
 void printComenzi();
 void printMedicamente(VectorDynamic* v);

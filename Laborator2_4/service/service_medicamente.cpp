@@ -4,132 +4,117 @@
 #include "service_medicamente.h"
 #include <string.h>
 #include "../validator/validator_medicament.h"
+#include "../domain/medicament.h"
 
-/// @param v Vectorul in care va fi adaugat medicamentul.
-/// @param cod Codul unic al medicamentului.
-/// @param nume Numele medicamentului.
-/// @param concentratie Concentratia medicamentului.
-/// @param cantitate Cantitatea de medicament care va fi adaugata.
-///
-/// Functia verifica daca datele medicamentului sunt valide folosind functia `valideazaMedicament`.
-/// Daca sunt valide, adauga medicamentul in vector folosind `adaugaMedicament`.
-void adaugaMedicamentService(VectorDynamic* v, int cod, char* nume, float concentratie, int cantitate) {
+int adaugaMedicamentService(VectorDynamic* v, int cod, char* nume, float concentratie, int cantitate) {
     if (valideazaMedicament(cod, nume, concentratie, cantitate)) {
-        adaugaMedicament(v, cod, nume, concentratie, cantitate);
+        Medicament medicament;
+        medicament = initMedicament(cod, nume, concentratie, cantitate);
+        return adaugaMedicament(v, medicament);
     }
+    return 2;
 }
 
-/// @param v Vectorul care contine medicamentele.
-/// @param cod Codul unic al medicamentului ce va fi actualizat.
-/// @param numeNou Noul nume pentru medicament.
-/// @param concentratieNoua Noua concentratie pentru medicament.
-///
-/// Functia actualizeaza detaliile medicamentului (nume si concentratie) in vector folosind `actualizeazaMedicament`.
-void actualizeazaMedicamentService(VectorDynamic* v, int cod, char* numeNou, float concentratieNoua) {
-    actualizeazaMedicament(v, cod, numeNou, concentratieNoua);
-}
-
-/// @param v Vectorul din care va fi sters medicamentul.
-/// @param cod Codul unic al medicamentului ce va fi sters.
-///
-/// Functia sterge medicamentul din vector dupa codul acestuia folosind `stergeMedicament`.
-void stergeMedicamentService(VectorDynamic* v, int cod) {
-    stergeMedicament(v, cod);
-}
-
-/// @param v Vectorul ce va fi sortat.
-/// @return Un `VectorDynamic` sortat continand medicamentele sortate dupa numele lor in ordine crescatoare.
-///
-/// Functia sorteaza medicamentele pe baza numelui lor folosind un algoritm simplu de sortare prin selectie.
-VectorDynamic sortMedicamenteDupaNume(const VectorDynamic* v) {
-    VectorDynamic sorted;
-    initVector(&sorted, v->capacity);
-    for (int i = 0; i < v->size; i++) {
-        adaugaMedicament(&sorted, v->medicamente[i].cod, v->medicamente[i].nume, v->medicamente[i].concentratie, v->medicamente[i].cantitate);
+int actualizeazaMedicamentService(VectorDynamic* v, int cod, char* numeNou, float concentratieNoua) {
+    if (valideazaCod(cod) && valideazaNume(numeNou) && valideazaConcentratie(concentratieNoua)) {
+        return actualizareMedicament(v, cod, numeNou, concentratieNoua);
     }
-    for (int i = 0; i < sorted.size - 1; i++) {
-        for (int j = i + 1; j < sorted.size; j++) {
-            if (strcmp(sorted.medicamente[i].nume, sorted.medicamente[j].nume) > 0) {
-                Medicament temp = sorted.medicamente[i];
-                sorted.medicamente[i] = sorted.medicamente[j];
-                sorted.medicamente[j] = temp;
+    return 2;
+}
+
+int stergeMedicamentService(VectorDynamic* v, int cod) {
+    if (valideazaCod(cod)) {
+        return stergeMedicament(v, cod);
+    }
+    return 2;
+}
+
+VectorDynamic sortMedicamenteDupaNume(VectorDynamic* v) {
+    VectorDynamic sorted = copyListaMedicamente(v);
+
+
+    for (int i = 0; i < size(&sorted) - 1; i++) {
+        for (int j = i + 1; j < size(&sorted); j++) {
+            Medicament* m1 = getElement(&sorted, i);
+            Medicament* m2 = getElement(&sorted, j);
+
+            if (strcmp(getNume(*m1),getNume(*m2)) > 0 ){
+                Medicament temp = *m1;
+                *m1 = *m2;
+                *m2 = temp;
             }
+
         }
     }
     return sorted;
 }
 
-/// @param v Vectorul ce va fi sortat.
-/// @return Un `VectorDynamic` sortat continand medicamentele sortate dupa cantitatea lor in ordine crescatoare.
-///
-/// Functia sorteaza medicamentele pe baza cantitatii folosind un algoritm simplu de sortare prin selectie.
-VectorDynamic sortMedicamenteCrescatorCantitate(const VectorDynamic* v) {
-    VectorDynamic sorted;
-    initVector(&sorted, v->capacity);
-    for (int i = 0; i < v->size; i++) {
-        adaugaMedicament(&sorted, v->medicamente[i].cod, v->medicamente[i].nume, v->medicamente[i].concentratie, v->medicamente[i].cantitate);
-    }
-    for (int i = 0; i < sorted.size - 1; i++) {
-        for (int j = i + 1; j < sorted.size; j++) {
-            if (sorted.medicamente[i].cantitate > sorted.medicamente[j].cantitate) {
-                Medicament temp = sorted.medicamente[i];
-                sorted.medicamente[i] = sorted.medicamente[j];
-                sorted.medicamente[j] = temp;
+
+VectorDynamic sortMedicamenteCrescatorCantitate(VectorDynamic* v) {
+    VectorDynamic sorted = copyListaMedicamente(v);
+    for (int i = 0; i < size(&sorted) - 1; i++) {
+        for (int j = i + 1; j < size(&sorted); j++) {
+            Medicament* m1 = getElement(&sorted, i);
+            Medicament* m2 = getElement(&sorted, j);
+
+            if (getCantitate(*m1) > getCantitate(*m2)) {
+                Medicament temp = *m1;
+                *m1 = *m2;
+                *m2 = temp;
             }
+
         }
     }
     return sorted;
 }
 
-/// @param v Vectorul ce va fi sortat.
-/// @return Un `VectorDynamic` sortat continand medicamentele sortate dupa cantitatea lor in ordine descrescatoare.
-///
-/// Functia sorteaza medicamentele pe baza cantitatii folosind un algoritm simplu de sortare prin selectie.
-VectorDynamic sortMedicamenteDescrescatorCantitate(const VectorDynamic* v) {
-    VectorDynamic sorted;
-    initVector(&sorted, v->capacity);
-    for (int i = 0; i < v->size; i++) {
-        adaugaMedicament(&sorted, v->medicamente[i].cod, v->medicamente[i].nume, v->medicamente[i].concentratie, v->medicamente[i].cantitate);
-    }
-    for (int i = 0; i < sorted.size - 1; i++) {
-        for (int j = i + 1; j < sorted.size; j++) {
-            if (sorted.medicamente[i].cantitate < sorted.medicamente[j].cantitate) {
-                Medicament temp = sorted.medicamente[i];
-                sorted.medicamente[i] = sorted.medicamente[j];
-                sorted.medicamente[j] = temp;
+VectorDynamic sortMedicamenteDescrescatorCantitate(VectorDynamic* v) {
+    VectorDynamic sorted = copyListaMedicamente(v);
+    for (int i = 0; i < size(&sorted) - 1; i++) {
+        for (int j = i + 1; j < size(&sorted); j++) {
+            Medicament* m1 = getElement(&sorted, i);
+            Medicament* m2 = getElement(&sorted, j);
+
+            if (getCantitate(*m1) < getCantitate(*m2)) {
+                Medicament temp = *m1;
+                *m1 = *m2;
+                *m2 = temp;
             }
+
         }
     }
     return sorted;
 }
 
-/// @param v Vectorul ce va fi filtrat.
-/// @param cantitate Pragul de cantitate.
-/// @return Un nou `VectorDynamic` continand doar medicamentele cu cantitate mai mica decat pragul specificat.
-///
-/// Functia filtreaza medicamentele pe baza cantitatii si returneaza un nou vector.
-VectorDynamic filtrareCantitate(const VectorDynamic* v, int cantitate) {
+VectorDynamic filtrareCantitate(VectorDynamic* v, int cantitate_max) {
     VectorDynamic filtered;
-    initVector(&filtered, v->capacity);
+    initVector(&filtered, capacity(v));
     for (int i = 0; i < v->size; i++) {
-        if (v->medicamente[i].cantitate < cantitate) {
-            adaugaMedicament(&filtered, v->medicamente[i].cod, v->medicamente[i].nume, v->medicamente[i].concentratie, v->medicamente[i].cantitate);
+        if (getCantitate(*getElement(v,i)) < cantitate_max) {
+            Medicament medicament;
+            int cod = getCod(*getElement(v, i));
+            char* nume = getNume(*getElement(v, i));
+            float concentratie = getConcentratie(*getElement(v, i));
+            int cantitate = getCantitate(*getElement(v, i));
+            medicament = initMedicament(cod, nume, concentratie, cantitate);
+            adaugaMedicament(&filtered, medicament);
         }
     }
     return filtered;
 }
 
-/// @param v Vectorul ce va fi filtrat.
-/// @param litera Prima litera a numelui medicamentului.
-/// @return Un nou `VectorDynamic` continand doar medicamentele al caror nume incepe cu litera specificata.
-///
-/// Functia filtreaza medicamentele pe baza primei litere a numelui lor.
-VectorDynamic filtrareLitera(const VectorDynamic* v, char litera) {
+VectorDynamic filtrareLitera( VectorDynamic* v, char litera) {
     VectorDynamic filtered;
     initVector(&filtered, v->capacity);
     for (int i = 0; i < v->size; i++) {
-        if (v->medicamente[i].nume[0] == litera) {
-            adaugaMedicament(&filtered, v->medicamente[i].cod, v->medicamente[i].nume, v->medicamente[i].concentratie, v->medicamente[i].cantitate);
+        if (getNume(*getElement(v,i))[0] == litera) {
+            Medicament medicament;
+            int cod = getCod(*getElement(v, i));
+            char* nume = getNume(*getElement(v, i));
+            float concentratie = getConcentratie(*getElement(v, i));
+            int cantitate = getCantitate(*getElement(v, i));
+            medicament = initMedicament(cod, nume, concentratie, cantitate);
+            adaugaMedicament(&filtered, medicament);
         }
     }
     return filtered;
