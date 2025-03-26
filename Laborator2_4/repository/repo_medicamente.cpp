@@ -1,4 +1,7 @@
 #include "repo_medicamente.h"
+
+#include <cstdlib>
+
 #include "../domain/lista.h"
 #include "../domain/medicament.h"
 //
@@ -10,6 +13,7 @@ int adaugaMedicament(VectorDynamic* v, Medicament el) {
         if (getCod(*getElement(v,i)) == getCod(el)) {
             int cantitate = getCantitate(*getElement(v,i));
             setCantitate(getElement(v,i), cantitate + getCantitate(el));
+            free(getNume(el));
             return 0;
         }
     }
@@ -31,7 +35,9 @@ int actualizareMedicament(VectorDynamic *v, int codElementVechi, char* numeNou, 
 int stergeMedicament(VectorDynamic* v, int cod) {
     for (int i = 0; i < size(v); i++) {
         if (getCod(*getElement(v,i)) == cod) {
+            free(getNume(*getElement(v,i)));
             stergeTElement(v, i);
+
             return 1;
         }
     }

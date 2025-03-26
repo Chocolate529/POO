@@ -2,7 +2,7 @@
 // Created by lupse on 3/11/2025.
 //
 #include "service_medicamente.h"
-#include <string.h>
+#include <cstring>
 #include "../validator/validator_medicament.h"
 #include "../domain/medicament.h"
 
@@ -29,7 +29,9 @@ int stergeMedicamentService(VectorDynamic* v, int cod) {
     return 2;
 }
 
-VectorDynamic sortMedicamenteDupaNume(VectorDynamic* v) {
+
+
+VectorDynamic sortMedicamente(VectorDynamic* v, ComapreFunction cmp) {
     VectorDynamic sorted = copyListaMedicamente(v);
 
 
@@ -38,7 +40,7 @@ VectorDynamic sortMedicamenteDupaNume(VectorDynamic* v) {
             Medicament* m1 = getElement(&sorted, i);
             Medicament* m2 = getElement(&sorted, j);
 
-            if (strcmp(getNume(*m1),getNume(*m2)) > 0 ){
+            if (cmp(m1,m2) > 0){
                 Medicament temp = *m1;
                 *m1 = *m2;
                 *m2 = temp;
@@ -47,43 +49,32 @@ VectorDynamic sortMedicamenteDupaNume(VectorDynamic* v) {
         }
     }
     return sorted;
+}
+
+
+VectorDynamic sortMedicamenteDupaNume(VectorDynamic* v) {
+    return sortMedicamente(v, criteriuDupaNume);
 }
 
 
 VectorDynamic sortMedicamenteCrescatorCantitate(VectorDynamic* v) {
-    VectorDynamic sorted = copyListaMedicamente(v);
-    for (int i = 0; i < size(&sorted) - 1; i++) {
-        for (int j = i + 1; j < size(&sorted); j++) {
-            Medicament* m1 = getElement(&sorted, i);
-            Medicament* m2 = getElement(&sorted, j);
-
-            if (getCantitate(*m1) > getCantitate(*m2)) {
-                Medicament temp = *m1;
-                *m1 = *m2;
-                *m2 = temp;
-            }
-
-        }
-    }
-    return sorted;
+    return sortMedicamente(v, criteriuDupaCantitateCrescator);
 }
 
 VectorDynamic sortMedicamenteDescrescatorCantitate(VectorDynamic* v) {
-    VectorDynamic sorted = copyListaMedicamente(v);
-    for (int i = 0; i < size(&sorted) - 1; i++) {
-        for (int j = i + 1; j < size(&sorted); j++) {
-            Medicament* m1 = getElement(&sorted, i);
-            Medicament* m2 = getElement(&sorted, j);
+    return sortMedicamente(v, criteriuDupaCantitateDescrescator);
+}
 
-            if (getCantitate(*m1) < getCantitate(*m2)) {
-                Medicament temp = *m1;
-                *m1 = *m2;
-                *m2 = temp;
-            }
+int criteriuDupaNume(Medicament* m1, Medicament* m2) {
+    return strcmp(getNume(*m1), getNume(*m2));
+}
 
-        }
-    }
-    return sorted;
+int criteriuDupaCantitateCrescator(Medicament* m1, Medicament* m2) {
+    return getCantitate(*m1) - getCantitate(*m2);
+}
+
+int criteriuDupaCantitateDescrescator(Medicament* m1, Medicament* m2) {
+    return getCantitate(*m2) - getCantitate(*m1);
 }
 
 VectorDynamic filtrareCantitate(VectorDynamic* v, int cantitate_max) {

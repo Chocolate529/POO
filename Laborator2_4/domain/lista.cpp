@@ -2,18 +2,28 @@
 // Created by lupse on 3/11/2025.
 //
 #include "lista.h"
-#include <stdlib.h>
+#include <cstdlib>
+#include <cstdio>
 
 void initVector(VectorDynamic* v, int capacity) {
     v->element = (TElement*)malloc(capacity * sizeof(TElement));
     v->size = 0;
     v->capacity = capacity;
 }
-
 void resizeVector(VectorDynamic* v) {
     v->capacity *= 2;
-    v->element = (TElement*)realloc(v->element, v->capacity * sizeof(TElement));
+
+
+    auto temp = (TElement*)realloc(v->element, v->capacity * sizeof(TElement));
+
+    if (temp == nullptr) {  // realloc failed
+        printf("Error: Out of memory while resizing vector\n");
+        exit(EXIT_FAILURE);
+    }
+
+    v->element = temp;
 }
+
 
 void adaugaTElement(VectorDynamic* v, TElement element) {
     if (v->size == v->capacity) {
@@ -49,9 +59,10 @@ int capacity(VectorDynamic *v) {
 void freeVector(VectorDynamic* v) {
     for (int i = 0; i < size(v); i++) {
         free(getNume(*getElement(v,i)));
+
     }
     free(v->element);
-    v->element = NULL;
+    v->element = nullptr;
     v->size = 0;
     v->capacity = 0;
 }

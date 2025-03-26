@@ -7,6 +7,13 @@
 
 #include "../repository/repo_medicamente.h"
 
+typedef int (*ComapreFunction)(Medicament* a, Medicament* b);
+VectorDynamic sortMedicamente(VectorDynamic* v, ComapreFunction cmp);
+int criteriuDupaNume(Medicament* m1, Medicament* m2);
+int criteriuDupaCantitateCrescator(Medicament* m1, Medicament* m2);
+int criteriuDupaCantitateDescrescator(Medicament* m1, Medicament* m2);
+
+
 /// Adaugă un medicament nou în vectorul dinamic, dacă este valid.
 /// @param v Pointer către structura VectorDynamic.
 /// @param cod Codul medicamentului.

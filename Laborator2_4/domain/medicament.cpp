@@ -1,7 +1,7 @@
 #include "medicament.h"
 
-#include <stdlib.h>
-#include <string.h>
+#include <cstdlib>
+#include <cstring>
 //
 // Created by lupse on 3/13/2025.
 //
@@ -16,7 +16,6 @@ Medicament initMedicament(int cod, char* nume, float concentratie, int cantitate
 }
 
 Medicament copyMedicament(Medicament medicament) {
-    Medicament copy;
     int cod = getCod(medicament);
     char* nume = getNume(medicament);
     int cantitate = getCantitate(medicament);
