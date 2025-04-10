@@ -1,0 +1,141 @@
+        -:    0:Source:C:/Users/lupse/CLionProjects/POO/Laborator2_4/repository/repo_medicamente.cpp
+        -:    0:Graph:C:\Users\lupse\CLionProjects\POO\Laborator2_4\cmake-build-debug-coverage\CMakeFiles\Laborator2_4.dir\repository\repo_medicamente.cpp.gcno
+        -:    0:Data:C:\Users\lupse\CLionProjects\POO\Laborator2_4\cmake-build-debug-coverage\CMakeFiles\Laborator2_4.dir\repository\repo_medicamente.cpp.gcda
+        -:    0:Runs:1
+        -:    1:#include "repo_medicamente.h"
+        -:    2:
+        -:    3:#include <cstdlib>
+        -:    4:
+        -:    5:#include "../domain/lista.h"
+        -:    6:#include "../domain/medicament.h"
+        -:    7://
+        -:    8:// Created by lupse on 3/13/2025.
+        -:    9://
+        -:   10:
+function _Z16adaugaMedicamentP13VectorDynamic10Medicament called 20 returned 100% blocks executed 100%
+       20:   11:int adaugaMedicament(VectorDynamic* v, Medicament el) {
+       33:   12:    for (int i = 0; i < size(v); i++) {
+       20:   12-block  0
+       13:   12-block  1
+       33:   12-block  2
+call    0 returned 33
+branch  1 taken 14
+branch  2 taken 19 (fallthrough)
+       14:   13:        if (getCod(*getElement(v,i)) == getCod(el)) {
+       14:   13-block  0
+call    0 returned 14
+call    1 returned 14
+call    2 returned 14
+branch  3 taken 1 (fallthrough)
+branch  4 taken 13
+        1:   14:            int cantitate = getCantitate(*getElement(v,i));
+        1:   14-block  0
+call    0 returned 1
+call    1 returned 1
+        1:   15:            setCantitate(getElement(v,i), cantitate + getCantitate(el));
+call    0 returned 1
+call    1 returned 1
+call    2 returned 1
+        1:   16:            free(getNume(el));
+call    0 returned 1
+        1:   17:            return 0;
+        -:   18:        }
+        -:   19:    }
+       19:   20:    adaugaTElement(v, el);
+       19:   20-block  0
+call    0 returned 19
+       19:   21:    return 1;
+        -:   22:}
+        -:   23:
+function _Z21actualizareMedicamentP13VectorDynamiciPcf called 2 returned 100% blocks executed 100%
+        2:   24:int actualizareMedicament(VectorDynamic *v, int codElementVechi, char* numeNou, float concentratieNoua) {
+        3:   25:    for (int i = 0; i < size(v); i++) {
+        2:   25-block  0
+        1:   25-block  1
+        3:   25-block  2
+call    0 returned 3
+branch  1 taken 2
+branch  2 taken 1 (fallthrough)
+        2:   26:        if (getCod(*getElement(v,i)) == codElementVechi) {
+        2:   26-block  0
+call    0 returned 2
+call    1 returned 2
+branch  2 taken 1 (fallthrough)
+branch  3 taken 1
+        1:   27:            setNume(getElement(v,i), numeNou);
+        1:   27-block  0
+call    0 returned 1
+call    1 returned 1
+        1:   28:            setConcentratie(getElement(v,i), concentratieNoua);
+call    0 returned 1
+call    1 returned 1
+        1:   29:            return 1;
+        -:   30:        }
+        -:   31:    }
+        1:   32:    return 0;
+        1:   32-block  0
+        -:   33:}
+        -:   34:
+function _Z16stergeMedicamentP13VectorDynamici called 2 returned 100% blocks executed 100%
+        2:   35:int stergeMedicament(VectorDynamic* v, int cod) {
+        4:   36:    for (int i = 0; i < size(v); i++) {
+        2:   36-block  0
+        2:   36-block  1
+        4:   36-block  2
+call    0 returned 4
+branch  1 taken 3
+branch  2 taken 1 (fallthrough)
+        3:   37:        if (getCod(*getElement(v,i)) == cod) {
+        3:   37-block  0
+call    0 returned 3
+call    1 returned 3
+branch  2 taken 1 (fallthrough)
+branch  3 taken 2
+        1:   38:            free(getNume(*getElement(v,i)));
+        1:   38-block  0
+call    0 returned 1
+call    1 returned 1
+        1:   39:            stergeTElement(v, i);
+call    0 returned 1
+        -:   40:
+        1:   41:            return 1;
+        -:   42:        }
+        -:   43:    }
+        1:   44:    return 0;
+        1:   44-block  0
+        -:   45:}
+        -:   46:
+function _Z20copyListaMedicamenteP13VectorDynamic called 3 returned 100% blocks executed 100%
+        3:   47:VectorDynamic copyListaMedicamente(VectorDynamic* v) {
+        -:   48:    VectorDynamic v2;
+        3:   49:    initVector(&v2, capacity(v));
+        3:   49-block  0
+call    0 returned 3
+call    1 returned 3
+       11:   50:    for (int i = 0; i < size(v); i++) {
+        8:   50-block  0
+       11:   50-block  1
+call    0 returned 11
+branch  1 taken 8
+branch  2 taken 3 (fallthrough)
+        8:   51:        Medicament m1 = *getElement(v, i);
+        8:   51-block  0
+call    0 returned 8
+branch  1 taken 8 (fallthrough)
+branch  2 taken 0 (throw)
+        8:   52:        Medicament copy = copyMedicament(m1);
+        8:   52-block  0
+call    0 returned 8
+branch  1 taken 8 (fallthrough)
+branch  2 taken 0 (throw)
+        -:   53:
+        8:   54:        adaugaTElement(&v2, copy);
+        8:   54-block  0
+call    0 returned 8
+branch  1 taken 8 (fallthrough)
+branch  2 taken 0 (throw)
+        -:   55:    }
+        3:   56:    return v2;
+        3:   56-block  0
+        3:   56-block  1
+        -:   57:}

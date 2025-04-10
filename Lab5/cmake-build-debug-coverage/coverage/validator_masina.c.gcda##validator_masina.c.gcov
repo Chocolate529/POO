@@ -1,0 +1,51 @@
+        -:    0:Source:/mnt/c/Users/lupse/CLionProjects/Lab5/validator_masina.c
+        -:    0:Graph:/mnt/c/Users/lupse/CLionProjects/Lab5/cmake-build-debug-coverage/CMakeFiles/Lab5.dir/validator_masina.c.gcno
+        -:    0:Data:/mnt/c/Users/lupse/CLionProjects/Lab5/cmake-build-debug-coverage/CMakeFiles/Lab5.dir/validator_masina.c.gcda
+        -:    0:Runs:1
+        -:    1:#include <string.h>
+        -:    2:#include "validator_masina.h"
+        -:    3:
+function validator_masina called 14 returned 100% blocks executed 100%
+       14:    4:int validator_masina(const struct_masina* masina) {
+       14:    5:    if (masina->id < 0)
+       14:    5-block  0
+branch  0 taken 2 (fallthrough)
+branch  1 taken 12
+        2:    6:        return -1;
+        2:    6-block  0
+       12:    7:    if (strlen(masina->model) < 1)
+       12:    7-block  0
+branch  0 taken 2 (fallthrough)
+branch  1 taken 10
+        2:    8:        return -1;
+        2:    8-block  0
+       10:    9:    if (strlen(masina->nr_inmatriculare) < 1)
+       10:    9-block  0
+branch  0 taken 1 (fallthrough)
+branch  1 taken 9
+        1:   10:        return -1;
+        1:   10-block  0
+        9:   11:    if (strcmp(masina->categorie, "mini") != 0 && strcmp(masina->categorie, "sport") != 0 && strcmp(masina->categorie, "suv") != 0)
+        9:   11-block  0
+branch  0 taken 6 (fallthrough)
+branch  1 taken 3
+        6:   11-block  1
+branch  2 taken 4 (fallthrough)
+branch  3 taken 2
+        4:   11-block  2
+branch  4 taken 1 (fallthrough)
+branch  5 taken 3
+        1:   12:        return -1;
+        1:   12-block  0
+        8:   13:    if (masina->inchiriata != 0 && masina->inchiriata != 1)
+        8:   13-block  0
+branch  0 taken 3 (fallthrough)
+branch  1 taken 5
+        3:   13-block  1
+branch  2 taken 1 (fallthrough)
+branch  3 taken 2
+        1:   14:        return -1;
+        1:   14-block  0
+        7:   15:    return 0;
+        7:   15-block  0
+        -:   16:}

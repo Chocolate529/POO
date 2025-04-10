@@ -1,0 +1,109 @@
+        -:    0:Source:C:/Users/lupse/CLionProjects/POO/Laborator2_4/domain/lista.cpp
+        -:    0:Graph:C:\Users\lupse\CLionProjects\POO\Laborator2_4\cmake-build-debug-coverage\CMakeFiles\Laborator2_4.dir\domain\lista.cpp.gcno
+        -:    0:Data:C:\Users\lupse\CLionProjects\POO\Laborator2_4\cmake-build-debug-coverage\CMakeFiles\Laborator2_4.dir\domain\lista.cpp.gcda
+        -:    0:Runs:1
+        -:    1://
+        -:    2:// Created by lupse on 3/11/2025.
+        -:    3://
+        -:    4:#include "lista.h"
+        -:    5:#include <cstdlib>
+        -:    6:#include <cstdio>
+        -:    7:
+function _Z10initVectorP13VectorDynamici called 14 returned 100% blocks executed 100%
+       14:    8:void initVector(VectorDynamic* v, int capacity) {
+       14:    9:    v->element = (TElement*)malloc(capacity * sizeof(TElement));
+       14:   10:    v->size = 0;
+       14:   11:    v->capacity = capacity;
+       14:   12:}
+function _Z12resizeVectorP13VectorDynamic called 2 returned 100% blocks executed 50%
+        2:   13:void resizeVector(VectorDynamic* v) {
+        2:   14:    v->capacity *= 2;
+        -:   15:
+        -:   16:
+        2:   17:    auto temp = (TElement*)realloc(v->element, v->capacity * sizeof(TElement));
+        -:   18:
+        2:   19:    if (temp == nullptr) {  // realloc failed
+        2:   19-block  0
+branch  0 taken 0 (fallthrough)
+branch  1 taken 2
+    #####:   20:        printf("Error: Out of memory while resizing vector\n");
+    %%%%%:   20-block  0
+call    0 never executed
+    #####:   21:        exit(EXIT_FAILURE);
+call    0 never executed
+        -:   22:    }
+        -:   23:
+        2:   24:    v->element = temp;
+        2:   25:}
+        -:   26:
+        -:   27:
+function _Z14adaugaTElementP13VectorDynamic10Medicament called 27 returned 100% blocks executed 100%
+       27:   28:void adaugaTElement(VectorDynamic* v, TElement element) {
+       27:   29:    if (v->size == v->capacity) {
+       27:   29-block  0
+branch  0 taken 2 (fallthrough)
+branch  1 taken 25
+        2:   30:        resizeVector(v);
+        2:   30-block  0
+call    0 returned 2
+        -:   31:    }
+       27:   32:    v->element[v->size] = element;
+       27:   33:    v->size++;
+       27:   34:}
+        -:   35:
+function _Z14stergeTElementP13VectorDynamici called 1 returned 100% blocks executed 100%
+        1:   36:void stergeTElement(VectorDynamic* v, int index) {
+        3:   37:    for (int j = index; j < v->size - 1; j++) {
+        1:   37-block  0
+        3:   37-block  1
+branch  0 taken 2
+branch  1 taken 1 (fallthrough)
+        2:   38:        v->element[j] = v->element[j + 1];
+        2:   38-block  0
+        -:   39:    }
+        1:   40:    v->size--;
+        1:   41:}
+        -:   42:
+function _Z10getElementP13VectorDynamici called 99 returned 100% blocks executed 100%
+       99:   43:TElement* getElement(VectorDynamic* v, int index) {
+       99:   44:    return &v->element[index];
+       99:   44-block  0
+        -:   45:}
+        -:   46:
+        -:   47:// void setElement(VectorDynamic* v, int index, TElement m) {
+        -:   48://     v->element[index] = m;
+        -:   49:// }
+        -:   50:
+function _Z4sizeP13VectorDynamic called 117 returned 100% blocks executed 100%
+      117:   51:int size(VectorDynamic* v) {
+      117:   52:    return v->size;
+      117:   52-block  0
+        -:   53:}
+        -:   54:
+function _Z8capacityP13VectorDynamic called 4 returned 100% blocks executed 100%
+        4:   55:int capacity(VectorDynamic *v) {
+        4:   56:    return v->capacity;
+        4:   56-block  0
+        -:   57:}
+        -:   58:
+function _Z10freeVectorP13VectorDynamic called 14 returned 100% blocks executed 100%
+       14:   59:void freeVector(VectorDynamic* v) {
+       40:   60:    for (int i = 0; i < size(v); i++) {
+       14:   60-block  0
+       40:   60-block  1
+call    0 returned 40
+branch  1 taken 26
+branch  2 taken 14 (fallthrough)
+       26:   61:        free(getNume(*getElement(v,i)));
+       26:   61-block  0
+call    0 returned 26
+call    1 returned 26
+        -:   62:
+        -:   63:    }
+       14:   64:    free(v->element);
+       14:   65:    v->element = nullptr;
+       14:   66:    v->size = 0;
+       14:   67:    v->capacity = 0;
+       14:   68:}
+        -:   69:
+        -:   70:

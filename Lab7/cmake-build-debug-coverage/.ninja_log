@@ -1,0 +1,8 @@
+# ninja log v6
+5	412	7658458064999653	CMakeFiles/Lab6.dir/main.cpp.obj	8e5edd20cdf1f521
+13	658	7658449683597114	CMakeFiles/Lab6.dir/domeniu_masina.cpp.obj	924a6f3ab15c9dfe
+12	463	7658458065069645	CMakeFiles/Lab6.dir/service_masina.cpp.obj	d4ed32c359c71b81
+15	674	7658458065100534	CMakeFiles/Lab6.dir/teste.cpp.obj	d4881c599a0a7e22
+9	465	7658458065049642	CMakeFiles/Lab6.dir/repo_masina.cpp.obj	fa67cbb1d2bc335
+4	215	7658809991272474	build.ninja	de3b0e086871d13
+610	722	7658432973560936	Lab6.exe	4f1feb2a9ff63485

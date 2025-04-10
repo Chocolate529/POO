@@ -1,0 +1,271 @@
+        -:    0:Source:/mnt/c/Users/lupse/CLionProjects/Lab5/repo.c
+        -:    0:Graph:/mnt/c/Users/lupse/CLionProjects/Lab5/cmake-build-debug-coverage/CMakeFiles/Lab5.dir/repo.c.gcno
+        -:    0:Data:/mnt/c/Users/lupse/CLionProjects/Lab5/cmake-build-debug-coverage/CMakeFiles/Lab5.dir/repo.c.gcda
+        -:    0:Runs:1
+        -:    1:#include "repo.h"
+        -:    2:#include <stdio.h>
+        -:    3:#include <stdlib.h>
+        -:    4:
+        -:    5:#define ALPHA 0.7
+        -:    6:#define BETA 0.3
+        -:    7:
+function repo_copie_repo called 18 returned 100% blocks executed 100%
+       18:    8:void* repo_copie_repo(const repository* repo) {
+       18:    9:    repository* repo_aux = (repository*)malloc(repo->spatiu * sizeof(repository));
+       18:   10:    repo_aux->lista = (void**)malloc(repo->spatiu * sizeof(void*));
+       40:   11:    for (int i = 0; i < repo->numar; i++)
+       18:   11-block  0
+       40:   11-block  1
+branch  0 taken 22
+branch  1 taken 18 (fallthrough)
+       22:   12:        repo_aux->lista[i] = repo->copie_element(repo->lista[i]);
+       22:   12-block  0
+call    0 returned 22
+       18:   13:    repo_aux->numar = repo->numar;
+       18:   14:    repo_aux->spatiu = repo->spatiu;
+       18:   15:    repo_aux->destroy_elem = repo->destroy_elem;
+       18:   16:    repo_aux->get_id = repo->get_id;
+       18:   17:    repo_aux->copie_element = repo->copie_element;
+       18:   18:    return repo_aux;
+       18:   18-block  0
+        -:   19:}
+        -:   20:
+function repo_verifica_existenta_element_dupa_id called 15 returned 100% blocks executed 100%
+       15:   21:int repo_verifica_existenta_element_dupa_id(const repository* repo, int id) {
+       21:   22:    for (int i = 0; i < repo->numar; i++) {
+       15:   22-block  0
+        6:   22-block  1
+       21:   22-block  2
+branch  0 taken 12
+branch  1 taken 9 (fallthrough)
+       12:   23:        if (id == repo->get_id(repo->lista[i]))
+       12:   23-block  0
+call    0 returned 12
+branch  1 taken 6 (fallthrough)
+branch  2 taken 6
+        6:   24:            return 0;
+        6:   24-block  0
+        -:   25:    }
+        9:   26:    return -2;
+        9:   26-block  0
+        -:   27:}
+        -:   28:
+function repo_creeaza called 6 returned 100% blocks executed 50%
+        6:   29:repository* repo_creeaza(void (*destroy_elem)(void*), int (*get_id)(void*), void* (*copie_element)(void*)) {
+        6:   30:    repository* repo = malloc(sizeof(repository));
+        6:   31:    if (repo == NULL) {
+        6:   31-block  0
+branch  0 taken 0 (fallthrough)
+branch  1 taken 6
+    #####:   32:        printf("Allocation error!\n");
+    %%%%%:   32-block  0
+call    0 never executed
+    #####:   33:        return NULL;
+        -:   34:    }
+        6:   35:    repo->numar = 0;
+        6:   36:    repo->spatiu = 1;
+        6:   37:    repo->lista = (void**)malloc(repo->spatiu * sizeof(void*));
+        6:   38:    if (repo->lista == NULL) {
+        6:   38-block  0
+branch  0 taken 0 (fallthrough)
+branch  1 taken 6
+    #####:   39:        printf("Allocation error!\n");
+    %%%%%:   39-block  0
+call    0 never executed
+    #####:   40:        return NULL;
+        -:   41:    }
+        6:   42:    repo->destroy_elem = destroy_elem;
+        6:   43:    repo->get_id = get_id;
+        6:   44:    repo->copie_element = copie_element;
+        6:   45:    return repo;
+        6:   45-block  0
+        -:   46:}
+        -:   47:
+function repo_destroy called 24 returned 100% blocks executed 78%
+       24:   48:void repo_destroy(repository* repo) {
+       24:   49:    if (repo == NULL) {
+       24:   49-block  0
+branch  0 taken 0 (fallthrough)
+branch  1 taken 24
+    #####:   50:        printf("Destruction error!\n");
+    %%%%%:   50-block  0
+call    0 never executed
+    #####:   51:        return;
+        -:   52:    }
+       53:   53:    for (int i = 0; i < repo->numar; i++) {
+       24:   53-block  0
+       53:   53-block  1
+branch  0 taken 29
+branch  1 taken 24 (fallthrough)
+       29:   54:        repo->destroy_elem(repo->lista[i]);
+       29:   54-block  0
+call    0 returned 29
+       29:   55:        repo->lista[i] = NULL;
+        -:   56:    }
+       24:   57:    free(repo->lista);
+       24:   58:    repo->lista = NULL;
+       24:   59:    free(repo);
+       24:   60:    repo = NULL;
+       24:   60-block  0
+        -:   61:}
+        -:   62:
+function repo_aloca_spatiu called 4 returned 100% blocks executed 75%
+        4:   63:void repo_aloca_spatiu(repository* repo) {
+        4:   64:    void** lista_noua_elemente = (void**)malloc((repo->spatiu * 2) * sizeof(void*));
+        4:   65:    if (lista_noua_elemente == NULL) {
+        4:   65-block  0
+branch  0 taken 0 (fallthrough)
+branch  1 taken 4
+    #####:   66:        printf("Allocation error!\n");
+    %%%%%:   66-block  0
+call    0 never executed
+    #####:   67:        return;
+        -:   68:    }
+       10:   69:    for (int i = 0; i < repo->numar; i++)
+        4:   69-block  0
+       10:   69-block  1
+branch  0 taken 6
+branch  1 taken 4 (fallthrough)
+        6:   70:        lista_noua_elemente[i] = repo->lista[i];
+        6:   70-block  0
+        4:   71:    free(repo->lista);
+        4:   72:    repo->lista = lista_noua_elemente;
+        4:   73:    repo->spatiu *= 2;
+        4:   73-block  0
+        -:   74:}
+        -:   75:
+function repo_dealoca_spatiu called 2 returned 100% blocks executed 75%
+        2:   76:void repo_dealoca_spatiu(repository* repo) {
+        2:   77:    void** temp = malloc(repo->spatiu / 2 * sizeof(void*));
+        3:   78:    for (int i = 0; i < repo->numar; i++)
+        2:   78-block  0
+        3:   78-block  1
+branch  0 taken 1
+branch  1 taken 2 (fallthrough)
+        1:   79:        temp[i] = repo->lista[i];
+        1:   79-block  0
+        2:   80:    free(repo->lista);
+        2:   81:    if (temp == NULL) {
+        2:   81-block  0
+branch  0 taken 0 (fallthrough)
+branch  1 taken 2
+    #####:   82:        printf("Reallocation error!\n");
+    %%%%%:   82-block  0
+call    0 never executed
+    #####:   83:        return;
+        -:   84:    }
+        2:   85:    repo->lista = temp;
+        2:   86:    repo->spatiu /= 2;
+        2:   86-block  0
+        -:   87:}
+        -:   88:
+function repo_adauga_element called 12 returned 100% blocks executed 71%
+       12:   89:void repo_adauga_element(repository* repo, void* elem) {
+       12:   90:    if (elem == NULL) {
+       12:   90-block  0
+branch  0 taken 0 (fallthrough)
+branch  1 taken 12
+    #####:   91:        printf("Element NULL!\n");
+    %%%%%:   91-block  0
+call    0 never executed
+    #####:   92:        return;
+        -:   93:    }
+       12:   94:    if (repo->numar >= ALPHA * repo->spatiu)
+       12:   94-block  0
+branch  0 taken 4 (fallthrough)
+branch  1 taken 8
+        4:   95:        repo_aloca_spatiu(repo);
+        4:   95-block  0
+call    0 returned 4
+       12:   96:    repo->lista[repo->numar] = elem;
+       12:   97:    repo->numar++;
+       12:   97-block  0
+        -:   98:}
+        -:   99:
+function repo_modifica_element called 2 returned 100% blocks executed 83%
+        2:  100:void repo_modifica_element(const repository* repo, void* elem) {
+        2:  101:    if (elem == NULL) {
+        2:  101-block  0
+branch  0 taken 0 (fallthrough)
+branch  1 taken 2
+    #####:  102:        printf("Element NULL!\n");
+    %%%%%:  102-block  0
+call    0 never executed
+    #####:  103:        return;
+        -:  104:    }
+        5:  105:    for (int i = 0; i < repo->numar; i++)
+        2:  105-block  0
+        3:  105-block  1
+        5:  105-block  2
+branch  0 taken 3
+branch  1 taken 2 (fallthrough)
+        3:  106:        if (repo->get_id(repo->lista[i]) == repo->get_id(elem)) {
+        3:  106-block  0
+call    0 returned 3
+call    1 returned 3
+branch  2 taken 2 (fallthrough)
+branch  3 taken 1
+        2:  107:            repo->destroy_elem(repo->lista[i]);
+        2:  107-block  0
+call    0 returned 2
+        2:  108:            repo->lista[i] = elem;
+        -:  109:        }
+        -:  110:}
+        -:  111:
+function repo_cauta_element called 4 returned 100% blocks executed 100%
+        4:  112:void* repo_cauta_element(const repository* repo, const int id) {
+        7:  113:    for (int i = 0; i < repo->numar; i++)
+        4:  113-block  0
+        3:  113-block  1
+        7:  113-block  2
+branch  0 taken 5
+branch  1 taken 2 (fallthrough)
+        5:  114:        if (id == repo->get_id(repo->lista[i]))
+        5:  114-block  0
+call    0 returned 5
+branch  1 taken 2 (fallthrough)
+branch  2 taken 3
+        2:  115:            return repo->copie_element(repo->lista[i]);
+        2:  115-block  0
+call    0 returned 2
+        2:  116:    return NULL;
+        2:  116-block  0
+        -:  117:}
+        -:  118:
+function repo_sterge_element called 5 returned 100% blocks executed 100%
+        5:  119:int repo_sterge_element(repository* repo, const int id) {
+       13:  120:    for (int i = 0; i < repo->numar; i++)
+        5:  120-block  0
+        8:  120-block  1
+       13:  120-block  2
+branch  0 taken 8
+branch  1 taken 5 (fallthrough)
+        8:  121:        if (repo->get_id(repo->lista[i]) == id) {
+        8:  121-block  0
+call    0 returned 8
+branch  1 taken 5 (fallthrough)
+branch  2 taken 3
+        5:  122:            repo->destroy_elem(repo->lista[i]);
+        5:  122-block  0
+call    0 returned 5
+        8:  123:            for (int j = i; j < repo->numar - 1; j++)
+        8:  123-block  0
+branch  0 taken 3
+branch  1 taken 5 (fallthrough)
+        3:  124:                repo->lista[j] = repo->lista[j + 1];
+        3:  124-block  0
+        -:  125:        }
+        5:  126:    repo->numar--;
+        5:  127:    if (repo->numar <= BETA * repo->spatiu && repo->spatiu > 1)
+        5:  127-block  0
+branch  0 taken 4 (fallthrough)
+branch  1 taken 1
+        4:  127-block  1
+branch  2 taken 2 (fallthrough)
+branch  3 taken 2
+        2:  128:        repo_dealoca_spatiu(repo);
+        2:  128-block  0
+call    0 returned 2
+        5:  129:    return 0;
+        5:  129-block  0
+        -:  130:}

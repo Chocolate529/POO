@@ -1,0 +1,10 @@
+# ninja log v6
+11	174	7640710175214946	CMakeFiles/Laborator2_4.dir/main.cpp.obj	cb975aa8b8edfb2f
+37	216	7640710175476964	CMakeFiles/Laborator2_4.dir/repository/repo_medicamente.cpp.obj	529a5ca18d078e11
+29	259	7640710175396947	CMakeFiles/Laborator2_4.dir/domain/lista.cpp.obj	e88bbb2b3a8d7a73
+57	240	7640710175677432	CMakeFiles/Laborator2_4.dir/validator/validator_medicament.cpp.obj	ef964f57f406ecd
+20	270	7640710175311096	CMakeFiles/Laborator2_4.dir/domain/medicament.cpp.obj	e0fdaf3f20f92e2f
+19	418	7640731690697758	CMakeFiles/Laborator2_4.dir/service/service_medicamente.cpp.obj	1d57eac49c07c680
+31	435	7640731690816156	CMakeFiles/Laborator2_4.dir/prezentare/consola.cpp.obj	9b86f812ec54cc84
+40	692	7640731690922455	CMakeFiles/Laborator2_4.dir/teste/test.cpp.obj	7a6db04616d08751
+695	1049	7640731697465640	Laborator2_4.exe	c70b01bc37e97c13

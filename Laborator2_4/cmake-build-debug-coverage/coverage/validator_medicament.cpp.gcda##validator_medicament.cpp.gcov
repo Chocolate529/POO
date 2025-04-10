@@ -1,0 +1,57 @@
+        -:    0:Source:C:/Users/lupse/CLionProjects/POO/Laborator2_4/validator/validator_medicament.cpp
+        -:    0:Graph:C:\Users\lupse\CLionProjects\POO\Laborator2_4\cmake-build-debug-coverage\CMakeFiles\Laborator2_4.dir\validator\validator_medicament.cpp.gcno
+        -:    0:Data:C:\Users\lupse\CLionProjects\POO\Laborator2_4\cmake-build-debug-coverage\CMakeFiles\Laborator2_4.dir\validator\validator_medicament.cpp.gcda
+        -:    0:Runs:1
+        -:    1://
+        -:    2:// Created by lupse on 3/11/2025.
+        -:    3://
+        -:    4:#include "validator_medicament.h"
+        -:    5:#include <string.h>
+        -:    6:
+function _Z12valideazaCodi called 25 returned 100% blocks executed 100%
+       25:    7:int valideazaCod(int cod) {
+       25:    8:    return cod > 0;
+       25:    8-block  0
+        -:    9:}
+        -:   10:
+function _Z13valideazaNumePc called 20 returned 100% blocks executed 100%
+       20:   11:int valideazaNume(char* nume) {
+       20:   12:    return strlen(nume) >= 2;
+       20:   12-block  0
+        -:   13:}
+        -:   14:
+function _Z21valideazaConcentratief called 20 returned 100% blocks executed 100%
+       20:   15:int valideazaConcentratie(float concentratie) {
+       20:   16:    return concentratie > 0;
+       20:   16-block  0
+        -:   17:}
+        -:   18:
+function _Z18valideazaCantitatei called 18 returned 100% blocks executed 100%
+       18:   19:int valideazaCantitate(int cantitate) {
+       18:   20:    return cantitate > 0;
+       18:   20-block  0
+        -:   21:}
+        -:   22:
+function _Z19valideazaMedicamentiPcfi called 19 returned 100% blocks executed 100%
+       19:   23:int valideazaMedicament(int cod, char* nume, float concentratie, int cantitate) {
+       19:   24:    return valideazaCod(cod) && valideazaNume(nume) && valideazaConcentratie(concentratie) && valideazaCantitate(cantitate);
+       19:   24-block  0
+call    0 returned 19
+branch  1 taken 18 (fallthrough)
+branch  2 taken 1
+       18:   24-block  1
+call    3 returned 18
+branch  4 taken 18 (fallthrough)
+branch  5 taken 0
+       18:   24-block  2
+call    6 returned 18
+branch  7 taken 18 (fallthrough)
+branch  8 taken 0
+       18:   24-block  3
+call    9 returned 18
+branch 10 taken 18 (fallthrough)
+branch 11 taken 0
+       18:   24-block  4
+        1:   24-block  5
+       19:   24-block  6
+        -:   25:}

@@ -1,0 +1,475 @@
+        -:    0:Source:C:/Users/lupse/CLionProjects/POO/Lab6/ui.cpp
+        -:    0:Graph:C:\Users\lupse\CLionProjects\POO\Lab6\cmake-build-debug-coverage\CMakeFiles\Lab6.dir\ui.cpp.gcno
+        -:    0:Data:C:\Users\lupse\CLionProjects\POO\Lab6\cmake-build-debug-coverage\CMakeFiles\Lab6.dir\ui.cpp.gcda
+        -:    0:Runs:1
+        -:    1://
+        -:    2:// Created by lupse on 4/7/2025.
+        -:    3://
+        -:    4:#include "ui.h"
+        -:    5:#include <iostream>
+        -:    6:
+function _ZN8MasinaUI8adaugaUIEv called 0 returned 0% blocks executed 0%
+    #####:    7:void MasinaUI::adaugaUI() {
+    #####:    8:    std::string nr, prod, mod, tip;
+    %%%%%:    8-block  0
+call    0 never executed
+call    1 never executed
+call    2 never executed
+call    3 never executed
+    #####:    9:    std::cout << "Nr inmatriculare: "; std::cin >> nr;
+call    0 never executed
+branch  1 never executed (fallthrough)
+branch  2 never executed (throw)
+    %%%%%:    9-block  0
+call    3 never executed
+branch  4 never executed (fallthrough)
+branch  5 never executed (throw)
+    #####:   10:    std::cout << "Producator: "; std::cin >> prod;
+    %%%%%:   10-block  0
+call    0 never executed
+branch  1 never executed (fallthrough)
+branch  2 never executed (throw)
+    %%%%%:   10-block  1
+call    3 never executed
+branch  4 never executed (fallthrough)
+branch  5 never executed (throw)
+    #####:   11:    std::cout << "Model: "; std::cin >> mod;
+    %%%%%:   11-block  0
+call    0 never executed
+branch  1 never executed (fallthrough)
+branch  2 never executed (throw)
+    %%%%%:   11-block  1
+call    3 never executed
+branch  4 never executed (fallthrough)
+branch  5 never executed (throw)
+    #####:   12:    std::cout << "Tip: "; std::cin >> tip;
+    %%%%%:   12-block  0
+call    0 never executed
+branch  1 never executed (fallthrough)
+branch  2 never executed (throw)
+    %%%%%:   12-block  1
+call    3 never executed
+branch  4 never executed (fallthrough)
+branch  5 never executed (throw)
+        -:   13:    try {
+    #####:   14:        service.adaugaMasina(nr, prod, mod, tip);
+    %%%%%:   14-block  0
+call    0 never executed
+branch  1 never executed (fallthrough)
+branch  2 never executed (throw)
+    =====:   15:    } catch (const std::exception& e) {
+    $$$$$:   15-block  0
+branch  0 never executed (fallthrough)
+branch  1 never executed
+    $$$$$:   15-block  1
+call    2 never executed
+    =====:   16:        std::cout << "Eroare: " << e.what() << "\n";
+call    0 never executed
+branch  1 never executed (fallthrough)
+branch  2 never executed (throw)
+    $$$$$:   16-block  0
+call    3 never executed
+call    4 never executed
+branch  5 never executed (fallthrough)
+branch  6 never executed (throw)
+    $$$$$:   16-block  1
+call    7 never executed
+branch  8 never executed (fallthrough)
+branch  9 never executed (throw)
+    =====:   17:    }
+    $$$$$:   17-block  0
+call    0 never executed
+    $$$$$:   17-block  1
+call    1 never executed
+    #####:   18:}
+    %%%%%:   18-block  0
+call    0 never executed
+call    1 never executed
+call    2 never executed
+call    3 never executed
+    $$$$$:   18-block  1
+call    4 never executed
+    $$$$$:   18-block  2
+call    5 never executed
+    $$$$$:   18-block  3
+call    6 never executed
+    $$$$$:   18-block  4
+call    7 never executed
+        -:   19:
+function _ZN8MasinaUI8stergeUIEv called 0 returned 0% blocks executed 0%
+    #####:   20:void MasinaUI::stergeUI() {
+    #####:   21:    std::string nr;
+    %%%%%:   21-block  0
+call    0 never executed
+    #####:   22:    std::cout << "Nr inmatriculare: "; std::cin >> nr;
+call    0 never executed
+branch  1 never executed (fallthrough)
+branch  2 never executed (throw)
+    %%%%%:   22-block  0
+call    3 never executed
+branch  4 never executed (fallthrough)
+branch  5 never executed (throw)
+        -:   23:    try {
+    #####:   24:        service.stergeMasina(nr);
+    %%%%%:   24-block  0
+call    0 never executed
+branch  1 never executed (fallthrough)
+branch  2 never executed (throw)
+    =====:   25:    } catch (const std::exception& e) {
+    $$$$$:   25-block  0
+branch  0 never executed (fallthrough)
+branch  1 never executed
+    $$$$$:   25-block  1
+call    2 never executed
+    =====:   26:        std::cout << "Eroare: " << e.what() << "\n";
+call    0 never executed
+branch  1 never executed (fallthrough)
+branch  2 never executed (throw)
+    $$$$$:   26-block  0
+call    3 never executed
+call    4 never executed
+branch  5 never executed (fallthrough)
+branch  6 never executed (throw)
+    $$$$$:   26-block  1
+call    7 never executed
+branch  8 never executed (fallthrough)
+branch  9 never executed (throw)
+    =====:   27:    }
+    $$$$$:   27-block  0
+call    0 never executed
+    $$$$$:   27-block  1
+call    1 never executed
+    #####:   28:}
+    %%%%%:   28-block  0
+call    0 never executed
+    $$$$$:   28-block  1
+call    1 never executed
+        -:   29:
+function _ZN8MasinaUI10modificaUIEv called 0 returned 0% blocks executed 0%
+    #####:   30:void MasinaUI::modificaUI() {
+    #####:   31:    std::string nr, prod, mod, tip;
+    %%%%%:   31-block  0
+call    0 never executed
+call    1 never executed
+call    2 never executed
+call    3 never executed
+    #####:   32:    std::cout << "Nr inmatriculare: "; std::cin >> nr;
+call    0 never executed
+branch  1 never executed (fallthrough)
+branch  2 never executed (throw)
+    %%%%%:   32-block  0
+call    3 never executed
+branch  4 never executed (fallthrough)
+branch  5 never executed (throw)
+    #####:   33:    std::cout << "Noul producator: "; std::cin >> prod;
+    %%%%%:   33-block  0
+call    0 never executed
+branch  1 never executed (fallthrough)
+branch  2 never executed (throw)
+    %%%%%:   33-block  1
+call    3 never executed
+branch  4 never executed (fallthrough)
+branch  5 never executed (throw)
+    #####:   34:    std::cout << "Noul model: "; std::cin >> mod;
+    %%%%%:   34-block  0
+call    0 never executed
+branch  1 never executed (fallthrough)
+branch  2 never executed (throw)
+    %%%%%:   34-block  1
+call    3 never executed
+branch  4 never executed (fallthrough)
+branch  5 never executed (throw)
+    #####:   35:    std::cout << "Noul tip: "; std::cin >> tip;
+    %%%%%:   35-block  0
+call    0 never executed
+branch  1 never executed (fallthrough)
+branch  2 never executed (throw)
+    %%%%%:   35-block  1
+call    3 never executed
+branch  4 never executed (fallthrough)
+branch  5 never executed (throw)
+        -:   36:    try {
+    #####:   37:        service.modificaMasina(nr, prod, mod, tip);
+    %%%%%:   37-block  0
+call    0 never executed
+branch  1 never executed (fallthrough)
+branch  2 never executed (throw)
+    =====:   38:    } catch (const std::exception& e) {
+    $$$$$:   38-block  0
+branch  0 never executed (fallthrough)
+branch  1 never executed
+    $$$$$:   38-block  1
+call    2 never executed
+    =====:   39:        std::cout << "Eroare: " << e.what() << "\n";
+call    0 never executed
+branch  1 never executed (fallthrough)
+branch  2 never executed (throw)
+    $$$$$:   39-block  0
+call    3 never executed
+call    4 never executed
+branch  5 never executed (fallthrough)
+branch  6 never executed (throw)
+    $$$$$:   39-block  1
+call    7 never executed
+branch  8 never executed (fallthrough)
+branch  9 never executed (throw)
+    =====:   40:    }
+    $$$$$:   40-block  0
+call    0 never executed
+    $$$$$:   40-block  1
+call    1 never executed
+    #####:   41:}
+    %%%%%:   41-block  0
+call    0 never executed
+call    1 never executed
+call    2 never executed
+call    3 never executed
+    $$$$$:   41-block  1
+call    4 never executed
+    $$$$$:   41-block  2
+call    5 never executed
+    $$$$$:   41-block  3
+call    6 never executed
+    $$$$$:   41-block  4
+call    7 never executed
+        -:   42:
+function _ZN8MasinaUI7cautaUIEv called 0 returned 0% blocks executed 0%
+    #####:   43:void MasinaUI::cautaUI() {
+    #####:   44:    std::string nr;
+    %%%%%:   44-block  0
+call    0 never executed
+    #####:   45:    std::cout << "Nr inmatriculare: "; std::cin >> nr;
+call    0 never executed
+branch  1 never executed (fallthrough)
+branch  2 never executed (throw)
+    %%%%%:   45-block  0
+call    3 never executed
+branch  4 never executed (fallthrough)
+branch  5 never executed (throw)
+        -:   46:    try {
+    #####:   47:        const auto& m = service.cautaMasina(nr);
+    %%%%%:   47-block  0
+call    0 never executed
+branch  1 never executed (fallthrough)
+branch  2 never executed (throw)
+    #####:   48:        std::cout << m.getNrInmatriculare() << " " << m.getProducator()
+    %%%%%:   48-block  0
+call    0 never executed
+branch  1 never executed (fallthrough)
+branch  2 never executed (throw)
+    #####:   49:                  << " " << m.getModel() << " " << m.getTip() << "\n";
+    %%%%%:   49-block  0
+call    0 never executed
+branch  1 never executed (fallthrough)
+branch  2 never executed (throw)
+    %%%%%:   49-block  1
+call    3 never executed
+branch  4 never executed (fallthrough)
+branch  5 never executed (throw)
+    %%%%%:   49-block  2
+call    6 never executed
+branch  7 never executed (fallthrough)
+branch  8 never executed (throw)
+    %%%%%:   49-block  3
+call    9 never executed
+branch 10 never executed (fallthrough)
+branch 11 never executed (throw)
+    %%%%%:   49-block  4
+call   12 never executed
+branch 13 never executed (fallthrough)
+branch 14 never executed (throw)
+    %%%%%:   49-block  5
+call   15 never executed
+branch 16 never executed (fallthrough)
+branch 17 never executed (throw)
+    %%%%%:   49-block  6
+call   18 never executed
+branch 19 never executed (fallthrough)
+branch 20 never executed (throw)
+    %%%%%:   49-block  7
+call   21 never executed
+branch 22 never executed (fallthrough)
+branch 23 never executed (throw)
+    %%%%%:   49-block  8
+call   24 never executed
+branch 25 never executed (fallthrough)
+branch 26 never executed (throw)
+    %%%%%:   49-block  9
+call   27 never executed
+branch 28 never executed (fallthrough)
+branch 29 never executed (throw)
+    %%%%%:   49-block 10
+call   30 never executed
+branch 31 never executed (fallthrough)
+branch 32 never executed (throw)
+    =====:   50:    } catch (const std::exception& e) {
+    $$$$$:   50-block  0
+branch  0 never executed (fallthrough)
+branch  1 never executed
+    $$$$$:   50-block  1
+call    2 never executed
+    =====:   51:        std::cout << "Eroare: " << e.what() << "\n";
+call    0 never executed
+branch  1 never executed (fallthrough)
+branch  2 never executed (throw)
+    $$$$$:   51-block  0
+call    3 never executed
+call    4 never executed
+branch  5 never executed (fallthrough)
+branch  6 never executed (throw)
+    $$$$$:   51-block  1
+call    7 never executed
+branch  8 never executed (fallthrough)
+branch  9 never executed (throw)
+    =====:   52:    }
+    $$$$$:   52-block  0
+call    0 never executed
+    $$$$$:   52-block  1
+call    1 never executed
+    #####:   53:}
+    %%%%%:   53-block  0
+call    0 never executed
+    $$$$$:   53-block  1
+call    1 never executed
+        -:   54:
+function _ZNK8MasinaUI13afiseazaToateEv called 0 returned 0% blocks executed 0%
+    #####:   55:void MasinaUI::afiseazaToate() const {
+    #####:   56:    for (const auto& m : service.getAllMasini()) {
+    %%%%%:   56-block  0
+call    0 never executed
+branch  1 never executed (fallthrough)
+branch  2 never executed (throw)
+    %%%%%:   56-block  1
+call    3 never executed
+call    4 never executed
+    %%%%%:   56-block  2
+call    5 never executed
+    %%%%%:   56-block  3
+call    6 never executed
+    %%%%%:   56-block  4
+call    7 never executed
+branch  8 never executed
+branch  9 never executed (fallthrough)
+    #####:   57:        std::cout << m.getNrInmatriculare() << " " << m.getProducator()
+call    0 never executed
+branch  1 never executed (fallthrough)
+branch  2 never executed (throw)
+    #####:   58:                  << " " << m.getModel() << " " << m.getTip() << "\n";
+    %%%%%:   58-block  0
+call    0 never executed
+branch  1 never executed (fallthrough)
+branch  2 never executed (throw)
+    %%%%%:   58-block  1
+call    3 never executed
+branch  4 never executed (fallthrough)
+branch  5 never executed (throw)
+    %%%%%:   58-block  2
+call    6 never executed
+branch  7 never executed (fallthrough)
+branch  8 never executed (throw)
+    %%%%%:   58-block  3
+call    9 never executed
+branch 10 never executed (fallthrough)
+branch 11 never executed (throw)
+    %%%%%:   58-block  4
+call   12 never executed
+branch 13 never executed (fallthrough)
+branch 14 never executed (throw)
+    %%%%%:   58-block  5
+call   15 never executed
+branch 16 never executed (fallthrough)
+branch 17 never executed (throw)
+    %%%%%:   58-block  6
+call   18 never executed
+branch 19 never executed (fallthrough)
+branch 20 never executed (throw)
+    %%%%%:   58-block  7
+call   21 never executed
+branch 22 never executed (fallthrough)
+branch 23 never executed (throw)
+    %%%%%:   58-block  8
+call   24 never executed
+branch 25 never executed (fallthrough)
+branch 26 never executed (throw)
+    %%%%%:   58-block  9
+call   27 never executed
+branch 28 never executed (fallthrough)
+branch 29 never executed (throw)
+    %%%%%:   58-block 10
+call   30 never executed
+branch 31 never executed (fallthrough)
+branch 32 never executed (throw)
+        -:   59:    }
+    #####:   60:}
+    %%%%%:   60-block  0
+        -:   61:
+function _ZN8MasinaUI3runEv called 1 returned 100% blocks executed 40%
+        1:   62:void MasinaUI::run() {
+        -:   63:    while (true) {
+        1:   64:        std::cout << "\n1.Adauga\n2.Sterge\n3.Modifica\n4.Cauta\n5.Afiseaza\n0.Exit\n";
+        1:   64-block  0
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        -:   65:        int cmd;
+        1:   66:        std::cout << "\nEnter your command: "; std::cin >> cmd;
+        1:   66-block  0
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        1:   66-block  1
+call    3 returned 1
+branch  4 taken 1 (fallthrough)
+branch  5 taken 0 (throw)
+        1:   67:        switch (cmd) {
+        1:   67-block  0
+branch  0 taken 0
+branch  1 taken 0
+branch  2 taken 0
+branch  3 taken 0
+branch  4 taken 0
+branch  5 taken 1
+branch  6 taken 0
+    #####:   68:            case 1: adaugaUI(); break;
+    %%%%%:   68-block  0
+call    0 never executed
+branch  1 never executed (fallthrough)
+branch  2 never executed (throw)
+    %%%%%:   68-block  1
+    #####:   69:            case 2: stergeUI(); break;
+    %%%%%:   69-block  0
+call    0 never executed
+branch  1 never executed (fallthrough)
+branch  2 never executed (throw)
+    %%%%%:   69-block  1
+    #####:   70:            case 3: modificaUI(); break;
+    %%%%%:   70-block  0
+call    0 never executed
+branch  1 never executed (fallthrough)
+branch  2 never executed (throw)
+    %%%%%:   70-block  1
+    #####:   71:            case 4: cautaUI(); break;
+    %%%%%:   71-block  0
+call    0 never executed
+branch  1 never executed (fallthrough)
+branch  2 never executed (throw)
+    %%%%%:   71-block  1
+    #####:   72:            case 5: afiseazaToate(); break;
+    %%%%%:   72-block  0
+call    0 never executed
+branch  1 never executed (fallthrough)
+branch  2 never executed (throw)
+    %%%%%:   72-block  1
+        1:   73:            case 0: return;
+        1:   73-block  0
+        1:   73-block  1
+        1:   73-block  2
+    #####:   74:            default: std::cout << "Comanda invalida!\n";
+    %%%%%:   74-block  0
+call    0 never executed
+branch  1 never executed (fallthrough)
+branch  2 never executed (throw)
+        -:   75:        }
+    #####:   76:    }
+    %%%%%:   76-block  0
+        -:   77:}

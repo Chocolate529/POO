@@ -1,0 +1,206 @@
+        -:    0:Source:/mnt/c/Users/lupse/CLionProjects/Lab5/lista.c
+        -:    0:Graph:/mnt/c/Users/lupse/CLionProjects/Lab5/cmake-build-debug-coverage/CMakeFiles/Lab5.dir/lista.c.gcno
+        -:    0:Data:/mnt/c/Users/lupse/CLionProjects/Lab5/cmake-build-debug-coverage/CMakeFiles/Lab5.dir/lista.c.gcda
+        -:    0:Runs:1
+        -:    1://
+        -:    2:// Created by lupse on 4/1/2025.
+        -:    3://
+        -:    4:
+        -:    5:#include "lista.h"
+        -:    6:
+        -:    7:#include <stdio.h>
+        -:    8:#include <stdlib.h>
+        -:    9:#define ALPHA 0.7
+        -:   10:#define BETA 0.3
+        -:   11:
+        -:   12:/// Creeaza o lista
+        -:   13:/// @param destroy_elem : functie ce distruge un element din lista
+        -:   14:/// @return : pointer catre lista creata
+function lista_creeaza called 4 returned 100% blocks executed 50%
+        4:   15:lista* lista_creeaza(void (*destroy_elem)(void*), void* (*copie_elem)(void*)) {
+        4:   16:    lista* l = (lista*)malloc(sizeof(lista));
+        4:   17:    if (l == NULL) {
+        4:   17-block  0
+branch  0 taken 0 (fallthrough)
+branch  1 taken 4
+    #####:   18:        printf("Allocation error!\n");
+    %%%%%:   18-block  0
+call    0 never executed
+    #####:   19:        return NULL;
+        -:   20:    }
+        4:   21:    l->elems = (void**)malloc(sizeof(void*));
+        4:   22:    if (l->elems == NULL) {
+        4:   22-block  0
+branch  0 taken 0 (fallthrough)
+branch  1 taken 4
+    #####:   23:        printf("Allocation error!\n");
+    %%%%%:   23-block  0
+call    0 never executed
+    #####:   24:        return NULL;
+        -:   25:    }
+        4:   26:    l->numar = 0;
+        4:   27:    l->capacitate = 1;
+        4:   28:    l->destroy_elem = destroy_elem;
+        4:   29:    l->copie_elem = copie_elem;
+        4:   30:    return l;
+        4:   30-block  0
+        -:   31:}
+        -:   32:
+        -:   33:/// Distruge o lista
+        -:   34:/// @param l : lista ce se distruge(se dealoca memoria)
+function lista_destroy called 4 returned 100% blocks executed 100%
+        4:   35:void lista_destroy(lista* l) {
+       18:   36:    for (int i = 0; i < l->numar; i++) {
+        4:   36-block  0
+       18:   36-block  1
+branch  0 taken 14
+branch  1 taken 4 (fallthrough)
+       14:   37:        l->destroy_elem(l->elems[i]);
+       14:   37-block  0
+call    0 returned 14
+       14:   38:        l->elems[i] = NULL;
+        -:   39:    }
+        4:   40:    free(l->elems);
+        4:   41:    l->elems=NULL;
+        4:   42:    free(l);
+        4:   43:    l=NULL;
+        4:   44:}
+        -:   45:
+        -:   46:/// Aloca memorie suplimentara pentru lista(o dubleaza)
+        -:   47:/// @param list : pointer catre lista
+function lista_aloca_memorie called 5 returned 100% blocks executed 75%
+        5:   48:void lista_aloca_memorie(lista *list) {
+        5:   49:    void** temp = malloc(list->capacitate*2*sizeof(void*));
+        5:   50:    if (temp==NULL) {
+        5:   50-block  0
+branch  0 taken 0 (fallthrough)
+branch  1 taken 5
+    #####:   51:        printf("Allocation Error!\n");
+    %%%%%:   51-block  0
+call    0 never executed
+    #####:   52:        return;
+        -:   53:    }
+       29:   54:    for (int i = 0; i < list->numar; i++) {
+        5:   54-block  0
+       29:   54-block  1
+branch  0 taken 24
+branch  1 taken 5 (fallthrough)
+       24:   55:        temp[i] = list->elems[i];
+       24:   55-block  0
+        -:   56:    }
+        5:   57:    free(list->elems);
+        5:   58:    list->elems = temp;
+        5:   59:    list->capacitate *= 2;
+        5:   59-block  0
+        -:   60:}
+        -:   61:
+        -:   62:/// Dealoca memorie dintr-o lista(o injumatateste)
+        -:   63:/// @param list : pointer catre lista
+function lista_dealoca_memorie called 0 returned 0% blocks executed 0%
+    #####:   64:void lista_dealoca_memorie(lista *list) {
+    #####:   65:    void** temp = malloc(list->capacitate*sizeof(void*));
+    #####:   66:    if (temp==NULL) {
+    %%%%%:   66-block  0
+branch  0 never executed (fallthrough)
+branch  1 never executed
+    #####:   67:        printf("Allocation Error!\n");
+    %%%%%:   67-block  0
+call    0 never executed
+    #####:   68:        return;
+        -:   69:    }
+    #####:   70:    for (int i = 0; i < list->numar; i++) {
+    %%%%%:   70-block  0
+    %%%%%:   70-block  1
+branch  0 never executed
+branch  1 never executed (fallthrough)
+    #####:   71:        temp[i] = list->elems[i];
+    %%%%%:   71-block  0
+        -:   72:    }
+    #####:   73:    free(list->elems);
+    #####:   74:    list->elems = temp;
+    #####:   75:    list->capacitate /= 2;
+    %%%%%:   75-block  0
+        -:   76:}
+        -:   77:
+        -:   78:/// Adauga un element in capatul listei
+        -:   79:/// @param list : pointer catre o lista
+        -:   80:/// @param elem : pointer catre un element
+function lista_push_back called 16 returned 100% blocks executed 100%
+       16:   81:void lista_push_back(lista* list, void* elem) {
+       16:   82:    if (list->numar >= ALPHA * list->capacitate)
+       16:   82-block  0
+branch  0 taken 5 (fallthrough)
+branch  1 taken 11
+        5:   83:        lista_aloca_memorie(list);
+        5:   83-block  0
+call    0 returned 5
+       16:   84:    list->elems[list->numar] = list->copie_elem(elem);
+       16:   84-block  0
+call    0 returned 16
+       16:   85:    list->numar++;
+       16:   86:}
+        -:   87:
+        -:   88:/// Returneaza o copie a ultimului element din lista
+        -:   89:/// @param list : pointer catre o lista
+        -:   90:/// @return : pointer catre o copie a ultimului element din lista
+function lista_top called 2 returned 100% blocks executed 75%
+        2:   91:void* lista_top(lista* list) {
+        2:   92:    if (list->numar == 0)
+        2:   92-block  0
+branch  0 taken 0 (fallthrough)
+branch  1 taken 2
+    #####:   93:        return NULL;
+    %%%%%:   93-block  0
+        2:   94:    return list->copie_elem(list->elems[list->numar-1]);
+        2:   94-block  0
+call    0 returned 2
+        -:   95:}
+        -:   96:
+        -:   97:/// Sterge ultimul element din lista
+        -:   98:/// @param list : pointer catre o lista
+        -:   99:/// @return :
+        -:  100:///     - 1 daca lista e goala
+        -:  101:///     - 0 daca s-a sters elementul cu succes
+function lista_pop called 2 returned 100% blocks executed 75%
+        2:  102:int lista_pop(lista* list) {
+        2:  103:    if (list->numar == 0)
+        2:  103-block  0
+branch  0 taken 0 (fallthrough)
+branch  1 taken 2
+    #####:  104:        return 1;
+    %%%%%:  104-block  0
+        2:  105:    list->destroy_elem(list->elems[list->numar-1]);
+        2:  105-block  0
+call    0 returned 2
+        2:  106:    list->elems[list->numar-1] = NULL;
+        2:  107:    list->numar--;
+        2:  108:    if (list->numar <= BETA * list->capacitate && list->capacitate > 5)
+branch  0 taken 2 (fallthrough)
+branch  1 taken 0
+        2:  108-block  0
+branch  2 taken 0 (fallthrough)
+branch  3 taken 2
+    #####:  109:        lista_dealoca_memorie(list);
+    %%%%%:  109-block  0
+call    0 never executed
+        2:  110:    return 0;
+        2:  110-block  0
+        -:  111:}
+        -:  112:
+        -:  113:/// Verifica daca lista e goala
+        -:  114:/// @param list : pointer catre o lista
+        -:  115:/// @return :
+        -:  116:///     - 1 daca lista e goala
+        -:  117:///     - 0 daca lista nu e goala
+function lista_empty called 4 returned 100% blocks executed 100%
+        4:  118:int lista_empty(const lista* list) {
+        4:  119:    if (list->numar == 0)
+        4:  119-block  0
+branch  0 taken 2 (fallthrough)
+branch  1 taken 2
+        2:  120:        return 1;
+        2:  120-block  0
+        2:  121:    return 0;
+        2:  121-block  0
+        -:  122:}
+        -:  123:

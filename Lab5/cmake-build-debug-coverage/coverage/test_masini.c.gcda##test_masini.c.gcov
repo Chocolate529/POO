@@ -1,0 +1,1142 @@
+        -:    0:Source:/mnt/c/Users/lupse/CLionProjects/Lab5/test_masini.c
+        -:    0:Graph:/mnt/c/Users/lupse/CLionProjects/Lab5/cmake-build-debug-coverage/CMakeFiles/Lab5.dir/test_masini.c.gcno
+        -:    0:Data:/mnt/c/Users/lupse/CLionProjects/Lab5/cmake-build-debug-coverage/CMakeFiles/Lab5.dir/test_masini.c.gcda
+        -:    0:Runs:1
+        -:    1://
+        -:    2:// Created by kevin on 3/23/2025.
+        -:    3://
+        -:    4:
+        -:    5:#include <assert.h>
+        -:    6:#include <string.h>
+        -:    7:#include "test_masini.h"
+        -:    8:
+        -:    9:#include <stdio.h>
+        -:   10:#include <stdlib.h>
+        -:   11:
+        -:   12:#include "domeniu_masina.h"
+        -:   13:#include "validator_masina.h"
+        -:   14:#include "repo.h"
+        -:   15:#include "service_masini.h"
+        -:   16:
+        -:   17:/// Teste pentru functiile din domeniu_masina.c
+function test_domeniu_masina called 1 returned 100% blocks executed 70%
+        1:   18:void test_domeniu_masina() {
+        -:   19:    /* --- Test creere masina --- */
+        1:   20:    int id=1;
+        1:   21:    char* model = malloc(10*sizeof(char));
+        1:   22:    strcpy(model, "Nissan");
+        1:   23:    char* nr_inmatriculare = malloc(10*sizeof(char));
+        1:   24:    strcpy(nr_inmatriculare, "BH07DMY");
+        1:   25:    char* categorie = malloc(10*sizeof(char));
+        1:   26:    strcpy(categorie, "suv");
+        1:   27:    int inchiriata=0;
+        1:   28:    struct_masina* masina = creeaza_masina(id, model, nr_inmatriculare, categorie, inchiriata);
+        1:   28-block  0
+call    0 returned 1
+       1*:   29:    assert(masina->id==1);
+branch  0 taken 0 (fallthrough)
+branch  1 taken 1
+    %%%%%:   29-block  0
+call    2 never executed
+       1*:   30:    assert(masina->inchiriata==0);
+        1:   30-block  0
+branch  0 taken 0 (fallthrough)
+branch  1 taken 1
+    %%%%%:   30-block  1
+call    2 never executed
+       1*:   31:    assert(strcmp(masina->model, model)==0);
+        1:   31-block  0
+branch  0 taken 0 (fallthrough)
+branch  1 taken 1
+    %%%%%:   31-block  1
+call    2 never executed
+       1*:   32:    assert(strcmp(masina->nr_inmatriculare, nr_inmatriculare)==0);
+        1:   32-block  0
+branch  0 taken 0 (fallthrough)
+branch  1 taken 1
+    %%%%%:   32-block  1
+call    2 never executed
+       1*:   33:    assert(strcmp(masina->categorie, categorie)==0);
+        1:   33-block  0
+branch  0 taken 0 (fallthrough)
+branch  1 taken 1
+    %%%%%:   33-block  1
+call    2 never executed
+        -:   34:
+        -:   35:    /* --- Teste Getters --- */
+        -:   36:
+        -:   37:    //Test get_id
+       1*:   38:    assert(get_id_masina(masina)==id);
+        1:   38-block  0
+call    0 returned 1
+branch  1 taken 0 (fallthrough)
+branch  2 taken 1
+    %%%%%:   38-block  1
+call    3 never executed
+        -:   39:    //Test get_model
+       1*:   40:    assert(strcmp(get_model_masina(masina),model)==0);
+        1:   40-block  0
+call    0 returned 1
+branch  1 taken 0 (fallthrough)
+branch  2 taken 1
+    %%%%%:   40-block  1
+call    3 never executed
+        -:   41:    //Test get_nr_inmatriculare
+       1*:   42:    assert(strcmp(get_nr_inmatriculare_masina(masina),nr_inmatriculare)==0);
+        1:   42-block  0
+call    0 returned 1
+branch  1 taken 0 (fallthrough)
+branch  2 taken 1
+    %%%%%:   42-block  1
+call    3 never executed
+        -:   43:    //Test get_categorie
+       1*:   44:    assert(strcmp(get_categorie_masina(masina),categorie)==0);
+        1:   44-block  0
+call    0 returned 1
+branch  1 taken 0 (fallthrough)
+branch  2 taken 1
+    %%%%%:   44-block  1
+call    3 never executed
+        -:   45:    //Test get_inchiriata
+       1*:   46:    assert(get_inchiriata_masina(masina)==inchiriata);
+        1:   46-block  0
+call    0 returned 1
+branch  1 taken 0 (fallthrough)
+branch  2 taken 1
+    %%%%%:   46-block  1
+call    3 never executed
+        -:   47:
+        -:   48:    /* --- Teste Setters --- */
+        -:   49:
+        1:   50:    char* model_nou = malloc(10*sizeof(char));
+        1:   51:    strcpy(model_nou, "Ford");
+        1:   52:    char* nr_inmatriculare_nou = malloc(10*sizeof(char));
+        1:   53:    strcpy(nr_inmatriculare_nou, "CJ19MCR");
+        1:   54:    char* categorie_nou = malloc(10*sizeof(char));
+        1:   55:    strcpy(categorie_nou, "mini");
+        1:   56:    int inchiriata_nou=1;
+        -:   57:
+        -:   58:    //Test set_model
+        1:   59:    set_model_masina(masina, model_nou);
+        1:   59-block  0
+call    0 returned 1
+       1*:   60:    assert(strcmp(get_model_masina(masina),model_nou)==0);
+call    0 returned 1
+branch  1 taken 0 (fallthrough)
+branch  2 taken 1
+    %%%%%:   60-block  0
+call    3 never executed
+        -:   61:
+        -:   62:    //Test set_nr_inmatriculare
+        1:   63:    set_nr_inmatriculare_masina(masina, nr_inmatriculare_nou);
+        1:   63-block  0
+call    0 returned 1
+       1*:   64:    assert(strcmp(get_nr_inmatriculare_masina(masina),nr_inmatriculare_nou)==0);
+call    0 returned 1
+branch  1 taken 0 (fallthrough)
+branch  2 taken 1
+    %%%%%:   64-block  0
+call    3 never executed
+        -:   65:
+        -:   66:    //Test set_categorie
+        1:   67:    set_categorie_masina(masina, categorie_nou);
+        1:   67-block  0
+call    0 returned 1
+       1*:   68:    assert(strcmp(get_categorie_masina(masina),categorie_nou)==0);
+call    0 returned 1
+branch  1 taken 0 (fallthrough)
+branch  2 taken 1
+    %%%%%:   68-block  0
+call    3 never executed
+        -:   69:
+        -:   70:    //Test set_inchiriata
+        1:   71:    set_inchiriata_masina(masina, inchiriata_nou);
+        1:   71-block  0
+call    0 returned 1
+       1*:   72:    assert(get_inchiriata_masina(masina)==inchiriata_nou);
+call    0 returned 1
+branch  1 taken 0 (fallthrough)
+branch  2 taken 1
+    %%%%%:   72-block  0
+call    3 never executed
+        -:   73:
+        -:   74:    /* --- Test comparare masini --- */
+        1:   75:    int id2=3;
+        1:   76:    char* model2 = malloc(10*sizeof(char));
+        1:   77:    strcpy(model2, "Ford");
+        1:   78:    char* nr_inmatriculare2 = malloc(10*sizeof(char));
+        1:   79:    strcpy(nr_inmatriculare2, "banana");
+        1:   80:    char* categorie2 = malloc(10*sizeof(char));
+        1:   81:    strcpy(categorie2, "mini");
+        1:   82:    int inchiriata2=0;
+        1:   83:    struct_masina* masina2 = creeaza_masina(id2, model2, nr_inmatriculare2, categorie2, inchiriata2);
+        1:   83-block  0
+call    0 returned 1
+       1*:   84:    assert(compara_masini(masina, masina2)==0);
+call    0 returned 1
+branch  1 taken 0 (fallthrough)
+branch  2 taken 1
+    %%%%%:   84-block  0
+call    3 never executed
+       1*:   85:    assert(compara_masini(masina, masina)==1);
+        1:   85-block  0
+call    0 returned 1
+branch  1 taken 0 (fallthrough)
+branch  2 taken 1
+    %%%%%:   85-block  1
+call    3 never executed
+        -:   86:
+        -:   87:    /* --- Test copiere masina --- */
+        1:   88:    struct_masina* masina_copiata = copiaza_masina(masina);
+        1:   88-block  0
+call    0 returned 1
+       1*:   89:    assert(compara_masini(masina_copiata, masina)==1);
+call    0 returned 1
+branch  1 taken 0 (fallthrough)
+branch  2 taken 1
+    %%%%%:   89-block  0
+call    3 never executed
+        -:   90:
+        1:   91:    destroy_masina(masina);
+        1:   91-block  0
+call    0 returned 1
+        1:   92:    destroy_masina(masina2);
+call    0 returned 1
+        1:   93:    destroy_masina(masina_copiata);
+call    0 returned 1
+        1:   94:}
+        -:   95:/// Teste pentru functiile din validator_masina.c
+function test_validator_masina called 1 returned 100% blocks executed 81%
+        1:   96:void test_validator_masina() {
+        -:   97:    /* --- Test cu date corecte --- */
+        1:   98:    int id_corect=1;
+        1:   99:    char* model_corect = malloc(10*sizeof(char));
+        1:  100:    strcpy(model_corect, "Nissan");
+        1:  101:    char* nr_inmatriculare_corect = malloc(10*sizeof(char));
+        1:  102:    strcpy(nr_inmatriculare_corect, "BH07DMY");
+        1:  103:    char* categorie_corecta = malloc(10*sizeof(char));
+        1:  104:    strcpy(categorie_corecta, "suv");
+        1:  105:    int inchiriata_corect=0;
+        1:  106:    struct_masina* masina_corecta = creeaza_masina(id_corect, model_corect, nr_inmatriculare_corect, categorie_corecta, inchiriata_corect);
+        1:  106-block  0
+call    0 returned 1
+       1*:  107:    assert(validator_masina(masina_corecta)==0);
+call    0 returned 1
+branch  1 taken 0 (fallthrough)
+branch  2 taken 1
+    %%%%%:  107-block  0
+call    3 never executed
+        1:  108:    destroy_masina(masina_corecta);
+        1:  108-block  0
+call    0 returned 1
+        -:  109:
+        -:  110:    /* --- Test cu id gresit --- */
+        1:  111:    int id_gresit=-1;
+        1:  112:    char* model_id = malloc(10*sizeof(char));
+        1:  113:    strcpy(model_id, "Nissan");
+        1:  114:    char* nr_inmatriculare_id = malloc(10*sizeof(char));
+        1:  115:    strcpy(nr_inmatriculare_id, "BH07DMY");
+        1:  116:    char* categorie_id = malloc(10*sizeof(char));
+        1:  117:    strcpy(categorie_id, "suv");
+        1:  118:    int inchiriata_id=0;
+        1:  119:    struct_masina* masina_gresita_id = creeaza_masina(id_gresit, model_id, nr_inmatriculare_id, categorie_id, inchiriata_id);
+call    0 returned 1
+       1*:  120:    assert(validator_masina(masina_gresita_id)==-1);
+call    0 returned 1
+branch  1 taken 0 (fallthrough)
+branch  2 taken 1
+    %%%%%:  120-block  0
+call    3 never executed
+        1:  121:    destroy_masina(masina_gresita_id);
+        1:  121-block  0
+call    0 returned 1
+        -:  122:
+        -:  123:    /* --- Test cu model gresit --- */
+        1:  124:    int id_model = 1;
+        1:  125:    char* model_gresit = malloc(10*sizeof(char));
+        1:  126:    strcpy(model_gresit, "");
+        1:  127:    char* nr_inmatriculare_model = malloc(10*sizeof(char));
+        1:  128:    strcpy(nr_inmatriculare_model, "BH07DMY");
+        1:  129:    char* categorie_model = malloc(10*sizeof(char));
+        1:  130:    strcpy(categorie_model, "suv");
+        1:  131:    int inchiriata_model=0;
+        1:  132:    struct_masina* masina_gresita_model = creeaza_masina(id_model, model_gresit, nr_inmatriculare_model, categorie_model, inchiriata_model);
+call    0 returned 1
+       1*:  133:    assert(validator_masina(masina_gresita_model)==-1);
+call    0 returned 1
+branch  1 taken 0 (fallthrough)
+branch  2 taken 1
+    %%%%%:  133-block  0
+call    3 never executed
+        1:  134:    destroy_masina(masina_gresita_model);
+        1:  134-block  0
+call    0 returned 1
+        -:  135:
+        -:  136:    /* --- Test cu numar de inmatriculare gresit --- */
+        1:  137:    int id_nr_inmatriculare = 1;
+        1:  138:    char* model_nr_inmatriculare = malloc(10*sizeof(char));
+        1:  139:    strcpy(model_nr_inmatriculare, "Nissan");
+        1:  140:    char* nr_inmatriculare_gresit = malloc(10*sizeof(char));
+        1:  141:    strcpy(nr_inmatriculare_gresit, "");
+        1:  142:    char* categorie_nr_inmatriculare = malloc(10*sizeof(char));
+        1:  143:    strcpy(categorie_nr_inmatriculare, "suv");
+        1:  144:    int inchiriata_nr_inmatriculare = 0;
+        1:  145:    struct_masina* masina_gresita_nr_inmatriculare = creeaza_masina(id_nr_inmatriculare, model_nr_inmatriculare, nr_inmatriculare_gresit, categorie_nr_inmatriculare, inchiriata_nr_inmatriculare);
+call    0 returned 1
+       1*:  146:    assert(validator_masina(masina_gresita_nr_inmatriculare)==-1);
+call    0 returned 1
+branch  1 taken 0 (fallthrough)
+branch  2 taken 1
+    %%%%%:  146-block  0
+call    3 never executed
+        1:  147:    destroy_masina(masina_gresita_nr_inmatriculare);
+        1:  147-block  0
+call    0 returned 1
+        -:  148:
+        -:  149:    /* --- Test cu categorie gresit --- */
+        1:  150:    int id_categorie = 1;
+        1:  151:    char* model_categorie = malloc(10*sizeof(char));
+        1:  152:    strcpy(model_categorie, "Nissan");
+        1:  153:    char* nr_inmatriculare_categorie = malloc(10*sizeof(char));
+        1:  154:    strcpy(nr_inmatriculare_categorie, "BH07DMY");
+        1:  155:    char* categorie_gresita = malloc(10*sizeof(char));
+        1:  156:    strcpy(categorie_gresita, "supercar");
+        1:  157:    int inchiriata_categorie=5;
+        1:  158:    struct_masina* masina_gresita_categorie = creeaza_masina(id_categorie, model_categorie, nr_inmatriculare_categorie, categorie_gresita, inchiriata_categorie);
+call    0 returned 1
+       1*:  159:    assert(validator_masina(masina_gresita_categorie)==-1);
+call    0 returned 1
+branch  1 taken 0 (fallthrough)
+branch  2 taken 1
+    %%%%%:  159-block  0
+call    3 never executed
+        1:  160:    destroy_masina(masina_gresita_categorie);
+        1:  160-block  0
+call    0 returned 1
+        -:  161:
+        -:  162:    /* --- Test cu status inchiriere gresit --- */
+        1:  163:    int id_inchiriata = 1;
+        1:  164:    char* model_inchiriata = malloc(10*sizeof(char));
+        1:  165:    strcpy(model_inchiriata, "Nissan");
+        1:  166:    char* nr_inmatriculare_inchiriata = malloc(10*sizeof(char));
+        1:  167:    strcpy(nr_inmatriculare_inchiriata, "BH07DMY");
+        1:  168:    char* categorie_inchiriata = malloc(10*sizeof(char));
+        1:  169:    strcpy(categorie_inchiriata, "suv");
+        1:  170:    int inchiriata_gresit = 2;
+        1:  171:    struct_masina* masina_gresita_inchiriata = creeaza_masina(id_inchiriata, model_inchiriata, nr_inmatriculare_inchiriata, categorie_inchiriata, inchiriata_gresit);
+call    0 returned 1
+       1*:  172:    assert(validator_masina(masina_gresita_inchiriata)==-1);
+call    0 returned 1
+branch  1 taken 0 (fallthrough)
+branch  2 taken 1
+    %%%%%:  172-block  0
+call    3 never executed
+        1:  173:    destroy_masina(masina_gresita_inchiriata);
+        1:  173-block  0
+call    0 returned 1
+        -:  174:
+        1:  175:}
+        -:  176:/// Teste pentru functiile din repo_masini.c
+function test_repo_masini called 1 returned 100% blocks executed 74%
+        1:  177:void test_repo_masini() {
+        1:  178:    repository* repo_masini = repo_creeaza((void*)destroy_masina, (void*)get_id_masina, (void*)copiaza_masina);
+        1:  178-block  0
+call    0 returned 1
+        -:  179:
+        -:  180:    /* --- Teste adaugare --- */
+        -:  181:
+        -:  182:    //Test adaugare fara alocare
+        1:  183:    int id1=0;
+        1:  184:    char* model1 = malloc(10*sizeof(char));
+        1:  185:    strcpy(model1, "Nissan");
+        1:  186:    char* nr_inmatriculare1 = malloc(10*sizeof(char));
+        1:  187:    strcpy(nr_inmatriculare1, "BH07DMY");
+        1:  188:    char* categorie1 = malloc(10*sizeof(char));
+        1:  189:    strcpy(categorie1, "suv");
+        1:  190:    int inchiriata1=0;
+        1:  191:    struct_masina* masina1 = creeaza_masina(id1, model1, nr_inmatriculare1, categorie1, inchiriata1);
+call    0 returned 1
+       1*:  192:    assert(repo_masini->numar==0);
+branch  0 taken 0 (fallthrough)
+branch  1 taken 1
+    %%%%%:  192-block  0
+call    2 never executed
+        1:  193:    repo_adauga_element(repo_masini, masina1);
+        1:  193-block  0
+call    0 returned 1
+       1*:  194:    assert(repo_masini->numar==1);
+branch  0 taken 0 (fallthrough)
+branch  1 taken 1
+    %%%%%:  194-block  0
+call    2 never executed
+       1*:  195:    assert(compara_masini(repo_masini->lista[0], masina1)==1);
+        1:  195-block  0
+call    0 returned 1
+branch  1 taken 0 (fallthrough)
+branch  2 taken 1
+    %%%%%:  195-block  1
+call    3 never executed
+        -:  196:
+        -:  197:    //Test adaugare cu alocare
+        1:  198:    int id2=2;
+        1:  199:    char* model2 = malloc(10*sizeof(char));
+        1:  200:    strcpy(model2, "Opel");
+        1:  201:    char* nr_inmatriculare2 = malloc(10*sizeof(char));
+        1:  202:    strcpy(nr_inmatriculare2, "CJ69XXX");
+        1:  203:    char* categorie2 = malloc(10*sizeof(char));
+        1:  204:    strcpy(categorie2, "mini");
+        1:  205:    int inchiriata2=0;
+        1:  206:    struct_masina* masina2 = creeaza_masina(id2, model2, nr_inmatriculare2, categorie2, inchiriata2);
+        1:  206-block  0
+call    0 returned 1
+       1*:  207:    assert(repo_masini->numar==1);
+branch  0 taken 0 (fallthrough)
+branch  1 taken 1
+    %%%%%:  207-block  0
+call    2 never executed
+        1:  208:    repo_adauga_element(repo_masini, masina2);
+        1:  208-block  0
+call    0 returned 1
+       1*:  209:    assert(repo_masini->numar==2);
+branch  0 taken 0 (fallthrough)
+branch  1 taken 1
+    %%%%%:  209-block  0
+call    2 never executed
+       1*:  210:    assert(compara_masini(repo_masini->lista[1], masina2)==1);
+        1:  210-block  0
+call    0 returned 1
+branch  1 taken 0 (fallthrough)
+branch  2 taken 1
+    %%%%%:  210-block  1
+call    3 never executed
+        -:  211:
+        -:  212:    /* --- Teste cautare --- */
+        -:  213:
+        -:  214:    //Test cautare cu masina existenta
+        1:  215:    struct_masina* masina_cautata = repo_cauta_element(repo_masini, get_id_masina(masina1));
+        1:  215-block  0
+call    0 returned 1
+call    1 returned 1
+       1*:  216:    assert(compara_masini(masina_cautata, masina1)==1);
+call    0 returned 1
+branch  1 taken 0 (fallthrough)
+branch  2 taken 1
+    %%%%%:  216-block  0
+call    3 never executed
+        -:  217:
+        -:  218:    //Test cautare cu masina inexistenta
+        1:  219:    struct_masina* masina_cautata2 = repo_cauta_element(repo_masini, 3);
+        1:  219-block  0
+call    0 returned 1
+       1*:  220:    assert(masina_cautata2==NULL);
+branch  0 taken 0 (fallthrough)
+branch  1 taken 1
+    %%%%%:  220-block  0
+call    2 never executed
+        -:  221:
+        -:  222:    /* --- Test modificare --- */
+        1:  223:    int id4=2;
+        1:  224:    char* model4 = malloc(10*sizeof(char));
+        1:  225:    strcpy(model4, "Suzuki");
+        1:  226:    char* nr_inmatriculare4 = malloc(10*sizeof(char));
+        1:  227:    strcpy(nr_inmatriculare4, "HR00AAA");
+        1:  228:    char* categorie4 = malloc(10*sizeof(char));
+        1:  229:    strcpy(categorie4, "sport");
+        1:  230:    int inchiriata4=0;
+        1:  231:    struct_masina* masina4 = creeaza_masina(id4, model4, nr_inmatriculare4, categorie4, inchiriata4);
+        1:  231-block  0
+call    0 returned 1
+        1:  232:    repo_modifica_element(repo_masini, masina4);
+call    0 returned 1
+       1*:  233:    assert(compara_masini(repo_masini->lista[1], masina4)==1);
+call    0 returned 1
+branch  1 taken 0 (fallthrough)
+branch  2 taken 1
+    %%%%%:  233-block  0
+call    3 never executed
+        -:  234:
+        -:  235:    /* --- Teste stergere ---*/
+        -:  236:
+        1:  237:    int id5=3;
+        1:  238:    char* model5 = malloc(10*sizeof(char));
+        1:  239:    strcpy(model5, "Suzuki");
+        1:  240:    char* nr_inmatriculare5 = malloc(10*sizeof(char));
+        1:  241:    strcpy(nr_inmatriculare5, "HR00AAA");
+        1:  242:    char* categorie5 = malloc(10*sizeof(char));
+        1:  243:    strcpy(categorie5, "sport");
+        1:  244:    int inchiriata5=0;
+        1:  245:    struct_masina* masina5 = creeaza_masina(id5, model5, nr_inmatriculare5, categorie5, inchiriata5);
+        1:  245-block  0
+call    0 returned 1
+        1:  246:    repo_adauga_element(repo_masini, masina5);
+call    0 returned 1
+        -:  247:    //Test stergere fara dealocare
+       1*:  248:    assert(repo_masini->numar==3);
+branch  0 taken 0 (fallthrough)
+branch  1 taken 1
+    %%%%%:  248-block  0
+call    2 never executed
+        1:  249:    repo_sterge_element(repo_masini, get_id_masina(masina1));
+        1:  249-block  0
+call    0 returned 1
+call    1 returned 1
+       1*:  250:    assert(repo_masini->numar==2);
+branch  0 taken 0 (fallthrough)
+branch  1 taken 1
+    %%%%%:  250-block  0
+call    2 never executed
+        -:  251:
+        -:  252:    //Test stergere cu dealocare
+        1:  253:    repo_sterge_element(repo_masini, get_id_masina(masina4));
+        1:  253-block  0
+call    0 returned 1
+call    1 returned 1
+       1*:  254:    assert(repo_masini->numar==1);
+branch  0 taken 0 (fallthrough)
+branch  1 taken 1
+    %%%%%:  254-block  0
+call    2 never executed
+        1:  255:    repo_sterge_element(repo_masini, get_id_masina(masina5));
+        1:  255-block  0
+call    0 returned 1
+call    1 returned 1
+       1*:  256:    assert(repo_masini->numar==0);
+branch  0 taken 0 (fallthrough)
+branch  1 taken 1
+    %%%%%:  256-block  0
+call    2 never executed
+        -:  257:
+        -:  258:    /* --- Test verifica_existenta_dupa_id --- */
+        1:  259:    repo_adauga_element(repo_masini, masina_cautata);
+        1:  259-block  0
+call    0 returned 1
+       1*:  260:    assert(repo_verifica_existenta_element_dupa_id(repo_masini, get_id_masina(masina_cautata))==0);
+call    0 returned 1
+call    1 returned 1
+branch  2 taken 0 (fallthrough)
+branch  3 taken 1
+    %%%%%:  260-block  0
+call    4 never executed
+       1*:  261:    assert(repo_verifica_existenta_element_dupa_id(repo_masini,5)==-2);
+        1:  261-block  0
+call    0 returned 1
+branch  1 taken 0 (fallthrough)
+branch  2 taken 1
+    %%%%%:  261-block  1
+call    3 never executed
+        1:  262:    repo_destroy(repo_masini);
+        1:  262-block  0
+call    0 returned 1
+        1:  263:}
+        -:  264:/// Teste pentru functiile din service_masini.c
+function teste_service_masini called 1 returned 100% blocks executed 70%
+        1:  265:void teste_service_masini(){
+        1:  266:    repository* repo_masini = repo_creeaza((void*)destroy_masina, (void*)get_id_masina, (void*)copiaza_masina);
+        1:  266-block  0
+call    0 returned 1
+        1:  267:    service_masina* serv_masini = service_creeaza(repo_masini, (void*)validator_masina, (void*)repo_destroy, (void*)repo_copie_repo);
+call    0 returned 1
+        -:  268:
+        -:  269:    /* --- Teste adaugare element --- */
+        -:  270:
+        -:  271:    //Test adaugare element valid cu id unic
+        1:  272:    int id1=1;
+        1:  273:    char* model1 = malloc(10*sizeof(char));
+        1:  274:    strcpy(model1, "Opel");
+        1:  275:    char* nr_inmatriculare1 = malloc(10*sizeof(char));
+        1:  276:    strcpy(nr_inmatriculare1, "BH07DMY");
+        1:  277:    char* categorie1 = malloc(10*sizeof(char));
+        1:  278:    strcpy(categorie1, "mini");
+        1:  279:    int inchiriata1 = 1;
+        1:  280:    struct_masina* masina1 = creeaza_masina(id1, model1, nr_inmatriculare1, categorie1, inchiriata1);
+call    0 returned 1
+       1*:  281:    assert(serv_masini->repo->numar==0);
+branch  0 taken 0 (fallthrough)
+branch  1 taken 1
+    %%%%%:  281-block  0
+call    2 never executed
+       1*:  282:    assert(service_adauga_element(serv_masini, masina1)==0);
+        1:  282-block  0
+call    0 returned 1
+branch  1 taken 0 (fallthrough)
+branch  2 taken 1
+    %%%%%:  282-block  1
+call    3 never executed
+       1*:  283:    assert(serv_masini->repo->numar==1);
+        1:  283-block  0
+branch  0 taken 0 (fallthrough)
+branch  1 taken 1
+    %%%%%:  283-block  1
+call    2 never executed
+       1*:  284:    assert(compara_masini(serv_masini->repo->lista[0], masina1) == 1);
+        1:  284-block  0
+call    0 returned 1
+branch  1 taken 0 (fallthrough)
+branch  2 taken 1
+    %%%%%:  284-block  1
+call    3 never executed
+        -:  285:    //test undo si redo
+        1:  286:    service_undo(serv_masini);
+        1:  286-block  0
+call    0 returned 1
+       1*:  287:    assert(service_undo(serv_masini)==-99);
+call    0 returned 1
+branch  1 taken 0 (fallthrough)
+branch  2 taken 1
+    %%%%%:  287-block  0
+call    3 never executed
+       1*:  288:    assert(serv_masini->repo->numar==0);
+        1:  288-block  0
+branch  0 taken 0 (fallthrough)
+branch  1 taken 1
+    %%%%%:  288-block  1
+call    2 never executed
+        1:  289:    service_redo(serv_masini);
+        1:  289-block  0
+call    0 returned 1
+       1*:  290:    assert(service_redo(serv_masini)==-99);
+call    0 returned 1
+branch  1 taken 0 (fallthrough)
+branch  2 taken 1
+    %%%%%:  290-block  0
+call    3 never executed
+       1*:  291:    assert(serv_masini->repo->numar==1);
+        1:  291-block  0
+branch  0 taken 0 (fallthrough)
+branch  1 taken 1
+    %%%%%:  291-block  1
+call    2 never executed
+        -:  292:
+        -:  293:    //Test adaugare element valid fara id unic
+       1*:  294:    assert(service_adauga_element(serv_masini, masina1)==-6);
+        1:  294-block  0
+call    0 returned 1
+branch  1 taken 0 (fallthrough)
+branch  2 taken 1
+    %%%%%:  294-block  1
+call    3 never executed
+       1*:  295:    assert(serv_masini->repo->numar==1);
+        1:  295-block  0
+branch  0 taken 0 (fallthrough)
+branch  1 taken 1
+    %%%%%:  295-block  1
+call    2 never executed
+        -:  296:
+        -:  297:    //Test adaugare element invalid
+        1:  298:    int id2=-1;
+        1:  299:    char* model2 = malloc(10*sizeof(char));
+        1:  300:    strcpy(model2, "");
+        1:  301:    char* nr_inmatriculare2 = malloc(10*sizeof(char));
+        1:  302:    strcpy(nr_inmatriculare2, "");
+        1:  303:    char* categorie2 = malloc(10*sizeof(char));
+        1:  304:    strcpy(categorie2, "");
+        1:  305:    int inchiriata2 = 2;
+        1:  306:    struct_masina* masina2 = creeaza_masina(id2, model2, nr_inmatriculare2, categorie2, inchiriata2);
+        1:  306-block  0
+call    0 returned 1
+       1*:  307:    assert(serv_masini->repo->numar==1);
+branch  0 taken 0 (fallthrough)
+branch  1 taken 1
+    %%%%%:  307-block  0
+call    2 never executed
+       1*:  308:    assert(service_adauga_element(serv_masini, masina2)==-1);
+        1:  308-block  0
+call    0 returned 1
+branch  1 taken 0 (fallthrough)
+branch  2 taken 1
+    %%%%%:  308-block  1
+call    3 never executed
+       1*:  309:    assert(serv_masini->repo->numar==1);
+        1:  309-block  0
+branch  0 taken 0 (fallthrough)
+branch  1 taken 1
+    %%%%%:  309-block  1
+call    2 never executed
+        1:  310:    destroy_masina(masina2);
+        1:  310-block  0
+call    0 returned 1
+        -:  311:
+        -:  312:    /* --- Teste modifica element --- */
+        -:  313:
+        -:  314:    //Test modificare element existent cu element valid
+        1:  315:    int id3=1;
+        1:  316:    char* model3 = malloc(10*sizeof(char));
+        1:  317:    strcpy(model3, "Ford");
+        1:  318:    char* nr_inmatriculare3 = malloc(10*sizeof(char));
+        1:  319:    strcpy(nr_inmatriculare3, "BV99BBB");
+        1:  320:    char* categorie3 = malloc(10*sizeof(char));
+        1:  321:    strcpy(categorie3, "sport");
+        1:  322:    int inchiriata3 = 0;
+        1:  323:    struct_masina* masina3 = creeaza_masina(id3, model3, nr_inmatriculare3, categorie3, inchiriata3);
+call    0 returned 1
+       1*:  324:    assert(service_modifica_element(serv_masini, masina3)==0);
+call    0 returned 1
+branch  1 taken 0 (fallthrough)
+branch  2 taken 1
+    %%%%%:  324-block  0
+call    3 never executed
+       1*:  325:    assert(compara_masini(serv_masini->repo->lista[0], masina3) == 1);
+        1:  325-block  0
+call    0 returned 1
+branch  1 taken 0 (fallthrough)
+branch  2 taken 1
+    %%%%%:  325-block  1
+call    3 never executed
+        -:  326:
+        -:  327:    //Test modificare element existent cu element invalid
+        1:  328:    int id4=1;
+        1:  329:    char* model4 = malloc(10*sizeof(char));
+        1:  330:    strcpy(model4, "");
+        1:  331:    char* nr_inmatriculare4 = malloc(10*sizeof(char));
+        1:  332:    strcpy(nr_inmatriculare4, "");
+        1:  333:    char* categorie4 = malloc(10*sizeof(char));
+        1:  334:    strcpy(categorie4, "");
+        1:  335:    int inchiriata4 = 3;
+        1:  336:    struct_masina* masina4 = creeaza_masina(id4, model4, nr_inmatriculare4, categorie4, inchiriata4);
+        1:  336-block  0
+call    0 returned 1
+       1*:  337:    assert(service_modifica_element(serv_masini, masina4)==-1);
+call    0 returned 1
+branch  1 taken 0 (fallthrough)
+branch  2 taken 1
+    %%%%%:  337-block  0
+call    3 never executed
+        1:  338:    destroy_masina(masina4);
+        1:  338-block  0
+call    0 returned 1
+        -:  339:
+        -:  340:    //Test modificare element inexistent
+        1:  341:    int id5=5;
+        1:  342:    char* model5 = malloc(10*sizeof(char));
+        1:  343:    strcpy(model5, "Porche");
+        1:  344:    char* nr_inmatriculare5 = malloc(10*sizeof(char));
+        1:  345:    strcpy(nr_inmatriculare5, "MM90BAI");
+        1:  346:    char* categorie5 = malloc(10*sizeof(char));
+        1:  347:    strcpy(categorie5, "suv");
+        1:  348:    int inchiriata5 = 1;
+        1:  349:    struct_masina* masina5 = creeaza_masina(id5, model5, nr_inmatriculare5, categorie5, inchiriata5);
+call    0 returned 1
+       1*:  350:    assert(service_modifica_element(serv_masini, masina5)==-7);
+call    0 returned 1
+branch  1 taken 0 (fallthrough)
+branch  2 taken 1
+    %%%%%:  350-block  0
+call    3 never executed
+        1:  351:    destroy_masina(masina5);
+        1:  351-block  0
+call    0 returned 1
+        -:  352:
+        -:  353:    /* --- Teste cautare element --- */
+        -:  354:
+        -:  355:    //Test cautare element existent
+        1:  356:    struct_masina* masina6 = service_cauta_element(serv_masini, id3);
+call    0 returned 1
+       1*:  357:    assert(compara_masini(masina6, masina3)==1);
+call    0 returned 1
+branch  1 taken 0 (fallthrough)
+branch  2 taken 1
+    %%%%%:  357-block  0
+call    3 never executed
+        1:  358:    destroy_masina(masina6);
+        1:  358-block  0
+call    0 returned 1
+        -:  359:
+        -:  360:    //Test cautare element inexistent
+        1:  361:    struct_masina* masina7 = service_cauta_element(serv_masini, id5);
+call    0 returned 1
+       1*:  362:    assert(masina7==NULL);
+branch  0 taken 0 (fallthrough)
+branch  1 taken 1
+    %%%%%:  362-block  0
+call    2 never executed
+        -:  363:
+        -:  364:    /* --- Teste stergere element --- */
+        -:  365:
+        -:  366:    //Test stergere element existent
+       1*:  367:    assert(serv_masini->repo->numar==1);
+        1:  367-block  0
+branch  0 taken 0 (fallthrough)
+branch  1 taken 1
+    %%%%%:  367-block  1
+call    2 never executed
+       1*:  368:    assert(service_sterge_element(serv_masini, id3)==0);
+        1:  368-block  0
+call    0 returned 1
+branch  1 taken 0 (fallthrough)
+branch  2 taken 1
+    %%%%%:  368-block  1
+call    3 never executed
+       1*:  369:    assert(serv_masini->repo->numar==0);
+        1:  369-block  0
+branch  0 taken 0 (fallthrough)
+branch  1 taken 1
+    %%%%%:  369-block  1
+call    2 never executed
+        -:  370:    //Test stergere element inexistent
+       1*:  371:    assert(serv_masini->repo->numar==0);
+        1:  371-block  0
+branch  0 taken 0 (fallthrough)
+branch  1 taken 1
+    %%%%%:  371-block  1
+call    2 never executed
+       1*:  372:    assert(service_sterge_element(serv_masini, id3)==-8);
+        1:  372-block  0
+call    0 returned 1
+branch  1 taken 0 (fallthrough)
+branch  2 taken 1
+    %%%%%:  372-block  1
+call    3 never executed
+       1*:  373:    assert(serv_masini->repo->numar==0);
+        1:  373-block  0
+branch  0 taken 0 (fallthrough)
+branch  1 taken 1
+    %%%%%:  373-block  1
+call    2 never executed
+        -:  374:
+        -:  375:    /* --- Teste inchiriere masina --- */
+        -:  376:
+        -:  377:    //Test inchiriere masina existenta neinchiriata
+        1:  378:    int id8=1;
+        1:  379:    char* model8 = malloc(10*sizeof(char));
+        1:  380:    strcpy(model8, "Opel");
+        1:  381:    char* nr_inmatriculare8 = malloc(10*sizeof(char));
+        1:  382:    strcpy(nr_inmatriculare8, "BH07DMY");
+        1:  383:    char* categorie8 = malloc(10*sizeof(char));
+        1:  384:    strcpy(categorie8, "mini");
+        1:  385:    int inchiriata8 = 0;
+        1:  386:    struct_masina* masina8 = creeaza_masina(id8, model8, nr_inmatriculare8, categorie8, inchiriata8);
+        1:  386-block  0
+call    0 returned 1
+        1:  387:    service_adauga_element(serv_masini, masina8);
+call    0 returned 1
+       1*:  388:    assert(get_inchiriata_masina(serv_masini->repo->lista[0])==inchiriata8);
+call    0 returned 1
+branch  1 taken 0 (fallthrough)
+branch  2 taken 1
+    %%%%%:  388-block  0
+call    3 never executed
+        1:  389:    service_inchiriaza_masina(serv_masini, id8);
+        1:  389-block  0
+call    0 returned 1
+       1*:  390:    assert(get_inchiriata_masina(serv_masini->repo->lista[0])==1);
+call    0 returned 1
+branch  1 taken 0 (fallthrough)
+branch  2 taken 1
+    %%%%%:  390-block  0
+call    3 never executed
+        -:  391:
+        -:  392:    //Test inchiriere masina existenta inchiriata
+       1*:  393:    assert(service_inchiriaza_masina(serv_masini, id8)==-6);
+        1:  393-block  0
+call    0 returned 1
+branch  1 taken 0 (fallthrough)
+branch  2 taken 1
+    %%%%%:  393-block  1
+call    3 never executed
+        -:  394:
+        -:  395:    //Test inchiriere masina inexistenta
+       1*:  396:    assert(service_inchiriaza_masina(serv_masini, 10)==-6);
+        1:  396-block  0
+call    0 returned 1
+branch  1 taken 0 (fallthrough)
+branch  2 taken 1
+    %%%%%:  396-block  1
+call    3 never executed
+        -:  397:
+        -:  398:    /* --- Teste returnare masina --- */
+        -:  399:
+        -:  400:    //Test returnare masina existenta inchiriata
+       1*:  401:    assert(get_inchiriata_masina(serv_masini->repo->lista[0])==1);
+        1:  401-block  0
+call    0 returned 1
+branch  1 taken 0 (fallthrough)
+branch  2 taken 1
+    %%%%%:  401-block  1
+call    3 never executed
+       1*:  402:    assert(service_returneaza_masina(serv_masini, id8)==0);
+        1:  402-block  0
+call    0 returned 1
+branch  1 taken 0 (fallthrough)
+branch  2 taken 1
+    %%%%%:  402-block  1
+call    3 never executed
+       1*:  403:    assert(get_inchiriata_masina(serv_masini->repo->lista[0])==0);
+        1:  403-block  0
+call    0 returned 1
+branch  1 taken 0 (fallthrough)
+branch  2 taken 1
+    %%%%%:  403-block  1
+call    3 never executed
+        -:  404:
+        -:  405:    //Test returnare masina existenta neinchiriata
+       1*:  406:    assert(service_returneaza_masina(serv_masini, id8)==-7);
+        1:  406-block  0
+call    0 returned 1
+branch  1 taken 0 (fallthrough)
+branch  2 taken 1
+    %%%%%:  406-block  1
+call    3 never executed
+        -:  407:
+        -:  408:    //Test returnare masina inexistenta
+       1*:  409:    assert(service_returneaza_masina(serv_masini, 10)==-7);
+        1:  409-block  0
+call    0 returned 1
+branch  1 taken 0 (fallthrough)
+branch  2 taken 1
+    %%%%%:  409-block  1
+call    3 never executed
+        -:  410:
+        1:  411:    service_sterge_element(serv_masini, id8);
+        1:  411-block  0
+call    0 returned 1
+        -:  412:    /* --- Teste vizualizare dupa categorie --- */
+        1:  413:    int id9=1;
+        1:  414:    char* model9 = malloc(10*sizeof(char));
+        1:  415:    strcpy(model9, "Opel");
+        1:  416:    char* nr_inmatriculare9 = malloc(10*sizeof(char));
+        1:  417:    strcpy(nr_inmatriculare9, "BH07DMY");
+        1:  418:    char* categorie9 = malloc(10*sizeof(char));
+        1:  419:    strcpy(categorie9, "mini");
+        1:  420:    int inchiriata9 = 0;
+        1:  421:    struct_masina* masina9 = creeaza_masina(id9, model9, nr_inmatriculare9, categorie9, inchiriata9);
+call    0 returned 1
+        1:  422:    service_adauga_element(serv_masini, masina9);
+call    0 returned 1
+        -:  423:
+        1:  424:    int id10=2;
+        1:  425:    char* model10 = malloc(10*sizeof(char));
+        1:  426:    strcpy(model10, "Ford");
+        1:  427:    char* nr_inmatriculare10 = malloc(10*sizeof(char));
+        1:  428:    strcpy(nr_inmatriculare10, "SM99DDD");
+        1:  429:    char* categorie10 = malloc(10*sizeof(char));
+        1:  430:    strcpy(categorie10, "sport");
+        1:  431:    int inchiriata10 = 0;
+        1:  432:    struct_masina* masina10 = creeaza_masina(id10, model10, nr_inmatriculare10, categorie10, inchiriata10);
+call    0 returned 1
+        1:  433:    service_adauga_element(serv_masini, masina10);
+call    0 returned 1
+        -:  434:
+        1:  435:    int id11=3;
+        1:  436:    char* model11 = malloc(10*sizeof(char));
+        1:  437:    strcpy(model11, "Nissan");
+        1:  438:    char* nr_inmatriculare11 = malloc(10*sizeof(char));
+        1:  439:    strcpy(nr_inmatriculare11, "B999XXX");
+        1:  440:    char* categorie11 = malloc(10*sizeof(char));
+        1:  441:    strcpy(categorie11, "suv");
+        1:  442:    int inchiriata11 = 1;
+        1:  443:    struct_masina* masina11 = creeaza_masina(id11, model11, nr_inmatriculare11, categorie11, inchiriata11);
+call    0 returned 1
+        1:  444:    service_adauga_element(serv_masini, masina11);
+call    0 returned 1
+        -:  445:
+        1:  446:    char* categorie_invalida = malloc(10*sizeof(char));
+        1:  447:    strcpy(categorie_invalida, "supercar");
+        -:  448:
+        -:  449:    //Test vizualizare dupa categorie invalida
+        1:  450:    repository* repo_cautat_1 = service_vizualizare_dupa_categorie(serv_masini, categorie_invalida);
+call    0 returned 1
+       1*:  451:    assert(repo_cautat_1==NULL);
+branch  0 taken 0 (fallthrough)
+branch  1 taken 1
+    %%%%%:  451-block  0
+call    2 never executed
+        1:  452:    free(categorie_invalida);
+        -:  453:
+        -:  454:    //Test vizualizare dupa categorie 'suv'
+        1:  455:    repository* repo_cautat_2 = service_vizualizare_dupa_categorie(serv_masini, categorie11);
+        1:  455-block  0
+call    0 returned 1
+       1*:  456:    assert(repo_cautat_2!=NULL);
+branch  0 taken 0 (fallthrough)
+branch  1 taken 1
+    %%%%%:  456-block  0
+call    2 never executed
+       1*:  457:    assert(compara_masini(repo_cautat_2->lista[0], masina11)==1);
+        1:  457-block  0
+call    0 returned 1
+branch  1 taken 0 (fallthrough)
+branch  2 taken 1
+    %%%%%:  457-block  1
+call    3 never executed
+       1*:  458:    assert(repo_cautat_2->numar==1);
+        1:  458-block  0
+branch  0 taken 0 (fallthrough)
+branch  1 taken 1
+    %%%%%:  458-block  1
+call    2 never executed
+        1:  459:    repo_destroy(repo_cautat_2);
+        1:  459-block  0
+call    0 returned 1
+        -:  460:
+        -:  461:    //Test vizualizare dupa categorie 'mini'
+        1:  462:    repository* repo_cautat_3 = service_vizualizare_dupa_categorie(serv_masini, categorie9);
+call    0 returned 1
+       1*:  463:    assert(repo_cautat_3!=NULL);
+branch  0 taken 0 (fallthrough)
+branch  1 taken 1
+    %%%%%:  463-block  0
+call    2 never executed
+       1*:  464:    assert(compara_masini(repo_cautat_3->lista[0], masina9)==1);
+        1:  464-block  0
+call    0 returned 1
+branch  1 taken 0 (fallthrough)
+branch  2 taken 1
+    %%%%%:  464-block  1
+call    3 never executed
+       1*:  465:    assert(repo_cautat_3->numar==1);
+        1:  465-block  0
+branch  0 taken 0 (fallthrough)
+branch  1 taken 1
+    %%%%%:  465-block  1
+call    2 never executed
+        1:  466:    repo_destroy(repo_cautat_3);
+        1:  466-block  0
+call    0 returned 1
+        -:  467:
+        -:  468:    //Test vizualizare dupa categorie 'sport'
+        1:  469:    repository* repo_cautat_4 = service_vizualizare_dupa_categorie(serv_masini, categorie10);
+call    0 returned 1
+       1*:  470:    assert(repo_cautat_4!=NULL);
+branch  0 taken 0 (fallthrough)
+branch  1 taken 1
+    %%%%%:  470-block  0
+call    2 never executed
+       1*:  471:    assert(compara_masini(repo_cautat_4->lista[0], masina10)==1);
+        1:  471-block  0
+call    0 returned 1
+branch  1 taken 0 (fallthrough)
+branch  2 taken 1
+    %%%%%:  471-block  1
+call    3 never executed
+       1*:  472:    assert(repo_cautat_4->numar==1);
+        1:  472-block  0
+branch  0 taken 0 (fallthrough)
+branch  1 taken 1
+    %%%%%:  472-block  1
+call    2 never executed
+        1:  473:    repo_destroy(repo_cautat_4);
+        1:  473-block  0
+call    0 returned 1
+        -:  474:
+        -:  475:    /* --- Teste sortare --- */
+        -:  476:
+        -:  477:    //Test sortare crescatoare dupa categorie
+        1:  478:    service_sortare(serv_masini, 1, 0);
+call    0 returned 1
+       1*:  479:    assert(compara_masini(serv_masini->repo->lista[0], masina9)==1);
+call    0 returned 1
+branch  1 taken 0 (fallthrough)
+branch  2 taken 1
+    %%%%%:  479-block  0
+call    3 never executed
+       1*:  480:    assert(compara_masini(serv_masini->repo->lista[1], masina10)==1);
+        1:  480-block  0
+call    0 returned 1
+branch  1 taken 0 (fallthrough)
+branch  2 taken 1
+    %%%%%:  480-block  1
+call    3 never executed
+       1*:  481:    assert(compara_masini(serv_masini->repo->lista[2], masina11)==1);
+        1:  481-block  0
+call    0 returned 1
+branch  1 taken 0 (fallthrough)
+branch  2 taken 1
+    %%%%%:  481-block  1
+call    3 never executed
+        -:  482:
+        -:  483:    //Test sortare descrescatoare dupa categorie
+        1:  484:    service_sortare(serv_masini, 0, 0);
+        1:  484-block  0
+call    0 returned 1
+       1*:  485:    assert(compara_masini(serv_masini->repo->lista[0], masina11)==1);
+call    0 returned 1
+branch  1 taken 0 (fallthrough)
+branch  2 taken 1
+    %%%%%:  485-block  0
+call    3 never executed
+       1*:  486:    assert(compara_masini(serv_masini->repo->lista[1], masina10)==1);
+        1:  486-block  0
+call    0 returned 1
+branch  1 taken 0 (fallthrough)
+branch  2 taken 1
+    %%%%%:  486-block  1
+call    3 never executed
+       1*:  487:    assert(compara_masini(serv_masini->repo->lista[2], masina9)==1);
+        1:  487-block  0
+call    0 returned 1
+branch  1 taken 0 (fallthrough)
+branch  2 taken 1
+    %%%%%:  487-block  1
+call    3 never executed
+        -:  488:
+        -:  489:    //Test sortare crescatoare dupa model
+        1:  490:    service_sortare(serv_masini, 1, 1);
+        1:  490-block  0
+call    0 returned 1
+       1*:  491:    assert(compara_masini(serv_masini->repo->lista[0], masina10)==1);
+call    0 returned 1
+branch  1 taken 0 (fallthrough)
+branch  2 taken 1
+    %%%%%:  491-block  0
+call    3 never executed
+       1*:  492:    assert(compara_masini(serv_masini->repo->lista[1], masina11)==1);
+        1:  492-block  0
+call    0 returned 1
+branch  1 taken 0 (fallthrough)
+branch  2 taken 1
+    %%%%%:  492-block  1
+call    3 never executed
+       1*:  493:    assert(compara_masini(serv_masini->repo->lista[2], masina9)==1);
+        1:  493-block  0
+call    0 returned 1
+branch  1 taken 0 (fallthrough)
+branch  2 taken 1
+    %%%%%:  493-block  1
+call    3 never executed
+        -:  494:
+        -:  495:    //Test sortare descrescatoare dupa model
+        1:  496:    service_sortare(serv_masini, 0, 1);
+        1:  496-block  0
+call    0 returned 1
+       1*:  497:    assert(compara_masini(serv_masini->repo->lista[0], masina9)==1);
+call    0 returned 1
+branch  1 taken 0 (fallthrough)
+branch  2 taken 1
+    %%%%%:  497-block  0
+call    3 never executed
+       1*:  498:    assert(compara_masini(serv_masini->repo->lista[1], masina11)==1);
+        1:  498-block  0
+call    0 returned 1
+branch  1 taken 0 (fallthrough)
+branch  2 taken 1
+    %%%%%:  498-block  1
+call    3 never executed
+       1*:  499:    assert(compara_masini(serv_masini->repo->lista[2], masina10)==1);
+        1:  499-block  0
+call    0 returned 1
+branch  1 taken 0 (fallthrough)
+branch  2 taken 1
+    %%%%%:  499-block  1
+call    3 never executed
+        -:  500:
+        -:  501:
+        1:  502:    service_destroy(serv_masini);
+        1:  502-block  0
+call    0 returned 1
+        1:  503:}
+        -:  504:
+        -:  505:///Ruleaza toate testele
+function runAllTests called 1 returned 100% blocks executed 100%
+        1:  506:void runAllTests() {
+        1:  507:    test_domeniu_masina();
+        1:  507-block  0
+call    0 returned 1
+        1:  508:    test_validator_masina();
+call    0 returned 1
+        1:  509:    test_repo_masini();
+call    0 returned 1
+        1:  510:    teste_service_masini();
+call    0 returned 1
+        1:  511:    printf("Teste rulate cu succes!\n");
+call    0 returned 1
+        1:  512:}

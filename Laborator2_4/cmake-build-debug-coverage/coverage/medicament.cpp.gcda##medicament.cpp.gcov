@@ -1,0 +1,79 @@
+        -:    0:Source:C:/Users/lupse/CLionProjects/POO/Laborator2_4/domain/medicament.cpp
+        -:    0:Graph:C:\Users\lupse\CLionProjects\POO\Laborator2_4\cmake-build-debug-coverage\CMakeFiles\Laborator2_4.dir\domain\medicament.cpp.gcno
+        -:    0:Data:C:\Users\lupse\CLionProjects\POO\Laborator2_4\cmake-build-debug-coverage\CMakeFiles\Laborator2_4.dir\domain\medicament.cpp.gcda
+        -:    0:Runs:1
+        -:    1:#include "medicament.h"
+        -:    2:
+        -:    3:#include <cstdlib>
+        -:    4:#include <cstring>
+        -:    5://
+        -:    6:// Created by lupse on 3/13/2025.
+        -:    7://
+function _Z14initMedicamentiPcfi called 28 returned 100% blocks executed 100%
+       28:    8:Medicament initMedicament(int cod, char* nume, float concentratie, int cantitate) {
+        -:    9:    Medicament medicament;
+       28:   10:    medicament.cod = cod;
+       28:   11:    medicament.nume = (char*)malloc(strlen(nume)+1);
+       28:   12:    strcpy(medicament.nume, nume);
+       28:   13:    medicament.concentratie = concentratie;
+       28:   14:    medicament.cantitate = cantitate;
+       28:   15:    return medicament;
+       28:   15-block  0
+        -:   16:}
+        -:   17:
+function _Z14copyMedicament10Medicament called 8 returned 100% blocks executed 100%
+        8:   18:Medicament copyMedicament(Medicament medicament) {
+        8:   19:    int cod = getCod(medicament);
+        8:   19-block  0
+call    0 returned 8
+        8:   20:    char* nume = getNume(medicament);
+call    0 returned 8
+        8:   21:    int cantitate = getCantitate(medicament);
+call    0 returned 8
+        8:   22:    float concentratie = getConcentratie(medicament);
+call    0 returned 8
+        8:   23:    return initMedicament(cod, nume, concentratie, cantitate);
+call    0 returned 8
+        -:   24:}
+        -:   25:
+function _Z6getCod10Medicament called 43 returned 100% blocks executed 100%
+       43:   26:int getCod(Medicament medicament) {
+       43:   27:    return medicament.cod;
+       43:   27-block  0
+        -:   28:}
+        -:   29:
+function _Z7getNume10Medicament called 59 returned 100% blocks executed 100%
+       59:   30:char* getNume(Medicament medicament) {
+       59:   31:    return medicament.nume;
+       59:   31-block  0
+        -:   32:}
+        -:   33:
+function _Z15getConcentratie10Medicament called 10 returned 100% blocks executed 100%
+       10:   34:float getConcentratie(Medicament medicament) {
+       10:   35:    return medicament.concentratie;
+       10:   35-block  0
+        -:   36:}
+        -:   37:
+function _Z12getCantitate10Medicament called 24 returned 100% blocks executed 100%
+       24:   38:int getCantitate(Medicament medicament) {
+       24:   39:    return medicament.cantitate;
+       24:   39-block  0
+        -:   40:}
+        -:   41:
+function _Z7setNumeP10MedicamentPc called 1 returned 100% blocks executed 100%
+        1:   42:void setNume(Medicament* medicament, char* nume) {
+        1:   43:    free(medicament->nume);
+        1:   44:    medicament->nume = (char*)malloc(strlen(nume) +1);
+        1:   45:    strcpy(medicament->nume, nume);
+        1:   46:}
+        -:   47:
+function _Z15setConcentratieP10Medicamentf called 1 returned 100% blocks executed 100%
+        1:   48:void setConcentratie(Medicament *medicament, float concentratie) {
+        1:   49:    medicament->concentratie = concentratie;
+        1:   50:}
+        -:   51:
+function _Z12setCantitateP10Medicamenti called 1 returned 100% blocks executed 100%
+        1:   52:void setCantitate(Medicament *medicament, int cantitate) {
+        1:   53:    medicament->cantitate = cantitate;
+        1:   54:}
+        -:   55:

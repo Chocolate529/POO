@@ -1,0 +1,153 @@
+        -:    0:Source:/mnt/c/Users/lupse/CLionProjects/Lab5/domeniu_masina.c
+        -:    0:Graph:/mnt/c/Users/lupse/CLionProjects/Lab5/cmake-build-debug-coverage/CMakeFiles/Lab5.dir/domeniu_masina.c.gcno
+        -:    0:Data:/mnt/c/Users/lupse/CLionProjects/Lab5/cmake-build-debug-coverage/CMakeFiles/Lab5.dir/domeniu_masina.c.gcda
+        -:    0:Runs:1
+        -:    1:#include "domeniu_masina.h"
+        -:    2:
+        -:    3:#include <stdio.h>
+        -:    4:#include <stdlib.h>
+        -:    5:#include <string.h>
+        -:    6:
+function creeaza_masina called 21 returned 100% blocks executed 100%
+       21:    7:struct_masina* creeaza_masina(int id, char* model, char* nr_inmatriculare, char* categorie, int inchiriata) {
+       21:    8:    struct_masina* masina = (struct_masina*)malloc(sizeof(struct_masina));
+       21:    9:    masina->id = id;
+       21:   10:    masina->nr_inmatriculare = nr_inmatriculare;
+       21:   11:    masina->categorie = categorie;
+       21:   12:    masina->model = model;
+       21:   13:    masina->inchiriata = inchiriata;
+       21:   14:    return masina;
+       21:   14-block  0
+        -:   15:}
+        -:   16:
+function destroy_masina called 49 returned 100% blocks executed 100%
+       49:   17:void destroy_masina(struct_masina* masina) {
+       49:   18:    free(masina->model);
+       49:   19:    free(masina->nr_inmatriculare);
+       49:   20:    free(masina->categorie);
+       49:   21:    free(masina);
+       49:   22:}
+        -:   23:
+function copiaza_masina called 28 returned 100% blocks executed 45%
+       28:   24:struct_masina* copiaza_masina(const struct_masina* masina) {
+       28:   25:    struct_masina* copie_masina = (struct_masina*)malloc(sizeof(struct_masina));
+       28:   26:    copie_masina->id = masina->id;
+       28:   27:    copie_masina->model = malloc(strlen(masina->model) + 1);
+       28:   28:    if (copie_masina->model == NULL) {
+       28:   28-block  0
+branch  0 taken 0 (fallthrough)
+branch  1 taken 28
+    #####:   29:        printf("Allocation Error");
+    %%%%%:   29-block  0
+call    0 never executed
+    #####:   30:        return NULL;
+        -:   31:    }
+       28:   32:    strcpy(copie_masina->model, masina->model);
+       28:   33:    copie_masina->nr_inmatriculare =  malloc(strlen(masina->nr_inmatriculare) + 1);
+       28:   34:    if (copie_masina->nr_inmatriculare == NULL) {
+       28:   34-block  0
+branch  0 taken 0 (fallthrough)
+branch  1 taken 28
+    #####:   35:        printf("Allocation Error");
+    %%%%%:   35-block  0
+call    0 never executed
+    #####:   36:        return NULL;
+        -:   37:    }
+       28:   38:    strcpy(copie_masina->nr_inmatriculare, masina->nr_inmatriculare);
+       28:   39:    copie_masina->categorie = malloc(strlen(masina->categorie) + 1);
+       28:   40:    if (copie_masina->categorie == NULL) {
+       28:   40-block  0
+branch  0 taken 0 (fallthrough)
+branch  1 taken 28
+    #####:   41:        printf("Allocation Error");
+    %%%%%:   41-block  0
+call    0 never executed
+    #####:   42:        return NULL;
+        -:   43:    }
+       28:   44:    strcpy(copie_masina->categorie, masina->categorie);
+       28:   45:    copie_masina->inchiriata =  masina->inchiriata;
+        -:   46:
+       28:   47:    return copie_masina;
+       28:   47-block  0
+        -:   48:}
+        -:   49:
+function compara_masini called 25 returned 100% blocks executed 100%
+       25:   50:int compara_masini(const struct_masina* masina1, const struct_masina* masina2) {
+       25:   51:    if ((masina1->id != masina2->id) ||
+       25:   51-block  0
+branch  0 taken 24 (fallthrough)
+branch  1 taken 1
+       24:   52:       (masina1->inchiriata != masina2->inchiriata) ||
+       24:   52-block  0
+branch  0 taken 24 (fallthrough)
+branch  1 taken 0
+       24:   53:       (strcmp(masina1->model, masina2->model) != 0) ||
+       24:   53-block  0
+branch  0 taken 24 (fallthrough)
+branch  1 taken 0
+       24:   54:       (strcmp(masina1->nr_inmatriculare, masina2->nr_inmatriculare) != 0) ||
+       24:   54-block  0
+branch  0 taken 24 (fallthrough)
+branch  1 taken 0
+       24:   55:       (strcmp(masina1->categorie, masina2->categorie) != 0))
+       24:   55-block  0
+branch  0 taken 0 (fallthrough)
+branch  1 taken 24
+        1:   56:        return 0;
+        1:   56-block  0
+       24:   57:    return 1;
+       24:   57-block  0
+        -:   58:}
+        -:   59:
+function get_id_masina called 53 returned 100% blocks executed 100%
+       53:   60:int get_id_masina(const struct_masina* masina) {
+       53:   61:    return masina->id;
+       53:   61-block  0
+        -:   62:}
+        -:   63:
+function get_model_masina called 14 returned 100% blocks executed 100%
+       14:   64:char* get_model_masina(const struct_masina* masina) {
+       14:   65:    return masina->model;
+       14:   65-block  0
+        -:   66:}
+        -:   67:
+function get_nr_inmatriculare_masina called 2 returned 100% blocks executed 100%
+        2:   68:char* get_nr_inmatriculare_masina(const struct_masina* masina) {
+        2:   69:    return masina->nr_inmatriculare;
+        2:   69-block  0
+        -:   70:}
+        -:   71:
+function get_categorie_masina called 23 returned 100% blocks executed 100%
+       23:   72:char* get_categorie_masina(const struct_masina* masina) {
+       23:   73:    return masina->categorie;
+       23:   73-block  0
+        -:   74:}
+        -:   75:
+function get_inchiriata_masina called 10 returned 100% blocks executed 100%
+       10:   76:int get_inchiriata_masina(const struct_masina* masina) {
+       10:   77:    return masina->inchiriata;
+       10:   77-block  0
+        -:   78:}
+        -:   79:
+function set_model_masina called 1 returned 100% blocks executed 100%
+        1:   80:void set_model_masina(struct_masina* masina, char* model_nou) {
+        1:   81:    free(masina->model);
+        1:   82:    masina->model = model_nou;
+        1:   83:}
+        -:   84:
+function set_categorie_masina called 1 returned 100% blocks executed 100%
+        1:   85:void set_categorie_masina(struct_masina* masina, char* categorie_noua) {
+        1:   86:    free(masina->categorie);
+        1:   87:    masina->categorie = categorie_noua;
+        1:   88:}
+        -:   89:
+function set_nr_inmatriculare_masina called 1 returned 100% blocks executed 100%
+        1:   90:void set_nr_inmatriculare_masina(struct_masina* masina, char* nr_inmatriculare_nou) {
+        1:   91:    free(masina->nr_inmatriculare);
+        1:   92:    masina->nr_inmatriculare = nr_inmatriculare_nou;
+        1:   93:}
+        -:   94:
+function set_inchiriata_masina called 3 returned 100% blocks executed 100%
+        3:   95:void set_inchiriata_masina(struct_masina* masina, const int inchiriata_nou) {
+        3:   96:    masina->inchiriata = inchiriata_nou;
+        3:   97:}

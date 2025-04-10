@@ -1,0 +1,533 @@
+        -:    0:Source:/mnt/c/Users/lupse/CLionProjects/Lab5/ui.c
+        -:    0:Graph:/mnt/c/Users/lupse/CLionProjects/Lab5/cmake-build-debug-coverage/CMakeFiles/Lab5.dir/ui.c.gcno
+        -:    0:Data:/mnt/c/Users/lupse/CLionProjects/Lab5/cmake-build-debug-coverage/CMakeFiles/Lab5.dir/ui.c.gcda
+        -:    0:Runs:1
+        -:    1://
+        -:    2:// Created by kevin on 3/23/2025.
+        -:    3://
+        -:    4:
+        -:    5:#include "ui.h"
+        -:    6:
+        -:    7:#include <stdio.h>
+        -:    8:#include <stdlib.h>
+        -:    9:#include <string.h>
+        -:   10:#include "domeniu_masina.h"
+        -:   11:#include "repo.h"
+        -:   12:#include "service_masini.h"
+function initializare_comenzi called 1 returned 100% blocks executed 100%
+        1:   13:void initializare_comenzi(const int* nr_comenzi, char** comenzi) {
+       13:   14:    for (int i = 0; i < *nr_comenzi; i++) {
+        1:   14-block  0
+       13:   14-block  1
+branch  0 taken 12
+branch  1 taken 1 (fallthrough)
+       12:   15:        comenzi[i] = malloc(15 * sizeof(char));
+       12:   15-block  0
+        -:   16:    }
+        1:   17:    strcpy(comenzi[0], "adauga\0");
+        1:   18:    strcpy(comenzi[1], "modifica\0");
+        1:   19:    strcpy(comenzi[2], "cauta\0");
+        1:   20:    strcpy(comenzi[3], "sterge\0");
+        1:   21:    strcpy(comenzi[4], "inchiriaza");
+        1:   22:    strcpy(comenzi[5], "returneaza");
+        1:   23:    strcpy(comenzi[6], "vizualizare");
+        1:   24:    strcpy(comenzi[7], "sortare");
+        1:   25:    strcpy(comenzi[8], "afis");
+        1:   26:    strcpy(comenzi[9], "undo");
+        1:   27:    strcpy(comenzi[10], "redo");
+        1:   28:    strcpy(comenzi[11], "exit");
+        1:   29:}
+        -:   30:
+function id_comanda called 1 returned 100% blocks executed 86%
+        1:   31:int id_comanda(int nr_comenzi, char** comenzi, const char* comanda) {
+       12:   32:    for (int i = 0; i < nr_comenzi; i++) {
+        1:   32-block  0
+       11:   32-block  1
+       12:   32-block  2
+branch  0 taken 12
+branch  1 taken 0 (fallthrough)
+       12:   33:        if (strcmp(comenzi[i], comanda) == 0) {
+       12:   33-block  0
+branch  0 taken 1 (fallthrough)
+branch  1 taken 11
+        1:   34:            return i;
+        1:   34-block  0
+        -:   35:        }
+        -:   36:    }
+    #####:   37:    return -10;
+    %%%%%:   37-block  0
+        -:   38:}
+        -:   39:
+        -:   40:
+function ui_afiseaza_masina called 0 returned 0% blocks executed 0%
+    #####:   41:void ui_afiseaza_masina(const struct_masina* masina) {
+    #####:   42:    printf("Id: %d\n", masina->id);
+    %%%%%:   42-block  0
+call    0 never executed
+    #####:   43:    printf("Model: %s\n", masina->model);
+call    0 never executed
+    #####:   44:    printf("Numar inmatriculare: %s\n", masina->nr_inmatriculare);
+call    0 never executed
+    #####:   45:    printf("Categorie: %s\n", masina->categorie);
+call    0 never executed
+    #####:   46:    printf("Status inchiriere: %d\n", masina->inchiriata);
+call    0 never executed
+    #####:   47:}
+        -:   48:
+        -:   49:
+function ui_adauga_masina called 0 returned 0% blocks executed 0%
+    #####:   50:void ui_adauga_masina(const service_masina* serv) {
+        -:   51:    int id;
+    #####:   52:    printf("Introduceti id-ul masinii: ");
+    %%%%%:   52-block  0
+call    0 never executed
+    #####:   53:    scanf("%d", &id);
+call    0 never executed
+        -:   54:
+        -:   55:    int inchiriata;
+    #####:   56:    printf("Introduceti statusul inchirierii(0/1): ");
+call    0 never executed
+    #####:   57:    scanf("%d", &inchiriata);
+call    0 never executed
+        -:   58:
+    #####:   59:    char *model = malloc(15 * sizeof(char));
+    #####:   60:    printf("Introduceti modelul masinii: ");
+call    0 never executed
+    #####:   61:    scanf("%s", model);
+call    0 never executed
+        -:   62:
+        -:   63:
+    #####:   64:    char* nr_inmatriculare = malloc(15 * sizeof(char));
+    #####:   65:    printf("Introduceti numarul de inmatriculare: ");
+call    0 never executed
+    #####:   66:    scanf("%s", nr_inmatriculare);
+call    0 never executed
+        -:   67:
+    #####:   68:    char* categorie = malloc(15 * sizeof(char));
+    #####:   69:    printf("Introduceti categoria masinii: ");
+call    0 never executed
+    #####:   70:    scanf("%s", categorie);
+call    0 never executed
+        -:   71:
+    #####:   72:    struct_masina* masina = creeaza_masina(id, model, nr_inmatriculare, categorie, inchiriata);
+call    0 never executed
+    #####:   73:    const int ret = service_adauga_element(serv, masina);
+call    0 never executed
+    #####:   74:    if (ret == -1) {
+branch  0 never executed (fallthrough)
+branch  1 never executed
+    #####:   75:        printf("App: Masina are date invalide!\n");
+    %%%%%:   75-block  0
+call    0 never executed
+    #####:   76:        destroy_masina(masina);
+call    0 never executed
+    #####:   77:        return;
+    %%%%%:   77-block  0
+        -:   78:    }
+    #####:   79:    if (ret == -6) {
+    %%%%%:   79-block  0
+branch  0 never executed (fallthrough)
+branch  1 never executed
+    #####:   80:        printf("App: Nu s-a putut adauga masina(id-ul trebuie sa fie unic, iar categoria sa fie suv,sport sau mini!\n");
+    %%%%%:   80-block  0
+call    0 never executed
+    #####:   81:        destroy_masina(masina);
+call    0 never executed
+    #####:   82:        return;
+        -:   83:    }
+    #####:   84:    printf("App: Masina adaugata cu succes!\n");
+    %%%%%:   84-block  0
+call    0 never executed
+        -:   85:}
+        -:   86:
+        -:   87:
+function ui_modifica_masina called 0 returned 0% blocks executed 0%
+    #####:   88:void ui_modifica_masina(const service_masina* serv) {
+        -:   89:    int id;
+    #####:   90:    printf("Introduceti id-ul masinii: ");
+    %%%%%:   90-block  0
+call    0 never executed
+    #####:   91:    scanf("%d", &id);
+call    0 never executed
+        -:   92:
+        -:   93:    int inchiriata;
+    #####:   94:    printf("Introduceti statusul inchirierii(0/1): ");
+call    0 never executed
+    #####:   95:    scanf("%d", &inchiriata);
+call    0 never executed
+        -:   96:
+    #####:   97:    char *model = malloc(15 * sizeof(char));
+    #####:   98:    printf("Introduceti modelul masinii: ");
+call    0 never executed
+    #####:   99:    scanf("%s", model);
+call    0 never executed
+        -:  100:
+        -:  101:
+    #####:  102:    char* nr_inmatriculare = malloc(15 * sizeof(char));
+    #####:  103:    printf("Introduceti numarul de inmatriculare: ");
+call    0 never executed
+    #####:  104:    scanf("%s", nr_inmatriculare);
+call    0 never executed
+        -:  105:
+    #####:  106:    char* categorie = malloc(15 * sizeof(char));
+    #####:  107:    printf("Introduceti categoria masinii: ");
+call    0 never executed
+    #####:  108:    scanf("%s", categorie);
+call    0 never executed
+        -:  109:
+    #####:  110:    struct_masina* masina = creeaza_masina(id, model, nr_inmatriculare, categorie, inchiriata);
+call    0 never executed
+    #####:  111:    int ret = service_modifica_element(serv, masina);
+call    0 never executed
+    #####:  112:    if (ret == -1) {
+branch  0 never executed (fallthrough)
+branch  1 never executed
+    #####:  113:        printf("App: Masina are date invalide!\n");
+    %%%%%:  113-block  0
+call    0 never executed
+    #####:  114:        destroy_masina(masina);
+call    0 never executed
+    #####:  115:        return;
+    %%%%%:  115-block  0
+        -:  116:    }
+    #####:  117:    if (ret == -7) {
+    %%%%%:  117-block  0
+branch  0 never executed (fallthrough)
+branch  1 never executed
+    #####:  118:        printf("App: Nu s-a putut modifica masina(id-ul trebuie sa existe, iar categoria sa fie suv,sport sau mini!\n");
+    %%%%%:  118-block  0
+call    0 never executed
+    #####:  119:        destroy_masina(masina);
+call    0 never executed
+    #####:  120:        return;
+        -:  121:    }
+    #####:  122:    printf("Masina modificata cu succes!\n");
+    %%%%%:  122-block  0
+call    0 never executed
+        -:  123:}
+        -:  124:
+function ui_cauta_masina called 0 returned 0% blocks executed 0%
+    #####:  125:void ui_cauta_masina(const service_masina* serv) {
+        -:  126:    int id;
+    #####:  127:    printf("Introduceti id-ul masinii: ");
+    %%%%%:  127-block  0
+call    0 never executed
+    #####:  128:    scanf("%d", &id);
+call    0 never executed
+    #####:  129:    for (int i = 0; i < serv->repo->numar; i++) {
+    %%%%%:  129-block  0
+    %%%%%:  129-block  1
+branch  0 never executed
+branch  1 never executed (fallthrough)
+    #####:  130:        if (get_id_masina(serv->repo->lista[i]) == id) {
+    %%%%%:  130-block  0
+call    0 never executed
+branch  1 never executed (fallthrough)
+branch  2 never executed
+    #####:  131:            ui_afiseaza_masina(serv->repo->lista[i]);
+    %%%%%:  131-block  0
+call    0 never executed
+    #####:  132:            return;
+        -:  133:        }
+        -:  134:    }
+    #####:  135:    printf("App: Masina cu id-ul %d nu a fost gasita!\n", id);
+    %%%%%:  135-block  0
+call    0 never executed
+        -:  136:}
+        -:  137:
+function ui_sterge_masina called 0 returned 0% blocks executed 0%
+    #####:  138:void ui_sterge_masina(const service_masina* serv) {
+        -:  139:    int id;
+    #####:  140:    printf("Introduceti id-ul masinii: ");
+    %%%%%:  140-block  0
+call    0 never executed
+    #####:  141:    scanf("%d", &id);
+call    0 never executed
+    #####:  142:    int ret = service_sterge_element(serv, id);
+call    0 never executed
+    #####:  143:    if (ret==-8) {
+branch  0 never executed (fallthrough)
+branch  1 never executed
+    #####:  144:        printf("App: Nu s-a putut sterge masina!(Ori nu exista ori eroare la dealocare\n");
+    %%%%%:  144-block  0
+call    0 never executed
+    #####:  145:        return;
+        -:  146:    }
+    #####:  147:    printf("App: Masina stearsa cu succes!\n");
+    %%%%%:  147-block  0
+call    0 never executed
+        -:  148:}
+        -:  149:
+function ui_afis called 0 returned 0% blocks executed 0%
+    #####:  150:void ui_afis(const repository* repo) {
+    #####:  151:    for (int i = 0; i < repo->numar; i++) {
+    %%%%%:  151-block  0
+    %%%%%:  151-block  1
+branch  0 never executed
+branch  1 never executed (fallthrough)
+    #####:  152:        ui_afiseaza_masina(repo->lista[i]);
+    %%%%%:  152-block  0
+call    0 never executed
+        -:  153:    }
+    #####:  154:}
+        -:  155:
+function ui_inchiriaza_masina called 0 returned 0% blocks executed 0%
+    #####:  156:void ui_inchiriaza_masina(const service_masina* serv) {
+        -:  157:    int id;
+    #####:  158:    printf("Introduceti id-ul masinii: ");
+    %%%%%:  158-block  0
+call    0 never executed
+    #####:  159:    scanf("%d", &id);
+call    0 never executed
+    #####:  160:    int ret = service_inchiriaza_masina(serv, id);
+call    0 never executed
+    #####:  161:    if (ret == -6) {
+branch  0 never executed (fallthrough)
+branch  1 never executed
+    #####:  162:        printf("App: Masina nu a putut fi inchiriata!(fie este inchiriata deja fie nu exista o masina cu acest id)\n");
+    %%%%%:  162-block  0
+call    0 never executed
+    #####:  163:        return;
+        -:  164:    }
+    #####:  165:    printf("App: Masina inchiriata cu succes!\n");
+    %%%%%:  165-block  0
+call    0 never executed
+        -:  166:}
+        -:  167:
+function ui_returneaza_masina called 0 returned 0% blocks executed 0%
+    #####:  168:void ui_returneaza_masina(const service_masina* serv) {
+        -:  169:    int id;
+    #####:  170:    printf("Introduceti id-ul masinii: ");
+    %%%%%:  170-block  0
+call    0 never executed
+    #####:  171:    scanf("%d", &id);
+call    0 never executed
+    #####:  172:    int ret = service_returneaza_masina(serv, id);
+call    0 never executed
+    #####:  173:    if (ret == -6) {
+branch  0 never executed (fallthrough)
+branch  1 never executed
+    #####:  174:        printf("App: Masina nu a putut fi returnata!(fie este nu este inchiriata fie nu exista o masina cu acest id)\n");
+    %%%%%:  174-block  0
+call    0 never executed
+    #####:  175:        return;
+        -:  176:    }
+    #####:  177:    printf("App: Masina returnata cu succes!\n");
+    %%%%%:  177-block  0
+call    0 never executed
+        -:  178:}
+        -:  179:
+function ui_vizualizeaza_dupa_categorie called 0 returned 0% blocks executed 0%
+    #####:  180:void ui_vizualizeaza_dupa_categorie(const service_masina* serv) {
+    #####:  181:    char* categorie = malloc(15 * sizeof(char));
+    #####:  182:    printf("Introduceti categoria masinii: ");
+    %%%%%:  182-block  0
+call    0 never executed
+    #####:  183:    scanf("%s", categorie);
+call    0 never executed
+    #####:  184:    repository* masini_cat = service_vizualizare_dupa_categorie(serv, categorie);
+call    0 never executed
+    #####:  185:    if (masini_cat==NULL) {
+branch  0 never executed (fallthrough)
+branch  1 never executed
+    #####:  186:        printf("App: Categorie invalida!\n");
+    %%%%%:  186-block  0
+call    0 never executed
+    #####:  187:        return;
+        -:  188:    }
+    #####:  189:    if (masini_cat->numar == 0) {
+    %%%%%:  189-block  0
+branch  0 never executed (fallthrough)
+branch  1 never executed
+    #####:  190:        printf("App: Nu exista masini cu categoria %s!\n", categorie);
+    %%%%%:  190-block  0
+call    0 never executed
+    #####:  191:        return;
+        -:  192:    }
+    #####:  193:    ui_afis(masini_cat);
+    %%%%%:  193-block  0
+call    0 never executed
+    #####:  194:    free(categorie);
+    #####:  195:    repo_destroy(masini_cat);
+call    0 never executed
+        -:  196:}
+        -:  197:
+function ui_undo called 0 returned 0% blocks executed 0%
+    #####:  198:void ui_undo(service_masina* serv) {
+    #####:  199:    int ret = service_undo(serv);
+    %%%%%:  199-block  0
+call    0 never executed
+    #####:  200:    if (ret == -99) {
+branch  0 never executed (fallthrough)
+branch  1 never executed
+    #####:  201:        printf("App: Nu exista operatii salvate pentru undo!\n");
+    %%%%%:  201-block  0
+call    0 never executed
+    #####:  202:        return;
+        -:  203:    }
+    #####:  204:    printf("App: Undo efectuat cu succes!\n");
+    %%%%%:  204-block  0
+call    0 never executed
+        -:  205:}
+        -:  206:
+function ui_redo called 0 returned 0% blocks executed 0%
+    #####:  207:void ui_redo(service_masina* serv) {
+    #####:  208:    int ret = service_redo(serv);
+    %%%%%:  208-block  0
+call    0 never executed
+    #####:  209:    if (ret == -99) {
+branch  0 never executed (fallthrough)
+branch  1 never executed
+    #####:  210:        printf("App: Nu exista operatii salvate pentru redo!\n");
+    %%%%%:  210-block  0
+call    0 never executed
+    #####:  211:        return;
+        -:  212:    }
+    #####:  213:    printf("App: Redo efectuat cu succes!\n");
+    %%%%%:  213-block  0
+call    0 never executed
+        -:  214:}
+        -:  215:
+function ui_sortare called 0 returned 0% blocks executed 0%
+    #####:  216:void ui_sortare(const service_masina* serv) {
+        -:  217:    int crescator;
+    #####:  218:    printf("Introduceti sa se sorteze crescator(1) sau descrescator(0): ");
+    %%%%%:  218-block  0
+call    0 never executed
+    #####:  219:    scanf("%d", &crescator);
+call    0 never executed
+        -:  220:
+        -:  221:    int mod;
+    #####:  222:    printf("Introduceti sa se sorteze dupa categorie(0) sau dupa model(1): ");
+call    0 never executed
+    #####:  223:    scanf("%d", &mod);
+call    0 never executed
+    #####:  224:    service_sortare(serv, crescator, mod);
+call    0 never executed
+    #####:  225:    ui_afis(serv->repo);
+call    0 never executed
+    #####:  226:}
+        -:  227:/// Porneste aplicatia
+function run called 1 returned 100% blocks executed 42%
+        1:  228:void run(service_masina* serv) {
+        1:  229:    int nr_comenzi = 12;
+        1:  230:    char** comenzi = malloc(nr_comenzi * sizeof(char*));
+        1:  231:    initializare_comenzi(&nr_comenzi, comenzi);
+        1:  231-block  0
+call    0 returned 1
+        -:  232:
+        1:  233:    printf("nr comenzi: %d\n", nr_comenzi);
+call    0 returned 1
+       13:  234:    for (int i = 0; i < nr_comenzi; i++) {
+       13:  234-block  0
+branch  0 taken 12
+branch  1 taken 1 (fallthrough)
+       12:  235:        printf("comanda[%d]: %s\n", i, comenzi[i]);
+       12:  235-block  0
+call    0 returned 12
+        -:  236:    }
+        -:  237:
+        1:  238:    char* comanda = malloc(15 * sizeof(char));
+        1:  238-block  0
+        -:  239:    while (1) {
+        1:  240:        printf(">>> ");
+        1:  240-block  0
+call    0 returned 1
+        1:  241:        scanf("%s", comanda);
+call    0 returned 1
+        1:  242:        switch (id_comanda(nr_comenzi, comenzi, comanda)) {
+call    0 returned 1
+branch  1 taken 0
+branch  2 taken 0
+branch  3 taken 0
+branch  4 taken 0
+branch  5 taken 0
+branch  6 taken 0
+branch  7 taken 0
+branch  8 taken 0
+branch  9 taken 0
+branch 10 taken 0
+branch 11 taken 0
+branch 12 taken 1
+branch 13 taken 0
+    #####:  243:            case 0:
+    #####:  244:                ui_adauga_masina(serv);
+    %%%%%:  244-block  0
+call    0 never executed
+    #####:  245:                break;
+    #####:  246:            case 1:
+    #####:  247:                ui_modifica_masina(serv);
+    %%%%%:  247-block  0
+call    0 never executed
+    #####:  248:                break;
+    #####:  249:            case 2:
+    #####:  250:                ui_cauta_masina(serv);
+    %%%%%:  250-block  0
+call    0 never executed
+    #####:  251:                break;
+    #####:  252:            case 3:
+    #####:  253:                ui_sterge_masina(serv);
+    %%%%%:  253-block  0
+call    0 never executed
+    #####:  254:                break;
+    #####:  255:            case 4:
+    #####:  256:                ui_inchiriaza_masina(serv);
+    %%%%%:  256-block  0
+call    0 never executed
+    #####:  257:                break;
+    #####:  258:            case 5:
+    #####:  259:                ui_returneaza_masina(serv);
+    %%%%%:  259-block  0
+call    0 never executed
+    #####:  260:                break;
+    #####:  261:            case 6:
+    #####:  262:                ui_vizualizeaza_dupa_categorie(serv);
+    %%%%%:  262-block  0
+call    0 never executed
+    #####:  263:                break;
+    #####:  264:            case 7:
+    #####:  265:                ui_sortare(serv);
+    %%%%%:  265-block  0
+call    0 never executed
+    #####:  266:                break;
+    #####:  267:            case 8:
+    #####:  268:                ui_afis(serv->repo);
+    %%%%%:  268-block  0
+call    0 never executed
+    #####:  269:                break;
+    #####:  270:            case 9:
+    #####:  271:                ui_undo(serv);
+    %%%%%:  271-block  0
+call    0 never executed
+    #####:  272:                break;
+    #####:  273:            case 10:
+    #####:  274:                ui_redo(serv);
+    %%%%%:  274-block  0
+call    0 never executed
+    #####:  275:                break;
+        1:  276:            case 11:
+        -:  277:                //dealocare memorie
+        1:  278:                free(comanda);
+        1:  279:                service_destroy(serv);
+        1:  279-block  0
+call    0 returned 1
+       13:  280:                for (int i=0; i<nr_comenzi; i++) {
+       13:  280-block  0
+branch  0 taken 12
+branch  1 taken 1 (fallthrough)
+       12:  281:                    free(comenzi[i]);
+       12:  281-block  0
+        -:  282:                }
+        1:  283:                free(comenzi);
+        1:  284:                return;
+        1:  284-block  0
+    #####:  285:            default:
+    #####:  286:                printf("App: Comanda invalida!\n");
+    %%%%%:  286-block  0
+call    0 never executed
+    #####:  287:                break;
+        -:  288:        }
+        -:  289:
+        -:  290:
+        -:  291:    }
+        -:  292:}

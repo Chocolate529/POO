@@ -1,0 +1,19 @@
+# ninja log v6
+20	179	7646744808897146	CMakeFiles/Laborator2_4.dir/main.cpp.obj	9e272b9123c150b3
+44	359	7646744809130773	CMakeFiles/Laborator2_4.dir/repository/repo_medicamente.cpp.obj	5b6964929bea2cd7
+36	363	7646744809059016	CMakeFiles/Laborator2_4.dir/domain/lista.cpp.obj	299aac3f1c377bd3
+53	243	7646744809230573	CMakeFiles/Laborator2_4.dir/validator/validator_medicament.cpp.obj	3cf563e8568a20c8
+28	367	7646744808979986	CMakeFiles/Laborator2_4.dir/domain/medicament.cpp.obj	9ee39d27720d5e96
+21	199	7646746133336283	CMakeFiles/Laborator2_4.dir/service/service_medicamente.cpp.obj	7c89d47ef339dd64
+71	343	7646744809409511	CMakeFiles/Laborator2_4.dir/prezentare/consola.cpp.obj	e3d7e5609daed76
+80	457	7646744809492312	CMakeFiles/Laborator2_4.dir/teste/test.cpp.obj	f65198b062141510
+200	417	7646746135119359	Laborator2_4.exe	b232970853872d63
+11	166	7646765887658710	CMakeFiles/Laborator2_4.dir/main.cpp.obj	9e272b9123c150b3
+42	248	7646765887968587	CMakeFiles/Laborator2_4.dir/validator/validator_medicament.cpp.obj	3cf563e8568a20c8
+34	272	7646765887893239	CMakeFiles/Laborator2_4.dir/repository/repo_medicamente.cpp.obj	5b6964929bea2cd7
+19	274	7646765887743710	CMakeFiles/Laborator2_4.dir/domain/medicament.cpp.obj	9ee39d27720d5e96
+26	304	7646765887812735	CMakeFiles/Laborator2_4.dir/domain/lista.cpp.obj	299aac3f1c377bd3
+51	314	7646765888055691	CMakeFiles/Laborator2_4.dir/service/service_medicamente.cpp.obj	7c89d47ef339dd64
+61	338	7646765888158565	CMakeFiles/Laborator2_4.dir/prezentare/consola.cpp.obj	e3d7e5609daed76
+70	402	7646765888251228	CMakeFiles/Laborator2_4.dir/teste/test.cpp.obj	f65198b062141510
+407	683	7646765891622420	Laborator2_4.exe	b232970853872d63

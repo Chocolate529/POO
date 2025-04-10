@@ -1,8 +1,24 @@
 //
 // Created by lupse on 4/7/2025.
 //
+#pragma once
+#include "repo_masina.h"
 
-#ifndef SERVICE_MASINA_H
-#define SERVICE_MASINA_H
+class MasinaService {
+private:
+    MasinaRepo& repo;
 
-#endif //SERVICE_MASINA_H
+public:
+    explicit MasinaService(MasinaRepo& r) : repo{r} {}
+
+    void adaugaMasina(const std::string& nr, const std::string& prod,
+                      const std::string& mod, const std::string& tip);
+
+    void stergeMasina(const std::string& nr);
+    void modificaMasina(const std::string& nr, const std::string& prod,
+                        const std::string& mod, const std::string& tip);
+
+    const Masina& cautaMasina(const std::string& nr) const;
+    const std::vector<Masina>& getAllMasini() const;
+};
+

@@ -1,0 +1,614 @@
+        -:    0:Source:C:/Users/lupse/CLionProjects/POO/Laborator2_4/prezentare/consola.cpp
+        -:    0:Graph:C:\Users\lupse\CLionProjects\POO\Laborator2_4\cmake-build-debug-coverage\CMakeFiles\Laborator2_4.dir\prezentare\consola.cpp.gcno
+        -:    0:Data:C:\Users\lupse\CLionProjects\POO\Laborator2_4\cmake-build-debug-coverage\CMakeFiles\Laborator2_4.dir\prezentare\consola.cpp.gcda
+        -:    0:Runs:1
+        -:    1://
+        -:    2:// Created by lupse on 3/11/2025.
+        -:    3://
+        -:    4:#include "../domain/lista.h"
+        -:    5:#include "../service/service_medicamente.h"
+        -:    6:#include <stdio.h>
+        -:    7:#include <string.h>
+        -:    8:#include "consola.h"
+        -:    9:#include "../teste/test.h"
+function _Z12printComenziv called 1 returned 100% blocks executed 100%
+        1:   10:void printComenzi() {
+        1:   11:    printf("Comenzi acceptate:\n");
+        1:   11-block  0
+call    0 returned 1
+        1:   12:    printf("1 - Adaugare medicament\n");
+call    0 returned 1
+        1:   13:    printf("2 - Actualizeaza medicament\n");
+call    0 returned 1
+        1:   14:    printf("3 - Sterge medicament\n");
+call    0 returned 1
+        1:   15:    printf("4 - Vizualizare medicamente\n");
+call    0 returned 1
+        1:   16:    printf("5 - Filtrare medicamente dupa cantitate\n");
+call    0 returned 1
+        1:   17:    printf("6 - Filtrare medicamente dupa litera initiala a numelui\n");
+call    0 returned 1
+        1:   18:    printf("7 - Sortare medicamente dupa nume\n");
+call    0 returned 1
+        1:   19:    printf("8 - Sortare medicamente crescator dupa cantitate\n");
+call    0 returned 1
+        1:   20:    printf("9 - Sortare medicamente descrescator dupa cantitate\n");
+call    0 returned 1
+        1:   21:    printf("0 - Iesire\n");
+call    0 returned 1
+        1:   22:}
+        -:   23:
+function _Z16printMedicamenteP13VectorDynamic called 0 returned 0% blocks executed 0%
+    #####:   24:void printMedicamente(VectorDynamic* v) {
+    #####:   25:    if (v->size == 0) {
+    %%%%%:   25-block  0
+branch  0 never executed (fallthrough)
+branch  1 never executed
+    #####:   26:        printf("Nu exista medicamente in stoc.\n");
+    %%%%%:   26-block  0
+call    0 never executed
+    #####:   27:        return;
+        -:   28:    }
+        -:   29:
+    #####:   30:    printf("Lista de medicamente:\n");
+    %%%%%:   30-block  0
+call    0 never executed
+    #####:   31:    for (int i = 0; i < v->size; i++) {
+    %%%%%:   31-block  0
+branch  0 never executed
+branch  1 never executed (fallthrough)
+    #####:   32:        printf("Cod: %d\n", getCod(*getElement(v, i)));
+    %%%%%:   32-block  0
+call    0 never executed
+call    1 never executed
+call    2 never executed
+    #####:   33:        printf("Nume: %s\n", getNume(*getElement(v, i)));
+call    0 never executed
+call    1 never executed
+call    2 never executed
+    #####:   34:        printf("Concentratie: %.2f\n", getConcentratie(*getElement(v, i)));
+call    0 never executed
+call    1 never executed
+call    2 never executed
+    #####:   35:        printf("Cantitate: %d\n", getCantitate(*getElement(v, i)));
+call    0 never executed
+call    1 never executed
+call    2 never executed
+    #####:   36:        printf("-------------------------\n");
+call    0 never executed
+        -:   37:    }
+        -:   38:}
+        -:   39:
+function _Z10citesteIntPiPKc called 0 returned 0% blocks executed 0%
+    #####:   40:int citesteInt(int* valoare, const char* prompt) {
+    #####:   41:    printf("%s", prompt);
+    %%%%%:   41-block  0
+call    0 never executed
+    #####:   42:    if (scanf("%d", valoare) != 1) {
+call    0 never executed
+branch  1 never executed (fallthrough)
+branch  2 never executed
+    #####:   43:        while (getchar() != '\n');
+    %%%%%:   43-block  0
+    %%%%%:   43-block  1
+call    0 never executed
+branch  1 never executed
+branch  2 never executed (fallthrough)
+    #####:   44:        printf("Valoare invalida! Introduceti un numar intreg.\n");
+    %%%%%:   44-block  0
+call    0 never executed
+    #####:   45:        return 0;
+        -:   46:    }
+    #####:   47:    return 1;
+    %%%%%:   47-block  0
+        -:   48:}
+        -:   49:
+        -:   50:
+function _Z12citesteFloatPfPKc called 0 returned 0% blocks executed 0%
+    #####:   51:int citesteFloat(float* valoare, const char* prompt) {
+    #####:   52:    printf("%s", prompt);
+    %%%%%:   52-block  0
+call    0 never executed
+    #####:   53:    if (scanf("%f", valoare) != 1) {
+call    0 never executed
+branch  1 never executed (fallthrough)
+branch  2 never executed
+    #####:   54:        while (getchar() != '\n');
+    %%%%%:   54-block  0
+    %%%%%:   54-block  1
+call    0 never executed
+branch  1 never executed
+branch  2 never executed (fallthrough)
+    #####:   55:        printf("Valoare invalida! Introduceti un numar real.\n");
+    %%%%%:   55-block  0
+call    0 never executed
+    #####:   56:        return 0;
+        -:   57:    }
+    #####:   58:    return 1;
+    %%%%%:   58-block  0
+        -:   59:}
+        -:   60:
+        -:   61:
+function _Z13citesteStringPcPKc called 0 returned 0% blocks executed 0%
+    #####:   62:int citesteString(char* valoare, const char* prompt) {
+    #####:   63:    printf("%s", prompt);
+    %%%%%:   63-block  0
+call    0 never executed
+    #####:   64:    if (scanf("%s", valoare) != 1 || strlen(valoare) == 0) {
+call    0 never executed
+branch  1 never executed (fallthrough)
+branch  2 never executed
+    %%%%%:   64-block  0
+branch  3 never executed (fallthrough)
+branch  4 never executed
+    %%%%%:   64-block  1
+    %%%%%:   64-block  2
+    %%%%%:   64-block  3
+branch  5 never executed (fallthrough)
+branch  6 never executed
+    #####:   65:        while (getchar() != '\n');
+    %%%%%:   65-block  0
+    %%%%%:   65-block  1
+call    0 never executed
+branch  1 never executed
+branch  2 never executed (fallthrough)
+    #####:   66:        printf("Nume invalid! Introduceti un sir de caractere valid.\n");
+    %%%%%:   66-block  0
+call    0 never executed
+    #####:   67:        return 0;
+        -:   68:    }
+    #####:   69:    return 1;
+    %%%%%:   69-block  0
+        -:   70:}
+        -:   71:
+        -:   72:
+function _Z11citesteCharPcPKc called 0 returned 0% blocks executed 0%
+    #####:   73:int citesteChar(char* valoare, const char* prompt) {
+    #####:   74:    printf("%s", prompt);
+    %%%%%:   74-block  0
+call    0 never executed
+    #####:   75:    if (scanf(" %c", valoare) != 1) {
+call    0 never executed
+branch  1 never executed (fallthrough)
+branch  2 never executed
+    #####:   76:        while (getchar() != '\n');
+    %%%%%:   76-block  0
+    %%%%%:   76-block  1
+call    0 never executed
+branch  1 never executed
+branch  2 never executed (fallthrough)
+    #####:   77:        printf("Litera invalida! Introduceti o litera.\n");
+    %%%%%:   77-block  0
+call    0 never executed
+    #####:   78:        return 0;
+        -:   79:    }
+    #####:   80:    return 1;
+    %%%%%:   80-block  0
+        -:   81:}
+        -:   82:
+function _Z3runv called 1 returned 100% blocks executed 12%
+        1:   83:void run() {
+        1:   84:    runTests();
+        1:   84-block  0
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        -:   85:    VectorDynamic stoc;
+        1:   86:    initVector(&stoc, 2);
+        1:   86-block  0
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        -:   87:
+        -:   88:    while (true) {
+        1:   89:        printComenzi();
+        1:   89-block  0
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        -:   90:        int userInput;
+        -:   91:
+        -:   92:        do {
+        1:   93:            printf("> ");
+        1:   93-block  0
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        1:   94:            if (scanf("%d", &userInput) != 1) {
+        1:   94-block  0
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        1:   94-block  1
+branch  3 taken 0 (fallthrough)
+branch  4 taken 1
+    #####:   95:                while (getchar() != '\n'); // Clear input buffer
+    %%%%%:   95-block  0
+    %%%%%:   95-block  1
+call    0 never executed
+branch  1 never executed (fallthrough)
+branch  2 never executed (throw)
+    %%%%%:   95-block  2
+branch  3 never executed
+branch  4 never executed (fallthrough)
+    #####:   96:                printf("Comanda invalida! Introduceti o comanda valida.\n");
+    %%%%%:   96-block  0
+call    0 never executed
+branch  1 never executed (fallthrough)
+branch  2 never executed (throw)
+    #####:   97:                userInput = -1;
+    %%%%%:   97-block  0
+        -:   98:            }
+        1:   99:        } while (userInput < 0 || userInput > NUMAR_COMENZI);
+        1:   99-block  0
+branch  0 taken 0
+branch  1 taken 1 (fallthrough)
+        1:   99-block  1
+branch  2 taken 0
+branch  3 taken 1 (fallthrough)
+        -:  100:
+        1:  101:        switch (userInput) {
+        1:  101-block  0
+branch  0 taken 0
+branch  1 taken 0
+branch  2 taken 0
+branch  3 taken 0
+branch  4 taken 0
+branch  5 taken 0
+branch  6 taken 0
+branch  7 taken 0
+branch  8 taken 0
+branch  9 taken 1
+branch 10 taken 0
+    #####:  102:            case 1: {
+        -:  103:                int cod, cantitate;
+        -:  104:                char nume[50];
+        -:  105:                float concentratie;
+        -:  106:
+    #####:  107:                if (!citesteInt(&cod, "Introduceti codul(int>0) medicamentului: ")) break;
+    %%%%%:  107-block  0
+call    0 never executed
+branch  1 never executed (fallthrough)
+branch  2 never executed (throw)
+    %%%%%:  107-block  1
+branch  3 never executed (fallthrough)
+branch  4 never executed
+    %%%%%:  107-block  2
+    #####:  108:                if (!citesteString(nume, "Introduceti numele(nevid) medicamentului: ")) break;
+    %%%%%:  108-block  0
+call    0 never executed
+branch  1 never executed (fallthrough)
+branch  2 never executed (throw)
+    %%%%%:  108-block  1
+branch  3 never executed (fallthrough)
+branch  4 never executed
+    %%%%%:  108-block  2
+    #####:  109:                if (!citesteFloat(&concentratie, "Introduceti concentratia(float>0) medicamentului: ")) break;
+    %%%%%:  109-block  0
+call    0 never executed
+branch  1 never executed (fallthrough)
+branch  2 never executed (throw)
+    %%%%%:  109-block  1
+branch  3 never executed (fallthrough)
+branch  4 never executed
+    %%%%%:  109-block  2
+    #####:  110:                if (!citesteInt(&cantitate, "Introduceti cantitatea(int>0) medicamentului: ")) break;
+    %%%%%:  110-block  0
+call    0 never executed
+branch  1 never executed (fallthrough)
+branch  2 never executed (throw)
+    %%%%%:  110-block  1
+branch  3 never executed (fallthrough)
+branch  4 never executed
+    %%%%%:  110-block  2
+    #####:  111:                int response = adaugaMedicamentService(&stoc, cod, nume, concentratie, cantitate);
+    %%%%%:  111-block  0
+call    0 never executed
+branch  1 never executed (fallthrough)
+branch  2 never executed (throw)
+    #####:  112:                if (response == 1) {
+    %%%%%:  112-block  0
+branch  0 never executed (fallthrough)
+branch  1 never executed
+    #####:  113:                    printf("Medicament adaugat cu succes\n");
+    %%%%%:  113-block  0
+call    0 never executed
+branch  1 never executed (fallthrough)
+branch  2 never executed (throw)
+        -:  114:                }
+    #####:  115:                else if (response == 0) {
+    %%%%%:  115-block  0
+branch  0 never executed (fallthrough)
+branch  1 never executed
+    #####:  116:                    printf("Medicamentul exista deja in stoc, iar la cantitatea exsitenta \n a fost adaugata cea introdusa\n");
+    %%%%%:  116-block  0
+call    0 never executed
+branch  1 never executed (fallthrough)
+branch  2 never executed (throw)
+        -:  117:                }
+    #####:  118:                else if (response == 2) {
+    %%%%%:  118-block  0
+branch  0 never executed (fallthrough)
+branch  1 never executed
+    #####:  119:                    printf("Validation Error: Valorile introduse nu sunt valide");
+    %%%%%:  119-block  0
+call    0 never executed
+branch  1 never executed (fallthrough)
+branch  2 never executed (throw)
+        -:  120:                }
+    #####:  121:                break;
+    %%%%%:  121-block  0
+        -:  122:            }
+    #####:  123:            case 2: {
+        -:  124:                int cod;
+        -:  125:                char numeNou[50];
+        -:  126:                float concentratieNoua;
+        -:  127:
+    #####:  128:                if (!citesteInt(&cod, "Introduceti codul(int>0) medicamentului de actualizat: ")) break;
+    %%%%%:  128-block  0
+call    0 never executed
+branch  1 never executed (fallthrough)
+branch  2 never executed (throw)
+    %%%%%:  128-block  1
+branch  3 never executed (fallthrough)
+branch  4 never executed
+    %%%%%:  128-block  2
+    #####:  129:                if (!citesteString(numeNou, "Introduceti numele(nevid) nou al medicamentului: ")) break;
+    %%%%%:  129-block  0
+call    0 never executed
+branch  1 never executed (fallthrough)
+branch  2 never executed (throw)
+    %%%%%:  129-block  1
+branch  3 never executed (fallthrough)
+branch  4 never executed
+    %%%%%:  129-block  2
+    #####:  130:                if (!citesteFloat(&concentratieNoua, "Introduceti noua concentratie(float>0) a medicamentului: ")) break;
+    %%%%%:  130-block  0
+call    0 never executed
+branch  1 never executed (fallthrough)
+branch  2 never executed (throw)
+    %%%%%:  130-block  1
+branch  3 never executed (fallthrough)
+branch  4 never executed
+    %%%%%:  130-block  2
+    #####:  131:                int response = actualizeazaMedicamentService(&stoc, cod, numeNou, concentratieNoua);
+    %%%%%:  131-block  0
+call    0 never executed
+branch  1 never executed (fallthrough)
+branch  2 never executed (throw)
+    #####:  132:                if (response == 1) {
+    %%%%%:  132-block  0
+branch  0 never executed (fallthrough)
+branch  1 never executed
+    #####:  133:                    printf("Medicament actualizat cu succes\n");
+    %%%%%:  133-block  0
+call    0 never executed
+branch  1 never executed (fallthrough)
+branch  2 never executed (throw)
+        -:  134:                }
+    #####:  135:                else if (response == 0) {
+    %%%%%:  135-block  0
+branch  0 never executed (fallthrough)
+branch  1 never executed
+    #####:  136:                    printf("Repo Error: Nu exista medicament cu codul precizat");
+    %%%%%:  136-block  0
+call    0 never executed
+branch  1 never executed (fallthrough)
+branch  2 never executed (throw)
+        -:  137:                }
+    #####:  138:                else if (response == 2) {
+    %%%%%:  138-block  0
+branch  0 never executed (fallthrough)
+branch  1 never executed
+    #####:  139:                    printf("Validation Error: Valorile introduse nu sunt valide");
+    %%%%%:  139-block  0
+call    0 never executed
+branch  1 never executed (fallthrough)
+branch  2 never executed (throw)
+        -:  140:                }
+    #####:  141:                break;
+    %%%%%:  141-block  0
+        -:  142:            }
+    #####:  143:            case 3: {
+        -:  144:                int cod;
+    #####:  145:                if (!citesteInt(&cod, "Introduceti codul(int>0) medicamentului de sters: ")) break;
+    %%%%%:  145-block  0
+call    0 never executed
+branch  1 never executed (fallthrough)
+branch  2 never executed (throw)
+    %%%%%:  145-block  1
+branch  3 never executed (fallthrough)
+branch  4 never executed
+    %%%%%:  145-block  2
+    #####:  146:                int response = stergeMedicamentService(&stoc, cod);
+    %%%%%:  146-block  0
+call    0 never executed
+branch  1 never executed (fallthrough)
+branch  2 never executed (throw)
+    #####:  147:                if (response == 1) {
+    %%%%%:  147-block  0
+branch  0 never executed (fallthrough)
+branch  1 never executed
+    #####:  148:                    printf("Medicament sters cu succes");
+    %%%%%:  148-block  0
+call    0 never executed
+branch  1 never executed (fallthrough)
+branch  2 never executed (throw)
+        -:  149:                }
+    #####:  150:                else if (response == 0) {
+    %%%%%:  150-block  0
+branch  0 never executed (fallthrough)
+branch  1 never executed
+    #####:  151:                    printf("Repo Error: Nu exista medicament cu codul precizat");
+    %%%%%:  151-block  0
+call    0 never executed
+branch  1 never executed (fallthrough)
+branch  2 never executed (throw)
+        -:  152:                }
+    #####:  153:                else if (response == 2) {
+    %%%%%:  153-block  0
+branch  0 never executed (fallthrough)
+branch  1 never executed
+    #####:  154:                    printf("Validation Error: Valorile introduse nu sunt valide");
+    %%%%%:  154-block  0
+call    0 never executed
+branch  1 never executed (fallthrough)
+branch  2 never executed (throw)
+        -:  155:                }
+    #####:  156:                break;
+    %%%%%:  156-block  0
+        -:  157:            }
+    #####:  158:            case 4:
+    #####:  159:                printMedicamente(&stoc);
+    %%%%%:  159-block  0
+call    0 never executed
+branch  1 never executed (fallthrough)
+branch  2 never executed (throw)
+    #####:  160:                break;
+    %%%%%:  160-block  0
+    #####:  161:            case 5: {
+        -:  162:                int cantitate;
+    #####:  163:                if (!citesteInt(&cantitate, "Introduceti cantitatea(int>0) limita: ") || cantitate < 0) break;
+    %%%%%:  163-block  0
+call    0 never executed
+branch  1 never executed (fallthrough)
+branch  2 never executed (throw)
+    %%%%%:  163-block  1
+branch  3 never executed (fallthrough)
+branch  4 never executed
+    %%%%%:  163-block  2
+branch  5 never executed (fallthrough)
+branch  6 never executed
+    %%%%%:  163-block  3
+    %%%%%:  163-block  4
+    %%%%%:  163-block  5
+branch  7 never executed (fallthrough)
+branch  8 never executed
+    %%%%%:  163-block  6
+    #####:  164:                VectorDynamic filtered = filtrareCantitate(&stoc, cantitate);
+    %%%%%:  164-block  0
+call    0 never executed
+branch  1 never executed (fallthrough)
+branch  2 never executed (throw)
+    #####:  165:                printMedicamente(&filtered);
+    %%%%%:  165-block  0
+call    0 never executed
+branch  1 never executed (fallthrough)
+branch  2 never executed (throw)
+    #####:  166:                freeVector(&filtered);
+    %%%%%:  166-block  0
+call    0 never executed
+branch  1 never executed (fallthrough)
+branch  2 never executed (throw)
+    #####:  167:                break;
+    %%%%%:  167-block  0
+        -:  168:            }
+    #####:  169:            case 6: {
+        -:  170:                char litera;
+    #####:  171:                if (!citesteChar(&litera, "Introduceti litera de inceput a numelui medicamentului: ")) break;
+    %%%%%:  171-block  0
+call    0 never executed
+branch  1 never executed (fallthrough)
+branch  2 never executed (throw)
+    %%%%%:  171-block  1
+branch  3 never executed (fallthrough)
+branch  4 never executed
+    %%%%%:  171-block  2
+    #####:  172:                VectorDynamic filtered = filtrareLitera(&stoc, litera);
+    %%%%%:  172-block  0
+call    0 never executed
+branch  1 never executed (fallthrough)
+branch  2 never executed (throw)
+    #####:  173:                printMedicamente(&filtered);
+    %%%%%:  173-block  0
+call    0 never executed
+branch  1 never executed (fallthrough)
+branch  2 never executed (throw)
+    #####:  174:                freeVector(&filtered);
+    %%%%%:  174-block  0
+call    0 never executed
+branch  1 never executed (fallthrough)
+branch  2 never executed (throw)
+    #####:  175:                break;
+    %%%%%:  175-block  0
+        -:  176:            }
+    #####:  177:            case 7: {
+    #####:  178:                VectorDynamic sorted = sortMedicamenteDupaNume(&stoc);
+    %%%%%:  178-block  0
+call    0 never executed
+branch  1 never executed (fallthrough)
+branch  2 never executed (throw)
+    #####:  179:                printMedicamente(&sorted);
+    %%%%%:  179-block  0
+call    0 never executed
+branch  1 never executed (fallthrough)
+branch  2 never executed (throw)
+    #####:  180:                freeVector(&sorted);
+    %%%%%:  180-block  0
+call    0 never executed
+branch  1 never executed (fallthrough)
+branch  2 never executed (throw)
+    #####:  181:                break;
+    %%%%%:  181-block  0
+        -:  182:            }
+    #####:  183:            case 8: {
+    #####:  184:                VectorDynamic sorted = sortMedicamenteCrescatorCantitate(&stoc);
+    %%%%%:  184-block  0
+call    0 never executed
+branch  1 never executed (fallthrough)
+branch  2 never executed (throw)
+    #####:  185:                printMedicamente(&sorted);
+    %%%%%:  185-block  0
+call    0 never executed
+branch  1 never executed (fallthrough)
+branch  2 never executed (throw)
+    #####:  186:                freeVector(&sorted);
+    %%%%%:  186-block  0
+call    0 never executed
+branch  1 never executed (fallthrough)
+branch  2 never executed (throw)
+    #####:  187:                break;
+    %%%%%:  187-block  0
+        -:  188:            }
+    #####:  189:            case 9: {
+    #####:  190:                VectorDynamic sorted = sortMedicamenteDescrescatorCantitate(&stoc);
+    %%%%%:  190-block  0
+call    0 never executed
+branch  1 never executed (fallthrough)
+branch  2 never executed (throw)
+    #####:  191:                printMedicamente(&sorted);
+    %%%%%:  191-block  0
+call    0 never executed
+branch  1 never executed (fallthrough)
+branch  2 never executed (throw)
+    #####:  192:                freeVector(&sorted);
+    %%%%%:  192-block  0
+call    0 never executed
+branch  1 never executed (fallthrough)
+branch  2 never executed (throw)
+    #####:  193:                break;
+    %%%%%:  193-block  0
+        -:  194:            }
+        1:  195:            case 0:
+        1:  196:                freeVector(&stoc);
+        1:  196-block  0
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        1:  197:                return;
+        1:  197-block  0
+        1:  197-block  1
+        1:  197-block  2
+    #####:  198:            default:
+    #####:  199:                printf("Comanda invalida!\n");
+    %%%%%:  199-block  0
+call    0 never executed
+branch  1 never executed (fallthrough)
+branch  2 never executed (throw)
+    #####:  200:                break;
+    %%%%%:  200-block  0
+        -:  201:        }
+    #####:  202:    }
+    %%%%%:  202-block  0
+        -:  203:}
+        -:  204:

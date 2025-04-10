@@ -1,0 +1,314 @@
+        -:    0:Source:C:/Users/lupse/CLionProjects/POO/Laborator2_4/service/service_medicamente.cpp
+        -:    0:Graph:C:\Users\lupse\CLionProjects\POO\Laborator2_4\cmake-build-debug-coverage\CMakeFiles\Laborator2_4.dir\service\service_medicamente.cpp.gcno
+        -:    0:Data:C:\Users\lupse\CLionProjects\POO\Laborator2_4\cmake-build-debug-coverage\CMakeFiles\Laborator2_4.dir\service\service_medicamente.cpp.gcda
+        -:    0:Runs:1
+        -:    1://
+        -:    2:// Created by lupse on 3/11/2025.
+        -:    3://
+        -:    4:#include "service_medicamente.h"
+        -:    5:#include <cstring>
+        -:    6:#include "../validator/validator_medicament.h"
+        -:    7:#include "../domain/medicament.h"
+        -:    8:
+function _Z23adaugaMedicamentServiceP13VectorDynamiciPcfi called 19 returned 100% blocks executed 100%
+       19:    9:int adaugaMedicamentService(VectorDynamic* v, int cod, char* nume, float concentratie, int cantitate) {
+       19:   10:    if (valideazaMedicament(cod, nume, concentratie, cantitate)) {
+       19:   10-block  0
+call    0 returned 19
+branch  1 taken 18 (fallthrough)
+branch  2 taken 1
+        -:   11:        Medicament medicament;
+       18:   12:        medicament = initMedicament(cod, nume, concentratie, cantitate);
+       18:   12-block  0
+call    0 returned 18
+branch  1 taken 18 (fallthrough)
+branch  2 taken 0 (throw)
+       18:   13:        return adaugaMedicament(v, medicament);
+       18:   13-block  0
+call    0 returned 18
+branch  1 taken 18 (fallthrough)
+branch  2 taken 0 (throw)
+       18:   13-block  1
+        -:   14:    }
+        1:   15:    return 2;
+        1:   15-block  0
+        -:   16:}
+        -:   17:
+function _Z29actualizeazaMedicamentServiceP13VectorDynamiciPcf called 3 returned 100% blocks executed 100%
+        3:   18:int actualizeazaMedicamentService(VectorDynamic* v, int cod, char* numeNou, float concentratieNoua) {
+        3:   19:    if (valideazaCod(cod) && valideazaNume(numeNou) && valideazaConcentratie(concentratieNoua)) {
+        3:   19-block  0
+call    0 returned 3
+branch  1 taken 2 (fallthrough)
+branch  2 taken 1
+        2:   19-block  1
+call    3 returned 2
+branch  4 taken 2 (fallthrough)
+branch  5 taken 0
+        2:   19-block  2
+call    6 returned 2
+branch  7 taken 2 (fallthrough)
+branch  8 taken 0
+        2:   19-block  3
+        1:   19-block  4
+        3:   19-block  5
+branch  9 taken 2 (fallthrough)
+branch 10 taken 1
+        2:   20:        return actualizareMedicament(v, cod, numeNou, concentratieNoua);
+        2:   20-block  0
+call    0 returned 2
+        -:   21:    }
+        1:   22:    return 2;
+        1:   22-block  0
+        -:   23:}
+        -:   24:
+function _Z23stergeMedicamentServiceP13VectorDynamici called 3 returned 100% blocks executed 100%
+        3:   25:int stergeMedicamentService(VectorDynamic* v, int cod) {
+        3:   26:    if (valideazaCod(cod)) {
+        3:   26-block  0
+call    0 returned 3
+branch  1 taken 2 (fallthrough)
+branch  2 taken 1
+        2:   27:        return stergeMedicament(v, cod);
+        2:   27-block  0
+call    0 returned 2
+        -:   28:    }
+        1:   29:    return 2;
+        1:   29-block  0
+        -:   30:}
+        -:   31:
+        -:   32:
+        -:   33:
+function _Z15sortMedicamenteP13VectorDynamicPFiP10MedicamentS2_E called 3 returned 100% blocks executed 100%
+        3:   34:VectorDynamic sortMedicamente(VectorDynamic* v, ComapreFunction cmp) {
+        3:   35:    VectorDynamic sorted = copyListaMedicamente(v);
+        3:   35-block  0
+call    0 returned 3
+        -:   36:
+        -:   37:
+        8:   38:    for (int i = 0; i < size(&sorted) - 1; i++) {
+        5:   38-block  0
+        8:   38-block  1
+call    0 returned 8
+branch  1 taken 5
+branch  2 taken 3 (fallthrough)
+       13:   39:        for (int j = i + 1; j < size(&sorted); j++) {
+        5:   39-block  0
+        8:   39-block  1
+       13:   39-block  2
+call    0 returned 13
+branch  1 taken 8
+branch  2 taken 5 (fallthrough)
+        8:   40:            Medicament* m1 = getElement(&sorted, i);
+        8:   40-block  0
+call    0 returned 8
+        8:   41:            Medicament* m2 = getElement(&sorted, j);
+call    0 returned 8
+        -:   42:
+        8:   43:            if (cmp(m1,m2) > 0){
+call    0 returned 8
+branch  1 taken 5 (fallthrough)
+branch  2 taken 3
+        5:   44:                Medicament temp = *m1;
+        5:   45:                *m1 = *m2;
+        5:   46:                *m2 = temp;
+        5:   46-block  0
+        -:   47:            }
+        -:   48:
+        -:   49:        }
+        -:   50:    }
+        3:   51:    return sorted;
+        3:   51-block  0
+        -:   52:}
+        -:   53:
+        -:   54:
+function _Z23sortMedicamenteDupaNumeP13VectorDynamic called 1 returned 100% blocks executed 100%
+        1:   55:VectorDynamic sortMedicamenteDupaNume(VectorDynamic* v) {
+        1:   56:    return sortMedicamente(v, criteriuDupaNume);
+        1:   56-block  0
+call    0 returned 1
+        -:   57:}
+        -:   58:
+        -:   59:
+function _Z33sortMedicamenteCrescatorCantitateP13VectorDynamic called 1 returned 100% blocks executed 100%
+        1:   60:VectorDynamic sortMedicamenteCrescatorCantitate(VectorDynamic* v) {
+        1:   61:    return sortMedicamente(v, criteriuDupaCantitateCrescator);
+        1:   61-block  0
+call    0 returned 1
+        -:   62:}
+        -:   63:
+function _Z36sortMedicamenteDescrescatorCantitateP13VectorDynamic called 1 returned 100% blocks executed 100%
+        1:   64:VectorDynamic sortMedicamenteDescrescatorCantitate(VectorDynamic* v) {
+        1:   65:    return sortMedicamente(v, criteriuDupaCantitateDescrescator);
+        1:   65-block  0
+call    0 returned 1
+        -:   66:}
+        -:   67:
+function _Z16criteriuDupaNumeP10MedicamentS0_ called 6 returned 100% blocks executed 100%
+        6:   68:int criteriuDupaNume(Medicament* m1, Medicament* m2) {
+        6:   69:    return strcmp(getNume(*m1), getNume(*m2));
+        6:   69-block  0
+call    0 returned 6
+call    1 returned 6
+        -:   70:}
+        -:   71:
+function _Z30criteriuDupaCantitateCrescatorP10MedicamentS0_ called 1 returned 100% blocks executed 100%
+        1:   72:int criteriuDupaCantitateCrescator(Medicament* m1, Medicament* m2) {
+        1:   73:    return getCantitate(*m1) - getCantitate(*m2);
+        1:   73-block  0
+call    0 returned 1
+call    1 returned 1
+        -:   74:}
+        -:   75:
+function _Z33criteriuDupaCantitateDescrescatorP10MedicamentS0_ called 1 returned 100% blocks executed 100%
+        1:   76:int criteriuDupaCantitateDescrescator(Medicament* m1, Medicament* m2) {
+        1:   77:    return getCantitate(*m2) - getCantitate(*m1);
+        1:   77-block  0
+call    0 returned 1
+call    1 returned 1
+        -:   78:}
+        -:   79:
+function _Z17filtrareCantitateP13VectorDynamici called 1 returned 100% blocks executed 100%
+        1:   80:VectorDynamic filtrareCantitate(VectorDynamic* v, int cantitate_max) {
+        -:   81:    VectorDynamic filtered;
+        1:   82:    initVector(&filtered, capacity(v));
+        1:   82-block  0
+call    0 returned 1
+call    1 returned 1
+        3:   83:    for (int i = 0; i < v->size; i++) {
+        2:   83-block  0
+        3:   83-block  1
+branch  0 taken 2
+branch  1 taken 1 (fallthrough)
+        2:   84:        if (getCantitate(*getElement(v,i)) < cantitate_max) {
+        2:   84-block  0
+call    0 returned 2
+call    1 returned 2
+branch  2 taken 1 (fallthrough)
+branch  3 taken 1
+        -:   85:            Medicament medicament;
+        1:   86:            int cod = getCod(*getElement(v, i));
+        1:   86-block  0
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        1:   86-block  1
+call    3 returned 1
+branch  4 taken 1 (fallthrough)
+branch  5 taken 0 (throw)
+        1:   87:            char* nume = getNume(*getElement(v, i));
+        1:   87-block  0
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        1:   87-block  1
+call    3 returned 1
+branch  4 taken 1 (fallthrough)
+branch  5 taken 0 (throw)
+        1:   88:            float concentratie = getConcentratie(*getElement(v, i));
+        1:   88-block  0
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        1:   88-block  1
+call    3 returned 1
+branch  4 taken 1 (fallthrough)
+branch  5 taken 0 (throw)
+        1:   89:            int cantitate = getCantitate(*getElement(v, i));
+        1:   89-block  0
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        1:   89-block  1
+call    3 returned 1
+branch  4 taken 1 (fallthrough)
+branch  5 taken 0 (throw)
+        1:   90:            medicament = initMedicament(cod, nume, concentratie, cantitate);
+        1:   90-block  0
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        1:   91:            adaugaMedicament(&filtered, medicament);
+        1:   91-block  0
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        -:   92:        }
+        -:   93:    }
+        1:   94:    return filtered;
+        1:   94-block  0
+        1:   94-block  1
+        -:   95:}
+        -:   96:
+function _Z14filtrareLiteraP13VectorDynamicc called 1 returned 100% blocks executed 100%
+        1:   97:VectorDynamic filtrareLitera( VectorDynamic* v, char litera) {
+        -:   98:    VectorDynamic filtered;
+        1:   99:    initVector(&filtered, v->capacity);
+        1:   99-block  0
+call    0 returned 1
+        3:  100:    for (int i = 0; i < v->size; i++) {
+        2:  100-block  0
+        3:  100-block  1
+branch  0 taken 2
+branch  1 taken 1 (fallthrough)
+        2:  101:        if (getNume(*getElement(v,i))[0] == litera) {
+        2:  101-block  0
+call    0 returned 2
+call    1 returned 2
+branch  2 taken 1 (fallthrough)
+branch  3 taken 1
+        -:  102:            Medicament medicament;
+        1:  103:            int cod = getCod(*getElement(v, i));
+        1:  103-block  0
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        1:  103-block  1
+call    3 returned 1
+branch  4 taken 1 (fallthrough)
+branch  5 taken 0 (throw)
+        1:  104:            char* nume = getNume(*getElement(v, i));
+        1:  104-block  0
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        1:  104-block  1
+call    3 returned 1
+branch  4 taken 1 (fallthrough)
+branch  5 taken 0 (throw)
+        1:  105:            float concentratie = getConcentratie(*getElement(v, i));
+        1:  105-block  0
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        1:  105-block  1
+call    3 returned 1
+branch  4 taken 1 (fallthrough)
+branch  5 taken 0 (throw)
+        1:  106:            int cantitate = getCantitate(*getElement(v, i));
+        1:  106-block  0
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        1:  106-block  1
+call    3 returned 1
+branch  4 taken 1 (fallthrough)
+branch  5 taken 0 (throw)
+        1:  107:            medicament = initMedicament(cod, nume, concentratie, cantitate);
+        1:  107-block  0
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        1:  108:            adaugaMedicament(&filtered, medicament);
+        1:  108-block  0
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        -:  109:        }
+        -:  110:    }
+        1:  111:    return filtered;
+        1:  111-block  0
+        1:  111-block  1
+        -:  112:}
+        -:  113:
+        -:  114:
