@@ -254,11 +254,11 @@ void Teste::testServiceSpalatorie() {
     std::ifstream in("test_export.csv");
     int lineCount = 0;
     std::string line;
-    // while (std::getline(in, line)) {
-    //     lineCount++;
-    // }
-    // assert(lineCount == 3);  // ar trebui să fie 3 linii în fișier
-    // in.close();
+    while (std::getline(in, line)) {
+        lineCount++;
+    }
+    assert(lineCount == 3);  // ar trebui să fie 3 linii în fișier
+    in.close();
 
     // Test generare lista cu număr prea mare
     exceptiePrinsa = false;
