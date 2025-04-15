@@ -1,0 +1,85 @@
+        -:    0:Source:C:/Users/lupse/CLionProjects/POO/Lab8/domeniu_masina.cpp
+        -:    0:Graph:C:\Users\lupse\CLionProjects\POO\Lab8\cmake-build-debug-coverage\CMakeFiles\Lab6.dir\domeniu_masina.cpp.gcno
+        -:    0:Data:C:\Users\lupse\CLionProjects\POO\Lab8\cmake-build-debug-coverage\CMakeFiles\Lab6.dir\domeniu_masina.cpp.gcda
+        -:    0:Runs:1
+        -:    1://
+        -:    2:// Created by lupse on 4/7/2025.
+        -:    3://
+        -:    4:#include "domeniu_masina.h"
+        -:    5:
+function _ZN6MasinaC2ERKNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEES7_S7_S7_ called 166 returned 100% blocks executed 55%
+      166:    6:Masina::Masina(const std::string& nr, const std::string& prod,
+      166:    7:               const std::string& mod, const std::string& t)
+      166:    8:    : nrInmatriculare{nr}, producator{prod}, model{mod}, tip{t} {}
+      166:    8-block  0
+call    0 returned 166
+call    1 returned 166
+branch  2 taken 166 (fallthrough)
+branch  3 taken 0 (throw)
+      166:    8-block  1
+call    4 returned 166
+branch  5 taken 166 (fallthrough)
+branch  6 taken 0 (throw)
+      166:    8-block  2
+call    7 returned 166
+branch  8 taken 166 (fallthrough)
+branch  9 taken 0 (throw)
+      166:    8-block  3
+    $$$$$:    8-block  4
+call   10 never executed
+    $$$$$:    8-block  5
+call   11 never executed
+    $$$$$:    8-block  6
+call   12 never executed
+        -:    9:
+function _ZNK6Masina18getNrInmatriculareB5cxx11Ev called 145 returned 100% blocks executed 100%
+      145:   10:const std::string& Masina::getNrInmatriculare() const {
+      145:   11:    return nrInmatriculare;
+      145:   11-block  0
+        -:   12:}
+        -:   13:
+function _ZNK6Masina13getProducatorB5cxx11Ev called 141 returned 100% blocks executed 100%
+      141:   14:const std::string& Masina::getProducator() const {
+      141:   15:    return producator;
+      141:   15-block  0
+        -:   16:}
+        -:   17:
+function _ZNK6Masina8getModelB5cxx11Ev called 11 returned 100% blocks executed 100%
+       11:   18:const std::string& Masina::getModel() const {
+       11:   19:    return model;
+       11:   19-block  0
+        -:   20:}
+        -:   21:
+function _ZNK6Masina6getTipB5cxx11Ev called 23 returned 100% blocks executed 100%
+       23:   22:const std::string& Masina::getTip() const {
+       23:   23:    return tip;
+       23:   23-block  0
+        -:   24:}
+        -:   25:
+function _ZN6Masina13setProducatorERKNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEE called 4 returned 100% blocks executed 100%
+        4:   26:void Masina::setProducator(const std::string& prod) {
+        4:   27:    producator = prod;
+        4:   27-block  0
+call    0 returned 4
+        4:   28:}
+        -:   29:
+function _ZN6Masina8setModelERKNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEE called 3 returned 100% blocks executed 100%
+        3:   30:void Masina::setModel(const std::string& mod) {
+        3:   31:    model = mod;
+        3:   31-block  0
+call    0 returned 3
+        3:   32:}
+        -:   33:
+function _ZN6Masina6setTipERKNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEE called 3 returned 100% blocks executed 100%
+        3:   34:void Masina::setTip(const std::string& t) {
+        3:   35:    tip = t;
+        3:   35-block  0
+call    0 returned 3
+        3:   36:}
+        -:   37:
+function _ZNK6MasinaeqERKS_ called 21 returned 100% blocks executed 100%
+       21:   38:bool Masina::operator==(const Masina& other) const {
+       21:   39:    return nrInmatriculare == other.nrInmatriculare;
+       21:   39-block  0
+call    0 returned 21
+        -:   40:}

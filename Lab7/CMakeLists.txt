@@ -10,7 +10,8 @@ add_executable(Lab6 main.cpp
         repo_masina.h
         service_masina.cpp
         service_masina.h
-       # ui.cpp
-       # ui.h
+        list.h
+        ui.cpp
+        ui.h
         teste.cpp
         teste.h)

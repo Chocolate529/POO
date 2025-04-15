@@ -1,0 +1,269 @@
+        -:    0:Source:C:/Users/lupse/CLionProjects/POO/Lab8/service_spalatorie.cpp
+        -:    0:Graph:C:\Users\lupse\CLionProjects\POO\Lab8\cmake-build-debug-coverage\CMakeFiles\Lab6.dir\service_spalatorie.cpp.gcno
+        -:    0:Data:C:\Users\lupse\CLionProjects\POO\Lab8\cmake-build-debug-coverage\CMakeFiles\Lab6.dir\service_spalatorie.cpp.gcda
+        -:    0:Runs:1
+        -:    1://
+        -:    2:// Created by lupse on 4/15/2025.
+        -:    3://
+        -:    4:#include "service_spalatorie.h"
+        -:    5:
+        -:    6:#include <algorithm>
+        -:    7:#include <chrono>
+        -:    8:
+        -:    9:#include "exceptii.h"
+        -:   10:#include <random>
+function _ZN17ServiceSpalatorie12adaugaMasinaERKNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEE called 1 returned 100% blocks executed 100%
+        1:   11:void ServiceSpalatorie::adaugaMasina(const std::string &nrInmatriculare) {
+        1:   12:    const Masina& masina = cautaMasina(nrInmatriculare);
+        1:   12-block  0
+call    0 returned 1
+        1:   13:    masiniSpalatorie.push_back(masina);
+call    0 returned 1
+        1:   14:}
+        -:   15:
+function _ZN17ServiceSpalatorie12golesteListaEv called 1 returned 100% blocks executed 100%
+        1:   16:void ServiceSpalatorie::golesteLista() {
+        1:   17:    masiniSpalatorie.clear();
+        1:   17-block  0
+call    0 returned 1
+        1:   18:}
+        -:   19:
+function _ZNK17ServiceSpalatorie9exportCSVERKNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEE called 1 returned 100% blocks executed 88%
+        1:   20:void ServiceSpalatorie::exportCSV(const std::string& fileName) const {
+        1:   21:    std::ofstream out(fileName);
+        1:   21-block  0
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        4:   22:    for (const auto& masina : masiniSpalatorie) {
+        1:   22-block  0
+call    0 returned 1
+call    1 returned 1
+        3:   22-block  1
+call    2 returned 3
+        3:   22-block  2
+call    3 returned 3
+        4:   22-block  3
+call    4 returned 4
+branch  5 taken 3
+branch  6 taken 1 (fallthrough)
+        3:   23:        out << masina.getNrInmatriculare() <<',' << masina.getProducator() <<
+call    0 returned 3
+branch  1 taken 3 (fallthrough)
+branch  2 taken 0 (throw)
+        3:   24:            ','<< masina.getModel() << ','<< masina.getTip()<< std::endl;
+        3:   24-block  0
+call    0 returned 3
+branch  1 taken 3 (fallthrough)
+branch  2 taken 0 (throw)
+        3:   24-block  1
+call    3 returned 3
+branch  4 taken 3 (fallthrough)
+branch  5 taken 0 (throw)
+        3:   24-block  2
+call    6 returned 3
+branch  7 taken 3 (fallthrough)
+branch  8 taken 0 (throw)
+        3:   24-block  3
+call    9 returned 3
+branch 10 taken 3 (fallthrough)
+branch 11 taken 0 (throw)
+        3:   24-block  4
+call   12 returned 3
+branch 13 taken 3 (fallthrough)
+branch 14 taken 0 (throw)
+        3:   24-block  5
+call   15 returned 3
+branch 16 taken 3 (fallthrough)
+branch 17 taken 0 (throw)
+        3:   24-block  6
+call   18 returned 3
+branch 19 taken 3 (fallthrough)
+branch 20 taken 0 (throw)
+        3:   24-block  7
+call   21 returned 3
+branch 22 taken 3 (fallthrough)
+branch 23 taken 0 (throw)
+        3:   24-block  8
+call   24 returned 3
+branch 25 taken 3 (fallthrough)
+branch 26 taken 0 (throw)
+        3:   24-block  9
+call   27 returned 3
+branch 28 taken 3 (fallthrough)
+branch 29 taken 0 (throw)
+        3:   24-block 10
+call   30 returned 3
+branch 31 taken 3 (fallthrough)
+branch 32 taken 0 (throw)
+        -:   25:    }
+        1:   26:}
+        1:   26-block  0
+call    0 returned 1
+    $$$$$:   26-block  1
+call    1 never executed
+        -:   27:
+function _ZN17ServiceSpalatorie13generareListaEi called 4 returned 50% blocks executed 72%
+        4:   28:void ServiceSpalatorie::generareLista(int nrTotal) {
+        4:   29:    masiniSpalatorie.clear();
+        4:   29-block  0
+call    0 returned 4
+        4:   30:    std::vector masini{getAllMasini()};
+call    0 returned 4
+branch  1 taken 4 (fallthrough)
+branch  2 taken 0 (throw)
+        4:   30-block  0
+call    3 returned 4
+branch  4 taken 4 (fallthrough)
+branch  5 taken 0 (throw)
+        4:   31:    if (masini.empty()) {
+        4:   31-block  0
+call    0 returned 4
+branch  1 taken 1 (fallthrough)
+branch  2 taken 3
+        3:   32:        throw ServiceException("Nu exista masini!");
+        1:   32-block  0
+call    0 returned 1
+        1:   32-block  1
+call    1 returned 1
+branch  2 taken 1 (fallthrough)
+branch  3 taken 0 (throw)
+        1:   32-block  2
+call    4 returned 1
+branch  5 taken 1 (fallthrough)
+branch  6 taken 0 (throw)
+        1:   32-block  3
+call    7 returned 1
+        1:   32-block  4
+call    8 returned 1
+    $$$$$:   32-block  5
+call    9 never executed
+    $$$$$:   32-block  6
+    $$$$$:   32-block  7
+    $$$$$:   32-block  8
+call   10 never executed
+        -:   33:    }
+        3:   34:    std::mt19937 gen{std::random_device{}()};
+        3:   34-block  0
+call    0 returned 3
+branch  1 taken 3 (fallthrough)
+branch  2 taken 0 (throw)
+        3:   34-block  1
+call    3 returned 3
+branch  4 taken 3 (fallthrough)
+branch  5 taken 0 (throw)
+        3:   34-block  2
+call    6 returned 3
+branch  7 taken 3 (fallthrough)
+branch  8 taken 0 (throw)
+        3:   34-block  3
+call    9 returned 3
+    $$$$$:   34-block  4
+call   10 never executed
+    $$$$$:   34-block  5
+        3:   35:    std::uniform_int_distribution<int> dis{0, static_cast<int>(masini.size())-1};
+call    0 returned 3
+call    1 returned 3
+branch  2 taken 3 (fallthrough)
+branch  3 taken 0 (throw)
+        3:   36:    if (masini.size() == nrTotal) {
+        3:   36-block  0
+call    0 returned 3
+branch  1 taken 1 (fallthrough)
+branch  2 taken 2
+        1:   37:        const auto seed = std::chrono::system_clock::now().time_since_epoch().count();
+        1:   37-block  0
+call    0 returned 1
+call    1 returned 1
+call    2 returned 1
+        1:   38:        std::shuffle(masini.begin(), masini.end(), std::default_random_engine(seed));
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        1:   38-block  0
+call    3 returned 1
+call    4 returned 1
+call    5 returned 1
+branch  6 taken 1 (fallthrough)
+branch  7 taken 0 (throw)
+    $$$$$:   38-block  1
+        1:   39:        masiniSpalatorie = masini;
+        1:   39-block  0
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        2:   40:    } else if (masini.size() > nrTotal) {
+        2:   40-block  0
+call    0 returned 2
+branch  1 taken 1 (fallthrough)
+branch  2 taken 1
+        2:   41:        while (nrMasini() < nrTotal) {
+        1:   41-block  0
+        2:   41-block  1
+call    0 returned 2
+branch  1 taken 1
+branch  2 taken 1
+        1:   42:            const int rndNr = dis(gen);
+        1:   42-block  0
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        1:   43:            if (std::find(masiniSpalatorie.begin(), masiniSpalatorie.end(),masini[rndNr]) == masiniSpalatorie.end()) {
+        1:   43-block  0
+call    0 returned 1
+call    1 returned 1
+call    2 returned 1
+call    3 returned 1
+call    4 returned 1
+branch  5 taken 1 (fallthrough)
+branch  6 taken 0 (throw)
+        1:   43-block  1
+call    7 returned 1
+branch  8 taken 1 (fallthrough)
+branch  9 taken 0
+    $$$$$:   43-block  2
+    $$$$$:   43-block  3
+        1:   44:                masiniSpalatorie.push_back(masini[rndNr]);
+        1:   44-block  0
+call    0 returned 1
+call    1 returned 1
+branch  2 taken 1 (fallthrough)
+branch  3 taken 0 (throw)
+        -:   45:            }
+        -:   46:        }
+        -:   47:    } else {
+        3:   48:        throw ServiceException("Nu exista masini destule!");
+        1:   48-block  0
+call    0 returned 1
+        1:   48-block  1
+call    1 returned 1
+branch  2 taken 1 (fallthrough)
+branch  3 taken 0 (throw)
+        1:   48-block  2
+call    4 returned 1
+branch  5 taken 1 (fallthrough)
+branch  6 taken 0 (throw)
+        1:   48-block  3
+call    7 returned 1
+        1:   48-block  4
+call    8 returned 1
+    $$$$$:   48-block  5
+call    9 never executed
+    $$$$$:   48-block  6
+    $$$$$:   48-block  7
+    $$$$$:   48-block  8
+call   10 never executed
+        -:   49:    }
+        4:   50:}
+        2:   50-block  0
+call    0 returned 2
+        2:   50-block  1
+call    1 returned 2
+        -:   51:
+function _ZNK17ServiceSpalatorie8nrMasiniEv called 6 returned 100% blocks executed 100%
+        6:   52:int ServiceSpalatorie::nrMasini() const {
+        6:   53:    return static_cast<int>(masiniSpalatorie.size());
+        6:   53-block  0
+call    0 returned 6
+        -:   54:}
+        -:   55:

@@ -1,6 +1,6 @@
         -:    0:Source:C:/Users/lupse/AppData/Local/Programs/CLion/bin/mingw/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/new
-        -:    0:Graph:C:\Users\lupse\CLionProjects\POO\Lab6\cmake-build-debug-coverage\CMakeFiles\Lab6.dir\domeniu_masina.cpp.gcno
-        -:    0:Data:C:\Users\lupse\CLionProjects\POO\Lab6\cmake-build-debug-coverage\CMakeFiles\Lab6.dir\domeniu_masina.cpp.gcda
+        -:    0:Graph:C:\Users\lupse\CLionProjects\POO\Lab7\cmake-build-debug-coverage\CMakeFiles\Lab6.dir\domeniu_masina.cpp.gcno
+        -:    0:Data:C:\Users\lupse\CLionProjects\POO\Lab7\cmake-build-debug-coverage\CMakeFiles\Lab6.dir\domeniu_masina.cpp.gcda
         -:    0:Runs:1
         -:    1:// The -*- C++ -*- dynamic memory management header.
         -:    2:
@@ -175,10 +175,10 @@
         -:  171:#endif // __cpp_aligned_new
         -:  172:
         -:  173:// Default placement versions of operator new.
-function _ZnwyPv called 6 returned 100% blocks executed 100%
-        6:  174:_GLIBCXX_NODISCARD inline void* operator new(std::size_t, void* __p) _GLIBCXX_USE_NOEXCEPT
-        6:  175:{ return __p; }
-        6:  175-block  0
+function _ZnwyPv called 3 returned 100% blocks executed 100%
+        3:  174:_GLIBCXX_NODISCARD inline void* operator new(std::size_t, void* __p) _GLIBCXX_USE_NOEXCEPT
+        3:  175:{ return __p; }
+        3:  175-block  0
         -:  176:_GLIBCXX_NODISCARD inline void* operator new[](std::size_t, void* __p) _GLIBCXX_USE_NOEXCEPT
         -:  177:{ return __p; }
         -:  178:

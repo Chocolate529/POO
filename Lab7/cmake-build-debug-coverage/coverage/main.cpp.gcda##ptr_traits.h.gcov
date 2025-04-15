@@ -1,6 +1,6 @@
         -:    0:Source:C:/Users/lupse/AppData/Local/Programs/CLion/bin/mingw/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/bits/ptr_traits.h
-        -:    0:Graph:C:\Users\lupse\CLionProjects\POO\Lab6\cmake-build-debug-coverage\CMakeFiles\Lab6.dir\main.cpp.gcno
-        -:    0:Data:C:\Users\lupse\CLionProjects\POO\Lab6\cmake-build-debug-coverage\CMakeFiles\Lab6.dir\main.cpp.gcda
+        -:    0:Graph:C:\Users\lupse\CLionProjects\POO\Lab7\cmake-build-debug-coverage\CMakeFiles\Lab6.dir\main.cpp.gcno
+        -:    0:Data:C:\Users\lupse\CLionProjects\POO\Lab7\cmake-build-debug-coverage\CMakeFiles\Lab6.dir\main.cpp.gcda
         -:    0:Runs:1
         -:    1:// Pointer Traits -*- C++ -*-
         -:    2:
@@ -142,11 +142,11 @@
         -:  138:       *  @return `addressof(__r)`
         -:  139:      */
         -:  140:      static _GLIBCXX20_CONSTEXPR pointer
-function _ZNSt19__ptr_traits_ptr_toIPKcS0_Lb0EE10pointer_toERS0_ called 146 returned 100% blocks executed 100%
-      146:  141:      pointer_to(element_type& __r) noexcept
-      146:  142:      { return std::addressof(__r); }
-      146:  142-block  0
-call    0 returned 146
+function _ZNSt19__ptr_traits_ptr_toIPKcS0_Lb0EE10pointer_toERS0_ called 10042 returned 100% blocks executed 100%
+    10042:  141:      pointer_to(element_type& __r) noexcept
+    10042:  142:      { return std::addressof(__r); }
+    10042:  142-block  0
+call    0 returned 10042
         -:  143:    };
         -:  144:
         -:  145:  template<typename _Ptr, typename _Elt>

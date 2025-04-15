@@ -1,41 +1,41 @@
-        -:    0:Source:C:/Users/lupse/CLionProjects/POO/Lab6/service_masina.cpp
-        -:    0:Graph:C:\Users\lupse\CLionProjects\POO\Lab6\cmake-build-debug-coverage\CMakeFiles\Lab6.dir\service_masina.cpp.gcno
-        -:    0:Data:C:\Users\lupse\CLionProjects\POO\Lab6\cmake-build-debug-coverage\CMakeFiles\Lab6.dir\service_masina.cpp.gcda
+        -:    0:Source:C:/Users/lupse/CLionProjects/POO/Lab7/service_masina.cpp
+        -:    0:Graph:C:\Users\lupse\CLionProjects\POO\Lab7\cmake-build-debug-coverage\CMakeFiles\Lab6.dir\service_masina.cpp.gcno
+        -:    0:Data:C:\Users\lupse\CLionProjects\POO\Lab7\cmake-build-debug-coverage\CMakeFiles\Lab6.dir\service_masina.cpp.gcda
         -:    0:Runs:1
         -:    1://
         -:    2:// Created by lupse on 4/7/2025.
         -:    3://
         -:    4:#include "service_masina.h"
         -:    5:
-function _ZN13MasinaService12adaugaMasinaERKNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEES7_S7_S7_ called 2 returned 100% blocks executed 71%
-        2:    6:void MasinaService::adaugaMasina(const std::string& nr, const std::string& prod,
-        -:    7:                                 const std::string& mod, const std::string& tip) {
-        2:    8:    Masina m{nr, prod, mod, tip};
-        2:    8-block  0
-call    0 returned 2
-branch  1 taken 2 (fallthrough)
+function _ZNK13MasinaService12adaugaMasinaERKNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEES7_S7_S7_ called 5 returned 100% blocks executed 71%
+        5:    6:void MasinaService::adaugaMasina(const std::string& nr, const std::string& prod,
+        -:    7:                                 const std::string& mod, const std::string& tip) const{
+        5:    8:    Masina m{nr, prod, mod, tip};
+        5:    8-block  0
+call    0 returned 5
+branch  1 taken 5 (fallthrough)
 branch  2 taken 0 (throw)
-        2:    9:    repo.adauga(m);
-        2:    9-block  0
-call    0 returned 2
-branch  1 taken 2 (fallthrough)
+        5:    9:    repo.adauga(m);
+        5:    9-block  0
+call    0 returned 5
+branch  1 taken 5 (fallthrough)
 branch  2 taken 0 (throw)
-        2:   10:}
-        2:   10-block  0
-call    0 returned 2
+        5:   10:}
+        5:   10-block  0
+call    0 returned 5
     $$$$$:   10-block  1
 call    1 never executed
         -:   11:
-function _ZN13MasinaService12stergeMasinaERKNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEE called 1 returned 100% blocks executed 100%
-        1:   12:void MasinaService::stergeMasina(const std::string& nr) {
+function _ZNK13MasinaService12stergeMasinaERKNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEE called 1 returned 100% blocks executed 100%
+        1:   12:void MasinaService::stergeMasina(const std::string& nr) const{
         1:   13:    repo.sterge(nr);
         1:   13-block  0
 call    0 returned 1
         1:   14:}
         -:   15:
-function _ZN13MasinaService14modificaMasinaERKNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEES7_S7_S7_ called 1 returned 100% blocks executed 71%
+function _ZNK13MasinaService14modificaMasinaERKNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEES7_S7_S7_ called 1 returned 100% blocks executed 71%
         1:   16:void MasinaService::modificaMasina(const std::string& nr, const std::string& prod,
-        -:   17:                                   const std::string& mod, const std::string& tip) {
+        -:   17:                                   const std::string& mod, const std::string& tip) const{
         1:   18:    Masina m{nr, prod, mod, tip};
         1:   18-block  0
 call    0 returned 1
@@ -59,9 +59,297 @@ function _ZNK13MasinaService11cautaMasinaERKNSt7__cxx1112basic_stringIcSt11char_
 call    0 returned 2
         -:   24:}
         -:   25:
-function _ZNK13MasinaService12getAllMasiniEv called 2 returned 100% blocks executed 100%
-        2:   26:const std::vector<Masina>& MasinaService::getAllMasini() const {
-        2:   27:    return repo.getAll();
-        2:   27-block  0
-call    0 returned 2
+function _ZNK13MasinaService12getAllMasiniEv called 7 returned 100% blocks executed 100%
+        7:   26:const List<Masina>& MasinaService::getAllMasini() const {
+        7:   27:    return repo.getAll();
+        7:   27-block  0
+call    0 returned 7
         -:   28:}
+        -:   29:
+function _ZNK13MasinaService29getFilteredMasiniByProducatorERKNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEE called 1 returned 100% blocks executed 83%
+        1:   30:List<Masina> MasinaService::getFilteredMasiniByProducator(const std::string& producator) const {
+        1:   31:    List Masini{getAllMasini()};
+        1:   31-block  0
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        1:   31-block  1
+call    3 returned 1
+branch  4 taken 1 (fallthrough)
+branch  5 taken 0 (throw)
+        1:   32:    List<Masina> filteredMasini;
+        1:   32-block  0
+call    0 returned 1
+        1:   33:    IteratorList it{Masini};
+call    0 returned 1
+        -:   34:
+        5:   35:    while (it.valid()) {
+        5:   35-block  0
+call    0 returned 5
+branch  1 taken 4
+branch  2 taken 1 (fallthrough)
+        4:   36:        if ((*it).getProducator() == producator) {
+        4:   36-block  0
+call    0 returned 4
+branch  1 taken 4 (fallthrough)
+branch  2 taken 0 (throw)
+        4:   36-block  1
+call    3 returned 4
+branch  4 taken 4 (fallthrough)
+branch  5 taken 0 (throw)
+        4:   36-block  2
+call    6 returned 4
+branch  7 taken 2 (fallthrough)
+branch  8 taken 2
+        2:   37:            filteredMasini.add(*it);
+        2:   37-block  0
+call    0 returned 2
+branch  1 taken 2 (fallthrough)
+branch  2 taken 0 (throw)
+        2:   37-block  1
+call    3 returned 2
+branch  4 taken 2 (fallthrough)
+branch  5 taken 0 (throw)
+        -:   38:        }
+        4:   39:        ++it;
+        4:   39-block  0
+call    0 returned 4
+        -:   40:    }
+        2:   41:    return filteredMasini;
+        1:   41-block  0
+        1:   41-block  1
+        1:   42:}
+        1:   42-block  0
+call    0 returned 1
+    $$$$$:   42-block  1
+call    1 never executed
+    $$$$$:   42-block  2
+call    2 never executed
+        -:   43:
+function _ZNK13MasinaService22getFilteredMasiniByTipERKNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEE called 1 returned 100% blocks executed 83%
+        1:   44:List<Masina> MasinaService::getFilteredMasiniByTip(const std::string& tip) const {
+        1:   45:    List Masini{getAllMasini()};
+        1:   45-block  0
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        1:   45-block  1
+call    3 returned 1
+branch  4 taken 1 (fallthrough)
+branch  5 taken 0 (throw)
+        1:   46:    List<Masina> filteredMasini;
+        1:   46-block  0
+call    0 returned 1
+        1:   47:    IteratorList it{Masini};
+call    0 returned 1
+        -:   48:
+        5:   49:    while (it.valid()) {
+        5:   49-block  0
+call    0 returned 5
+branch  1 taken 4
+branch  2 taken 1 (fallthrough)
+        4:   50:        if ((*it).getTip() == tip) {
+        4:   50-block  0
+call    0 returned 4
+branch  1 taken 4 (fallthrough)
+branch  2 taken 0 (throw)
+        4:   50-block  1
+call    3 returned 4
+branch  4 taken 4 (fallthrough)
+branch  5 taken 0 (throw)
+        4:   50-block  2
+call    6 returned 4
+branch  7 taken 1 (fallthrough)
+branch  8 taken 3
+        1:   51:            filteredMasini.add(*it);
+        1:   51-block  0
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        1:   51-block  1
+call    3 returned 1
+branch  4 taken 1 (fallthrough)
+branch  5 taken 0 (throw)
+        -:   52:        }
+        4:   53:        ++it;
+        4:   53-block  0
+call    0 returned 4
+        -:   54:    }
+        2:   55:    return filteredMasini;
+        1:   55-block  0
+        1:   55-block  1
+        1:   56:}
+        1:   56-block  0
+call    0 returned 1
+    $$$$$:   56-block  1
+call    1 never executed
+    $$$$$:   56-block  2
+call    2 never executed
+        -:   57:
+function _ZNK13MasinaService14sorteazaMasiniEPFbRK6MasinaS2_E called 3 returned 100% blocks executed 86%
+        3:   58:List<Masina> MasinaService::sorteazaMasini(bool (*cmp)(const Masina&, const Masina&)) const {
+        3:   59:    List sortedList{getAllMasini()};
+        3:   59-block  0
+call    0 returned 3
+call    1 returned 3
+        -:   60:
+       12:   61:    for (size_t i = 0; i < sortedList.getSize() - 1; i++) {
+        9:   61-block  0
+       12:   61-block  1
+call    0 returned 12
+branch  1 taken 9
+branch  2 taken 3 (fallthrough)
+       27:   62:        for (size_t j = i + 1; j < sortedList.getSize(); j++) {
+        9:   62-block  0
+       18:   62-block  1
+       27:   62-block  2
+call    0 returned 27
+branch  1 taken 18
+branch  2 taken 9 (fallthrough)
+       18:   63:            if (!cmp(sortedList.get(i), sortedList.get(j))) {
+       18:   63-block  0
+call    0 returned 18
+branch  1 taken 18 (fallthrough)
+branch  2 taken 0 (throw)
+       18:   63-block  1
+call    3 returned 18
+branch  4 taken 18 (fallthrough)
+branch  5 taken 0 (throw)
+       18:   63-block  2
+call    6 returned 18
+branch  7 taken 18 (fallthrough)
+branch  8 taken 0 (throw)
+       18:   63-block  3
+branch  9 taken 10 (fallthrough)
+branch 10 taken 8
+        -:   64:
+       10:   65:                Masina aux = sortedList.get(i);
+       10:   65-block  0
+call    0 returned 10
+branch  1 taken 10 (fallthrough)
+branch  2 taken 0 (throw)
+       10:   65-block  1
+call    3 returned 10
+branch  4 taken 10 (fallthrough)
+branch  5 taken 0 (throw)
+       10:   66:                sortedList.set(i, sortedList.get(j));
+       10:   66-block  0
+call    0 returned 10
+branch  1 taken 10 (fallthrough)
+branch  2 taken 0 (throw)
+       10:   66-block  1
+call    3 returned 10
+branch  4 taken 10 (fallthrough)
+branch  5 taken 0 (throw)
+       10:   67:                sortedList.set(j, aux);
+       10:   67-block  0
+call    0 returned 10
+branch  1 taken 10 (fallthrough)
+branch  2 taken 0 (throw)
+       10:   68:            }
+       10:   68-block  0
+call    0 returned 10
+    $$$$$:   68-block  1
+call    1 never executed
+        -:   69:        }
+        -:   70:    }
+        -:   71:
+        3:   72:    return sortedList;
+        3:   72-block  0
+        3:   72-block  1
+    =====:   73:}
+    $$$$$:   73-block  0
+call    0 never executed
+        -:   74:
+function _ZN13MasinaService18cmpNrInmatriculareERK6MasinaS2_ called 6 returned 100% blocks executed 100%
+        6:   75:bool MasinaService::cmpNrInmatriculare(const Masina& masina1, const Masina& masina2) {
+        6:   76:    return masina1.getNrInmatriculare() < masina2.getNrInmatriculare();
+        6:   76-block  0
+call    0 returned 6
+call    1 returned 6
+branch  2 taken 6 (fallthrough)
+branch  3 taken 0 (throw)
+        6:   76-block  1
+call    4 returned 6
+branch  5 taken 6 (fallthrough)
+branch  6 taken 0 (throw)
+        6:   76-block  2
+call    7 returned 6
+call    8 returned 6
+        6:   76-block  3
+        -:   77:}
+function _ZN13MasinaService6cmpTipERK6MasinaS2_ called 6 returned 100% blocks executed 100%
+        6:   78:bool MasinaService::cmpTip(const Masina& masina1, const Masina& masina2){
+        6:   79:    return masina1.getTip() < masina2.getTip();
+        6:   79-block  0
+call    0 returned 6
+call    1 returned 6
+branch  2 taken 6 (fallthrough)
+branch  3 taken 0 (throw)
+        6:   79-block  1
+call    4 returned 6
+branch  5 taken 6 (fallthrough)
+branch  6 taken 0 (throw)
+        6:   79-block  2
+call    7 returned 6
+call    8 returned 6
+        6:   79-block  3
+        -:   80:}
+function _ZN13MasinaService18cmpProducatorModelERK6MasinaS2_ called 6 returned 100% blocks executed 95%
+        6:   81:bool MasinaService::cmpProducatorModel(const Masina& masina1, const Masina& masina2) {
+        6:   82:    if (masina1.getProducator() == masina2.getProducator()) {
+        6:   82-block  0
+call    0 returned 6
+call    1 returned 6
+call    2 returned 6
+branch  3 taken 3 (fallthrough)
+branch  4 taken 3
+        3:   83:        return masina1.getModel() < masina2.getModel();
+        3:   83-block  0
+call    0 returned 3
+call    1 returned 3
+branch  2 taken 3 (fallthrough)
+branch  3 taken 0 (throw)
+        3:   83-block  1
+call    4 returned 3
+branch  5 taken 3 (fallthrough)
+branch  6 taken 0 (throw)
+        3:   83-block  2
+call    7 returned 3
+call    8 returned 3
+    $$$$$:   83-block  3
+call    9 never executed
+        -:   84:    }
+        3:   85:    return masina1.getProducator() < masina2.getProducator();
+        3:   85-block  0
+call    0 returned 3
+call    1 returned 3
+branch  2 taken 3 (fallthrough)
+branch  3 taken 0 (throw)
+        3:   85-block  1
+call    4 returned 3
+branch  5 taken 3 (fallthrough)
+branch  6 taken 0 (throw)
+        3:   85-block  2
+call    7 returned 3
+call    8 returned 3
+        -:   86:}
+        -:   87:
+function _ZNK13MasinaService29sorteazaMasiniNrInmatriculareEv called 1 returned 100% blocks executed 100%
+        1:   88:List<Masina> MasinaService::sorteazaMasiniNrInmatriculare() const {
+        1:   89:    return sorteazaMasini(cmpNrInmatriculare);
+        1:   89-block  0
+call    0 returned 1
+        -:   90:}
+function _ZNK13MasinaService17sorteazaMasiniTipEv called 1 returned 100% blocks executed 100%
+        1:   91:List<Masina> MasinaService::sorteazaMasiniTip() const {
+        1:   92:    return sorteazaMasini(cmpTip);
+        1:   92-block  0
+call    0 returned 1
+        -:   93:}
+function _ZNK13MasinaService29sorteazaMasiniProducatorModelEv called 1 returned 100% blocks executed 100%
+        1:   94:List<Masina> MasinaService::sorteazaMasiniProducatorModel() const {
+        1:   95:    return sorteazaMasini(cmpProducatorModel);
+        1:   95-block  0
+call    0 returned 1
+        -:   96:}

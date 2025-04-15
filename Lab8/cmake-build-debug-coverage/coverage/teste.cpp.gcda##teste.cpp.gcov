@@ -1,0 +1,2477 @@
+        -:    0:Source:C:/Users/lupse/CLionProjects/POO/Lab8/teste.cpp
+        -:    0:Graph:C:\Users\lupse\CLionProjects\POO\Lab8\cmake-build-debug-coverage\CMakeFiles\Lab6.dir\teste.cpp.gcno
+        -:    0:Data:C:\Users\lupse\CLionProjects\POO\Lab8\cmake-build-debug-coverage\CMakeFiles\Lab6.dir\teste.cpp.gcda
+        -:    0:Runs:1
+        -:    1://
+        -:    2:// Created by lupse on 4/8/2025.
+        -:    3://
+        -:    4:#include "teste.h"
+        -:    5:#include "list.h"
+        -:    6:#include <iostream>
+        -:    7:#include <vector>
+        -:    8:
+        -:    9:#include "exceptii.h"
+        -:   10:
+        -:   11:// ------------------ Test pentru Domain ------------------
+        -:   12:
+function _ZN5Teste10testMasinaEv called 1 returned 100% blocks executed 58%
+        1:   13:void Teste::testMasina() {
+        1:   13-block  0
+        7:   14:    Masina m("B123XYZ", "Toyota", "Corolla", "Sedan");
+        1:   14-block  0
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        1:   14-block  1
+call    3 returned 1
+branch  4 taken 1 (fallthrough)
+branch  5 taken 0 (throw)
+        1:   14-block  2
+call    6 returned 1
+branch  7 taken 1 (fallthrough)
+branch  8 taken 0 (throw)
+        1:   14-block  3
+call    9 returned 1
+branch 10 taken 1 (fallthrough)
+branch 11 taken 0 (throw)
+        1:   14-block  4
+call   12 returned 1
+branch 13 taken 1 (fallthrough)
+branch 14 taken 0 (throw)
+        1:   14-block  5
+call   15 returned 1
+        1:   14-block  6
+call   16 returned 1
+        1:   14-block  7
+call   17 returned 1
+        1:   14-block  8
+call   18 returned 1
+    $$$$$:   14-block  9
+call   19 never executed
+    $$$$$:   14-block 10
+    $$$$$:   14-block 11
+    $$$$$:   14-block 12
+call   20 never executed
+    $$$$$:   14-block 13
+    $$$$$:   14-block 14
+    $$$$$:   14-block 15
+call   21 never executed
+    $$$$$:   14-block 16
+    $$$$$:   14-block 17
+    $$$$$:   14-block 18
+call   22 never executed
+    $$$$$:   14-block 19
+    $$$$$:   14-block 20
+        -:   15:
+        -:   16:    // Testăm getterele
+       1*:   17:    assert(m.getNrInmatriculare() == "B123XYZ");
+        1:   17-block  0
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        1:   17-block  1
+call    3 returned 1
+branch  4 taken 1 (fallthrough)
+branch  5 taken 0 (throw)
+        1:   17-block  2
+branch  6 taken 0 (fallthrough)
+branch  7 taken 1
+    %%%%%:   17-block  3
+call    8 never executed
+        1:   17-block  4
+       1*:   18:    assert(m.getProducator() == "Toyota");
+        1:   18-block  0
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        1:   18-block  1
+call    3 returned 1
+branch  4 taken 1 (fallthrough)
+branch  5 taken 0 (throw)
+        1:   18-block  2
+branch  6 taken 0 (fallthrough)
+branch  7 taken 1
+    %%%%%:   18-block  3
+call    8 never executed
+        1:   18-block  4
+       1*:   19:    assert(m.getModel() == "Corolla");
+        1:   19-block  0
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        1:   19-block  1
+call    3 returned 1
+branch  4 taken 1 (fallthrough)
+branch  5 taken 0 (throw)
+        1:   19-block  2
+branch  6 taken 0 (fallthrough)
+branch  7 taken 1
+    %%%%%:   19-block  3
+call    8 never executed
+        1:   19-block  4
+       1*:   20:    assert(m.getTip() == "Sedan");
+        1:   20-block  0
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        1:   20-block  1
+call    3 returned 1
+branch  4 taken 1 (fallthrough)
+branch  5 taken 0 (throw)
+        1:   20-block  2
+branch  6 taken 0 (fallthrough)
+branch  7 taken 1
+    %%%%%:   20-block  3
+call    8 never executed
+        1:   20-block  4
+        -:   21:
+        -:   22:    // Testăm setterele
+        2:   23:    m.setProducator("Honda");
+        1:   23-block  0
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        1:   23-block  1
+call    3 returned 1
+branch  4 taken 1 (fallthrough)
+branch  5 taken 0 (throw)
+        1:   23-block  2
+call    6 returned 1
+        1:   23-block  3
+    $$$$$:   23-block  4
+call    7 never executed
+    $$$$$:   23-block  5
+    $$$$$:   23-block  6
+        2:   24:    m.setModel("Civic");
+        1:   24-block  0
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        1:   24-block  1
+call    3 returned 1
+branch  4 taken 1 (fallthrough)
+branch  5 taken 0 (throw)
+        1:   24-block  2
+call    6 returned 1
+        1:   24-block  3
+    $$$$$:   24-block  4
+call    7 never executed
+    $$$$$:   24-block  5
+    $$$$$:   24-block  6
+        1:   25:    m.setTip("Hatchback");
+        1:   25-block  0
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        1:   25-block  1
+call    3 returned 1
+branch  4 taken 1 (fallthrough)
+branch  5 taken 0 (throw)
+        1:   25-block  2
+call    6 returned 1
+    $$$$$:   25-block  3
+call    7 never executed
+    $$$$$:   25-block  4
+    $$$$$:   25-block  5
+        -:   26:
+       1*:   27:    assert(m.getProducator() == "Honda");
+        1:   27-block  0
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        1:   27-block  1
+call    3 returned 1
+branch  4 taken 1 (fallthrough)
+branch  5 taken 0 (throw)
+        1:   27-block  2
+branch  6 taken 0 (fallthrough)
+branch  7 taken 1
+    %%%%%:   27-block  3
+call    8 never executed
+        1:   27-block  4
+       1*:   28:    assert(m.getModel() == "Civic");
+        1:   28-block  0
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        1:   28-block  1
+call    3 returned 1
+branch  4 taken 1 (fallthrough)
+branch  5 taken 0 (throw)
+        1:   28-block  2
+branch  6 taken 0 (fallthrough)
+branch  7 taken 1
+    %%%%%:   28-block  3
+call    8 never executed
+        1:   28-block  4
+       1*:   29:    assert(m.getTip() == "Hatchback");
+        1:   29-block  0
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        1:   29-block  1
+call    3 returned 1
+branch  4 taken 1 (fallthrough)
+branch  5 taken 0 (throw)
+        1:   29-block  2
+branch  6 taken 0 (fallthrough)
+branch  7 taken 1
+    %%%%%:   29-block  3
+call    8 never executed
+        1:   29-block  4
+        -:   30:
+        1:   31:    std::cout << "Test Masina passed!\n";
+        1:   31-block  0
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        1:   32:}
+        1:   32-block  0
+call    0 returned 1
+    $$$$$:   32-block  1
+call    1 never executed
+        -:   33:
+        -:   34:// ------------------ Test pentru Repository ------------------
+        -:   35:
+function _ZN5Teste14testMasinaRepoEv called 1 returned 100% blocks executed 54%
+        1:   36:void Teste::testMasinaRepo() {
+        1:   37:    MasinaRepo repo;
+        1:   37-block  0
+        -:   38:
+        8:   39:    Masina m1("B123XYZ", "Toyota", "Corolla", "Sedan");
+        1:   39-block  0
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        1:   39-block  1
+call    3 returned 1
+branch  4 taken 1 (fallthrough)
+branch  5 taken 0 (throw)
+        1:   39-block  2
+call    6 returned 1
+branch  7 taken 1 (fallthrough)
+branch  8 taken 0 (throw)
+        1:   39-block  3
+call    9 returned 1
+branch 10 taken 1 (fallthrough)
+branch 11 taken 0 (throw)
+        1:   39-block  4
+call   12 returned 1
+branch 13 taken 1 (fallthrough)
+branch 14 taken 0 (throw)
+        1:   39-block  5
+call   15 returned 1
+        1:   39-block  6
+call   16 returned 1
+        1:   39-block  7
+call   17 returned 1
+        1:   39-block  8
+call   18 returned 1
+        1:   39-block  9
+    $$$$$:   39-block 10
+call   19 never executed
+    $$$$$:   39-block 11
+    $$$$$:   39-block 12
+    $$$$$:   39-block 13
+call   20 never executed
+    $$$$$:   39-block 14
+    $$$$$:   39-block 15
+    $$$$$:   39-block 16
+call   21 never executed
+    $$$$$:   39-block 17
+    $$$$$:   39-block 18
+    $$$$$:   39-block 19
+call   22 never executed
+    $$$$$:   39-block 20
+    $$$$$:   39-block 21
+        7:   40:    Masina m2("B456ABC", "Honda", "Civic", "Hatchback");
+        1:   40-block  0
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        1:   40-block  1
+call    3 returned 1
+branch  4 taken 1 (fallthrough)
+branch  5 taken 0 (throw)
+        1:   40-block  2
+call    6 returned 1
+branch  7 taken 1 (fallthrough)
+branch  8 taken 0 (throw)
+        1:   40-block  3
+call    9 returned 1
+branch 10 taken 1 (fallthrough)
+branch 11 taken 0 (throw)
+        1:   40-block  4
+call   12 returned 1
+branch 13 taken 1 (fallthrough)
+branch 14 taken 0 (throw)
+        1:   40-block  5
+call   15 returned 1
+        1:   40-block  6
+call   16 returned 1
+        1:   40-block  7
+call   17 returned 1
+        1:   40-block  8
+call   18 returned 1
+    $$$$$:   40-block  9
+call   19 never executed
+    $$$$$:   40-block 10
+    $$$$$:   40-block 11
+    $$$$$:   40-block 12
+call   20 never executed
+    $$$$$:   40-block 13
+    $$$$$:   40-block 14
+    $$$$$:   40-block 15
+call   21 never executed
+    $$$$$:   40-block 16
+    $$$$$:   40-block 17
+    $$$$$:   40-block 18
+call   22 never executed
+    $$$$$:   40-block 19
+    $$$$$:   40-block 20
+        -:   41:
+        -:   42:    // Adăugăm mașini în repo
+        1:   43:    repo.adauga(m1);
+        1:   43-block  0
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        1:   44:    repo.adauga(m2);
+        1:   44-block  0
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        -:   45:
+        -:   46:    // Verificăm dacă mașinile sunt adăugate corect
+       1*:   47:    assert(repo.getAll().size() == 2);
+        1:   47-block  0
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        1:   47-block  1
+call    3 returned 1
+branch  4 taken 0 (fallthrough)
+branch  5 taken 1
+    %%%%%:   47-block  2
+call    6 never executed
+        1:   47-block  3
+        -:   48:
+        -:   49:    // Căutăm o mașină existentă
+        1:   50:    const Masina& found = repo.cauta("B123XYZ");
+        1:   50-block  0
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        1:   50-block  1
+call    3 returned 1
+branch  4 taken 1 (fallthrough)
+branch  5 taken 0 (throw)
+        1:   50-block  2
+call    6 returned 1
+    $$$$$:   50-block  3
+call    7 never executed
+    $$$$$:   50-block  4
+    $$$$$:   50-block  5
+       1*:   51:    assert(found.getNrInmatriculare() == "B123XYZ");
+        1:   51-block  0
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        1:   51-block  1
+call    3 returned 1
+branch  4 taken 1 (fallthrough)
+branch  5 taken 0 (throw)
+        1:   51-block  2
+branch  6 taken 0 (fallthrough)
+branch  7 taken 1
+    %%%%%:   51-block  3
+call    8 never executed
+        1:   51-block  4
+        -:   52:
+        -:   53:    // Căutăm o mașină inexistentă (ar trebui să arunce excepție)
+        -:   54:    try {
+       2*:   55:        auto& dump = repo.cauta("X999XXX");
+        1:   55-block  0
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        1:   55-block  1
+call    3 returned 1
+branch  4 taken 0 (fallthrough)
+branch  5 taken 1 (throw)
+    %%%%%:   55-block  2
+call    6 never executed
+        1:   55-block  3
+call    7 returned 1
+        1:   55-block  4
+        1:   55-block  5
+    #####:   56:        assert(false && "Excepția nu a fost aruncată pentru cautarea unei mașini inexistente");
+    %%%%%:   56-block  0
+call    0 never executed
+        1:   57:    } catch (const std::runtime_error& e) {
+        1:   57-block  0
+branch  0 taken 0 (fallthrough)
+branch  1 taken 1
+        1:   57-block  1
+call    2 returned 1
+        2:   58:        assert(std::string(e.what()) == "Masina inexistenta.");
+        1:   58-block  0
+call    0 returned 1
+call    1 returned 1
+branch  2 taken 1 (fallthrough)
+branch  3 taken 0 (throw)
+        1:   58-block  1
+call    4 returned 1
+branch  5 taken 1 (fallthrough)
+branch  6 taken 0 (throw)
+        1:   58-block  2
+branch  7 taken 0 (fallthrough)
+branch  8 taken 1
+    $$$$$:   58-block  3
+call    9 never executed
+        1:   58-block  4
+        1:   58-block  5
+branch 10 taken 1 (fallthrough)
+branch 11 taken 0
+        1:   58-block  6
+call   12 returned 1
+        1:   58-block  7
+branch 13 taken 1 (fallthrough)
+branch 14 taken 0
+    $$$$$:   58-block  8
+branch 15 never executed (fallthrough)
+branch 16 never executed
+    $$$$$:   58-block  9
+call   17 never executed
+    $$$$$:   58-block 10
+    $$$$$:   58-block 11
+branch 18 never executed (fallthrough)
+branch 19 never executed
+    $$$$$:   58-block 12
+        1:   59:    }
+        1:   59-block  0
+call    0 returned 1
+    $$$$$:   59-block  1
+call    1 never executed
+        -:   60:
+        -:   61:    // Adăugăm din nou mașina m1, ceea ce ar trebui să arunce o excepție
+        -:   62:    try {
+        1:   63:        repo.adauga(m1);
+call    0 returned 1
+branch  1 taken 0 (fallthrough)
+branch  2 taken 1 (throw)
+    =====:   64:        assert(false && "Excepția nu a fost aruncată pentru adăugarea unei mașini deja existente");
+    $$$$$:   64-block  0
+call    0 never executed
+        1:   65:    } catch (const std::runtime_error& e) {
+        1:   65-block  0
+branch  0 taken 0 (fallthrough)
+branch  1 taken 1
+        1:   65-block  1
+call    2 returned 1
+        2:   66:        assert(std::string(e.what()) == "Masina deja existenta.");
+        1:   66-block  0
+call    0 returned 1
+call    1 returned 1
+branch  2 taken 1 (fallthrough)
+branch  3 taken 0 (throw)
+        1:   66-block  1
+call    4 returned 1
+branch  5 taken 1 (fallthrough)
+branch  6 taken 0 (throw)
+        1:   66-block  2
+branch  7 taken 0 (fallthrough)
+branch  8 taken 1
+    $$$$$:   66-block  3
+call    9 never executed
+        1:   66-block  4
+        1:   66-block  5
+branch 10 taken 1 (fallthrough)
+branch 11 taken 0
+        1:   66-block  6
+call   12 returned 1
+        1:   66-block  7
+branch 13 taken 1 (fallthrough)
+branch 14 taken 0
+    $$$$$:   66-block  8
+branch 15 never executed (fallthrough)
+branch 16 never executed
+    $$$$$:   66-block  9
+call   17 never executed
+    $$$$$:   66-block 10
+    $$$$$:   66-block 11
+branch 18 never executed (fallthrough)
+branch 19 never executed
+    $$$$$:   66-block 12
+        1:   67:    }
+        1:   67-block  0
+call    0 returned 1
+    $$$$$:   67-block  1
+call    1 never executed
+        -:   68:
+        -:   69:    // Modificăm o mașină existentă
+        1:   70:    m2.setProducator("Ford");
+        1:   70-block  0
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        1:   70-block  1
+call    3 returned 1
+        1:   70-block  2
+call    4 returned 1
+branch  5 taken 1 (fallthrough)
+branch  6 taken 0 (throw)
+    $$$$$:   70-block  3
+call    7 never executed
+    $$$$$:   70-block  4
+    $$$$$:   70-block  5
+        1:   71:    repo.modifica(m2);
+        1:   71-block  0
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        1:   72:    const Masina& modified = repo.cauta("B456ABC");
+        1:   72-block  0
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        1:   72-block  1
+call    3 returned 1
+branch  4 taken 1 (fallthrough)
+branch  5 taken 0 (throw)
+        1:   72-block  2
+call    6 returned 1
+    $$$$$:   72-block  3
+call    7 never executed
+    $$$$$:   72-block  4
+    $$$$$:   72-block  5
+        1:   73:    assert(modified.getProducator() == "Ford");
+        1:   73-block  0
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        1:   73-block  1
+call    3 returned 1
+branch  4 taken 1 (fallthrough)
+branch  5 taken 0 (throw)
+        1:   73-block  2
+branch  6 taken 0 (fallthrough)
+branch  7 taken 1
+    $$$$$:   73-block  3
+call    8 never executed
+        1:   73-block  4
+        -:   74:
+        -:   75:    // Modificăm o mașină inexistentă (ar trebui să arunce excepție)
+        7:   76:    Masina m3("X999XXX", "BMW", "X5", "SUV");
+        1:   76-block  0
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        1:   76-block  1
+call    3 returned 1
+branch  4 taken 1 (fallthrough)
+branch  5 taken 0 (throw)
+        1:   76-block  2
+call    6 returned 1
+branch  7 taken 1 (fallthrough)
+branch  8 taken 0 (throw)
+        1:   76-block  3
+call    9 returned 1
+branch 10 taken 1 (fallthrough)
+branch 11 taken 0 (throw)
+        1:   76-block  4
+call   12 returned 1
+branch 13 taken 1 (fallthrough)
+branch 14 taken 0 (throw)
+        1:   76-block  5
+call   15 returned 1
+        1:   76-block  6
+call   16 returned 1
+        1:   76-block  7
+call   17 returned 1
+        1:   76-block  8
+call   18 returned 1
+    $$$$$:   76-block  9
+call   19 never executed
+    $$$$$:   76-block 10
+    $$$$$:   76-block 11
+    $$$$$:   76-block 12
+call   20 never executed
+    $$$$$:   76-block 13
+    $$$$$:   76-block 14
+    $$$$$:   76-block 15
+call   21 never executed
+    $$$$$:   76-block 16
+    $$$$$:   76-block 17
+    $$$$$:   76-block 18
+call   22 never executed
+    $$$$$:   76-block 19
+    $$$$$:   76-block 20
+        -:   77:    try {
+        1:   78:        repo.modifica(m3);
+        1:   78-block  0
+call    0 returned 1
+branch  1 taken 0 (fallthrough)
+branch  2 taken 1 (throw)
+    =====:   79:        assert(false && "Excepția nu a fost aruncată pentru modificarea unei mașini inexistente");
+    $$$$$:   79-block  0
+call    0 never executed
+        1:   80:    } catch (const std::runtime_error& e) {
+        1:   80-block  0
+branch  0 taken 0 (fallthrough)
+branch  1 taken 1
+        1:   80-block  1
+call    2 returned 1
+        2:   81:        assert(std::string(e.what()) == "Masina inexistenta.");
+        1:   81-block  0
+call    0 returned 1
+call    1 returned 1
+branch  2 taken 1 (fallthrough)
+branch  3 taken 0 (throw)
+        1:   81-block  1
+call    4 returned 1
+branch  5 taken 1 (fallthrough)
+branch  6 taken 0 (throw)
+        1:   81-block  2
+branch  7 taken 0 (fallthrough)
+branch  8 taken 1
+    $$$$$:   81-block  3
+call    9 never executed
+        1:   81-block  4
+        1:   81-block  5
+branch 10 taken 1 (fallthrough)
+branch 11 taken 0
+        1:   81-block  6
+call   12 returned 1
+        1:   81-block  7
+branch 13 taken 1 (fallthrough)
+branch 14 taken 0
+    $$$$$:   81-block  8
+branch 15 never executed (fallthrough)
+branch 16 never executed
+    $$$$$:   81-block  9
+call   17 never executed
+    $$$$$:   81-block 10
+    $$$$$:   81-block 11
+branch 18 never executed (fallthrough)
+branch 19 never executed
+    $$$$$:   81-block 12
+        1:   82:    }
+        1:   82-block  0
+call    0 returned 1
+    $$$$$:   82-block  1
+call    1 never executed
+        -:   83:
+        -:   84:    // Ștergem o mașină existentă
+        1:   85:    repo.sterge("B123XYZ");
+        1:   85-block  0
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        1:   85-block  1
+call    3 returned 1
+        1:   85-block  2
+call    4 returned 1
+branch  5 taken 1 (fallthrough)
+branch  6 taken 0 (throw)
+    $$$$$:   85-block  3
+call    7 never executed
+    $$$$$:   85-block  4
+    $$$$$:   85-block  5
+        1:   86:    assert(repo.getAll().size() == 1);
+        1:   86-block  0
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        1:   86-block  1
+call    3 returned 1
+branch  4 taken 0 (fallthrough)
+branch  5 taken 1
+    $$$$$:   86-block  2
+call    6 never executed
+        1:   86-block  3
+        -:   87:
+        -:   88:    // Ștergem o mașină inexistentă (ar trebui să arunce excepție)
+        -:   89:    try {
+        2:   90:        repo.sterge("B123XYZ");
+        1:   90-block  0
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        1:   90-block  1
+call    3 returned 1
+branch  4 taken 0 (fallthrough)
+branch  5 taken 1 (throw)
+    $$$$$:   90-block  2
+call    6 never executed
+        1:   90-block  3
+call    7 returned 1
+        1:   90-block  4
+        1:   90-block  5
+    =====:   91:        assert(false && "Excepția nu a fost aruncată pentru ștergerea unei mașini inexistente");
+    $$$$$:   91-block  0
+call    0 never executed
+        1:   92:    } catch (const std::runtime_error& e) {
+        1:   92-block  0
+branch  0 taken 0 (fallthrough)
+branch  1 taken 1
+        1:   92-block  1
+call    2 returned 1
+        2:   93:        assert(std::string(e.what()) == "Masina inexistenta.");
+        1:   93-block  0
+call    0 returned 1
+call    1 returned 1
+branch  2 taken 1 (fallthrough)
+branch  3 taken 0 (throw)
+        1:   93-block  1
+call    4 returned 1
+branch  5 taken 1 (fallthrough)
+branch  6 taken 0 (throw)
+        1:   93-block  2
+branch  7 taken 0 (fallthrough)
+branch  8 taken 1
+    $$$$$:   93-block  3
+call    9 never executed
+        1:   93-block  4
+        1:   93-block  5
+branch 10 taken 1 (fallthrough)
+branch 11 taken 0
+        1:   93-block  6
+call   12 returned 1
+        1:   93-block  7
+branch 13 taken 1 (fallthrough)
+branch 14 taken 0
+    $$$$$:   93-block  8
+branch 15 never executed (fallthrough)
+branch 16 never executed
+    $$$$$:   93-block  9
+call   17 never executed
+    $$$$$:   93-block 10
+    $$$$$:   93-block 11
+branch 18 never executed (fallthrough)
+branch 19 never executed
+    $$$$$:   93-block 12
+        1:   94:    }
+        1:   94-block  0
+call    0 returned 1
+    $$$$$:   94-block  1
+call    1 never executed
+        -:   95:
+        1:   96:    std::cout << "Test MasinaRepo passed!\n";
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        1:   97:}
+        1:   97-block  0
+call    0 returned 1
+call    1 returned 1
+call    2 returned 1
+call    3 returned 1
+    $$$$$:   97-block  1
+call    4 never executed
+    $$$$$:   97-block  2
+call    5 never executed
+    $$$$$:   97-block  3
+call    6 never executed
+    $$$$$:   97-block  4
+call    7 never executed
+        -:   98:
+        -:   99:// ------------------ Test pentru Service ------------------
+        -:  100:
+function _ZN5Teste17testMasinaServiceEv called 1 returned 100% blocks executed 57%
+        1:  101:void Teste::testMasinaService() {
+        1:  102:    MasinaRepo repo;
+        1:  103:    MasinaService service(repo);
+        1:  103-block  0
+call    0 returned 1
+        -:  104:
+        8:  105:    Masina m1("B123XYZ", "Toyota", "Corolla", "Sedan");
+        1:  105-block  0
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        1:  105-block  1
+call    3 returned 1
+branch  4 taken 1 (fallthrough)
+branch  5 taken 0 (throw)
+        1:  105-block  2
+call    6 returned 1
+branch  7 taken 1 (fallthrough)
+branch  8 taken 0 (throw)
+        1:  105-block  3
+call    9 returned 1
+branch 10 taken 1 (fallthrough)
+branch 11 taken 0 (throw)
+        1:  105-block  4
+call   12 returned 1
+branch 13 taken 1 (fallthrough)
+branch 14 taken 0 (throw)
+        1:  105-block  5
+call   15 returned 1
+        1:  105-block  6
+call   16 returned 1
+        1:  105-block  7
+call   17 returned 1
+        1:  105-block  8
+call   18 returned 1
+        1:  105-block  9
+    $$$$$:  105-block 10
+call   19 never executed
+    $$$$$:  105-block 11
+    $$$$$:  105-block 12
+    $$$$$:  105-block 13
+call   20 never executed
+    $$$$$:  105-block 14
+    $$$$$:  105-block 15
+    $$$$$:  105-block 16
+call   21 never executed
+    $$$$$:  105-block 17
+    $$$$$:  105-block 18
+    $$$$$:  105-block 19
+call   22 never executed
+    $$$$$:  105-block 20
+    $$$$$:  105-block 21
+        8:  106:    Masina m2("B456ABC", "Honda", "Civic", "Hatchback");
+        1:  106-block  0
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        1:  106-block  1
+call    3 returned 1
+branch  4 taken 1 (fallthrough)
+branch  5 taken 0 (throw)
+        1:  106-block  2
+call    6 returned 1
+branch  7 taken 1 (fallthrough)
+branch  8 taken 0 (throw)
+        1:  106-block  3
+call    9 returned 1
+branch 10 taken 1 (fallthrough)
+branch 11 taken 0 (throw)
+        1:  106-block  4
+call   12 returned 1
+branch 13 taken 1 (fallthrough)
+branch 14 taken 0 (throw)
+        1:  106-block  5
+call   15 returned 1
+        1:  106-block  6
+call   16 returned 1
+        1:  106-block  7
+call   17 returned 1
+        1:  106-block  8
+call   18 returned 1
+        1:  106-block  9
+    $$$$$:  106-block 10
+call   19 never executed
+    $$$$$:  106-block 11
+    $$$$$:  106-block 12
+    $$$$$:  106-block 13
+call   20 never executed
+    $$$$$:  106-block 14
+    $$$$$:  106-block 15
+    $$$$$:  106-block 16
+call   21 never executed
+    $$$$$:  106-block 17
+    $$$$$:  106-block 18
+    $$$$$:  106-block 19
+call   22 never executed
+    $$$$$:  106-block 20
+    $$$$$:  106-block 21
+        -:  107:
+        -:  108:    // Adăugăm mașini
+        8:  109:    service.adaugaMasina("B123XYZ", "Toyota", "Corolla", "Sedan");
+        1:  109-block  0
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        1:  109-block  1
+call    3 returned 1
+branch  4 taken 1 (fallthrough)
+branch  5 taken 0 (throw)
+        1:  109-block  2
+call    6 returned 1
+branch  7 taken 1 (fallthrough)
+branch  8 taken 0 (throw)
+        1:  109-block  3
+call    9 returned 1
+branch 10 taken 1 (fallthrough)
+branch 11 taken 0 (throw)
+        1:  109-block  4
+call   12 returned 1
+branch 13 taken 1 (fallthrough)
+branch 14 taken 0 (throw)
+        1:  109-block  5
+call   15 returned 1
+        1:  109-block  6
+call   16 returned 1
+        1:  109-block  7
+call   17 returned 1
+        1:  109-block  8
+call   18 returned 1
+        1:  109-block  9
+    $$$$$:  109-block 10
+call   19 never executed
+    $$$$$:  109-block 11
+    $$$$$:  109-block 12
+    $$$$$:  109-block 13
+call   20 never executed
+    $$$$$:  109-block 14
+    $$$$$:  109-block 15
+    $$$$$:  109-block 16
+call   21 never executed
+    $$$$$:  109-block 17
+    $$$$$:  109-block 18
+    $$$$$:  109-block 19
+call   22 never executed
+    $$$$$:  109-block 20
+    $$$$$:  109-block 21
+        8:  110:    service.adaugaMasina("B456ABC", "Honda", "Civic", "Hatchback");
+        1:  110-block  0
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        1:  110-block  1
+call    3 returned 1
+branch  4 taken 1 (fallthrough)
+branch  5 taken 0 (throw)
+        1:  110-block  2
+call    6 returned 1
+branch  7 taken 1 (fallthrough)
+branch  8 taken 0 (throw)
+        1:  110-block  3
+call    9 returned 1
+branch 10 taken 1 (fallthrough)
+branch 11 taken 0 (throw)
+        1:  110-block  4
+call   12 returned 1
+branch 13 taken 1 (fallthrough)
+branch 14 taken 0 (throw)
+        1:  110-block  5
+call   15 returned 1
+        1:  110-block  6
+call   16 returned 1
+        1:  110-block  7
+call   17 returned 1
+        1:  110-block  8
+call   18 returned 1
+        1:  110-block  9
+    $$$$$:  110-block 10
+call   19 never executed
+    $$$$$:  110-block 11
+    $$$$$:  110-block 12
+    $$$$$:  110-block 13
+call   20 never executed
+    $$$$$:  110-block 14
+    $$$$$:  110-block 15
+    $$$$$:  110-block 16
+call   21 never executed
+    $$$$$:  110-block 17
+    $$$$$:  110-block 18
+    $$$$$:  110-block 19
+call   22 never executed
+    $$$$$:  110-block 20
+    $$$$$:  110-block 21
+        8:  111:    service.adaugaMasina("B567DEF", "Ford", "Focus", "SUV");
+        1:  111-block  0
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        1:  111-block  1
+call    3 returned 1
+branch  4 taken 1 (fallthrough)
+branch  5 taken 0 (throw)
+        1:  111-block  2
+call    6 returned 1
+branch  7 taken 1 (fallthrough)
+branch  8 taken 0 (throw)
+        1:  111-block  3
+call    9 returned 1
+branch 10 taken 1 (fallthrough)
+branch 11 taken 0 (throw)
+        1:  111-block  4
+call   12 returned 1
+branch 13 taken 1 (fallthrough)
+branch 14 taken 0 (throw)
+        1:  111-block  5
+call   15 returned 1
+        1:  111-block  6
+call   16 returned 1
+        1:  111-block  7
+call   17 returned 1
+        1:  111-block  8
+call   18 returned 1
+        1:  111-block  9
+    $$$$$:  111-block 10
+call   19 never executed
+    $$$$$:  111-block 11
+    $$$$$:  111-block 12
+    $$$$$:  111-block 13
+call   20 never executed
+    $$$$$:  111-block 14
+    $$$$$:  111-block 15
+    $$$$$:  111-block 16
+call   21 never executed
+    $$$$$:  111-block 17
+    $$$$$:  111-block 18
+    $$$$$:  111-block 19
+call   22 never executed
+    $$$$$:  111-block 20
+    $$$$$:  111-block 21
+        8:  112:    service.adaugaMasina("B678HIJ", "Bmw", "Seria5", "Coupe");
+        1:  112-block  0
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        1:  112-block  1
+call    3 returned 1
+branch  4 taken 1 (fallthrough)
+branch  5 taken 0 (throw)
+        1:  112-block  2
+call    6 returned 1
+branch  7 taken 1 (fallthrough)
+branch  8 taken 0 (throw)
+        1:  112-block  3
+call    9 returned 1
+branch 10 taken 1 (fallthrough)
+branch 11 taken 0 (throw)
+        1:  112-block  4
+call   12 returned 1
+branch 13 taken 1 (fallthrough)
+branch 14 taken 0 (throw)
+        1:  112-block  5
+call   15 returned 1
+        1:  112-block  6
+call   16 returned 1
+        1:  112-block  7
+call   17 returned 1
+        1:  112-block  8
+call   18 returned 1
+        1:  112-block  9
+    $$$$$:  112-block 10
+call   19 never executed
+    $$$$$:  112-block 11
+    $$$$$:  112-block 12
+    $$$$$:  112-block 13
+call   20 never executed
+    $$$$$:  112-block 14
+    $$$$$:  112-block 15
+    $$$$$:  112-block 16
+call   21 never executed
+    $$$$$:  112-block 17
+    $$$$$:  112-block 18
+    $$$$$:  112-block 19
+call   22 never executed
+    $$$$$:  112-block 20
+    $$$$$:  112-block 21
+        7:  113:    service.adaugaMasina("B899KLM", "Dacia", "Papuc", "Pickup");
+        1:  113-block  0
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        1:  113-block  1
+call    3 returned 1
+branch  4 taken 1 (fallthrough)
+branch  5 taken 0 (throw)
+        1:  113-block  2
+call    6 returned 1
+branch  7 taken 1 (fallthrough)
+branch  8 taken 0 (throw)
+        1:  113-block  3
+call    9 returned 1
+branch 10 taken 1 (fallthrough)
+branch 11 taken 0 (throw)
+        1:  113-block  4
+call   12 returned 1
+branch 13 taken 1 (fallthrough)
+branch 14 taken 0 (throw)
+        1:  113-block  5
+call   15 returned 1
+        1:  113-block  6
+call   16 returned 1
+        1:  113-block  7
+call   17 returned 1
+        1:  113-block  8
+call   18 returned 1
+    $$$$$:  113-block  9
+call   19 never executed
+    $$$$$:  113-block 10
+    $$$$$:  113-block 11
+    $$$$$:  113-block 12
+call   20 never executed
+    $$$$$:  113-block 13
+    $$$$$:  113-block 14
+    $$$$$:  113-block 15
+call   21 never executed
+    $$$$$:  113-block 16
+    $$$$$:  113-block 17
+    $$$$$:  113-block 18
+call   22 never executed
+    $$$$$:  113-block 19
+    $$$$$:  113-block 20
+        -:  114:
+        -:  115:    // Verificăm dacă mașinile sunt adăugate corect
+       1*:  116:    assert(service.getAllMasini().size() == 5);
+        1:  116-block  0
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        1:  116-block  1
+call    3 returned 1
+branch  4 taken 0 (fallthrough)
+branch  5 taken 1
+    %%%%%:  116-block  2
+call    6 never executed
+        1:  116-block  3
+        -:  117:
+        -:  118:    // Căutăm mașina
+        1:  119:    const Masina& found = service.cautaMasina("B123XYZ");
+        1:  119-block  0
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        1:  119-block  1
+call    3 returned 1
+branch  4 taken 1 (fallthrough)
+branch  5 taken 0 (throw)
+        1:  119-block  2
+call    6 returned 1
+    $$$$$:  119-block  3
+call    7 never executed
+    $$$$$:  119-block  4
+    $$$$$:  119-block  5
+       1*:  120:    assert(found.getNrInmatriculare() == "B123XYZ");
+        1:  120-block  0
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        1:  120-block  1
+call    3 returned 1
+branch  4 taken 1 (fallthrough)
+branch  5 taken 0 (throw)
+        1:  120-block  2
+branch  6 taken 0 (fallthrough)
+branch  7 taken 1
+    %%%%%:  120-block  3
+call    8 never executed
+        1:  120-block  4
+        -:  121:
+        -:  122:    // Modificăm o mașină
+        8:  123:    service.modificaMasina("B456ABC", "Ford", "Focus", "Sedan");
+        1:  123-block  0
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        1:  123-block  1
+call    3 returned 1
+branch  4 taken 1 (fallthrough)
+branch  5 taken 0 (throw)
+        1:  123-block  2
+call    6 returned 1
+branch  7 taken 1 (fallthrough)
+branch  8 taken 0 (throw)
+        1:  123-block  3
+call    9 returned 1
+branch 10 taken 1 (fallthrough)
+branch 11 taken 0 (throw)
+        1:  123-block  4
+call   12 returned 1
+branch 13 taken 1 (fallthrough)
+branch 14 taken 0 (throw)
+        1:  123-block  5
+call   15 returned 1
+        1:  123-block  6
+call   16 returned 1
+        1:  123-block  7
+call   17 returned 1
+        1:  123-block  8
+call   18 returned 1
+        1:  123-block  9
+    $$$$$:  123-block 10
+call   19 never executed
+    $$$$$:  123-block 11
+    $$$$$:  123-block 12
+    $$$$$:  123-block 13
+call   20 never executed
+    $$$$$:  123-block 14
+    $$$$$:  123-block 15
+    $$$$$:  123-block 16
+call   21 never executed
+    $$$$$:  123-block 17
+    $$$$$:  123-block 18
+    $$$$$:  123-block 19
+call   22 never executed
+    $$$$$:  123-block 20
+    $$$$$:  123-block 21
+        1:  124:    const Masina& modified = service.cautaMasina("B456ABC");
+        1:  124-block  0
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        1:  124-block  1
+call    3 returned 1
+branch  4 taken 1 (fallthrough)
+branch  5 taken 0 (throw)
+        1:  124-block  2
+call    6 returned 1
+    $$$$$:  124-block  3
+call    7 never executed
+    $$$$$:  124-block  4
+    $$$$$:  124-block  5
+       1*:  125:    assert(modified.getProducator() == "Ford");
+        1:  125-block  0
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        1:  125-block  1
+call    3 returned 1
+branch  4 taken 1 (fallthrough)
+branch  5 taken 0 (throw)
+        1:  125-block  2
+branch  6 taken 0 (fallthrough)
+branch  7 taken 1
+    %%%%%:  125-block  3
+call    8 never executed
+        1:  125-block  4
+        -:  126:
+        -:  127:    // Ștergem o mașină
+        1:  128:    service.stergeMasina("B123XYZ");
+        1:  128-block  0
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        1:  128-block  1
+call    3 returned 1
+branch  4 taken 1 (fallthrough)
+branch  5 taken 0 (throw)
+        1:  128-block  2
+call    6 returned 1
+    $$$$$:  128-block  3
+call    7 never executed
+    $$$$$:  128-block  4
+    $$$$$:  128-block  5
+       1*:  129:    assert(service.getAllMasini().size() == 4);
+        1:  129-block  0
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        1:  129-block  1
+call    3 returned 1
+branch  4 taken 0 (fallthrough)
+branch  5 taken 1
+    %%%%%:  129-block  2
+call    6 never executed
+        1:  129-block  3
+        -:  130:
+        -:  131:    //filtrare
+        1:  132:    std::vector m = service.getFilteredMasiniByProducator("Ford");
+        1:  132-block  0
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        1:  132-block  1
+call    3 returned 1
+branch  4 taken 1 (fallthrough)
+branch  5 taken 0 (throw)
+        1:  132-block  2
+call    6 returned 1
+    $$$$$:  132-block  3
+call    7 never executed
+    $$$$$:  132-block  4
+    $$$$$:  132-block  5
+       1*:  133:    assert(m.size() == 2);
+        1:  133-block  0
+call    0 returned 1
+branch  1 taken 0 (fallthrough)
+branch  2 taken 1
+    %%%%%:  133-block  1
+call    3 never executed
+        1:  133-block  2
+        1:  134:    auto it = m.begin();
+        1:  134-block  0
+call    0 returned 1
+       1*:  135:    assert(it->getNrInmatriculare() == "B456ABC");
+call    0 returned 1
+call    1 returned 1
+branch  2 taken 1 (fallthrough)
+branch  3 taken 0 (throw)
+        1:  135-block  0
+call    4 returned 1
+branch  5 taken 1 (fallthrough)
+branch  6 taken 0 (throw)
+        1:  135-block  1
+branch  7 taken 0 (fallthrough)
+branch  8 taken 1
+    %%%%%:  135-block  2
+call    9 never executed
+        1:  135-block  3
+        1:  136:    ++it;
+        1:  136-block  0
+call    0 returned 1
+       1*:  137:    assert(it->getNrInmatriculare() == "B567DEF");
+call    0 returned 1
+call    1 returned 1
+branch  2 taken 1 (fallthrough)
+branch  3 taken 0 (throw)
+        1:  137-block  0
+call    4 returned 1
+branch  5 taken 1 (fallthrough)
+branch  6 taken 0 (throw)
+        1:  137-block  1
+branch  7 taken 0 (fallthrough)
+branch  8 taken 1
+    %%%%%:  137-block  2
+call    9 never executed
+        1:  137-block  3
+        -:  138:
+        1:  139:    m = service.getFilteredMasiniByTip("Coupe");
+        1:  139-block  0
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        1:  139-block  1
+call    3 returned 1
+branch  4 taken 1 (fallthrough)
+branch  5 taken 0 (throw)
+        1:  139-block  2
+call    6 returned 1
+call    7 returned 1
+call    8 returned 1
+    $$$$$:  139-block  3
+call    9 never executed
+    $$$$$:  139-block  4
+    $$$$$:  139-block  5
+    $$$$$:  139-block  6
+       1*:  140:    assert(m.size() == 1);
+        1:  140-block  0
+call    0 returned 1
+branch  1 taken 0 (fallthrough)
+branch  2 taken 1
+    %%%%%:  140-block  1
+call    3 never executed
+        1:  140-block  2
+        1:  141:    it = m.begin();
+        1:  141-block  0
+call    0 returned 1
+       1*:  142:    assert(it->getNrInmatriculare() == "B678HIJ");
+call    0 returned 1
+call    1 returned 1
+branch  2 taken 1 (fallthrough)
+branch  3 taken 0 (throw)
+        1:  142-block  0
+call    4 returned 1
+branch  5 taken 1 (fallthrough)
+branch  6 taken 0 (throw)
+        1:  142-block  1
+branch  7 taken 0 (fallthrough)
+branch  8 taken 1
+    %%%%%:  142-block  2
+call    9 never executed
+        1:  142-block  3
+        -:  143:
+        -:  144:
+        -:  145:    //sortare
+        1:  146:    m = service.sorteazaMasiniNrInmatriculare();
+        1:  146-block  0
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        1:  146-block  1
+call    3 returned 1
+call    4 returned 1
+    $$$$$:  146-block  2
+       1*:  147:    assert(m.size() == 4);
+call    0 returned 1
+branch  1 taken 0 (fallthrough)
+branch  2 taken 1
+    %%%%%:  147-block  0
+call    3 never executed
+        1:  147-block  1
+        1:  148:    it = m.begin();
+        1:  148-block  0
+call    0 returned 1
+       1*:  149:    assert(it->getNrInmatriculare() == "B456ABC");
+call    0 returned 1
+call    1 returned 1
+branch  2 taken 1 (fallthrough)
+branch  3 taken 0 (throw)
+        1:  149-block  0
+call    4 returned 1
+branch  5 taken 1 (fallthrough)
+branch  6 taken 0 (throw)
+        1:  149-block  1
+branch  7 taken 0 (fallthrough)
+branch  8 taken 1
+    %%%%%:  149-block  2
+call    9 never executed
+        1:  149-block  3
+        1:  150:    ++it;
+        1:  150-block  0
+call    0 returned 1
+       1*:  151:    assert(it->getNrInmatriculare() == "B567DEF");
+call    0 returned 1
+call    1 returned 1
+branch  2 taken 1 (fallthrough)
+branch  3 taken 0 (throw)
+        1:  151-block  0
+call    4 returned 1
+branch  5 taken 1 (fallthrough)
+branch  6 taken 0 (throw)
+        1:  151-block  1
+branch  7 taken 0 (fallthrough)
+branch  8 taken 1
+    %%%%%:  151-block  2
+call    9 never executed
+        1:  151-block  3
+        1:  152:    ++it;
+        1:  152-block  0
+call    0 returned 1
+       1*:  153:    assert(it->getNrInmatriculare() == "B678HIJ");
+call    0 returned 1
+call    1 returned 1
+branch  2 taken 1 (fallthrough)
+branch  3 taken 0 (throw)
+        1:  153-block  0
+call    4 returned 1
+branch  5 taken 1 (fallthrough)
+branch  6 taken 0 (throw)
+        1:  153-block  1
+branch  7 taken 0 (fallthrough)
+branch  8 taken 1
+    %%%%%:  153-block  2
+call    9 never executed
+        1:  153-block  3
+        1:  154:    ++it;
+        1:  154-block  0
+call    0 returned 1
+       1*:  155:    assert(it->getNrInmatriculare() == "B899KLM");
+call    0 returned 1
+call    1 returned 1
+branch  2 taken 1 (fallthrough)
+branch  3 taken 0 (throw)
+        1:  155-block  0
+call    4 returned 1
+branch  5 taken 1 (fallthrough)
+branch  6 taken 0 (throw)
+        1:  155-block  1
+branch  7 taken 0 (fallthrough)
+branch  8 taken 1
+    %%%%%:  155-block  2
+call    9 never executed
+        1:  155-block  3
+        -:  156:
+        1:  157:    m = service.sorteazaMasiniTip();
+        1:  157-block  0
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        1:  157-block  1
+call    3 returned 1
+call    4 returned 1
+    $$$$$:  157-block  2
+       1*:  158:    assert(m.size() == 4);
+call    0 returned 1
+branch  1 taken 0 (fallthrough)
+branch  2 taken 1
+    %%%%%:  158-block  0
+call    3 never executed
+        1:  158-block  1
+        1:  159:    it = m.begin();
+        1:  159-block  0
+call    0 returned 1
+       1*:  160:    assert(it->getNrInmatriculare() == "B678HIJ");
+call    0 returned 1
+call    1 returned 1
+branch  2 taken 1 (fallthrough)
+branch  3 taken 0 (throw)
+        1:  160-block  0
+call    4 returned 1
+branch  5 taken 1 (fallthrough)
+branch  6 taken 0 (throw)
+        1:  160-block  1
+branch  7 taken 0 (fallthrough)
+branch  8 taken 1
+    %%%%%:  160-block  2
+call    9 never executed
+        1:  160-block  3
+        1:  161:    ++it;
+        1:  161-block  0
+call    0 returned 1
+       1*:  162:    assert(it->getNrInmatriculare() == "B899KLM");
+call    0 returned 1
+call    1 returned 1
+branch  2 taken 1 (fallthrough)
+branch  3 taken 0 (throw)
+        1:  162-block  0
+call    4 returned 1
+branch  5 taken 1 (fallthrough)
+branch  6 taken 0 (throw)
+        1:  162-block  1
+branch  7 taken 0 (fallthrough)
+branch  8 taken 1
+    %%%%%:  162-block  2
+call    9 never executed
+        1:  162-block  3
+        1:  163:    ++it;
+        1:  163-block  0
+call    0 returned 1
+       1*:  164:    assert(it->getNrInmatriculare() == "B567DEF");
+call    0 returned 1
+call    1 returned 1
+branch  2 taken 1 (fallthrough)
+branch  3 taken 0 (throw)
+        1:  164-block  0
+call    4 returned 1
+branch  5 taken 1 (fallthrough)
+branch  6 taken 0 (throw)
+        1:  164-block  1
+branch  7 taken 0 (fallthrough)
+branch  8 taken 1
+    %%%%%:  164-block  2
+call    9 never executed
+        1:  164-block  3
+        1:  165:    ++it;
+        1:  165-block  0
+call    0 returned 1
+       1*:  166:    assert(it->getNrInmatriculare() == "B456ABC");
+call    0 returned 1
+call    1 returned 1
+branch  2 taken 1 (fallthrough)
+branch  3 taken 0 (throw)
+        1:  166-block  0
+call    4 returned 1
+branch  5 taken 1 (fallthrough)
+branch  6 taken 0 (throw)
+        1:  166-block  1
+branch  7 taken 0 (fallthrough)
+branch  8 taken 1
+    %%%%%:  166-block  2
+call    9 never executed
+        1:  166-block  3
+        -:  167:
+        1:  168:    m = service.sorteazaMasiniProducatorModel();
+        1:  168-block  0
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        1:  168-block  1
+call    3 returned 1
+call    4 returned 1
+    $$$$$:  168-block  2
+       1*:  169:    assert(m.size() == 4);
+call    0 returned 1
+branch  1 taken 0 (fallthrough)
+branch  2 taken 1
+    %%%%%:  169-block  0
+call    3 never executed
+        1:  169-block  1
+        1:  170:    it = m.begin();
+        1:  170-block  0
+call    0 returned 1
+       1*:  171:    assert(it->getNrInmatriculare() == "B678HIJ");
+call    0 returned 1
+call    1 returned 1
+branch  2 taken 1 (fallthrough)
+branch  3 taken 0 (throw)
+        1:  171-block  0
+call    4 returned 1
+branch  5 taken 1 (fallthrough)
+branch  6 taken 0 (throw)
+        1:  171-block  1
+branch  7 taken 0 (fallthrough)
+branch  8 taken 1
+    %%%%%:  171-block  2
+call    9 never executed
+        1:  171-block  3
+        1:  172:    ++it;
+        1:  172-block  0
+call    0 returned 1
+       1*:  173:    assert(it->getNrInmatriculare() == "B899KLM");
+call    0 returned 1
+call    1 returned 1
+branch  2 taken 1 (fallthrough)
+branch  3 taken 0 (throw)
+        1:  173-block  0
+call    4 returned 1
+branch  5 taken 1 (fallthrough)
+branch  6 taken 0 (throw)
+        1:  173-block  1
+branch  7 taken 0 (fallthrough)
+branch  8 taken 1
+    %%%%%:  173-block  2
+call    9 never executed
+        1:  173-block  3
+        1:  174:    ++it;
+        1:  174-block  0
+call    0 returned 1
+       1*:  175:    assert(it->getNrInmatriculare() == "B456ABC");
+call    0 returned 1
+call    1 returned 1
+branch  2 taken 1 (fallthrough)
+branch  3 taken 0 (throw)
+        1:  175-block  0
+call    4 returned 1
+branch  5 taken 1 (fallthrough)
+branch  6 taken 0 (throw)
+        1:  175-block  1
+branch  7 taken 0 (fallthrough)
+branch  8 taken 1
+    %%%%%:  175-block  2
+call    9 never executed
+        1:  175-block  3
+        1:  176:    ++it;
+        1:  176-block  0
+call    0 returned 1
+       1*:  177:    assert(it->getNrInmatriculare() == "B567DEF");
+call    0 returned 1
+call    1 returned 1
+branch  2 taken 1 (fallthrough)
+branch  3 taken 0 (throw)
+        1:  177-block  0
+call    4 returned 1
+branch  5 taken 1 (fallthrough)
+branch  6 taken 0 (throw)
+        1:  177-block  1
+branch  7 taken 0 (fallthrough)
+branch  8 taken 1
+    %%%%%:  177-block  2
+call    9 never executed
+        1:  177-block  3
+        -:  178:
+        1:  179:    std::cout << "Test MasinaService passed!\n";
+        1:  179-block  0
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        1:  180:}
+        1:  180-block  0
+call    0 returned 1
+call    1 returned 1
+call    2 returned 1
+call    3 returned 1
+    $$$$$:  180-block  1
+call    4 never executed
+    $$$$$:  180-block  2
+call    5 never executed
+    $$$$$:  180-block  3
+call    6 never executed
+    $$$$$:  180-block  4
+call    7 never executed
+        -:  181:// ------------------ Teste spalatorie ------------------
+        -:  182:// void Teste::testServiceSpalatorie() {
+        -:  183://     MasinaRepo repo;
+        -:  184://     repo.adauga(Masina("B123XYZ", "Toyota", "Corolla", "Sedan"));
+        -:  185://     repo.adauga(Masina("CJ45ABC", "Honda", "Civic", "Coupe"));
+        -:  186://     repo.adauga(Masina("MS99XYZ", "Dacia", "Duster", "SUV"));
+        -:  187://     MasinaService service{repo};
+        -:  188://     ServiceSpalatorie spalatorie{service};
+        -:  189://
+        -:  190://     // Test adaugare masina
+        -:  191://     spalatorie.adaugaMasina("B123XYZ");
+        -:  192://     assert(spalatorie.nrMasini() == 1);
+        -:  193://
+        -:  194://     // Test golire
+        -:  195://     spalatorie.golesteLista();
+        -:  196://     assert(spalatorie.nrMasini() == 0);
+        -:  197://
+        -:  198://     // Test generare aleatorie
+        -:  199://     spalatorie.generareLista(2);
+        -:  200://     assert(spalatorie.nrMasini() == 2);
+        -:  201://
+        -:  202://     // Test export CSV
+        -:  203://     spalatorie.exportCSV("test_export.csv");
+        -:  204://     std::ifstream in("test_export.csv");
+        -:  205://     assert(in.is_open());
+        -:  206://     in.close();
+        -:  207://
+        -:  208://     // Test eroare la adaugare cu numar inexistent
+        -:  209://     // bool exceptie = false;
+        -:  210://     // try {
+        -:  211://     //     service.adaugaMasina("INVALID");
+        -:  212://     // } catch (
+        -:  213:// }
+        -:  214:
+        -:  215:
+        -:  216:#include "service_spalatorie.h"
+        -:  217:#include "repo_masina.h"
+        -:  218:#include "service_masina.h"
+        -:  219:#include <cassert>
+        -:  220:#include <fstream>
+        -:  221:
+function _ZN5Teste21testServiceSpalatorieEv called 1 returned 100% blocks executed 53%
+        1:  222:void Teste::testServiceSpalatorie() {
+        1:  223:    MasinaRepo repo;
+        1:  224:    MasinaService srv{repo};
+        1:  224-block  0
+call    0 returned 1
+        1:  225:    ServiceSpalatorie spalatorie{srv};
+call    0 returned 1
+        1:  226:    bool  exceptiePrinsa = false;
+        -:  227:    try {
+        1:  228:        spalatorie.generareLista(2);
+call    0 returned 1
+branch  1 taken 0 (fallthrough)
+branch  2 taken 1 (throw)
+        1:  229:    } catch (const ServiceException&) {
+        1:  229-block  0
+branch  0 taken 0 (fallthrough)
+branch  1 taken 1
+        1:  229-block  1
+call    2 returned 1
+        1:  230:        exceptiePrinsa = true;
+        1:  231:    }
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+       1*:  232:    assert(exceptiePrinsa);
+        1:  232-block  0
+branch  0 taken 0 (fallthrough)
+branch  1 taken 1
+    %%%%%:  232-block  1
+call    2 never executed
+        1:  232-block  2
+        8:  233:    srv.adaugaMasina("CJ01ABC", "Dacia", "Logan", "sedan");
+        1:  233-block  0
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        1:  233-block  1
+call    3 returned 1
+branch  4 taken 1 (fallthrough)
+branch  5 taken 0 (throw)
+        1:  233-block  2
+call    6 returned 1
+branch  7 taken 1 (fallthrough)
+branch  8 taken 0 (throw)
+        1:  233-block  3
+call    9 returned 1
+branch 10 taken 1 (fallthrough)
+branch 11 taken 0 (throw)
+        1:  233-block  4
+call   12 returned 1
+branch 13 taken 1 (fallthrough)
+branch 14 taken 0 (throw)
+        1:  233-block  5
+call   15 returned 1
+        1:  233-block  6
+call   16 returned 1
+        1:  233-block  7
+call   17 returned 1
+        1:  233-block  8
+call   18 returned 1
+        1:  233-block  9
+    $$$$$:  233-block 10
+call   19 never executed
+    $$$$$:  233-block 11
+    $$$$$:  233-block 12
+    $$$$$:  233-block 13
+call   20 never executed
+    $$$$$:  233-block 14
+    $$$$$:  233-block 15
+    $$$$$:  233-block 16
+call   21 never executed
+    $$$$$:  233-block 17
+    $$$$$:  233-block 18
+    $$$$$:  233-block 19
+call   22 never executed
+    $$$$$:  233-block 20
+    $$$$$:  233-block 21
+        8:  234:    srv.adaugaMasina("CJ02DEF", "VW", "Golf", "hatchback");
+        1:  234-block  0
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        1:  234-block  1
+call    3 returned 1
+branch  4 taken 1 (fallthrough)
+branch  5 taken 0 (throw)
+        1:  234-block  2
+call    6 returned 1
+branch  7 taken 1 (fallthrough)
+branch  8 taken 0 (throw)
+        1:  234-block  3
+call    9 returned 1
+branch 10 taken 1 (fallthrough)
+branch 11 taken 0 (throw)
+        1:  234-block  4
+call   12 returned 1
+branch 13 taken 1 (fallthrough)
+branch 14 taken 0 (throw)
+        1:  234-block  5
+call   15 returned 1
+        1:  234-block  6
+call   16 returned 1
+        1:  234-block  7
+call   17 returned 1
+        1:  234-block  8
+call   18 returned 1
+        1:  234-block  9
+    $$$$$:  234-block 10
+call   19 never executed
+    $$$$$:  234-block 11
+    $$$$$:  234-block 12
+    $$$$$:  234-block 13
+call   20 never executed
+    $$$$$:  234-block 14
+    $$$$$:  234-block 15
+    $$$$$:  234-block 16
+call   21 never executed
+    $$$$$:  234-block 17
+    $$$$$:  234-block 18
+    $$$$$:  234-block 19
+call   22 never executed
+    $$$$$:  234-block 20
+    $$$$$:  234-block 21
+        7:  235:    srv.adaugaMasina("CJ03XYZ", "Audi", "A4", "sedan");
+        1:  235-block  0
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        1:  235-block  1
+call    3 returned 1
+branch  4 taken 1 (fallthrough)
+branch  5 taken 0 (throw)
+        1:  235-block  2
+call    6 returned 1
+branch  7 taken 1 (fallthrough)
+branch  8 taken 0 (throw)
+        1:  235-block  3
+call    9 returned 1
+branch 10 taken 1 (fallthrough)
+branch 11 taken 0 (throw)
+        1:  235-block  4
+call   12 returned 1
+branch 13 taken 1 (fallthrough)
+branch 14 taken 0 (throw)
+        1:  235-block  5
+call   15 returned 1
+        1:  235-block  6
+call   16 returned 1
+        1:  235-block  7
+call   17 returned 1
+        1:  235-block  8
+call   18 returned 1
+    $$$$$:  235-block  9
+call   19 never executed
+    $$$$$:  235-block 10
+    $$$$$:  235-block 11
+    $$$$$:  235-block 12
+call   20 never executed
+    $$$$$:  235-block 13
+    $$$$$:  235-block 14
+    $$$$$:  235-block 15
+call   21 never executed
+    $$$$$:  235-block 16
+    $$$$$:  235-block 17
+    $$$$$:  235-block 18
+call   22 never executed
+    $$$$$:  235-block 19
+    $$$$$:  235-block 20
+        -:  236:
+        1:  237:    spalatorie.generareLista(1);
+        1:  237-block  0
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+       1*:  238:    assert(spalatorie.nrMasini() == 1);
+        1:  238-block  0
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        1:  238-block  1
+branch  3 taken 0 (fallthrough)
+branch  4 taken 1
+    %%%%%:  238-block  2
+call    5 never executed
+        1:  238-block  3
+        -:  239:    // Test adaugare masina
+        1:  240:    spalatorie.adaugaMasina("CJ01ABC");
+        1:  240-block  0
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        1:  240-block  1
+call    3 returned 1
+branch  4 taken 1 (fallthrough)
+branch  5 taken 0 (throw)
+        1:  240-block  2
+call    6 returned 1
+    $$$$$:  240-block  3
+call    7 never executed
+    $$$$$:  240-block  4
+    $$$$$:  240-block  5
+       1*:  241:    assert(spalatorie.nrMasini() == 2);
+        1:  241-block  0
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        1:  241-block  1
+branch  3 taken 0 (fallthrough)
+branch  4 taken 1
+    %%%%%:  241-block  2
+call    5 never executed
+        1:  241-block  3
+        -:  242:
+        -:  243:    // Test golire
+        1:  244:    spalatorie.golesteLista();
+        1:  244-block  0
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+       1*:  245:    assert(spalatorie.nrMasini() == 0);
+        1:  245-block  0
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        1:  245-block  1
+branch  3 taken 0 (fallthrough)
+branch  4 taken 1
+    %%%%%:  245-block  2
+call    5 never executed
+        1:  245-block  3
+        -:  246:
+        -:  247:    // Test generare lista (când numărul este egal cu numărul total)
+        1:  248:    spalatorie.generareLista(3);
+        1:  248-block  0
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+       1*:  249:    assert(spalatorie.nrMasini() == 3);
+        1:  249-block  0
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        1:  249-block  1
+branch  3 taken 0 (fallthrough)
+branch  4 taken 1
+    %%%%%:  249-block  2
+call    5 never executed
+        1:  249-block  3
+        -:  250:
+        -:  251:    // Test export CSV
+        1:  252:    spalatorie.exportCSV("test_export.csv");
+        1:  252-block  0
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        1:  252-block  1
+call    3 returned 1
+branch  4 taken 1 (fallthrough)
+branch  5 taken 0 (throw)
+        1:  252-block  2
+call    6 returned 1
+    $$$$$:  252-block  3
+call    7 never executed
+    $$$$$:  252-block  4
+    $$$$$:  252-block  5
+        -:  253:
+        1:  254:    std::ifstream in("test_export.csv");
+        1:  254-block  0
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        1:  255:    int lineCount = 0;
+        1:  256:    std::string line;
+        1:  256-block  0
+call    0 returned 1
+        -:  257:    // while (std::getline(in, line)) {
+        -:  258:    //     lineCount++;
+        -:  259:    // }
+        -:  260:    // assert(lineCount == 3);  // ar trebui să fie 3 linii în fișier
+        -:  261:    // in.close();
+        -:  262:
+        -:  263:    // Test generare lista cu număr prea mare
+        1:  264:    exceptiePrinsa = false;
+        -:  265:    try {
+        1:  266:        spalatorie.generareLista(100);
+call    0 returned 1
+branch  1 taken 0 (fallthrough)
+branch  2 taken 1 (throw)
+        1:  267:    } catch (const ServiceException&) {
+        1:  267-block  0
+branch  0 taken 0 (fallthrough)
+branch  1 taken 1
+        1:  267-block  1
+call    2 returned 1
+        1:  268:        exceptiePrinsa = true;
+        1:  269:    }
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+       1*:  270:    assert(exceptiePrinsa);
+        1:  270-block  0
+branch  0 taken 0 (fallthrough)
+branch  1 taken 1
+    %%%%%:  270-block  1
+call    2 never executed
+        1:  270-block  2
+        1:  271:    std::cout << "Test ServiceSpalatorie passed!\n";
+        1:  271-block  0
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        -:  272:
+        1:  273:}
+        1:  273-block  0
+call    0 returned 1
+call    1 returned 1
+call    2 returned 1
+call    3 returned 1
+    $$$$$:  273-block  1
+call    4 never executed
+    $$$$$:  273-block  2
+call    5 never executed
+    $$$$$:  273-block  3
+call    6 never executed
+    $$$$$:  273-block  4
+call    7 never executed
+        -:  274:
+        -:  275:
+        -:  276:
+        -:  277:
+        -:  278:
+        -:  279:
+        -:  280:// ------------------ Teste din VectorDinamicCPP ------------------
+        -:  281:template <typename MyVector>
+function _Z15testCopyIterateI4ListI6MasinaEET_S3_ called 1 returned 100% blocks executed 57%
+        1:  282:MyVector testCopyIterate(MyVector v) {
+      101:  283:    for (auto& el : v) {
+        1:  283-block  0
+call    0 returned 1
+call    1 returned 1
+      100:  283-block  1
+call    2 returned 100
+branch  3 taken 100 (fallthrough)
+branch  4 taken 0 (throw)
+      100:  283-block  2
+call    5 returned 100
+call    6 returned 100
+      101:  283-block  3
+call    7 returned 101
+branch  8 taken 101 (fallthrough)
+branch  9 taken 0 (throw)
+      101:  283-block  4
+branch 10 taken 100
+branch 11 taken 1 (fallthrough)
+      100:  284:        std::string concat = el.getNrInmatriculare() + el.getProducator();
+      100:  284-block  0
+call    0 returned 100
+branch  1 taken 100 (fallthrough)
+branch  2 taken 0 (throw)
+      100:  284-block  1
+call    3 returned 100
+branch  4 taken 100 (fallthrough)
+branch  5 taken 0 (throw)
+      100:  284-block  2
+call    6 returned 100
+branch  7 taken 100 (fallthrough)
+branch  8 taken 0 (throw)
+        -:  285:        (void)concat;
+        -:  286:    }
+        7:  287:    Masina m{ "XX00YYY", "Total", "Concat", "Test" };
+        1:  287-block  0
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        1:  287-block  1
+call    3 returned 1
+branch  4 taken 1 (fallthrough)
+branch  5 taken 0 (throw)
+        1:  287-block  2
+call    6 returned 1
+branch  7 taken 1 (fallthrough)
+branch  8 taken 0 (throw)
+        1:  287-block  3
+call    9 returned 1
+branch 10 taken 1 (fallthrough)
+branch 11 taken 0 (throw)
+        1:  287-block  4
+call   12 returned 1
+branch 13 taken 1 (fallthrough)
+branch 14 taken 0 (throw)
+        1:  287-block  5
+call   15 returned 1
+        1:  287-block  6
+call   16 returned 1
+        1:  287-block  7
+call   17 returned 1
+        1:  287-block  8
+call   18 returned 1
+    $$$$$:  287-block  9
+call   19 never executed
+    $$$$$:  287-block 10
+    $$$$$:  287-block 11
+    $$$$$:  287-block 12
+call   20 never executed
+    $$$$$:  287-block 13
+    $$$$$:  287-block 14
+    $$$$$:  287-block 15
+call   21 never executed
+    $$$$$:  287-block 16
+    $$$$$:  287-block 17
+    $$$$$:  287-block 18
+call   22 never executed
+    $$$$$:  287-block 19
+    $$$$$:  287-block 20
+        1:  288:    v.add(m);
+        1:  288-block  0
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        2:  289:    return v;
+        1:  289-block  0
+call    0 returned 1
+        1:  289-block  1
+        1:  290:}
+call    0 returned 1
+    $$$$$:  290-block  0
+call    1 never executed
+        -:  291:
+        -:  292:template <typename MyVector>
+function _Z9addMasiniI4ListI6MasinaEEvRT_i called 2 returned 100% blocks executed 47%
+        2:  293:void addMasini(MyVector& v, int cate) {
+      152:  294:    for (int i = 0; i < cate; i++) {
+        2:  294-block  0
+      150:  294-block  1
+call    0 returned 150
+      152:  294-block  2
+branch  1 taken 150
+branch  2 taken 2 (fallthrough)
+    $$$$$:  294-block  3
+call    3 never executed
+      150:  295:        Masina m{
+      150:  295-block  0
+call    0 returned 150
+call    1 returned 150
+branch  2 taken 150 (fallthrough)
+branch  3 taken 0 (throw)
+      150:  295-block  1
+call    4 returned 150
+branch  5 taken 150 (fallthrough)
+branch  6 taken 0 (throw)
+      150:  295-block  2
+call    7 returned 150
+call    8 returned 150
+branch  9 taken 150 (fallthrough)
+branch 10 taken 0 (throw)
+      150:  295-block  3
+call   11 returned 150
+call   12 returned 150
+branch 13 taken 150 (fallthrough)
+branch 14 taken 0 (throw)
+      150:  295-block  4
+call   15 returned 150
+call   16 returned 150
+branch 17 taken 150 (fallthrough)
+branch 18 taken 0 (throw)
+      150:  295-block  5
+call   19 returned 150
+branch 20 taken 150 (fallthrough)
+branch 21 taken 0 (throw)
+      150:  295-block  6
+call   22 returned 150
+call   23 returned 150
+call   24 returned 150
+call   25 returned 150
+call   26 returned 150
+call   27 returned 150
+call   28 returned 150
+call   29 returned 150
+call   30 returned 150
+    $$$$$:  295-block  7
+call   31 never executed
+    $$$$$:  295-block  8
+call   32 never executed
+    $$$$$:  295-block  9
+    $$$$$:  295-block 10
+    $$$$$:  295-block 11
+call   33 never executed
+    $$$$$:  295-block 12
+call   34 never executed
+    $$$$$:  295-block 13
+    $$$$$:  295-block 14
+    $$$$$:  295-block 15
+call   35 never executed
+    $$$$$:  295-block 16
+call   36 never executed
+    $$$$$:  295-block 17
+    $$$$$:  295-block 18
+    $$$$$:  295-block 19
+call   37 never executed
+    $$$$$:  295-block 20
+call   38 never executed
+    $$$$$:  295-block 21
+call   39 never executed
+    $$$$$:  295-block 22
+    $$$$$:  295-block 23
+    $$$$$:  295-block 24
+        -:  296:            "B" + std::to_string(i) + "XYZ",
+        -:  297:            "Prod" + std::to_string(i),
+        -:  298:            "Model" + std::to_string(i),
+        -:  299:            "Tip" + std::to_string(i)
+        -:  300:        };
+      150:  301:        v.add(m);
+call    0 returned 150
+branch  1 taken 150 (fallthrough)
+branch  2 taken 0 (throw)
+        -:  302:    }
+        2:  303:}
+        2:  303-block  0
+        -:  304:
+        -:  305:template <typename MyVector>
+function _Z20testCreateCopyAssignI4ListI6MasinaEEvv called 1 returned 100% blocks executed 71%
+        1:  306:void testCreateCopyAssign() {
+        1:  307:    MyVector v; // default constructor
+        1:  307-block  0
+call    0 returned 1
+        1:  308:    addMasini(v, 100);
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+       1*:  309:    assert(v.getSize() == 100);
+        1:  309-block  0
+call    0 returned 1
+branch  1 taken 0 (fallthrough)
+branch  2 taken 1
+    %%%%%:  309-block  1
+call    3 never executed
+        1:  309-block  2
+       1*:  310:    assert(v.get(50).getProducator() == "Prod50");
+        1:  310-block  0
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        1:  310-block  1
+call    3 returned 1
+branch  4 taken 1 (fallthrough)
+branch  5 taken 0 (throw)
+        1:  310-block  2
+call    6 returned 1
+branch  7 taken 1 (fallthrough)
+branch  8 taken 0 (throw)
+        1:  310-block  3
+branch  9 taken 0 (fallthrough)
+branch 10 taken 1
+    %%%%%:  310-block  4
+call   11 never executed
+        1:  310-block  5
+        -:  311:
+        1:  312:    MyVector v2{ v }; // copy constructor
+        1:  312-block  0
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+       1*:  313:    assert(v2.getSize() == 100);
+        1:  313-block  0
+call    0 returned 1
+branch  1 taken 0 (fallthrough)
+branch  2 taken 1
+    %%%%%:  313-block  1
+call    3 never executed
+        1:  313-block  2
+       1*:  314:    assert(v2.get(50).getProducator() == "Prod50");
+        1:  314-block  0
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        1:  314-block  1
+call    3 returned 1
+branch  4 taken 1 (fallthrough)
+branch  5 taken 0 (throw)
+        1:  314-block  2
+call    6 returned 1
+branch  7 taken 1 (fallthrough)
+branch  8 taken 0 (throw)
+        1:  314-block  3
+branch  9 taken 0 (fallthrough)
+branch 10 taken 1
+    %%%%%:  314-block  4
+call   11 never executed
+        1:  314-block  5
+        -:  315:
+        1:  316:    MyVector v3; // default constructor
+        1:  316-block  0
+call    0 returned 1
+        1:  317:    v3 = v; // assignment
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+       1*:  318:    assert(v3.getSize() == 100);
+        1:  318-block  0
+call    0 returned 1
+branch  1 taken 0 (fallthrough)
+branch  2 taken 1
+    %%%%%:  318-block  1
+call    3 never executed
+        1:  318-block  2
+       1*:  319:    assert(v3.get(50).getProducator() == "Prod50");
+        1:  319-block  0
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        1:  319-block  1
+call    3 returned 1
+branch  4 taken 1 (fallthrough)
+branch  5 taken 0 (throw)
+        1:  319-block  2
+call    6 returned 1
+branch  7 taken 1 (fallthrough)
+branch  8 taken 0 (throw)
+        1:  319-block  3
+branch  9 taken 0 (fallthrough)
+branch 10 taken 1
+    %%%%%:  319-block  4
+call   11 never executed
+        1:  319-block  5
+        -:  320:
+        1:  321:    auto v4 = testCopyIterate(v3);
+        1:  321-block  0
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        1:  321-block  1
+call    3 returned 1
+branch  4 taken 1 (fallthrough)
+branch  5 taken 0 (throw)
+        1:  321-block  2
+call    6 returned 1
+    $$$$$:  321-block  3
+call    7 never executed
+    $$$$$:  321-block  4
+       1*:  322:    assert(v4.getSize() == 101);
+call    0 returned 1
+branch  1 taken 0 (fallthrough)
+branch  2 taken 1
+    %%%%%:  322-block  0
+call    3 never executed
+        1:  322-block  1
+       1*:  323:    assert(v4.get(50).getProducator() == "Prod50");
+        1:  323-block  0
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        1:  323-block  1
+call    3 returned 1
+branch  4 taken 1 (fallthrough)
+branch  5 taken 0 (throw)
+        1:  323-block  2
+call    6 returned 1
+branch  7 taken 1 (fallthrough)
+branch  8 taken 0 (throw)
+        1:  323-block  3
+branch  9 taken 0 (fallthrough)
+branch 10 taken 1
+    %%%%%:  323-block  4
+call   11 never executed
+        1:  323-block  5
+        -:  324:
+        1:  325:    std::cout << "Test copy, assignment, and iteration passed.\n";
+        1:  325-block  0
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        1:  326:}
+        1:  326-block  0
+call    0 returned 1
+call    1 returned 1
+call    2 returned 1
+call    3 returned 1
+    $$$$$:  326-block  1
+call    4 never executed
+    $$$$$:  326-block  2
+call    5 never executed
+    $$$$$:  326-block  3
+call    6 never executed
+    $$$$$:  326-block  4
+call    7 never executed
+        -:  327:
+        -:  328:template <typename MyVector>
+function _Z23testMoveConstrAssgnmentI4ListI6MasinaEEvv called 1 returned 100% blocks executed 63%
+        1:  329:void testMoveConstrAssgnment() {
+        1:  330:    std::vector<MyVector> v;
+        1:  331:    v.push_back(MyVector{});
+        1:  331-block  0
+call    0 returned 1
+call    1 returned 1
+branch  2 taken 1 (fallthrough)
+branch  3 taken 0 (throw)
+        1:  331-block  1
+call    4 returned 1
+    $$$$$:  331-block  2
+call    5 never executed
+    $$$$$:  331-block  3
+        1:  332:    v.insert(v.begin(), MyVector{});
+call    0 returned 1
+call    1 returned 1
+call    2 returned 1
+call    3 returned 1
+branch  4 taken 1 (fallthrough)
+branch  5 taken 0 (throw)
+        1:  332-block  0
+call    6 returned 1
+    $$$$$:  332-block  1
+    $$$$$:  332-block  2
+    $$$$$:  332-block  3
+call    7 never executed
+    $$$$$:  332-block  4
+        -:  333:
+       1*:  334:    assert(v.size() == 2);
+call    0 returned 1
+branch  1 taken 0 (fallthrough)
+branch  2 taken 1
+    %%%%%:  334-block  0
+call    3 never executed
+        1:  334-block  1
+        -:  335:
+        1:  336:    MyVector v2;
+        1:  336-block  0
+call    0 returned 1
+        1:  337:    addMasini(v2, 50);
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        1:  338:    v2 = MyVector{}; // move assignment
+        1:  338-block  0
+call    0 returned 1
+call    1 returned 1
+call    2 returned 1
+       1*:  339:    assert(v2.getSize() == 0);
+call    0 returned 1
+branch  1 taken 0 (fallthrough)
+branch  2 taken 1
+    %%%%%:  339-block  0
+call    3 never executed
+        1:  339-block  1
+        -:  340:
+        1:  341:    std::cout << "Test move constructor and assignment passed.\n";
+        1:  341-block  0
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        1:  342:}
+        1:  342-block  0
+call    0 returned 1
+call    1 returned 1
+    $$$$$:  342-block  1
+call    2 never executed
+    $$$$$:  342-block  2
+call    3 never executed
+        -:  343:// ------------------ Funcție principală pentru a rula testele ------------------
+        -:  344:
+function _ZN5Teste8runTestsEv called 1 returned 100% blocks executed 100%
+        1:  345:void Teste::runTests() {
+        1:  346:    testCreateCopyAssign<List<Masina>>();
+        1:  346-block  0
+call    0 returned 1
+        1:  347:    testMoveConstrAssgnment<List<Masina>>();
+call    0 returned 1
+        1:  348:    testMasina();
+call    0 returned 1
+        1:  349:    testMasinaRepo();
+call    0 returned 1
+        1:  350:    testMasinaService();
+call    0 returned 1
+        1:  351:    testServiceSpalatorie();
+call    0 returned 1
+        1:  352:    std::cout << "Toate testele au trecut cu succes!\n";
+call    0 returned 1
+        1:  353:}

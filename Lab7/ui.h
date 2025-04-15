@@ -13,6 +13,8 @@ private:
     void modificaUI();
     void cautaUI();
     void afiseazaToate() const;
+    void filtrareUI() const;
+    void sortareUI() const;
 
 public:
     explicit MasinaUI(MasinaService& srv): service{srv} {}

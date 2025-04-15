@@ -1,6 +1,6 @@
         -:    0:Source:C:/Users/lupse/AppData/Local/Programs/CLion/bin/mingw/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/bits/alloc_traits.h
-        -:    0:Graph:C:\Users\lupse\CLionProjects\POO\Lab6\cmake-build-debug-coverage\CMakeFiles\Lab6.dir\main.cpp.gcno
-        -:    0:Data:C:\Users\lupse\CLionProjects\POO\Lab6\cmake-build-debug-coverage\CMakeFiles\Lab6.dir\main.cpp.gcda
+        -:    0:Graph:C:\Users\lupse\CLionProjects\POO\Lab7\cmake-build-debug-coverage\CMakeFiles\Lab6.dir\main.cpp.gcno
+        -:    0:Data:C:\Users\lupse\CLionProjects\POO\Lab7\cmake-build-debug-coverage\CMakeFiles\Lab6.dir\main.cpp.gcda
         -:    0:Runs:1
         -:    1:// Allocator traits -*- C++ -*-
         -:    2:
@@ -517,9 +517,8 @@
         -:  513:      [[__gnu__::__always_inline__]]
         -:  514:      static _GLIBCXX20_CONSTEXPR void
         -:  515:      deallocate(allocator_type& __a, pointer __p, size_type __n)
-        8:  516:      { __a.deallocate(__p, __n); }
+        4:  516:      { __a.deallocate(__p, __n); }
         4:  516-block  0
-        4:  516-block  1
         -:  517:
         -:  518:      /**
         -:  519:       *  @brief  Construct an object of type `_Up`
@@ -950,9 +949,8 @@
         -:  944:    _Destroy(_ForwardIterator __first, _ForwardIterator __last,
         -:  945:	     allocator<_Tp>&)
         -:  946:    {
-        3:  947:      _Destroy(__first, __last);
-call    0 returned 3
-        3:  948:    }
+        -:  947:      _Destroy(__first, __last);
+        -:  948:    }
         -:  949:#endif
         -:  950:  /// @endcond
         -:  951:

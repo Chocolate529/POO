@@ -1,6 +1,6 @@
         -:    0:Source:C:/Users/lupse/AppData/Local/Programs/CLion/bin/mingw/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/ext/alloc_traits.h
-        -:    0:Graph:C:\Users\lupse\CLionProjects\POO\Lab6\cmake-build-debug-coverage\CMakeFiles\Lab6.dir\domeniu_masina.cpp.gcno
-        -:    0:Data:C:\Users\lupse\CLionProjects\POO\Lab6\cmake-build-debug-coverage\CMakeFiles\Lab6.dir\domeniu_masina.cpp.gcda
+        -:    0:Graph:C:\Users\lupse\CLionProjects\POO\Lab7\cmake-build-debug-coverage\CMakeFiles\Lab6.dir\domeniu_masina.cpp.gcno
+        -:    0:Data:C:\Users\lupse\CLionProjects\POO\Lab7\cmake-build-debug-coverage\CMakeFiles\Lab6.dir\domeniu_masina.cpp.gcda
         -:    0:Runs:1
         -:    1:// Allocator traits -*- C++ -*-
         -:    2:
@@ -99,9 +99,9 @@
         -:   95:
         -:   96:    [[__gnu__::__always_inline__]]
         -:   97:    static constexpr _Alloc _S_select_on_copy(const _Alloc& __a)
-       52:   98:    { return _Base_type::select_on_container_copy_construction(__a); }
-       52:   98-block  0
-       52:   98-block  1
+      692:   98:    { return _Base_type::select_on_container_copy_construction(__a); }
+      692:   98-block  0
+      692:   98-block  1
         -:   99:
         -:  100:    [[__gnu__::__always_inline__]]
         -:  101:    static _GLIBCXX14_CONSTEXPR void _S_on_swap(_Alloc& __a, _Alloc& __b)
@@ -109,8 +109,8 @@
         -:  103:
         -:  104:    [[__gnu__::__always_inline__]]
         -:  105:    static constexpr bool _S_propagate_on_copy_assign()
-       10:  106:    { return _Base_type::propagate_on_container_copy_assignment::value; }
-       10:  106-block  0
+     2830:  106:    { return _Base_type::propagate_on_container_copy_assignment::value; }
+     2830:  106-block  0
         -:  107:
         -:  108:    [[__gnu__::__always_inline__]]
         -:  109:    static constexpr bool _S_propagate_on_move_assign()

@@ -1,6 +1,6 @@
         -:    0:Source:C:/Users/lupse/AppData/Local/Programs/CLion/bin/mingw/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/bits/basic_string.tcc
-        -:    0:Graph:C:\Users\lupse\CLionProjects\POO\Lab6\cmake-build-debug-coverage\CMakeFiles\Lab6.dir\domeniu_masina.cpp.gcno
-        -:    0:Data:C:\Users\lupse\CLionProjects\POO\Lab6\cmake-build-debug-coverage\CMakeFiles\Lab6.dir\domeniu_masina.cpp.gcda
+        -:    0:Graph:C:\Users\lupse\CLionProjects\POO\Lab7\cmake-build-debug-coverage\CMakeFiles\Lab6.dir\domeniu_masina.cpp.gcno
+        -:    0:Data:C:\Users\lupse\CLionProjects\POO\Lab7\cmake-build-debug-coverage\CMakeFiles\Lab6.dir\domeniu_masina.cpp.gcda
         -:    0:Runs:1
         -:    1:// Components for manipulating sequences of characters -*- C++ -*-
         -:    2:
@@ -240,18 +240,18 @@ call    0 returned 4
         -:  214:    template<typename _InIterator>
         -:  215:      _GLIBCXX20_CONSTEXPR
         -:  216:      void
-function _ZNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEE12_M_constructIPcEEvT_S7_St20forward_iterator_tag called 52 returned 100% blocks executed 76%
-       52:  217:      basic_string<_CharT, _Traits, _Alloc>::
-       52:  217-block  0
+function _ZNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEE12_M_constructIPcEEvT_S7_St20forward_iterator_tag called 692 returned 100% blocks executed 76%
+      692:  217:      basic_string<_CharT, _Traits, _Alloc>::
+      692:  217-block  0
         -:  218:      _M_construct(_InIterator __beg, _InIterator __end,
         -:  219:		   std::forward_iterator_tag)
         -:  220:      {
-       52:  221:	size_type __dnew = static_cast<size_type>(std::distance(__beg, __end));
+      692:  221:	size_type __dnew = static_cast<size_type>(std::distance(__beg, __end));
         -:  222:
-       52:  223:	if (__dnew > size_type(_S_local_capacity))
-       52:  223-block  0
+      692:  223:	if (__dnew > size_type(_S_local_capacity))
+      692:  223-block  0
 branch  0 taken 0 (fallthrough)
-branch  1 taken 52
+branch  1 taken 692
         -:  224:	  {
     #####:  225:	    _M_data(_M_create(__dnew, size_type(0)));
     %%%%%:  225-block  0
@@ -270,33 +270,33 @@ call    0 never executed
         -:  232:	struct _Guard
         -:  233:	{
         -:  234:	  _GLIBCXX20_CONSTEXPR
-function _ZZNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEE12_M_constructIPcEEvT_S7_St20forward_iterator_tagEN6_GuardC1EPS4_ called 52 returned 100% blocks executed 100%
-       52:  235:	  explicit _Guard(basic_string* __s) : _M_guarded(__s) { }
+function _ZZNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEE12_M_constructIPcEEvT_S7_St20forward_iterator_tagEN6_GuardC1EPS4_ called 692 returned 100% blocks executed 100%
+      692:  235:	  explicit _Guard(basic_string* __s) : _M_guarded(__s) { }
         -:  236:
         -:  237:	  _GLIBCXX20_CONSTEXPR
-function _ZZNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEE12_M_constructIPcEEvT_S7_St20forward_iterator_tagEN6_GuardD1Ev called 52 returned 100% blocks executed 67%
-      52*:  238:	  ~_Guard() { if (_M_guarded) _M_guarded->_M_dispose(); }
-       52:  238-block  0
+function _ZZNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEE12_M_constructIPcEEvT_S7_St20forward_iterator_tagEN6_GuardD1Ev called 692 returned 100% blocks executed 67%
+     692*:  238:	  ~_Guard() { if (_M_guarded) _M_guarded->_M_dispose(); }
+      692:  238-block  0
 branch  0 taken 0 (fallthrough)
-branch  1 taken 52
+branch  1 taken 692
     %%%%%:  238-block  1
 call    2 never executed
         -:  239:
         -:  240:	  basic_string* _M_guarded;
-       52:  241:	} __guard(this);
-       52:  241-block  0
-call    0 returned 52
+      692:  241:	} __guard(this);
+      692:  241-block  0
+call    0 returned 692
         -:  242:
-       52:  243:	this->_S_copy_chars(_M_data(), __beg, __end);
-call    0 returned 52
-call    1 returned 52
+      692:  243:	this->_S_copy_chars(_M_data(), __beg, __end);
+call    0 returned 692
+call    1 returned 692
         -:  244:
-       52:  245:	__guard._M_guarded = 0;
+      692:  245:	__guard._M_guarded = 0;
         -:  246:
-       52:  247:	_M_set_length(__dnew);
-call    0 returned 52
-       52:  248:      }
-call    0 returned 52
+      692:  247:	_M_set_length(__dnew);
+call    0 returned 692
+      692:  248:      }
+call    0 returned 692
         -:  249:
         -:  250:  template<typename _CharT, typename _Traits, typename _Alloc>
         -:  251:    _GLIBCXX20_CONSTEXPR
@@ -321,25 +321,25 @@ call    0 returned 52
         -:  270:  template<typename _CharT, typename _Traits, typename _Alloc>
         -:  271:    _GLIBCXX20_CONSTEXPR
         -:  272:    void
-function _ZNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEE9_M_assignERKS4_ called 10 returned 100% blocks executed 71%
-       10:  273:    basic_string<_CharT, _Traits, _Alloc>::
+function _ZNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEE9_M_assignERKS4_ called 2830 returned 100% blocks executed 71%
+     2830:  273:    basic_string<_CharT, _Traits, _Alloc>::
         -:  274:    _M_assign(const basic_string& __str)
         -:  275:    {
-       10:  276:      if (this != std::__addressof(__str))
-       10:  276-block  0
-call    0 returned 10
-branch  1 taken 10 (fallthrough)
+     2830:  276:      if (this != std::__addressof(__str))
+     2830:  276-block  0
+call    0 returned 2830
+branch  1 taken 2830 (fallthrough)
 branch  2 taken 0
         -:  277:	{
-       10:  278:	  const size_type __rsize = __str.length();
-       10:  278-block  0
-call    0 returned 10
-       10:  279:	  const size_type __capacity = capacity();
-call    0 returned 10
+     2830:  278:	  const size_type __rsize = __str.length();
+     2830:  278-block  0
+call    0 returned 2830
+     2830:  279:	  const size_type __capacity = capacity();
+call    0 returned 2830
         -:  280:
-       10:  281:	  if (__rsize > __capacity)
+     2830:  281:	  if (__rsize > __capacity)
 branch  0 taken 0 (fallthrough)
-branch  1 taken 10
+branch  1 taken 2830
         -:  282:	    {
     #####:  283:	      size_type __new_capacity = __rsize;
     #####:  284:	      pointer __tmp = _M_create(__new_capacity, __capacity);
@@ -359,22 +359,22 @@ call    0 never executed
 call    0 never executed
         -:  288:	    }
         -:  289:
-       10:  290:	  if (__rsize)
-       10:  290-block  0
-branch  0 taken 10 (fallthrough)
+     2830:  290:	  if (__rsize)
+     2830:  290-block  0
+branch  0 taken 2830 (fallthrough)
 branch  1 taken 0
-       10:  291:	    this->_S_copy(_M_data(), __str._M_data(), __rsize);
-       10:  291-block  0
-call    0 returned 10
-call    1 returned 10
-call    2 returned 10
+     2830:  291:	    this->_S_copy(_M_data(), __str._M_data(), __rsize);
+     2830:  291-block  0
+call    0 returned 2830
+call    1 returned 2830
+call    2 returned 2830
         -:  292:
-       10:  293:	  _M_set_length(__rsize);
-       10:  293-block  0
-call    0 returned 10
+     2830:  293:	  _M_set_length(__rsize);
+     2830:  293-block  0
+call    0 returned 2830
         -:  294:	}
-       10:  295:    }
-       10:  295-block  0
+     2830:  295:    }
+     2830:  295-block  0
         -:  296:
         -:  297:  template<typename _CharT, typename _Traits, typename _Alloc>
         -:  298:    _GLIBCXX20_CONSTEXPR

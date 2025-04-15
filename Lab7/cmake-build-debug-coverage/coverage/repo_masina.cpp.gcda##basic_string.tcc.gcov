@@ -1,6 +1,6 @@
         -:    0:Source:C:/Users/lupse/AppData/Local/Programs/CLion/bin/mingw/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/bits/basic_string.tcc
-        -:    0:Graph:C:\Users\lupse\CLionProjects\POO\Lab6\cmake-build-debug-coverage\CMakeFiles\Lab6.dir\repo_masina.cpp.gcno
-        -:    0:Data:C:\Users\lupse\CLionProjects\POO\Lab6\cmake-build-debug-coverage\CMakeFiles\Lab6.dir\repo_masina.cpp.gcda
+        -:    0:Graph:C:\Users\lupse\CLionProjects\POO\Lab7\cmake-build-debug-coverage\CMakeFiles\Lab6.dir\repo_masina.cpp.gcno
+        -:    0:Data:C:\Users\lupse\CLionProjects\POO\Lab7\cmake-build-debug-coverage\CMakeFiles\Lab6.dir\repo_masina.cpp.gcda
         -:    0:Runs:1
         -:    1:// Components for manipulating sequences of characters -*- C++ -*-
         -:    2:
@@ -240,28 +240,16 @@ call    0 never executed
         -:  214:    template<typename _InIterator>
         -:  215:      _GLIBCXX20_CONSTEXPR
         -:  216:      void
-function _ZNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEE12_M_constructIPcEEvT_S7_St20forward_iterator_tag called 0 returned 0% blocks executed 0%
-    #####:  217:      basic_string<_CharT, _Traits, _Alloc>::
-    %%%%%:  217-block  0
+        -:  217:      basic_string<_CharT, _Traits, _Alloc>::
         -:  218:      _M_construct(_InIterator __beg, _InIterator __end,
         -:  219:		   std::forward_iterator_tag)
         -:  220:      {
-    #####:  221:	size_type __dnew = static_cast<size_type>(std::distance(__beg, __end));
+        -:  221:	size_type __dnew = static_cast<size_type>(std::distance(__beg, __end));
         -:  222:
-    #####:  223:	if (__dnew > size_type(_S_local_capacity))
-    %%%%%:  223-block  0
-branch  0 never executed (fallthrough)
-branch  1 never executed
+        -:  223:	if (__dnew > size_type(_S_local_capacity))
         -:  224:	  {
-    #####:  225:	    _M_data(_M_create(__dnew, size_type(0)));
-    %%%%%:  225-block  0
-call    0 never executed
-branch  1 never executed (fallthrough)
-branch  2 never executed (throw)
-    %%%%%:  225-block  1
-call    3 never executed
-    #####:  226:	    _M_capacity(__dnew);
-call    0 never executed
+        -:  225:	    _M_data(_M_create(__dnew, size_type(0)));
+        -:  226:	    _M_capacity(__dnew);
         -:  227:	  }
         -:  228:	else
         -:  229:	  _M_use_local_data();
@@ -270,33 +258,20 @@ call    0 never executed
         -:  232:	struct _Guard
         -:  233:	{
         -:  234:	  _GLIBCXX20_CONSTEXPR
-function _ZZNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEE12_M_constructIPcEEvT_S7_St20forward_iterator_tagEN6_GuardC1EPS4_ called 0 returned 0% blocks executed 0%
-    #####:  235:	  explicit _Guard(basic_string* __s) : _M_guarded(__s) { }
+        -:  235:	  explicit _Guard(basic_string* __s) : _M_guarded(__s) { }
         -:  236:
         -:  237:	  _GLIBCXX20_CONSTEXPR
-function _ZZNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEE12_M_constructIPcEEvT_S7_St20forward_iterator_tagEN6_GuardD1Ev called 0 returned 0% blocks executed 0%
-    #####:  238:	  ~_Guard() { if (_M_guarded) _M_guarded->_M_dispose(); }
-    %%%%%:  238-block  0
-branch  0 never executed (fallthrough)
-branch  1 never executed
-    %%%%%:  238-block  1
-call    2 never executed
+        -:  238:	  ~_Guard() { if (_M_guarded) _M_guarded->_M_dispose(); }
         -:  239:
         -:  240:	  basic_string* _M_guarded;
-    #####:  241:	} __guard(this);
-    %%%%%:  241-block  0
-call    0 never executed
+        -:  241:	} __guard(this);
         -:  242:
-    #####:  243:	this->_S_copy_chars(_M_data(), __beg, __end);
-call    0 never executed
-call    1 never executed
+        -:  243:	this->_S_copy_chars(_M_data(), __beg, __end);
         -:  244:
-    #####:  245:	__guard._M_guarded = 0;
+        -:  245:	__guard._M_guarded = 0;
         -:  246:
-    #####:  247:	_M_set_length(__dnew);
-call    0 never executed
-    #####:  248:      }
-call    0 never executed
+        -:  247:	_M_set_length(__dnew);
+        -:  248:      }
         -:  249:
         -:  250:  template<typename _CharT, typename _Traits, typename _Alloc>
         -:  251:    _GLIBCXX20_CONSTEXPR

@@ -53,15 +53,92 @@ void MasinaUI::cautaUI() {
 }
 
 void MasinaUI::afiseazaToate() const {
-    for (const auto& m : service.getAllMasini()) {
-        std::cout << m.getNrInmatriculare() << " " << m.getProducator()
-                  << " " << m.getModel() << " " << m.getTip() << "\n";
+    List m{service.getAllMasini()};
+    IteratorList<Masina> it = m.begin();
+    for (; it.valid(); ++it) {
+        std::cout << (*it).getNrInmatriculare() << " " << (*it).getProducator()
+                  << " " << (*it).getModel() << " " << (*it).getTip() << "\n";
+    }
+}
+
+void MasinaUI::filtrareUI() const {
+    List<Masina> filteredMasini;
+    IteratorList<Masina> it = filteredMasini.begin();
+    int cmd;
+    std::cout << "1.Dupa Producator\n2.Dupa Tip\n0.Exit\n"; std::cin >> cmd;
+    switch (cmd) {
+        case 1: {
+            std::string producator;
+            std::cout << "Producator: "; std::cin >> producator;
+            filteredMasini = service.getFilteredMasiniByProducator(producator);
+            it.prim();
+            for (; it.valid(); ++it) {
+                std::cout << (*it).getNrInmatriculare() << " " << (*it).getProducator()
+                 << " " << (*it).getModel() << " " << (*it).getTip() << "\n";
+            }
+            break;
+        }
+        case 2: {
+            std::string tip;
+            std::cout << "Tip: "; std::cin >> tip;
+            filteredMasini = service.getFilteredMasiniByTip(tip);
+            it.prim();
+            for (; it.valid(); ++it) {
+                std::cout << (*it).getNrInmatriculare() << " " << (*it).getProducator()
+                 << " " << (*it).getModel() << " " << (*it).getTip() << "\n";
+            }
+            break;
+        }
+        case 0:
+            return;
+        default: std::cout << "Comanda invalida!\n";
+
+    }
+}
+
+void MasinaUI::sortareUI() const {
+    List<Masina> sortedMasini;
+    IteratorList<Masina> it = sortedMasini.begin();
+    int cmd;
+    std::cout << "1.Dupa NrInmatriculare\n2.Dupa Tip\n3.Dupa Producator+model\n0.Exit\n"; std::cin >> cmd;
+    switch (cmd) {
+        case 1: {
+            sortedMasini = service.sorteazaMasiniNrInmatriculare();
+            it.prim();
+            for (; it.valid(); ++it) {
+                std::cout << (*it).getNrInmatriculare() << " " << (*it).getProducator()
+                 << " " << (*it).getModel() << " " << (*it).getTip() << "\n";
+            }
+            break;
+        }
+        case 2: {
+            sortedMasini = service.sorteazaMasiniTip();
+            it.prim();
+            for (; it.valid(); ++it) {
+                std::cout << (*it).getNrInmatriculare() << " " << (*it).getProducator()
+                 << " " << (*it).getModel() << " " << (*it).getTip() << "\n";
+            }
+            break;
+        }
+        case 3: {
+            sortedMasini = service.sorteazaMasiniProducatorModel();
+            it.prim();
+            for (; it.valid(); ++it) {
+                std::cout << (*it).getNrInmatriculare() << " " << (*it).getProducator()
+                 << " " << (*it).getModel() << " " << (*it).getTip() << "\n";
+            }
+            break;
+        }
+        case 0:
+            return;
+        default: std::cout << "Comanda invalida!\n";
+
     }
 }
 
 void MasinaUI::run() {
     while (true) {
-        std::cout << "\n1.Adauga\n2.Sterge\n3.Modifica\n4.Cauta\n5.Afiseaza\n0.Exit\n";
+        std::cout << "\n1.Adauga\n2.Sterge\n3.Modifica\n4.Cauta\n5.Afiseaza\n6.Filtrare\n7.Sortare\n0.Exit\n";
         int cmd;
         std::cout << "\nEnter your command: "; std::cin >> cmd;
         switch (cmd) {
@@ -70,6 +147,8 @@ void MasinaUI::run() {
             case 3: modificaUI(); break;
             case 4: cautaUI(); break;
             case 5: afiseazaToate(); break;
+            case 6: filtrareUI(); break;
+            case 7: sortareUI(); break;
             case 0: return;
             default: std::cout << "Comanda invalida!\n";
         }

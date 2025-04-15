@@ -1,6 +1,6 @@
         -:    0:Source:C:/Users/lupse/AppData/Local/Programs/CLion/bin/mingw/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/bits/ptr_traits.h
-        -:    0:Graph:C:\Users\lupse\CLionProjects\POO\Lab6\cmake-build-debug-coverage\CMakeFiles\Lab6.dir\domeniu_masina.cpp.gcno
-        -:    0:Data:C:\Users\lupse\CLionProjects\POO\Lab6\cmake-build-debug-coverage\CMakeFiles\Lab6.dir\domeniu_masina.cpp.gcda
+        -:    0:Graph:C:\Users\lupse\CLionProjects\POO\Lab7\cmake-build-debug-coverage\CMakeFiles\Lab6.dir\domeniu_masina.cpp.gcno
+        -:    0:Data:C:\Users\lupse\CLionProjects\POO\Lab7\cmake-build-debug-coverage\CMakeFiles\Lab6.dir\domeniu_masina.cpp.gcda
         -:    0:Runs:1
         -:    1:// Pointer Traits -*- C++ -*-
         -:    2:
@@ -142,8 +142,8 @@
         -:  138:       *  @return `addressof(__r)`
         -:  139:      */
         -:  140:      static _GLIBCXX20_CONSTEXPR pointer
-     220*:  141:      pointer_to(element_type& __r) noexcept
-     220*:  142:      { return std::addressof(__r); }
+   10820*:  141:      pointer_to(element_type& __r) noexcept
+   10820*:  142:      { return std::addressof(__r); }
 ------------------
 _ZNSt19__ptr_traits_ptr_toIPKcS0_Lb0EE10pointer_toERS0_:
 function _ZNSt19__ptr_traits_ptr_toIPKcS0_Lb0EE10pointer_toERS0_ called 0 returned 0% blocks executed 0%
@@ -153,11 +153,11 @@ function _ZNSt19__ptr_traits_ptr_toIPKcS0_Lb0EE10pointer_toERS0_ called 0 return
 call    0 never executed
 ------------------
 _ZNSt19__ptr_traits_ptr_toIPccLb0EE10pointer_toERc:
-function _ZNSt19__ptr_traits_ptr_toIPccLb0EE10pointer_toERc called 220 returned 100% blocks executed 100%
-      220:  141:      pointer_to(element_type& __r) noexcept
-      220:  142:      { return std::addressof(__r); }
-      220:  142-block  0
-call    0 returned 220
+function _ZNSt19__ptr_traits_ptr_toIPccLb0EE10pointer_toERc called 10820 returned 100% blocks executed 100%
+    10820:  141:      pointer_to(element_type& __r) noexcept
+    10820:  142:      { return std::addressof(__r); }
+    10820:  142-block  0
+call    0 returned 10820
 ------------------
         -:  143:    };
         -:  144:

@@ -1,6 +1,6 @@
         -:    0:Source:C:/Users/lupse/AppData/Local/Programs/CLion/bin/mingw/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/bits/stl_iterator_base_funcs.h
-        -:    0:Graph:C:\Users\lupse\CLionProjects\POO\Lab6\cmake-build-debug-coverage\CMakeFiles\Lab6.dir\domeniu_masina.cpp.gcno
-        -:    0:Data:C:\Users\lupse\CLionProjects\POO\Lab6\cmake-build-debug-coverage\CMakeFiles\Lab6.dir\domeniu_masina.cpp.gcda
+        -:    0:Graph:C:\Users\lupse\CLionProjects\POO\Lab7\cmake-build-debug-coverage\CMakeFiles\Lab6.dir\domeniu_masina.cpp.gcno
+        -:    0:Data:C:\Users\lupse\CLionProjects\POO\Lab7\cmake-build-debug-coverage\CMakeFiles\Lab6.dir\domeniu_masina.cpp.gcda
         -:    0:Runs:1
         -:    1:// Functions used by iterators -*- C++ -*-
         -:    2:
@@ -107,7 +107,7 @@
         -:  103:      // concept requirements
         -:  104:      __glibcxx_function_requires(_RandomAccessIteratorConcept<
         -:  105:				  _RandomAccessIterator>)
-       52:  106:      return __last - __first;
+      692:  106:      return __last - __first;
         -:  107:    }
         -:  108:
         -:  109:#if _GLIBCXX_USE_CXX11_ABI
@@ -152,11 +152,11 @@
         -:  148:    distance(_InputIterator __first, _InputIterator __last)
         -:  149:    {
         -:  150:      // concept requirements -- taken care of in __distance
-      104:  151:      return std::__distance(__first, __last,
-      104:  152:			     std::__iterator_category(__first));
-       52:  152-block  0
-       52:  152-block  1
-       52:  152-block  2
+     1384:  151:      return std::__distance(__first, __last,
+     1384:  152:			     std::__iterator_category(__first));
+      692:  152-block  0
+      692:  152-block  1
+      692:  152-block  2
         -:  153:    }
         -:  154:
         -:  155:  template<typename _InputIterator, typename _Distance>

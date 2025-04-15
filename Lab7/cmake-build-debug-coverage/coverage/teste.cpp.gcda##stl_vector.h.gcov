@@ -1,6 +1,6 @@
         -:    0:Source:C:/Users/lupse/AppData/Local/Programs/CLion/bin/mingw/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/bits/stl_vector.h
-        -:    0:Graph:C:\Users\lupse\CLionProjects\POO\Lab6\cmake-build-debug-coverage\CMakeFiles\Lab6.dir\teste.cpp.gcno
-        -:    0:Data:C:\Users\lupse\CLionProjects\POO\Lab6\cmake-build-debug-coverage\CMakeFiles\Lab6.dir\teste.cpp.gcda
+        -:    0:Graph:C:\Users\lupse\CLionProjects\POO\Lab7\cmake-build-debug-coverage\CMakeFiles\Lab6.dir\teste.cpp.gcno
+        -:    0:Data:C:\Users\lupse\CLionProjects\POO\Lab7\cmake-build-debug-coverage\CMakeFiles\Lab6.dir\teste.cpp.gcda
         -:    0:Runs:1
         -:    1:// Vector implementation -*- C++ -*-
         -:    2:
@@ -299,15 +299,17 @@
         -:  295:
         -:  296:      _GLIBCXX20_CONSTEXPR
         -:  297:      _Tp_alloc_type&
-function _ZNSt12_Vector_baseI6MasinaSaIS0_EE19_M_get_Tp_allocatorEv called 0 returned 0% blocks executed 0%
-    #####:  298:      _M_get_Tp_allocator() _GLIBCXX_NOEXCEPT
-    #####:  299:      { return this->_M_impl; }
-    %%%%%:  299-block  0
+function _ZNSt12_Vector_baseI4ListI6MasinaESaIS2_EE19_M_get_Tp_allocatorEv called 5 returned 100% blocks executed 100%
+        5:  298:      _M_get_Tp_allocator() _GLIBCXX_NOEXCEPT
+        5:  299:      { return this->_M_impl; }
+        5:  299-block  0
         -:  300:
         -:  301:      _GLIBCXX20_CONSTEXPR
         -:  302:      const _Tp_alloc_type&
-        -:  303:      _M_get_Tp_allocator() const _GLIBCXX_NOEXCEPT
-        -:  304:      { return this->_M_impl; }
+function _ZNKSt12_Vector_baseI4ListI6MasinaESaIS2_EE19_M_get_Tp_allocatorEv called 4 returned 100% blocks executed 100%
+        4:  303:      _M_get_Tp_allocator() const _GLIBCXX_NOEXCEPT
+        4:  304:      { return this->_M_impl; }
+        4:  304-block  0
         -:  305:
         -:  306:      _GLIBCXX20_CONSTEXPR
         -:  307:      allocator_type
@@ -367,41 +369,50 @@ function _ZNSt12_Vector_baseI6MasinaSaIS0_EE19_M_get_Tp_allocatorEv called 0 ret
         -:  361:#endif
         -:  362:
         -:  363:      _GLIBCXX20_CONSTEXPR
-function _ZNSt12_Vector_baseI6MasinaSaIS0_EED2Ev called 0 returned 0% blocks executed 0%
-    #####:  364:      ~_Vector_base() _GLIBCXX_NOEXCEPT
+function _ZNSt12_Vector_baseI4ListI6MasinaESaIS2_EED2Ev called 1 returned 100% blocks executed 100%
+        1:  364:      ~_Vector_base() _GLIBCXX_NOEXCEPT
         -:  365:      {
-    #####:  366:	_M_deallocate(_M_impl._M_start,
-    #####:  367:		      _M_impl._M_end_of_storage - _M_impl._M_start);
-    %%%%%:  367-block  0
-call    0 never executed
-    #####:  368:      }
-call    0 never executed
+        1:  366:	_M_deallocate(_M_impl._M_start,
+        1:  367:		      _M_impl._M_end_of_storage - _M_impl._M_start);
+        1:  367-block  0
+call    0 returned 1
+        1:  368:      }
+call    0 returned 1
         -:  369:
         -:  370:    public:
         -:  371:      _Vector_impl _M_impl;
         -:  372:
         -:  373:      _GLIBCXX20_CONSTEXPR
         -:  374:      pointer
-        -:  375:      _M_allocate(size_t __n)
+function _ZNSt12_Vector_baseI4ListI6MasinaESaIS2_EE11_M_allocateEy called 2 returned 100% blocks executed 67%
+        2:  375:      _M_allocate(size_t __n)
         -:  376:      {
         -:  377:	typedef __gnu_cxx::__alloc_traits<_Tp_alloc_type> _Tr;
-        -:  378:	return __n != 0 ? _Tr::allocate(_M_impl, __n) : pointer();
+       4*:  378:	return __n != 0 ? _Tr::allocate(_M_impl, __n) : pointer();
+        2:  378-block  0
+branch  0 taken 2 (fallthrough)
+branch  1 taken 0
+        2:  378-block  1
+call    2 returned 2
+        2:  378-block  2
+    %%%%%:  378-block  3
+        2:  378-block  4
         -:  379:      }
         -:  380:
         -:  381:      _GLIBCXX20_CONSTEXPR
         -:  382:      void
-function _ZNSt12_Vector_baseI6MasinaSaIS0_EE13_M_deallocateEPS0_y called 0 returned 0% blocks executed 0%
-    #####:  383:      _M_deallocate(pointer __p, size_t __n)
+function _ZNSt12_Vector_baseI4ListI6MasinaESaIS2_EE13_M_deallocateEPS2_y called 3 returned 100% blocks executed 78%
+        3:  383:      _M_deallocate(pointer __p, size_t __n)
         -:  384:      {
         -:  385:	typedef __gnu_cxx::__alloc_traits<_Tp_alloc_type> _Tr;
-    #####:  386:	if (__p)
-    %%%%%:  386-block  0
-branch  0 never executed (fallthrough)
-branch  1 never executed
-    #####:  387:	  _Tr::deallocate(_M_impl, __p, __n);
-    %%%%%:  387-block  0
-call    0 never executed
-    #####:  388:      }
+        3:  386:	if (__p)
+        3:  386-block  0
+branch  0 taken 2 (fallthrough)
+branch  1 taken 1
+        2:  387:	  _Tr::deallocate(_M_impl, __p, __n);
+        2:  387-block  0
+call    0 returned 2
+        3:  388:      }
         -:  389:
         -:  390:    protected:
         -:  391:      _GLIBCXX20_CONSTEXPR
@@ -512,12 +523,15 @@ call    0 never executed
         -:  496:      { return __result; }
         -:  497:
         -:  498:      static _GLIBCXX20_CONSTEXPR pointer
-        -:  499:      _S_relocate(pointer __first, pointer __last, pointer __result,
+function _ZNSt6vectorI4ListI6MasinaESaIS2_EE11_S_relocateEPS2_S5_S5_RS3_ called 4 returned 100% blocks executed 100%
+        4:  499:      _S_relocate(pointer __first, pointer __last, pointer __result,
         -:  500:		  _Tp_alloc_type& __alloc) noexcept
         -:  501:      {
         -:  502:#if __cpp_if_constexpr
         -:  503:	// All callers have already checked _S_use_relocate() so just do it.
-        -:  504:	return std::__relocate_a(__first, __last, __result, __alloc);
+        4:  504:	return std::__relocate_a(__first, __last, __result, __alloc);
+        4:  504-block  0
+call    0 returned 4
         -:  505:#else
         -:  506:	using __do_it = __bool_constant<_S_use_relocate()>;
         -:  507:	return _S_do_relocate(__first, __last, __result, __alloc, __do_it{});
@@ -741,18 +755,18 @@ call    0 never executed
         -:  725:       *  responsibility.
         -:  726:       */
         -:  727:      _GLIBCXX20_CONSTEXPR
-function _ZNSt6vectorI6MasinaSaIS0_EED1Ev called 0 returned 0% blocks executed 0%
-    #####:  728:      ~vector() _GLIBCXX_NOEXCEPT
+function _ZNSt6vectorI4ListI6MasinaESaIS2_EED1Ev called 1 returned 100% blocks executed 100%
+        1:  728:      ~vector() _GLIBCXX_NOEXCEPT
         -:  729:      {
-    #####:  730:	std::_Destroy(this->_M_impl._M_start, this->_M_impl._M_finish,
-call    0 never executed
-    #####:  731:		      _M_get_Tp_allocator());
-    %%%%%:  731-block  0
-call    0 never executed
+        1:  730:	std::_Destroy(this->_M_impl._M_start, this->_M_impl._M_finish,
+call    0 returned 1
+        1:  731:		      _M_get_Tp_allocator());
+        1:  731-block  0
+call    0 returned 1
         -:  732:	_GLIBCXX_ASAN_ANNOTATE_BEFORE_DEALLOC;
-    #####:  733:      }
-    %%%%%:  733-block  0
-call    0 never executed
+        1:  733:      }
+        1:  733-block  0
+call    0 returned 1
         -:  734:
         -:  735:      /**
         -:  736:       *  @brief  %Vector assignment operator.
@@ -887,8 +901,12 @@ call    0 never executed
         -:  865:       */
         -:  866:      _GLIBCXX_NODISCARD _GLIBCXX20_CONSTEXPR
         -:  867:      iterator
-        -:  868:      begin() _GLIBCXX_NOEXCEPT
-        -:  869:      { return iterator(this->_M_impl._M_start); }
+function _ZNSt6vectorI4ListI6MasinaESaIS2_EE5beginEv called 4 returned 100% blocks executed 100%
+        4:  868:      begin() _GLIBCXX_NOEXCEPT
+        4:  869:      { return iterator(this->_M_impl._M_start); }
+        4:  869-block  0
+call    0 returned 4
+        4:  869-block  1
         -:  870:
         -:  871:      /**
         -:  872:       *  Returns a read-only (constant) iterator that points to the
@@ -907,8 +925,12 @@ call    0 never executed
         -:  885:       */
         -:  886:      _GLIBCXX_NODISCARD _GLIBCXX20_CONSTEXPR
         -:  887:      iterator
-        -:  888:      end() _GLIBCXX_NOEXCEPT
-        -:  889:      { return iterator(this->_M_impl._M_finish); }
+function _ZNSt6vectorI4ListI6MasinaESaIS2_EE3endEv called 2 returned 100% blocks executed 100%
+        2:  888:      end() _GLIBCXX_NOEXCEPT
+        2:  889:      { return iterator(this->_M_impl._M_finish); }
+        2:  889-block  0
+call    0 returned 2
+        2:  889-block  1
         -:  890:
         -:  891:      /**
         -:  892:       *  Returns a read-only (constant) iterator that points one past
@@ -968,8 +990,12 @@ call    0 never executed
         -:  946:       */
         -:  947:      [[__nodiscard__]] _GLIBCXX20_CONSTEXPR
         -:  948:      const_iterator
-        -:  949:      cbegin() const noexcept
-        -:  950:      { return const_iterator(this->_M_impl._M_start); }
+function _ZNKSt6vectorI4ListI6MasinaESaIS2_EE6cbeginEv called 1 returned 100% blocks executed 100%
+        1:  949:      cbegin() const noexcept
+        1:  950:      { return const_iterator(this->_M_impl._M_start); }
+        1:  950-block  0
+call    0 returned 1
+        1:  950-block  1
         -:  951:
         -:  952:      /**
         -:  953:       *  Returns a read-only (constant) iterator that points one past
@@ -978,8 +1004,12 @@ call    0 never executed
         -:  956:       */
         -:  957:      [[__nodiscard__]] _GLIBCXX20_CONSTEXPR
         -:  958:      const_iterator
-        -:  959:      cend() const noexcept
-        -:  960:      { return const_iterator(this->_M_impl._M_finish); }
+function _ZNKSt6vectorI4ListI6MasinaESaIS2_EE4cendEv called 0 returned 0% blocks executed 0%
+    #####:  959:      cend() const noexcept
+    #####:  960:      { return const_iterator(this->_M_impl._M_finish); }
+    %%%%%:  960-block  0
+call    0 never executed
+    %%%%%:  960-block  1
         -:  961:
         -:  962:      /**
         -:  963:       *  Returns a read-only (constant) reverse iterator that points
@@ -1006,16 +1036,20 @@ call    0 never executed
         -:  984:      /**  Returns the number of elements in the %vector.  */
         -:  985:      _GLIBCXX_NODISCARD _GLIBCXX20_CONSTEXPR
         -:  986:      size_type
-function _ZNKSt6vectorI6MasinaSaIS0_EE4sizeEv called 0 returned 0% blocks executed 0%
-    #####:  987:      size() const _GLIBCXX_NOEXCEPT
-    #####:  988:      { return size_type(this->_M_impl._M_finish - this->_M_impl._M_start); }
-    %%%%%:  988-block  0
+function _ZNKSt6vectorI4ListI6MasinaESaIS2_EE4sizeEv called 9 returned 100% blocks executed 100%
+        9:  987:      size() const _GLIBCXX_NOEXCEPT
+        9:  988:      { return size_type(this->_M_impl._M_finish - this->_M_impl._M_start); }
+        9:  988-block  0
         -:  989:
         -:  990:      /**  Returns the size() of the largest possible %vector.  */
         -:  991:      _GLIBCXX_NODISCARD _GLIBCXX20_CONSTEXPR
         -:  992:      size_type
-        -:  993:      max_size() const _GLIBCXX_NOEXCEPT
-        -:  994:      { return _S_max_size(_M_get_Tp_allocator()); }
+function _ZNKSt6vectorI4ListI6MasinaESaIS2_EE8max_sizeEv called 4 returned 100% blocks executed 100%
+        4:  993:      max_size() const _GLIBCXX_NOEXCEPT
+        4:  994:      { return _S_max_size(_M_get_Tp_allocator()); }
+        4:  994-block  0
+call    0 returned 4
+call    1 returned 4
         -:  995:
         -:  996:#if __cplusplus >= 201103L
         -:  997:      /**
@@ -1249,10 +1283,15 @@ function _ZNKSt6vectorI6MasinaSaIS0_EE4sizeEv called 0 returned 0% blocks execut
         -: 1225:       */
         -: 1226:      _GLIBCXX_NODISCARD _GLIBCXX20_CONSTEXPR
         -: 1227:      reference
-        -: 1228:      back() _GLIBCXX_NOEXCEPT
+function _ZNSt6vectorI4ListI6MasinaESaIS2_EE4backEv called 1 returned 100% blocks executed 100%
+        1: 1228:      back() _GLIBCXX_NOEXCEPT
         -: 1229:      {
         -: 1230:	__glibcxx_requires_nonempty();
-        -: 1231:	return *(end() - 1);
+        1: 1231:	return *(end() - 1);
+        1: 1231-block  0
+call    0 returned 1
+call    1 returned 1
+call    2 returned 1
         -: 1232:      }
         -: 1233:
         -: 1234:      /**
@@ -1314,8 +1353,12 @@ function _ZNKSt6vectorI6MasinaSaIS0_EE4sizeEv called 0 returned 0% blocks execut
         -: 1290:#if __cplusplus >= 201103L
         -: 1291:      _GLIBCXX20_CONSTEXPR
         -: 1292:      void
-        -: 1293:      push_back(value_type&& __x)
-        -: 1294:      { emplace_back(std::move(__x)); }
+function _ZNSt6vectorI4ListI6MasinaESaIS2_EE9push_backEOS2_ called 1 returned 100% blocks executed 100%
+        1: 1293:      push_back(value_type&& __x)
+        1: 1294:      { emplace_back(std::move(__x)); }
+        1: 1294-block  0
+call    0 returned 1
+call    1 returned 1
         -: 1295:
         -: 1296:      template<typename... _Args>
         -: 1297:#if __cplusplus > 201402L
@@ -1409,8 +1452,12 @@ function _ZNKSt6vectorI6MasinaSaIS0_EE4sizeEv called 0 returned 0% blocks execut
         -: 1385:       */
         -: 1386:      _GLIBCXX20_CONSTEXPR
         -: 1387:      iterator
-        -: 1388:      insert(const_iterator __position, value_type&& __x)
-        -: 1389:      { return _M_insert_rval(__position, std::move(__x)); }
+function _ZNSt6vectorI4ListI6MasinaESaIS2_EE6insertEN9__gnu_cxx17__normal_iteratorIPKS2_S4_EEOS2_ called 1 returned 100% blocks executed 100%
+        1: 1388:      insert(const_iterator __position, value_type&& __x)
+        1: 1389:      { return _M_insert_rval(__position, std::move(__x)); }
+        1: 1389-block  0
+call    0 returned 1
+call    1 returned 1
         -: 1390:
         -: 1391:      /**
         -: 1392:       *  @brief  Inserts an initializer_list into the %vector.
@@ -1912,13 +1959,36 @@ function _ZNKSt6vectorI6MasinaSaIS0_EE4sizeEv called 0 returned 0% blocks execut
         -: 1888:      // Called by _M_fill_insert, _M_insert_aux etc.
         -: 1889:      _GLIBCXX20_CONSTEXPR
         -: 1890:      size_type
-        -: 1891:      _M_check_len(size_type __n, const char* __s) const
+function _ZNKSt6vectorI4ListI6MasinaESaIS2_EE12_M_check_lenEyPKc called 2 returned 100% blocks executed 87%
+        2: 1891:      _M_check_len(size_type __n, const char* __s) const
         -: 1892:      {
-        -: 1893:	if (max_size() - size() < __n)
-        -: 1894:	  __throw_length_error(__N(__s));
+        2: 1893:	if (max_size() - size() < __n)
+        2: 1893-block  0
+call    0 returned 2
+call    1 returned 2
+branch  2 taken 0 (fallthrough)
+branch  3 taken 2
+    #####: 1894:	  __throw_length_error(__N(__s));
+    %%%%%: 1894-block  0
+call    0 never executed
         -: 1895:
-        -: 1896:	const size_type __len = size() + (std::max)(size(), __n);
-        -: 1897:	return (__len < size() || __len > max_size()) ? max_size() : __len;
+        2: 1896:	const size_type __len = size() + (std::max)(size(), __n);
+        2: 1896-block  0
+call    0 returned 2
+call    1 returned 2
+call    2 returned 2
+       2*: 1897:	return (__len < size() || __len > max_size()) ? max_size() : __len;
+call    0 returned 2
+branch  1 taken 2 (fallthrough)
+branch  2 taken 0
+        2: 1897-block  0
+call    3 returned 2
+branch  4 taken 0 (fallthrough)
+branch  5 taken 2
+    %%%%%: 1897-block  1
+call    6 never executed
+        2: 1897-block  2
+        2: 1897-block  3
         -: 1898:      }
         -: 1899:
         -: 1900:      // Called by constructors to check initial size.
@@ -1932,15 +2002,19 @@ function _ZNKSt6vectorI6MasinaSaIS0_EE4sizeEv called 0 returned 0% blocks execut
         -: 1908:      }
         -: 1909:
         -: 1910:      static _GLIBCXX20_CONSTEXPR size_type
-        -: 1911:      _S_max_size(const _Tp_alloc_type& __a) _GLIBCXX_NOEXCEPT
+function _ZNSt6vectorI4ListI6MasinaESaIS2_EE11_S_max_sizeERKS3_ called 4 returned 100% blocks executed 100%
+        4: 1911:      _S_max_size(const _Tp_alloc_type& __a) _GLIBCXX_NOEXCEPT
         -: 1912:      {
         -: 1913:	// std::distance(begin(), end()) cannot be greater than PTRDIFF_MAX,
         -: 1914:	// and realistically we can't store more than PTRDIFF_MAX/sizeof(T)
         -: 1915:	// (even if std::allocator_traits::max_size says we can).
-        -: 1916:	const size_t __diffmax
+        4: 1916:	const size_t __diffmax
+        4: 1916-block  0
         -: 1917:	  = __gnu_cxx::__numeric_traits<ptrdiff_t>::__max / sizeof(_Tp);
-        -: 1918:	const size_t __allocmax = _Alloc_traits::max_size(__a);
-        -: 1919:	return (std::min)(__diffmax, __allocmax);
+        4: 1918:	const size_t __allocmax = _Alloc_traits::max_size(__a);
+        4: 1919:	return (std::min)(__diffmax, __allocmax);
+        4: 1919-block  0
+call    0 returned 4
         -: 1920:      }
         -: 1921:
         -: 1922:      // Internal erase functions follow.

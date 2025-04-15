@@ -1,6 +1,6 @@
         -:    0:Source:C:/Users/lupse/AppData/Local/Programs/CLion/bin/mingw/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/bits/move.h
-        -:    0:Graph:C:\Users\lupse\CLionProjects\POO\Lab6\cmake-build-debug-coverage\CMakeFiles\Lab6.dir\main.cpp.gcno
-        -:    0:Data:C:\Users\lupse\CLionProjects\POO\Lab6\cmake-build-debug-coverage\CMakeFiles\Lab6.dir\main.cpp.gcda
+        -:    0:Graph:C:\Users\lupse\CLionProjects\POO\Lab7\cmake-build-debug-coverage\CMakeFiles\Lab6.dir\main.cpp.gcno
+        -:    0:Data:C:\Users\lupse\CLionProjects\POO\Lab7\cmake-build-debug-coverage\CMakeFiles\Lab6.dir\main.cpp.gcda
         -:    0:Runs:1
         -:    1:// Move, forward and identity for C++11 + swap -*- C++ -*-
         -:    2:
@@ -50,21 +50,10 @@
         -:   46:   */
         -:   47:  template<typename _Tp>
         -:   48:    inline _GLIBCXX_CONSTEXPR _Tp*
-      154:   49:    __addressof(_Tp& __r) _GLIBCXX_NOEXCEPT
-      154:   50:    { return __builtin_addressof(__r); }
-------------------
-_ZSt11__addressofIKcEPT_RS1_:
-function _ZSt11__addressofIKcEPT_RS1_ called 146 returned 100% blocks executed 100%
-      146:   49:    __addressof(_Tp& __r) _GLIBCXX_NOEXCEPT
-      146:   50:    { return __builtin_addressof(__r); }
-      146:   50-block  0
-------------------
-_ZSt11__addressofI6MasinaEPT_RS1_:
-function _ZSt11__addressofI6MasinaEPT_RS1_ called 8 returned 100% blocks executed 100%
-        8:   49:    __addressof(_Tp& __r) _GLIBCXX_NOEXCEPT
-        8:   50:    { return __builtin_addressof(__r); }
-        8:   50-block  0
-------------------
+function _ZSt11__addressofIKcEPT_RS1_ called 10042 returned 100% blocks executed 100%
+    10042:   49:    __addressof(_Tp& __r) _GLIBCXX_NOEXCEPT
+    10042:   50:    { return __builtin_addressof(__r); }
+    10042:   50-block  0
         -:   51:
         -:   52:#if __cplusplus >= 201103L
         -:   53:
@@ -159,11 +148,11 @@ function _ZSt11__addressofI6MasinaEPT_RS1_ called 8 returned 100% blocks execute
         -:  142:  template<typename _Tp>
         -:  143:    _GLIBCXX_NODISCARD
         -:  144:    inline _GLIBCXX17_CONSTEXPR _Tp*
-function _ZSt9addressofIKcEPT_RS1_ called 146 returned 100% blocks executed 100%
-      146:  145:    addressof(_Tp& __r) noexcept
-      146:  146:    { return std::__addressof(__r); }
-      146:  146-block  0
-call    0 returned 146
+function _ZSt9addressofIKcEPT_RS1_ called 10042 returned 100% blocks executed 100%
+    10042:  145:    addressof(_Tp& __r) noexcept
+    10042:  146:    { return std::__addressof(__r); }
+    10042:  146-block  0
+call    0 returned 10042
         -:  147:
         -:  148:  // _GLIBCXX_RESOLVE_LIB_DEFECTS
         -:  149:  // 2598. addressof works on temporaries

@@ -1,33 +1,27 @@
-        -:    0:Source:C:/Users/lupse/CLionProjects/POO/Lab6/repo_masina.cpp
-        -:    0:Graph:C:\Users\lupse\CLionProjects\POO\Lab6\cmake-build-debug-coverage\CMakeFiles\Lab6.dir\repo_masina.cpp.gcno
-        -:    0:Data:C:\Users\lupse\CLionProjects\POO\Lab6\cmake-build-debug-coverage\CMakeFiles\Lab6.dir\repo_masina.cpp.gcda
+        -:    0:Source:C:/Users/lupse/CLionProjects/POO/Lab7/repo_masina.cpp
+        -:    0:Graph:C:\Users\lupse\CLionProjects\POO\Lab7\cmake-build-debug-coverage\CMakeFiles\Lab6.dir\repo_masina.cpp.gcno
+        -:    0:Data:C:\Users\lupse\CLionProjects\POO\Lab7\cmake-build-debug-coverage\CMakeFiles\Lab6.dir\repo_masina.cpp.gcda
         -:    0:Runs:1
-        -:    1://
-        -:    2:// Created by lupse on 4/7/2025.
-        -:    3://
-        -:    4:#include "repo_masina.h"
-        -:    5:
-function _ZN10MasinaRepo6adaugaERK6Masina called 5 returned 80% blocks executed 88%
-        5:    6:void MasinaRepo::adauga(const Masina& m) {
-        7:    7:    for (const auto& masina : masini)
-        5:    7-block  0
-call    0 returned 5
-call    1 returned 5
-        3:    7-block  1
-call    2 returned 3
-        2:    7-block  2
-call    3 returned 2
-        7:    7-block  3
-call    4 returned 7
-branch  5 taken 3
-branch  6 taken 4 (fallthrough)
-        3:    8:        if (masina == m)
-call    0 returned 3
-branch  1 taken 3 (fallthrough)
-branch  2 taken 0 (throw)
-        3:    8-block  0
-branch  3 taken 1 (fallthrough)
-branch  4 taken 2
+        -:    1:#include "repo_masina.h"
+        -:    2:#include <stdexcept>
+        -:    3:
+        -:    4:// Adăugăm o mașină în lista repo-ului
+function _ZN10MasinaRepo6adaugaERK6Masina called 8 returned 88% blocks executed 93%
+        8:    5:void MasinaRepo::adauga(const Masina& m) {
+        -:    6:    // Verificăm dacă mașina există deja în listă
+       19:    7:    for (size_t i = 0; i < masini.getSize(); ++i) {
+        8:    7-block  0
+       11:    7-block  1
+       19:    7-block  2
+call    0 returned 19
+branch  1 taken 12
+branch  2 taken 7 (fallthrough)
+       12:    8:        if (masini.get(i) == m) {
+       12:    8-block  0
+call    0 returned 12
+call    1 returned 12
+branch  2 taken 1 (fallthrough)
+branch  3 taken 11
         1:    9:            throw std::runtime_error("Masina deja existenta.");
         1:    9-block  0
 call    0 returned 1
@@ -35,164 +29,136 @@ call    1 returned 1
 branch  2 taken 1 (fallthrough)
 branch  3 taken 0 (throw)
         1:    9-block  1
-call    4 returned 1
+call    4 returned 0
     $$$$$:    9-block  2
 call    5 never executed
-        4:   10:    masini.push_back(m);
-        4:   10-block  0
+        -:   10:        }
+        -:   11:    }
+        7:   12:    masini.add(m);  // Adăugăm mașina în lista dinamică
+        7:   12-block  0
+call    0 returned 7
+        7:   13:}
+        -:   14:
+        -:   15:// Ștergem o mașină după numărul de înmatriculare
+function _ZN10MasinaRepo6stergeERKNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEE called 3 returned 67% blocks executed 94%
+        3:   16:void MasinaRepo::sterge(const std::string& nrInmatriculare) {
+        4:   17:    for (size_t i = 0; i < masini.getSize(); ++i) {
+        3:   17-block  0
+        1:   17-block  1
+        4:   17-block  2
 call    0 returned 4
-        4:   11:}
-        -:   12:
-function _ZN10MasinaRepo6stergeERKNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEE called 3 returned 67% blocks executed 85%
-        3:   13:void MasinaRepo::sterge(const std::string& nrInmatriculare) {
-        4:   14:    for (auto it = masini.begin(); it != masini.end(); ++it) {
-        3:   14-block  0
-call    0 returned 3
-        1:   14-block  1
-call    1 returned 1
-        4:   14-block  2
-call    2 returned 4
-call    3 returned 4
-branch  4 taken 3
-branch  5 taken 1 (fallthrough)
-        3:   15:        if (it->getNrInmatriculare() == nrInmatriculare) {
-        3:   15-block  0
+branch  1 taken 3
+branch  2 taken 1 (fallthrough)
+        3:   18:        if (masini.get(i).getNrInmatriculare() == nrInmatriculare) {
+        3:   18-block  0
 call    0 returned 3
 call    1 returned 3
-branch  2 taken 3 (fallthrough)
-branch  3 taken 0 (throw)
-        3:   15-block  1
-call    4 returned 3
-branch  5 taken 2 (fallthrough)
-branch  6 taken 1
-        2:   16:            masini.erase(it);
-        2:   16-block  0
+call    2 returned 3
+branch  3 taken 2 (fallthrough)
+branch  4 taken 1
+        2:   19:            masini.remove(masini.get(i));  // Ștergem mașina din listă
+        2:   19-block  0
 call    0 returned 2
 call    1 returned 2
-branch  2 taken 2 (fallthrough)
-branch  3 taken 0 (throw)
-    $$$$$:   16-block  1
-        2:   17:            return;
-        2:   17-block  0
-        2:   17-block  1
-        -:   18:        }
-        -:   19:    }
-        1:   20:    throw std::runtime_error("Masina inexistenta.");
-        1:   20-block  0
+        2:   20:            return;
+        2:   20-block  0
+        -:   21:        }
+        -:   22:    }
+        1:   23:    throw std::runtime_error("Masina inexistenta.");
+        1:   23-block  0
 call    0 returned 1
 call    1 returned 1
 branch  2 taken 1 (fallthrough)
 branch  3 taken 0 (throw)
-        1:   20-block  1
+        1:   23-block  1
 call    4 returned 0
-    $$$$$:   20-block  2
+    $$$$$:   23-block  2
 call    5 never executed
-        -:   21:}
-        -:   22:
-function _ZN10MasinaRepo8modificaERK6Masina called 3 returned 67% blocks executed 91%
-        3:   23:void MasinaRepo::modifica(const Masina& m) {
-        7:   24:    for (auto& masina : masini) {
-        3:   24-block  0
-call    0 returned 3
-call    1 returned 3
-        6:   24-block  1
-call    2 returned 6
-        4:   24-block  2
-call    3 returned 4
-        7:   24-block  3
-call    4 returned 7
-branch  5 taken 6
-branch  6 taken 1 (fallthrough)
-        6:   25:        if (masina == m) {
+        -:   24:}
+        -:   25:
+        -:   26:// Modificăm detaliile unei mașini
+function _ZNK10MasinaRepo8modificaERK6Masina called 3 returned 67% blocks executed 96%
+        3:   27:void MasinaRepo::modifica(const Masina& m) const{
+        7:   28:    for (size_t i = 0; i < masini.getSize(); ++i) {
+        3:   28-block  0
+        4:   28-block  1
+        7:   28-block  2
+call    0 returned 7
+branch  1 taken 6
+branch  2 taken 1 (fallthrough)
+        6:   29:        if (masini.get(i) == m) {
+        6:   29-block  0
 call    0 returned 6
-branch  1 taken 6 (fallthrough)
-branch  2 taken 0 (throw)
-        6:   25-block  0
-branch  3 taken 2 (fallthrough)
-branch  4 taken 4
-        2:   26:            masina.setProducator(m.getProducator());
-        2:   26-block  0
+call    1 returned 6
+branch  2 taken 2 (fallthrough)
+branch  3 taken 4
+        2:   30:            masini.get(i).setProducator(m.getProducator());
+        2:   30-block  0
 call    0 returned 2
-branch  1 taken 2 (fallthrough)
-branch  2 taken 0 (throw)
-        2:   26-block  1
-call    3 returned 2
-branch  4 taken 2 (fallthrough)
-branch  5 taken 0 (throw)
-        2:   27:            masina.setModel(m.getModel());
-        2:   27-block  0
+call    1 returned 2
+call    2 returned 2
+        2:   31:            masini.get(i).setModel(m.getModel());
 call    0 returned 2
-branch  1 taken 2 (fallthrough)
-branch  2 taken 0 (throw)
-        2:   27-block  1
-call    3 returned 2
-branch  4 taken 2 (fallthrough)
-branch  5 taken 0 (throw)
-        2:   28:            masina.setTip(m.getTip());
-        2:   28-block  0
+call    1 returned 2
+call    2 returned 2
+        2:   32:            masini.get(i).setTip(m.getTip());
 call    0 returned 2
-branch  1 taken 2 (fallthrough)
-branch  2 taken 0 (throw)
-        2:   28-block  1
-call    3 returned 2
-branch  4 taken 2 (fallthrough)
-branch  5 taken 0 (throw)
-        2:   29:            return;
-        2:   29-block  0
-        2:   29-block  1
-        -:   30:        }
-        -:   31:    }
-        1:   32:    throw std::runtime_error("Masina inexistenta.");
-        1:   32-block  0
+call    1 returned 2
+call    2 returned 2
+        2:   33:            return;
+        2:   33-block  0
+        -:   34:        }
+        -:   35:    }
+        1:   36:    throw std::runtime_error("Masina inexistenta.");
+        1:   36-block  0
 call    0 returned 1
 call    1 returned 1
 branch  2 taken 1 (fallthrough)
 branch  3 taken 0 (throw)
-        1:   32-block  1
+        1:   36-block  1
 call    4 returned 0
-    $$$$$:   32-block  2
+    $$$$$:   36-block  2
 call    5 never executed
-        -:   33:}
-        -:   34:
-function _ZNK10MasinaRepo5cautaERKNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEE called 5 returned 80% blocks executed 88%
-        5:   35:const Masina& MasinaRepo::cauta(const std::string& nrInmatriculare) const {
-        9:   36:    for (const auto& masina : masini)
-        5:   36-block  0
-call    0 returned 5
-call    1 returned 5
-        8:   36-block  1
-call    2 returned 8
-        4:   36-block  2
-call    3 returned 4
-        9:   36-block  3
-call    4 returned 9
-branch  5 taken 8
-branch  6 taken 1 (fallthrough)
-        8:   37:        if (masina.getNrInmatriculare() == nrInmatriculare)
+        -:   37:}
+        -:   38:
+        -:   39:// Căutăm o mașină după numărul de înmatriculare
+function _ZNK10MasinaRepo5cautaERKNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEE called 5 returned 80% blocks executed 94%
+        5:   40:const Masina& MasinaRepo::cauta(const std::string& nrInmatriculare) const{
+        9:   41:    for (size_t i = 0; i < masini.getSize(); ++i) {
+        5:   41-block  0
+        4:   41-block  1
+        9:   41-block  2
+call    0 returned 9
+branch  1 taken 8
+branch  2 taken 1 (fallthrough)
+        8:   42:        if (masini.get(i).getNrInmatriculare() == nrInmatriculare) {
+        8:   42-block  0
 call    0 returned 8
-branch  1 taken 8 (fallthrough)
-branch  2 taken 0 (throw)
-        8:   37-block  0
-call    3 returned 8
-branch  4 taken 4 (fallthrough)
-branch  5 taken 4
-        4:   38:            return masina;
-        4:   38-block  0
-        4:   38-block  1
-        1:   39:    throw std::runtime_error("Masina inexistenta.");
-        1:   39-block  0
+call    1 returned 8
+call    2 returned 8
+branch  3 taken 4 (fallthrough)
+branch  4 taken 4
+        4:   43:            return masini.get(i);
+        4:   43-block  0
+call    0 returned 4
+        4:   43-block  1
+        -:   44:        }
+        -:   45:    }
+        1:   46:    throw std::runtime_error("Masina inexistenta.");
+        1:   46-block  0
 call    0 returned 1
 call    1 returned 1
 branch  2 taken 1 (fallthrough)
 branch  3 taken 0 (throw)
-        1:   39-block  1
+        1:   46-block  1
 call    4 returned 0
-    $$$$$:   39-block  2
+    $$$$$:   46-block  2
 call    5 never executed
-        -:   40:}
-        -:   41:
-function _ZNK10MasinaRepo6getAllEv called 4 returned 100% blocks executed 100%
-        4:   42:const std::vector<Masina>& MasinaRepo::getAll() const {
-        4:   43:    return masini;
-        4:   43-block  0
-        -:   44:}
+        -:   47:}
+        -:   48:
+        -:   49:// Returnăm toate mașinile
+function _ZNK10MasinaRepo6getAllEv called 9 returned 100% blocks executed 100%
+        9:   50:const List<Masina>& MasinaRepo::getAll() const {
+        9:   51:    return masini;  // Returnăm lista de mașini ca referință constantă
+        9:   51-block  0
+        -:   52:}

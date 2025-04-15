@@ -1,0 +1,263 @@
+        -:    0:Source:C:/Users/lupse/CLionProjects/POO/Lab8/service_masina.cpp
+        -:    0:Graph:C:\Users\lupse\CLionProjects\POO\Lab8\cmake-build-debug-coverage\CMakeFiles\Lab6.dir\service_masina.cpp.gcno
+        -:    0:Data:C:\Users\lupse\CLionProjects\POO\Lab8\cmake-build-debug-coverage\CMakeFiles\Lab6.dir\service_masina.cpp.gcda
+        -:    0:Runs:1
+        -:    1://
+        -:    2:// Created by lupse on 4/7/2025.
+        -:    3://
+        -:    4:#include "service_masina.h"
+        -:    5:
+        -:    6:#include <algorithm>
+        -:    7:using std::copy_if;
+        -:    8:using std::sort;
+function _ZNK13MasinaService12adaugaMasinaERKNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEES7_S7_S7_ called 8 returned 100% blocks executed 71%
+        8:    9:void MasinaService::adaugaMasina(const std::string& nr, const std::string& prod,
+        -:   10:                                 const std::string& mod, const std::string& tip) const{
+        8:   11:    Masina m{nr, prod, mod, tip};
+        8:   11-block  0
+call    0 returned 8
+branch  1 taken 8 (fallthrough)
+branch  2 taken 0 (throw)
+        8:   12:    repo.adauga(m);
+        8:   12-block  0
+call    0 returned 8
+branch  1 taken 8 (fallthrough)
+branch  2 taken 0 (throw)
+        8:   13:}
+        8:   13-block  0
+call    0 returned 8
+    $$$$$:   13-block  1
+call    1 never executed
+        -:   14:
+function _ZNK13MasinaService12stergeMasinaERKNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEE called 1 returned 100% blocks executed 100%
+        1:   15:void MasinaService::stergeMasina(const std::string& nr) const{
+        1:   16:    repo.sterge(nr);
+        1:   16-block  0
+call    0 returned 1
+        1:   17:}
+        -:   18:
+function _ZNK13MasinaService14modificaMasinaERKNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEES7_S7_S7_ called 1 returned 100% blocks executed 71%
+        1:   19:void MasinaService::modificaMasina(const std::string& nr, const std::string& prod,
+        -:   20:                                   const std::string& mod, const std::string& tip) const{
+        1:   21:    Masina m{nr, prod, mod, tip};
+        1:   21-block  0
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        1:   22:    repo.modifica(m);
+        1:   22-block  0
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        1:   23:}
+        1:   23-block  0
+call    0 returned 1
+    $$$$$:   23-block  1
+call    1 never executed
+        -:   24:
+function _ZNK13MasinaService11cautaMasinaERKNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEE called 3 returned 100% blocks executed 100%
+        3:   25:const Masina& MasinaService::cautaMasina(const std::string& nr) const {
+        3:   26:    return repo.cauta(nr);
+        3:   26-block  0
+call    0 returned 3
+        -:   27:}
+        -:   28://
+        -:   29:// const Masina& MasinaService::cautaMasinaByIndex(int index) const {
+        -:   30://     return repo.cautaIndex(index);
+        -:   31:// }
+        -:   32:
+function _ZNK13MasinaService12getAllMasiniEv called 11 returned 100% blocks executed 100%
+       11:   33:const std::vector<Masina>& MasinaService::getAllMasini() const {
+       11:   34:    return repo.getAll();
+       11:   34-block  0
+call    0 returned 11
+        -:   35:}
+        -:   36:
+function _ZNK13MasinaService29getFilteredMasiniByProducatorERKNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEE called 1 returned 100% blocks executed 76%
+        1:   37:std::vector<Masina> MasinaService::getFilteredMasiniByProducator(const std::string& producator) const {
+        1:   38:    std::vector Masini{getAllMasini()};
+        1:   38-block  0
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        1:   38-block  1
+call    3 returned 1
+branch  4 taken 1 (fallthrough)
+branch  5 taken 0 (throw)
+        1:   39:    std::vector<Masina> filteredMasini;
+        2:   40:    copy_if(std::begin(Masini), std::end(Masini), std::back_inserter(filteredMasini),
+        1:   40-block  0
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        1:   40-block  1
+call    3 returned 1
+branch  4 taken 1 (fallthrough)
+branch  5 taken 0 (throw)
+function _ZZNK13MasinaService29getFilteredMasiniByProducatorERKNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEEENKUlRK6MasinaE_clESA_ called 4 returned 100% blocks executed 100%
+        4:   41:        [&producator](const Masina& m) {
+        4:   42:            return m.getProducator() == producator;
+        4:   42-block  0
+call    0 returned 4
+call    1 returned 4
+        -:   43:    });
+        2:   44:    return filteredMasini;
+        1:   44-block  0
+        1:   44-block  1
+        1:   45:}
+        1:   45-block  0
+call    0 returned 1
+    $$$$$:   45-block  1
+call    1 never executed
+    $$$$$:   45-block  2
+call    2 never executed
+        -:   46:
+function _ZNK13MasinaService22getFilteredMasiniByTipERKNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEE called 1 returned 100% blocks executed 76%
+        1:   47:std::vector<Masina> MasinaService::getFilteredMasiniByTip(const std::string& tip) const {
+        1:   48:    std::vector Masini{getAllMasini()};
+        1:   48-block  0
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        1:   48-block  1
+call    3 returned 1
+branch  4 taken 1 (fallthrough)
+branch  5 taken 0 (throw)
+        1:   49:    std::vector<Masina> filteredMasini;
+        2:   50:    copy_if(std::begin(Masini), std::end(Masini), std::back_inserter(filteredMasini),
+        1:   50-block  0
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        1:   50-block  1
+call    3 returned 1
+branch  4 taken 1 (fallthrough)
+branch  5 taken 0 (throw)
+function _ZZNK13MasinaService22getFilteredMasiniByTipERKNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEEENKUlRK6MasinaE_clESA_ called 4 returned 100% blocks executed 100%
+        4:   51:        [&tip](const Masina& m) {
+        4:   52:            return m.getTip() == tip;
+        4:   52-block  0
+call    0 returned 4
+call    1 returned 4
+        -:   53:    });
+        2:   54:    return filteredMasini;
+        1:   54-block  0
+        1:   54-block  1
+        1:   55:}
+        1:   55-block  0
+call    0 returned 1
+    $$$$$:   55-block  1
+call    1 never executed
+    $$$$$:   55-block  2
+call    2 never executed
+        -:   56:
+function _ZNK13MasinaService14sorteazaMasiniEPFbRK6MasinaS2_E called 3 returned 100% blocks executed 91%
+        3:   57:std::vector<Masina> MasinaService::sorteazaMasini(bool (*cmp)(const Masina&, const Masina&)) const {
+        3:   58:    std::vector sortedList{getAllMasini()};
+        3:   58-block  0
+call    0 returned 3
+call    1 returned 3
+        3:   59:    sort(std::begin(sortedList), std::end(sortedList), cmp);
+        3:   59-block  0
+call    0 returned 3
+branch  1 taken 3 (fallthrough)
+branch  2 taken 0 (throw)
+        3:   60:    return sortedList;
+        3:   60-block  0
+        3:   60-block  1
+    =====:   61:}
+    $$$$$:   61-block  0
+call    0 never executed
+        -:   62:
+function _ZN13MasinaService18cmpNrInmatriculareERK6MasinaS2_ called 6 returned 100% blocks executed 100%
+        6:   63:bool MasinaService::cmpNrInmatriculare(const Masina& masina1, const Masina& masina2) {
+        6:   64:    return masina1.getNrInmatriculare() < masina2.getNrInmatriculare();
+        6:   64-block  0
+call    0 returned 6
+call    1 returned 6
+branch  2 taken 6 (fallthrough)
+branch  3 taken 0 (throw)
+        6:   64-block  1
+call    4 returned 6
+branch  5 taken 6 (fallthrough)
+branch  6 taken 0 (throw)
+        6:   64-block  2
+call    7 returned 6
+call    8 returned 6
+        6:   64-block  3
+        -:   65:}
+function _ZN13MasinaService6cmpTipERK6MasinaS2_ called 6 returned 100% blocks executed 100%
+        6:   66:bool MasinaService::cmpTip(const Masina& masina1, const Masina& masina2){
+        6:   67:    return masina1.getTip() < masina2.getTip();
+        6:   67-block  0
+call    0 returned 6
+call    1 returned 6
+branch  2 taken 6 (fallthrough)
+branch  3 taken 0 (throw)
+        6:   67-block  1
+call    4 returned 6
+branch  5 taken 6 (fallthrough)
+branch  6 taken 0 (throw)
+        6:   67-block  2
+call    7 returned 6
+call    8 returned 6
+        6:   67-block  3
+        -:   68:}
+function _ZN13MasinaService18cmpProducatorModelERK6MasinaS2_ called 7 returned 100% blocks executed 95%
+        7:   69:bool MasinaService::cmpProducatorModel(const Masina& masina1, const Masina& masina2) {
+        7:   70:    if (masina1.getProducator() == masina2.getProducator()) {
+        7:   70-block  0
+call    0 returned 7
+call    1 returned 7
+call    2 returned 7
+branch  3 taken 2 (fallthrough)
+branch  4 taken 5
+        2:   71:        return masina1.getModel() < masina2.getModel();
+        2:   71-block  0
+call    0 returned 2
+call    1 returned 2
+branch  2 taken 2 (fallthrough)
+branch  3 taken 0 (throw)
+        2:   71-block  1
+call    4 returned 2
+branch  5 taken 2 (fallthrough)
+branch  6 taken 0 (throw)
+        2:   71-block  2
+call    7 returned 2
+call    8 returned 2
+    $$$$$:   71-block  3
+call    9 never executed
+        -:   72:    }
+        5:   73:    return masina1.getProducator() < masina2.getProducator();
+        5:   73-block  0
+call    0 returned 5
+call    1 returned 5
+branch  2 taken 5 (fallthrough)
+branch  3 taken 0 (throw)
+        5:   73-block  1
+call    4 returned 5
+branch  5 taken 5 (fallthrough)
+branch  6 taken 0 (throw)
+        5:   73-block  2
+call    7 returned 5
+call    8 returned 5
+        -:   74:}
+        -:   75:
+function _ZNK13MasinaService29sorteazaMasiniNrInmatriculareEv called 1 returned 100% blocks executed 100%
+        1:   76:std::vector<Masina> MasinaService::sorteazaMasiniNrInmatriculare() const {
+        1:   77:    return sorteazaMasini(cmpNrInmatriculare);
+        1:   77-block  0
+call    0 returned 1
+        -:   78:}
+function _ZNK13MasinaService17sorteazaMasiniTipEv called 1 returned 100% blocks executed 100%
+        1:   79:std::vector<Masina> MasinaService::sorteazaMasiniTip() const {
+        1:   80:    return sorteazaMasini(cmpTip);
+        1:   80-block  0
+call    0 returned 1
+        -:   81:}
+function _ZNK13MasinaService29sorteazaMasiniProducatorModelEv called 1 returned 100% blocks executed 100%
+        1:   82:std::vector<Masina> MasinaService::sorteazaMasiniProducatorModel() const {
+        1:   83:    return sorteazaMasini(cmpProducatorModel);
+        1:   83-block  0
+call    0 returned 1
+        -:   84:}

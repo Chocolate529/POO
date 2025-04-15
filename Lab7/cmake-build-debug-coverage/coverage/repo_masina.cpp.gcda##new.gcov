@@ -1,6 +1,6 @@
         -:    0:Source:C:/Users/lupse/AppData/Local/Programs/CLion/bin/mingw/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/new
-        -:    0:Graph:C:\Users\lupse\CLionProjects\POO\Lab6\cmake-build-debug-coverage\CMakeFiles\Lab6.dir\repo_masina.cpp.gcno
-        -:    0:Data:C:\Users\lupse\CLionProjects\POO\Lab6\cmake-build-debug-coverage\CMakeFiles\Lab6.dir\repo_masina.cpp.gcda
+        -:    0:Graph:C:\Users\lupse\CLionProjects\POO\Lab7\cmake-build-debug-coverage\CMakeFiles\Lab6.dir\repo_masina.cpp.gcno
+        -:    0:Data:C:\Users\lupse\CLionProjects\POO\Lab7\cmake-build-debug-coverage\CMakeFiles\Lab6.dir\repo_masina.cpp.gcda
         -:    0:Runs:1
         -:    1:// The -*- C++ -*- dynamic memory management header.
         -:    2:
@@ -183,8 +183,7 @@ function _ZnwyPv called 0 returned 0% blocks executed 0%
         -:  177:{ return __p; }
         -:  178:
         -:  179:// Default placement versions of operator delete.
-function _ZdlPvS_ called 0 returned 0% blocks executed 0%
-    #####:  180:inline void operator delete  (void*, void*) _GLIBCXX_USE_NOEXCEPT { }
+        -:  180:inline void operator delete  (void*, void*) _GLIBCXX_USE_NOEXCEPT { }
         -:  181:inline void operator delete[](void*, void*) _GLIBCXX_USE_NOEXCEPT { }
         -:  182://@}
         -:  183:} // extern "C++"

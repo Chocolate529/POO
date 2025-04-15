@@ -24,7 +24,7 @@ void MasinaRepo::sterge(const std::string& nrInmatriculare) {
 }
 
 // Modificăm detaliile unei mașini
-void MasinaRepo::modifica(const Masina& m) {
+void MasinaRepo::modifica(const Masina& m) const{
     for (size_t i = 0; i < masini.getSize(); ++i) {
         if (masini.get(i) == m) {
             masini.get(i).setProducator(m.getProducator());

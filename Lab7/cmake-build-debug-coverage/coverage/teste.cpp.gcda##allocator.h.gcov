@@ -1,6 +1,6 @@
         -:    0:Source:C:/Users/lupse/AppData/Local/Programs/CLion/bin/mingw/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/bits/allocator.h
-        -:    0:Graph:C:\Users\lupse\CLionProjects\POO\Lab6\cmake-build-debug-coverage\CMakeFiles\Lab6.dir\teste.cpp.gcno
-        -:    0:Data:C:\Users\lupse\CLionProjects\POO\Lab6\cmake-build-debug-coverage\CMakeFiles\Lab6.dir\teste.cpp.gcda
+        -:    0:Graph:C:\Users\lupse\CLionProjects\POO\Lab7\cmake-build-debug-coverage\CMakeFiles\Lab6.dir\teste.cpp.gcno
+        -:    0:Data:C:\Users\lupse\CLionProjects\POO\Lab7\cmake-build-debug-coverage\CMakeFiles\Lab6.dir\teste.cpp.gcda
         -:    0:Runs:1
         -:    1:// Allocators -*- C++ -*-
         -:    2:
@@ -164,8 +164,8 @@
         -:  160:      // 3035. std::allocator's constructors should be constexpr
         -:  161:      __attribute__((__always_inline__))
         -:  162:      _GLIBCXX20_CONSTEXPR
-       52:  163:      allocator() _GLIBCXX_NOTHROW { }
-        1:  163-block  0
+     670*:  163:      allocator() _GLIBCXX_NOTHROW { }
+    %%%%%:  163-block  0
         1:  163-block  1
         1:  163-block  2
         1:  163-block  3
@@ -217,12 +217,36 @@
         1:  163-block 49
         1:  163-block 50
         1:  163-block 51
+        1:  163-block 52
+        1:  163-block 53
+        1:  163-block 54
+        1:  163-block 55
+        1:  163-block 56
+        1:  163-block 57
+        1:  163-block 58
+        1:  163-block 59
+        1:  163-block 60
+        1:  163-block 61
+        1:  163-block 62
+        1:  163-block 63
+        1:  163-block 64
+        1:  163-block 65
+        1:  163-block 66
+        1:  163-block 67
+        1:  163-block 68
+        1:  163-block 69
+        1:  163-block 70
+      600:  163-block 71
         -:  164:
         -:  165:      __attribute__((__always_inline__))
         -:  166:      _GLIBCXX20_CONSTEXPR
         -:  167:      allocator(const allocator& __a) _GLIBCXX_NOTHROW
-       52:  168:      : __allocator_base<_Tp>(__a) { }
-       52:  168-block  0
+     970*:  168:      : __allocator_base<_Tp>(__a) { }
+    %%%%%:  168-block  0
+      100:  168-block  1
+      100:  168-block  2
+    %%%%%:  168-block  3
+      770:  168-block  4
         -:  169:
         -:  170:#if __cplusplus >= 201103L
         -:  171:      // Avoid implicit deprecation.
@@ -238,9 +262,9 @@
         -:  181:#if __cpp_constexpr_dynamic_alloc
         -:  182:      constexpr
         -:  183:#endif
-      52*:  184:      ~allocator() _GLIBCXX_NOTHROW { }
+     870*:  184:      ~allocator() _GLIBCXX_NOTHROW { }
     $$$$$:  184-block  0
-    $$$$$:  184-block  1
+      100:  184-block  1
     $$$$$:  184-block  2
     $$$$$:  184-block  3
     $$$$$:  184-block  4
@@ -271,10 +295,10 @@
     $$$$$:  184-block 29
     $$$$$:  184-block 30
     $$$$$:  184-block 31
-        1:  184-block 32
-        1:  184-block 33
+    $$$$$:  184-block 32
+    $$$$$:  184-block 33
     $$$$$:  184-block 34
-        1:  184-block 35
+    $$$$$:  184-block 35
     $$$$$:  184-block 36
     $$$$$:  184-block 37
     $$$$$:  184-block 38
@@ -282,79 +306,151 @@
     $$$$$:  184-block 40
     $$$$$:  184-block 41
     $$$$$:  184-block 42
-        1:  184-block 43
+    $$$$$:  184-block 43
     $$$$$:  184-block 44
     $$$$$:  184-block 45
-        1:  184-block 46
-        1:  184-block 47
+    $$$$$:  184-block 46
+    $$$$$:  184-block 47
     $$$$$:  184-block 48
     $$$$$:  184-block 49
     $$$$$:  184-block 50
     $$$$$:  184-block 51
     $$$$$:  184-block 52
-    $$$$$:  184-block 53
-    $$$$$:  184-block 54
+        1:  184-block 53
+        1:  184-block 54
     $$$$$:  184-block 55
+        1:  184-block 56
+    $$$$$:  184-block 57
+    $$$$$:  184-block 58
+    $$$$$:  184-block 59
+    $$$$$:  184-block 60
+    $$$$$:  184-block 61
+    $$$$$:  184-block 62
+    $$$$$:  184-block 63
+        1:  184-block 64
+    $$$$$:  184-block 65
+    $$$$$:  184-block 66
+        1:  184-block 67
+        1:  184-block 68
+    $$$$$:  184-block 69
+    $$$$$:  184-block 70
+    $$$$$:  184-block 71
+    $$$$$:  184-block 72
+    $$$$$:  184-block 73
+    $$$$$:  184-block 74
+    $$$$$:  184-block 75
+    $$$$$:  184-block 76
         -:  185:
         -:  186:#if __cplusplus > 201703L
         -:  187:      [[nodiscard,__gnu__::__always_inline__]]
         -:  188:      constexpr _Tp*
         -:  189:      allocate(size_t __n)
         -:  190:      {
-    #####:  191:	if (std::__is_constant_evaluated())
-call    0 never executed
-branch  1 never executed (fallthrough)
-branch  2 never executed
+       2*:  191:	if (std::__is_constant_evaluated())
+        2:  191-block  0
+call    0 returned 2
+branch  1 taken 0 (fallthrough)
+branch  2 taken 2
+    %%%%%:  191-block  1
+call    3 never executed
+branch  4 never executed (fallthrough)
+branch  5 never executed
+call    6 never executed
+branch  7 never executed (fallthrough)
+branch  8 never executed
+call    9 never executed
+branch 10 never executed (fallthrough)
+branch 11 never executed
         -:  192:	  {
     #####:  193:	    if (__builtin_mul_overflow(__n, sizeof(_Tp), &__n))
     %%%%%:  193-block  0
 branch  0 never executed (fallthrough)
 branch  1 never executed
+    %%%%%:  193-block  1
+branch  2 never executed (fallthrough)
+branch  3 never executed
+    %%%%%:  193-block  2
+branch  4 never executed (fallthrough)
+branch  5 never executed
+    %%%%%:  193-block  3
+branch  6 never executed (fallthrough)
+branch  7 never executed
     #####:  194:	      std::__throw_bad_array_new_length();
     %%%%%:  194-block  0
 call    0 never executed
+    %%%%%:  194-block  1
+call    1 never executed
+    %%%%%:  194-block  2
+call    2 never executed
+    %%%%%:  194-block  3
+call    3 never executed
     #####:  195:	    return static_cast<_Tp*>(::operator new(__n));
     %%%%%:  195-block  0
 call    0 never executed
+    %%%%%:  195-block  1
+call    1 never executed
+branch  2 never executed (fallthrough)
+branch  3 never executed (throw)
+    %%%%%:  195-block  2
+    %%%%%:  195-block  3
+call    4 never executed
+    %%%%%:  195-block  4
+call    5 never executed
         -:  196:	  }
         -:  197:
-    #####:  198:	return __allocator_base<_Tp>::allocate(__n, 0);
-    %%%%%:  198-block  0
-call    0 never executed
+       2*:  198:	return __allocator_base<_Tp>::allocate(__n, 0);
+        2:  198-block  0
+call    0 returned 2
+    %%%%%:  198-block  1
+call    1 never executed
+branch  2 never executed (fallthrough)
+branch  3 never executed (throw)
+    %%%%%:  198-block  2
+    %%%%%:  198-block  3
+call    4 never executed
+    %%%%%:  198-block  4
+call    5 never executed
         -:  199:      }
         -:  200:
         -:  201:      [[__gnu__::__always_inline__]]
         -:  202:      constexpr void
         -:  203:      deallocate(_Tp* __p, size_t __n)
         -:  204:      {
-    #####:  205:	if (std::__is_constant_evaluated())
+       2*:  205:	if (std::__is_constant_evaluated())
 call    0 never executed
 branch  1 never executed (fallthrough)
 branch  2 never executed
-    %%%%%:  205-block  0
-call    3 never executed
-branch  4 never executed (fallthrough)
-branch  5 never executed
+        2:  205-block  0
+call    3 returned 2
+branch  4 taken 0 (fallthrough)
+branch  5 taken 2
+call    6 never executed
+branch  7 never executed (fallthrough)
+branch  8 never executed
         -:  206:	  {
     #####:  207:	    ::operator delete(__p);
     %%%%%:  207-block  0
 call    0 never executed
     %%%%%:  207-block  1
 call    1 never executed
+    %%%%%:  207-block  2
+call    2 never executed
     #####:  208:	    return;
         -:  209:	  }
-    #####:  210:	__allocator_base<_Tp>::deallocate(__p, __n);
+       2*:  210:	__allocator_base<_Tp>::deallocate(__p, __n);
     %%%%%:  210-block  0
 call    0 never executed
-    %%%%%:  210-block  1
-call    1 never executed
+        2:  210-block  1
+call    1 returned 2
+    %%%%%:  210-block  2
+call    2 never executed
         -:  211:      }
         -:  212:#endif // C++20
         -:  213:
         -:  214:      friend __attribute__((__always_inline__)) _GLIBCXX20_CONSTEXPR
         -:  215:      bool
         -:  216:      operator==(const allocator&, const allocator&) _GLIBCXX_NOTHROW
-        -:  217:      { return true; }
+    #####:  217:      { return true; }
         -:  218:
         -:  219:#if __cpp_impl_three_way_comparison < 201907L
         -:  220:      friend __attribute__((__always_inline__)) _GLIBCXX20_CONSTEXPR

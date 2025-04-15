@@ -1,6 +1,6 @@
         -:    0:Source:C:/Users/lupse/AppData/Local/Programs/CLion/bin/mingw/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/bits/char_traits.h
-        -:    0:Graph:C:\Users\lupse\CLionProjects\POO\Lab6\cmake-build-debug-coverage\CMakeFiles\Lab6.dir\ui.cpp.gcno
-        -:    0:Data:C:\Users\lupse\CLionProjects\POO\Lab6\cmake-build-debug-coverage\CMakeFiles\Lab6.dir\ui.cpp.gcda
+        -:    0:Graph:C:\Users\lupse\CLionProjects\POO\Lab7\cmake-build-debug-coverage\CMakeFiles\Lab6.dir\ui.cpp.gcno
+        -:    0:Data:C:\Users\lupse\CLionProjects\POO\Lab7\cmake-build-debug-coverage\CMakeFiles\Lab6.dir\ui.cpp.gcda
         -:    0:Runs:1
         -:    1:// Character Traits for use by standard string and iostream -*- C++ -*-
         -:    2:
@@ -264,21 +264,38 @@
         -:  260:  template<typename _CharT>
         -:  261:    _GLIBCXX20_CONSTEXPR
         -:  262:    typename char_traits<_CharT>::char_type*
-        -:  263:    char_traits<_CharT>::
+function _ZN9__gnu_cxx11char_traitsIcE4copyEPcPKcy called 0 returned 0% blocks executed 0%
+    #####:  263:    char_traits<_CharT>::
         -:  264:    copy(char_type* __s1, const char_type* __s2, std::size_t __n)
         -:  265:    {
-        -:  266:      if (__n == 0)
-        -:  267:	return __s1;
+    #####:  266:      if (__n == 0)
+    %%%%%:  266-block  0
+branch  0 never executed (fallthrough)
+branch  1 never executed
+    #####:  267:	return __s1;
+    %%%%%:  267-block  0
         -:  268:#if __cplusplus >= 202002L
-        -:  269:      if (std::__is_constant_evaluated())
+    #####:  269:      if (std::__is_constant_evaluated())
+    %%%%%:  269-block  0
+call    0 never executed
+branch  1 never executed (fallthrough)
+branch  2 never executed
         -:  270:	{
-        -:  271:	  for (std::size_t __i = 0; __i < __n; ++__i)
-        -:  272:	    std::construct_at(__s1 + __i, __s2[__i]);
-        -:  273:	  return __s1;
+    #####:  271:	  for (std::size_t __i = 0; __i < __n; ++__i)
+    %%%%%:  271-block  0
+    %%%%%:  271-block  1
+branch  0 never executed
+branch  1 never executed (fallthrough)
+    #####:  272:	    std::construct_at(__s1 + __i, __s2[__i]);
+    %%%%%:  272-block  0
+call    0 never executed
+    #####:  273:	  return __s1;
+    %%%%%:  273-block  0
         -:  274:	}
         -:  275:#endif
-        -:  276:      __builtin_memcpy(__s1, __s2, __n * sizeof(char_type));
-        -:  277:      return __s1;
+    #####:  276:      __builtin_memcpy(__s1, __s2, __n * sizeof(char_type));
+    #####:  277:      return __s1;
+    %%%%%:  277-block  0
         -:  278:    }
         -:  279:
         -:  280:  template<typename _CharT>
@@ -446,15 +463,27 @@ call    0 never executed
         -:  434:      }
         -:  435:
         -:  436:      static _GLIBCXX20_CONSTEXPR char_type*
-        -:  437:      copy(char_type* __s1, const char_type* __s2, size_t __n)
+function _ZNSt11char_traitsIcE4copyEPcPKcy called 0 returned 0% blocks executed 0%
+    #####:  437:      copy(char_type* __s1, const char_type* __s2, size_t __n)
         -:  438:      {
-        -:  439:	if (__n == 0)
-        -:  440:	  return __s1;
+    #####:  439:	if (__n == 0)
+    %%%%%:  439-block  0
+branch  0 never executed (fallthrough)
+branch  1 never executed
+    #####:  440:	  return __s1;
+    %%%%%:  440-block  0
         -:  441:#if __cplusplus >= 202002L
-        -:  442:	if (std::__is_constant_evaluated())
-        -:  443:	  return __gnu_cxx::char_traits<char_type>::copy(__s1, __s2, __n);
+    #####:  442:	if (std::__is_constant_evaluated())
+    %%%%%:  442-block  0
+call    0 never executed
+branch  1 never executed (fallthrough)
+branch  2 never executed
+    #####:  443:	  return __gnu_cxx::char_traits<char_type>::copy(__s1, __s2, __n);
+    %%%%%:  443-block  0
+call    0 never executed
         -:  444:#endif
-        -:  445:	return static_cast<char_type*>(__builtin_memcpy(__s1, __s2, __n));
+    #####:  445:	return static_cast<char_type*>(__builtin_memcpy(__s1, __s2, __n));
+    %%%%%:  445-block  0
         -:  446:      }
         -:  447:
         -:  448:      static _GLIBCXX20_CONSTEXPR char_type*

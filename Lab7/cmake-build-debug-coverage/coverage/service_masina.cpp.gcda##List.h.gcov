@@ -1,0 +1,383 @@
+        -:    0:Source:C:/Users/lupse/CLionProjects/POO/Lab7/List.h
+        -:    0:Graph:C:\Users\lupse\CLionProjects\POO\Lab7\cmake-build-debug-coverage\CMakeFiles\Lab6.dir\service_masina.cpp.gcno
+        -:    0:Data:C:\Users\lupse\CLionProjects\POO\Lab7\cmake-build-debug-coverage\CMakeFiles\Lab6.dir\service_masina.cpp.gcda
+        -:    0:Runs:1
+        -:    1://
+        -:    2:// Created by lupse on 4/8/2025.
+        -:    3://
+        -:    4:
+        -:    5:#ifndef LIST_H
+        -:    6:#define LIST_H
+        -:    7:#include <stdexcept>
+        -:    8:// #include "iterator_list.h"
+        -:    9:template<typename T>
+        -:   10:class IteratorList;
+        -:   11:template <typename T>
+        -:   12:class List {
+        -:   13:    friend class IteratorList<T>;
+        -:   14:private:
+        -:   15:    T* data;
+        -:   16:    size_t capacity;
+        -:   17:    size_t size;
+        -:   18:
+        -:   19:    void resize();
+        -:   20:
+        -:   21:public:
+        -:   22:    List();
+        -:   23:    List(const List& other);
+        -:   24:    List(List&& other) noexcept;
+        -:   25:    ~List();
+        -:   26:
+        -:   27:    void add(const T& value);
+        -:   28:    void remove(const T& value);
+        -:   29:    T& get(size_t index) const;
+        -:   30:    void set(size_t index, const T& value);
+        -:   31:    [[nodiscard]] size_t getSize() const;
+        -:   32:
+        -:   33:
+        -:   34:    List& operator=(const List& other);
+        -:   35:    List& operator=(List&& other) noexcept;
+        -:   36:    bool operator==(const List& other) const;
+        -:   37:
+        -:   38:    IteratorList<T> begin();
+        -:   39:    IteratorList<T> end();
+        -:   40:};
+        -:   41:
+        -:   42:
+        -:   43:// Constructor - Inițializează lista cu dimensiunea 0 și capacitatea 0
+        -:   44:template <typename T>
+function _ZN4ListI6MasinaEC1Ev called 0 returned 0% blocks executed 0%
+    #####:   45:List<T>::List() : data(nullptr), capacity(0), size(0) {}
+        -:   46:
+        -:   47:template <typename T>
+function _ZN4ListI6MasinaEC1ERKS1_ called 7 returned 100% blocks executed 92%
+        7:   48:List<T>::List(const List<T>& other) {
+     303*:   49:    data = new T[other.capacity];
+        7:   49-block  0
+branch  0 taken 7 (fallthrough)
+branch  1 taken 0
+        7:   49-block  1
+    %%%%%:   49-block  2
+        7:   49-block  3
+call    2 returned 7
+      296:   49-block  4
+call    3 returned 296
+      303:   49-block  5
+branch  4 taken 296
+branch  5 taken 7 (fallthrough)
+      227:   50:    for (size_t i = 0; i < other.size; i++) {
+        7:   50-block  0
+      227:   50-block  1
+branch  0 taken 220
+branch  1 taken 7 (fallthrough)
+      220:   51:        data[i] = other.data[i];
+      220:   51-block  0
+call    0 returned 220
+        -:   52:    }
+        7:   53:    size = other.size;
+        7:   54:    capacity = other.capacity;
+        7:   55:}
+        -:   56:
+        -:   57:template <typename T>
+        -:   58:List<T>::List(List<T>&& other) noexcept{
+        -:   59:    data = other.data;
+        -:   60:    capacity = other.capacity;
+        -:   61:    size = other.size;
+        -:   62:
+        -:   63:    other.data = nullptr;
+        -:   64:    other.size = 0;
+        -:   65:    other.capacity = 0;
+        -:   66:}
+        -:   67:
+        -:   68:// Destructor - Eliberează memoria alocată dinamic
+        -:   69:template <typename T>
+function _ZN4ListI6MasinaED1Ev called 0 returned 0% blocks executed 0%
+    #####:   70:List<T>::~List() {
+    #####:   71:    delete[] data;
+    %%%%%:   71-block  0
+branch  0 never executed (fallthrough)
+branch  1 never executed
+    %%%%%:   71-block  1
+    %%%%%:   71-block  2
+branch  2 never executed (fallthrough)
+branch  3 never executed
+    %%%%%:   71-block  3
+call    4 never executed
+    %%%%%:   71-block  4
+call    5 never executed
+    #####:   72:}
+        -:   73:
+        -:   74:// Redimensionează lista (împinge capacitatea)
+        -:   75:template <typename T>
+function _ZN4ListI6MasinaE6resizeEv called 0 returned 0% blocks executed 0%
+    #####:   76:void List<T>::resize() {
+    #####:   77:    capacity = (capacity == 0) ? 1 : capacity * 2;
+    %%%%%:   77-block  0
+branch  0 never executed (fallthrough)
+branch  1 never executed
+    %%%%%:   77-block  1
+    %%%%%:   77-block  2
+    #####:   78:    T* newData = new T[capacity];
+    %%%%%:   78-block  0
+branch  0 never executed (fallthrough)
+branch  1 never executed
+    %%%%%:   78-block  1
+    %%%%%:   78-block  2
+    %%%%%:   78-block  3
+call    2 never executed
+    %%%%%:   78-block  4
+call    3 never executed
+    %%%%%:   78-block  5
+branch  4 never executed
+branch  5 never executed (fallthrough)
+        -:   79:
+    #####:   80:    for (size_t i = 0; i < size; ++i) {
+    %%%%%:   80-block  0
+    %%%%%:   80-block  1
+branch  0 never executed
+branch  1 never executed (fallthrough)
+    #####:   81:        newData[i] = data[i];
+    %%%%%:   81-block  0
+call    0 never executed
+        -:   82:    }
+        -:   83:
+    #####:   84:    delete[] data;
+    %%%%%:   84-block  0
+branch  0 never executed (fallthrough)
+branch  1 never executed
+    %%%%%:   84-block  1
+    %%%%%:   84-block  2
+branch  2 never executed (fallthrough)
+branch  3 never executed
+    %%%%%:   84-block  3
+call    4 never executed
+    %%%%%:   84-block  4
+call    5 never executed
+    #####:   85:    data = newData;
+    #####:   86:}
+        -:   87:
+        -:   88:// Adaugă un element în listă
+        -:   89:template <typename T>
+function _ZN4ListI6MasinaE3addERKS0_ called 0 returned 0% blocks executed 0%
+    #####:   90:void List<T>::add(const T& value) {
+    #####:   91:    if (size == capacity) {
+    %%%%%:   91-block  0
+branch  0 never executed (fallthrough)
+branch  1 never executed
+    #####:   92:        resize();
+    %%%%%:   92-block  0
+call    0 never executed
+        -:   93:    }
+    #####:   94:    data[size++] = value;
+    %%%%%:   94-block  0
+call    0 never executed
+    #####:   95:}
+        -:   96:
+        -:   97:// Șterge un element din listă
+        -:   98:template <typename T>
+        -:   99:void List<T>::remove(const T& value) {
+        -:  100:    for (size_t i = 0; i < size; ++i) {
+        -:  101:        if (data[i] == value) {
+        -:  102:            for (size_t j = i; j < size - 1; ++j) {
+        -:  103:                data[j] = data[j + 1];
+        -:  104:            }
+        -:  105:            --size;
+        -:  106:            return;
+        -:  107:        }
+        -:  108:    }
+        -:  109:    throw std::runtime_error("Elementul nu a fost găsit în listă.");
+        -:  110:}
+        -:  111:
+        -:  112:// Returnează elementul de la un anumit index
+        -:  113:template <typename T>
+function _ZNK4ListI6MasinaE3getEy called 0 returned 0% blocks executed 0%
+    #####:  114:T& List<T>::get(size_t index) const {
+    #####:  115:    if (index >= size) {
+    %%%%%:  115-block  0
+branch  0 never executed (fallthrough)
+branch  1 never executed
+    #####:  116:        throw std::out_of_range("Indexul este în afara limitelor.");
+    %%%%%:  116-block  0
+call    0 never executed
+call    1 never executed
+branch  2 never executed (fallthrough)
+branch  3 never executed (throw)
+    %%%%%:  116-block  1
+call    4 never executed
+    $$$$$:  116-block  2
+call    5 never executed
+        -:  117:    }
+    #####:  118:    return data[index];
+    %%%%%:  118-block  0
+    %%%%%:  118-block  1
+        -:  119:}
+        -:  120:
+        -:  121:template <typename T>
+function _ZN4ListI6MasinaE3setEyRKS0_ called 20 returned 100% blocks executed 50%
+       20:  122:void List<T>::set(size_t index, const T& value) {
+       20:  123:    if (index >= size) {
+       20:  123-block  0
+branch  0 taken 0 (fallthrough)
+branch  1 taken 20
+    #####:  124:        throw std::out_of_range("Indexul este în afara limitelor.");
+    %%%%%:  124-block  0
+call    0 never executed
+call    1 never executed
+branch  2 never executed (fallthrough)
+branch  3 never executed (throw)
+    %%%%%:  124-block  1
+call    4 never executed
+    $$$$$:  124-block  2
+call    5 never executed
+        -:  125:    }
+       20:  126:    data[index] = value;
+       20:  126-block  0
+call    0 returned 20
+       20:  127:}
+        -:  128:
+        -:  129:// Returnează dimensiunea actuală a listei
+        -:  130:template <typename T>
+function _ZNK4ListI6MasinaE7getSizeEv called 0 returned 0% blocks executed 0%
+    #####:  131:size_t List<T>::getSize() const {
+    #####:  132:    return size;
+    %%%%%:  132-block  0
+        -:  133:}
+        -:  134:
+        -:  135:template<typename T>
+        -:  136:List<T>& List<T>::operator=(const List& other) {
+        -:  137:    if (this == &other) {
+        -:  138:        return *this;
+        -:  139:    }
+        -:  140:    delete[] data;
+        -:  141:    data = new T[other.size];
+        -:  142:    this->size = other.size;
+        -:  143:    this->capacity = other.capacity;
+        -:  144:    for (size_t i = 0; i < size; ++i) {
+        -:  145:        data[i] = other.data[i];
+        -:  146:    }
+        -:  147:    return *this;
+        -:  148:}
+        -:  149:
+        -:  150:template<typename T>
+        -:  151:List<T>& List<T>::operator=(List&& other) noexcept{
+        -:  152:    if (this == &other) {
+        -:  153:        return *this;
+        -:  154:    }
+        -:  155:    delete[] data;
+        -:  156:    data = other.data;
+        -:  157:    capacity = other.capacity;
+        -:  158:    size = other.size;
+        -:  159:
+        -:  160:    other.data = nullptr;
+        -:  161:    other.size = 0;
+        -:  162:    other.capacity = 0;
+        -:  163:    return *this;
+        -:  164:}
+        -:  165:
+        -:  166:template<typename T>
+        -:  167:bool List<T>::operator==(const List& other) const {
+        -:  168:    if (this.size != other.size) {
+        -:  169:        return false;
+        -:  170:    }
+        -:  171:    if (this.capacity != other.capacity) {
+        -:  172:        return false;
+        -:  173:    }
+        -:  174:    for (size_t i = 0; i < size; ++i) {
+        -:  175:        if (data[i] == data[i]) {
+        -:  176:            return false;
+        -:  177:        }
+        -:  178:    }
+        -:  179:    return true;
+        -:  180:}
+        -:  181:
+        -:  182:template<typename T>
+        -:  183:IteratorList<T> List<T>::begin() {
+        -:  184:    return IteratorList<T>(*this);
+        -:  185:}
+        -:  186:template<typename T>
+        -:  187:IteratorList<T> List<T>::end() {
+        -:  188:    return IteratorList<T>(*this, size);
+        -:  189:}
+        -:  190:template<typename T>
+        -:  191:class IteratorList {
+        -:  192:    friend class List<T>;
+        -:  193:private:
+        -:  194:    const List<T>& list;
+        -:  195:    int poz=0;
+        -:  196:
+        -:  197:public:
+        -:  198:    explicit IteratorList(const List<T>& list) noexcept;
+        -:  199:    IteratorList(const List<T>& list, int poz) noexcept;
+        -:  200:
+        -:  201:    void urmator();
+        -:  202:    [[nodiscard]] bool valid() const;
+        -:  203:    T& element() const;
+        -:  204:    void prim();
+        -:  205:    T& operator*() const;
+        -:  206:    IteratorList& operator++();
+        -:  207:    bool operator==(const IteratorList& other) const;
+        -:  208:    bool operator!=(const IteratorList& other) const;
+        -:  209:
+        -:  210:};
+        -:  211:
+        -:  212:template<typename T>
+function _ZN12IteratorListI6MasinaEC1ERK4ListIS0_E called 4 returned 100% blocks executed 100%
+        4:  213:IteratorList<T> :: IteratorList(const List<T>& list) noexcept: list{ list } {}
+        -:  214:
+        -:  215:template<typename T>
+        -:  216:IteratorList<T> :: IteratorList(const List<T>& list, int poz) noexcept: list{ list }, poz{ poz }{}
+        -:  217:
+        -:  218:template<typename T>
+        -:  219:void IteratorList<T>::urmator() {
+        -:  220:    poz++;
+        -:  221:}
+        -:  222:
+        -:  223:template<typename T>
+function _ZNK12IteratorListI6MasinaE5validEv called 10 returned 100% blocks executed 100%
+       10:  224:bool IteratorList<T>::valid() const {
+       10:  225:    return poz < list.size;
+       10:  225-block  0
+        -:  226:}
+        -:  227:
+        -:  228:template<typename T>
+function _ZNK12IteratorListI6MasinaE7elementEv called 126 returned 100% blocks executed 100%
+      126:  229:T &IteratorList<T>::element() const {
+      126:  230:    return list.data[poz];
+      126:  230-block  0
+        -:  231:}
+        -:  232:
+        -:  233:template<typename T>
+        -:  234:void IteratorList<T>::prim() {
+        -:  235:    poz = 0;
+        -:  236:}
+        -:  237:
+        -:  238:template<typename T>
+function _ZNK12IteratorListI6MasinaEdeEv called 123 returned 100% blocks executed 100%
+      123:  239:T& IteratorList<T>::operator*() const {
+      123:  240:    return element();
+      123:  240-block  0
+call    0 returned 123
+        -:  241:}
+        -:  242:
+        -:  243:template<typename T>
+function _ZN12IteratorListI6MasinaEppEv called 118 returned 100% blocks executed 100%
+      118:  244:IteratorList<T>& IteratorList<T>::operator++() {
+      118:  245:    poz++;
+      118:  246:    return *this;
+      118:  246-block  0
+        -:  247:}
+        -:  248:
+        -:  249:template<typename T>
+        -:  250:bool IteratorList<T>::operator==(const IteratorList &other) const {
+        -:  251:    return poz == other.poz;
+        -:  252:}
+        -:  253:
+        -:  254:template<typename T>
+        -:  255:bool IteratorList<T>::operator!=(const IteratorList &other) const {
+        -:  256:    return !(*this == other);
+        -:  257:}
+        -:  258:
+        -:  259:
+        -:  260:
+        -:  261:
+        -:  262:#endif //LIST_H

@@ -1,6 +1,6 @@
         -:    0:Source:C:/Users/lupse/AppData/Local/Programs/CLion/bin/mingw/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/bits/allocator.h
-        -:    0:Graph:C:\Users\lupse\CLionProjects\POO\Lab6\cmake-build-debug-coverage\CMakeFiles\Lab6.dir\ui.cpp.gcno
-        -:    0:Data:C:\Users\lupse\CLionProjects\POO\Lab6\cmake-build-debug-coverage\CMakeFiles\Lab6.dir\ui.cpp.gcda
+        -:    0:Graph:C:\Users\lupse\CLionProjects\POO\Lab7\cmake-build-debug-coverage\CMakeFiles\Lab6.dir\ui.cpp.gcno
+        -:    0:Data:C:\Users\lupse\CLionProjects\POO\Lab7\cmake-build-debug-coverage\CMakeFiles\Lab6.dir\ui.cpp.gcda
         -:    0:Runs:1
         -:    1:// Allocators -*- C++ -*-
         -:    2:
@@ -172,6 +172,7 @@
         -:  167:      allocator(const allocator& __a) _GLIBCXX_NOTHROW
     #####:  168:      : __allocator_base<_Tp>(__a) { }
     %%%%%:  168-block  0
+    %%%%%:  168-block  1
         -:  169:
         -:  170:#if __cplusplus >= 201103L
         -:  171:      // Avoid implicit deprecation.
@@ -188,20 +189,53 @@
         -:  182:      constexpr
         -:  183:#endif
     #####:  184:      ~allocator() _GLIBCXX_NOTHROW { }
+    %%%%%:  184-block  0
+    $$$$$:  184-block  1
         -:  185:
         -:  186:#if __cplusplus > 201703L
         -:  187:      [[nodiscard,__gnu__::__always_inline__]]
         -:  188:      constexpr _Tp*
         -:  189:      allocate(size_t __n)
         -:  190:      {
-        -:  191:	if (std::__is_constant_evaluated())
+    #####:  191:	if (std::__is_constant_evaluated())
+    %%%%%:  191-block  0
+call    0 never executed
+branch  1 never executed (fallthrough)
+branch  2 never executed
+call    3 never executed
+branch  4 never executed (fallthrough)
+branch  5 never executed
         -:  192:	  {
-        -:  193:	    if (__builtin_mul_overflow(__n, sizeof(_Tp), &__n))
-        -:  194:	      std::__throw_bad_array_new_length();
-        -:  195:	    return static_cast<_Tp*>(::operator new(__n));
+    #####:  193:	    if (__builtin_mul_overflow(__n, sizeof(_Tp), &__n))
+    %%%%%:  193-block  0
+branch  0 never executed (fallthrough)
+branch  1 never executed
+    %%%%%:  193-block  1
+branch  2 never executed (fallthrough)
+branch  3 never executed
+    #####:  194:	      std::__throw_bad_array_new_length();
+    %%%%%:  194-block  0
+call    0 never executed
+    %%%%%:  194-block  1
+call    1 never executed
+    #####:  195:	    return static_cast<_Tp*>(::operator new(__n));
+    %%%%%:  195-block  0
+call    0 never executed
+branch  1 never executed (fallthrough)
+branch  2 never executed (throw)
+    %%%%%:  195-block  1
+    %%%%%:  195-block  2
+call    3 never executed
         -:  196:	  }
         -:  197:
-        -:  198:	return __allocator_base<_Tp>::allocate(__n, 0);
+    #####:  198:	return __allocator_base<_Tp>::allocate(__n, 0);
+    %%%%%:  198-block  0
+call    0 never executed
+branch  1 never executed (fallthrough)
+branch  2 never executed (throw)
+    %%%%%:  198-block  1
+    %%%%%:  198-block  2
+call    3 never executed
         -:  199:      }
         -:  200:
         -:  201:      [[__gnu__::__always_inline__]]
@@ -227,7 +261,7 @@ call    0 never executed
         -:  214:      friend __attribute__((__always_inline__)) _GLIBCXX20_CONSTEXPR
         -:  215:      bool
         -:  216:      operator==(const allocator&, const allocator&) _GLIBCXX_NOTHROW
-        -:  217:      { return true; }
+    #####:  217:      { return true; }
         -:  218:
         -:  219:#if __cpp_impl_three_way_comparison < 201907L
         -:  220:      friend __attribute__((__always_inline__)) _GLIBCXX20_CONSTEXPR

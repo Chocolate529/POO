@@ -1,0 +1,41 @@
+        -:    0:Source:C:/Users/lupse/CLionProjects/POO/Lab7/domeniu_masina.h
+        -:    0:Graph:C:\Users\lupse\CLionProjects\POO\Lab7\cmake-build-debug-coverage\CMakeFiles\Lab6.dir\ui.cpp.gcno
+        -:    0:Data:C:\Users\lupse\CLionProjects\POO\Lab7\cmake-build-debug-coverage\CMakeFiles\Lab6.dir\ui.cpp.gcda
+        -:    0:Runs:1
+        -:    1://
+        -:    2:// Created by lupse on 4/7/2025.
+        -:    3://
+        -:    4:#pragma once
+        -:    5:#include <string>
+        -:    6:
+        -:    7:class Masina {
+        -:    8:private:
+        -:    9:    std::string nrInmatriculare;
+        -:   10:    std::string producator;
+        -:   11:    std::string model;
+        -:   12:    std::string tip;
+        -:   13:
+        -:   14:public:
+function _ZN6MasinaC1Ev called 0 returned 0% blocks executed 0%
+    #####:   15:    Masina() = default;
+    %%%%%:   15-block  0
+call    0 never executed
+call    1 never executed
+call    2 never executed
+call    3 never executed
+        -:   16:    Masina(const std::string& nr, const std::string& prod,
+        -:   17:           const std::string& mod, const std::string& t);
+        -:   18:
+        -:   19:    [[nodiscard]] const std::string& getNrInmatriculare() const;
+        -:   20:    [[nodiscard]] const std::string& getProducator() const;
+        -:   21:    [[nodiscard]] const std::string& getModel() const;
+        -:   22:    [[nodiscard]] const std::string& getTip() const;
+        -:   23:
+        -:   24:    void setProducator(const std::string& prod);
+        -:   25:    void setModel(const std::string& mod);
+        -:   26:    void setTip(const std::string& t);
+        -:   27:
+        -:   28:    bool operator==(const Masina& other) const;
+        -:   29:};
+        -:   30:
+        -:   31:
