@@ -1,0 +1,56 @@
+        -:    0:Source:C:/Users/lupse/CLionProjects/POO/Lab9/domeniu_masina.h
+        -:    0:Graph:C:\Users\lupse\CLionProjects\POO\Lab9\cmake-build-debug-coverage\CMakeFiles\Lab6.dir\repo_masina.cpp.gcno
+        -:    0:Data:C:\Users\lupse\CLionProjects\POO\Lab9\cmake-build-debug-coverage\CMakeFiles\Lab6.dir\repo_masina.cpp.gcda
+        -:    0:Runs:1
+        -:    1://
+        -:    2:// Created by lupse on 4/7/2025.
+        -:    3://
+        -:    4:#pragma once
+        -:    5:#include <string>
+        -:    6:
+        -:    7:class Masina {
+        -:    8:private:
+        -:    9:    std::string nrInmatriculare;
+        -:   10:    std::string producator;
+        -:   11:    std::string model;
+        -:   12:    std::string tip;
+        -:   13:
+        -:   14:public:
+        -:   15:    Masina() = default;
+        -:   16:    Masina(const std::string& nr, const std::string& prod,
+        -:   17:           const std::string& mod, const std::string& t);
+function _ZN6MasinaC1ERKS_ called 106 returned 100% blocks executed 55%
+      106:   18:    Masina(const Masina& masina)=default;
+      106:   18-block  0
+call    0 returned 106
+call    1 returned 106
+branch  2 taken 106 (fallthrough)
+branch  3 taken 0 (throw)
+      106:   18-block  1
+call    4 returned 106
+branch  5 taken 106 (fallthrough)
+branch  6 taken 0 (throw)
+      106:   18-block  2
+call    7 returned 106
+branch  8 taken 106 (fallthrough)
+branch  9 taken 0 (throw)
+      106:   18-block  3
+    $$$$$:   18-block  4
+call   10 never executed
+    $$$$$:   18-block  5
+call   11 never executed
+    $$$$$:   18-block  6
+call   12 never executed
+        -:   19:    [[nodiscard]] const std::string& getNrInmatriculare() const;
+        -:   20:    [[nodiscard]] const std::string& getProducator() const;
+        -:   21:    [[nodiscard]] const std::string& getModel() const;
+        -:   22:    [[nodiscard]] const std::string& getTip() const;
+        -:   23:
+        -:   24:    void setProducator(const std::string& prod);
+        -:   25:    void setModel(const std::string& mod);
+        -:   26:    void setTip(const std::string& t);
+        -:   27:
+        -:   28:    bool operator==(const Masina& other) const;
+        -:   29:};
+        -:   30:
+        -:   31:

@@ -1,0 +1,87 @@
+        -:    0:Source:C:/Users/lupse/CLionProjects/POO/Lab9/undo.h
+        -:    0:Graph:C:\Users\lupse\CLionProjects\POO\Lab9\cmake-build-debug-coverage\CMakeFiles\Lab6.dir\service_masina.cpp.gcno
+        -:    0:Data:C:\Users\lupse\CLionProjects\POO\Lab9\cmake-build-debug-coverage\CMakeFiles\Lab6.dir\service_masina.cpp.gcda
+        -:    0:Runs:1
+        -:    1://
+        -:    2:// Created by lupse on 4/28/2025.
+        -:    3://
+        -:    4:
+        -:    5:#ifndef UNDO_H
+        -:    6:#define UNDO_H
+        -:    7:class ActiuneUndo {
+        -:    8:public:
+        -:    9:    virtual void doUndo() = 0;
+function _ZN11ActiuneUndoD2Ev called 15 returned 100% blocks executed 100%
+       15:   10:    virtual ~ActiuneUndo() = default;
+        -:   11:};
+        -:   12:
+        -:   13:class UndoAdauga : public ActiuneUndo {
+        -:   14:    Masina masinaAdaugata;
+        -:   15:    MasinaRepo& repo;
+        -:   16:public:
+function _ZN10UndoAdaugaC1ER10MasinaRepoR6Masina called 11 returned 100% blocks executed 80%
+       11:   17:    UndoAdauga(MasinaRepo& masinaRepo, Masina& masina): repo {masinaRepo}, masinaAdaugata {masina} {}
+       11:   17-block  0
+call    0 returned 11
+call    1 returned 11
+branch  2 taken 11 (fallthrough)
+branch  3 taken 0 (throw)
+       11:   17-block  1
+    $$$$$:   17-block  2
+call    4 never executed
+        -:   18:
+function _ZN10UndoAdauga6doUndoEv called 2 returned 100% blocks executed 100%
+        2:   19:    void doUndo() override {
+        2:   20:        repo.sterge(masinaAdaugata.getNrInmatriculare());
+        2:   20-block  0
+call    0 returned 2
+call    1 returned 2
+        2:   21:    };
+        -:   22:};
+        -:   23:
+        -:   24:class UndoSterge : public ActiuneUndo {
+        -:   25:    Masina masinaStearsa;
+        -:   26:    MasinaRepo& repo;
+        -:   27:public:
+function _ZN10UndoStergeC1ER10MasinaRepoR6Masina called 2 returned 100% blocks executed 80%
+        2:   28:    UndoSterge(MasinaRepo& masinaRepo, Masina& masina): repo {masinaRepo}, masinaStearsa {masina} {}
+        2:   28-block  0
+call    0 returned 2
+call    1 returned 2
+branch  2 taken 2 (fallthrough)
+branch  3 taken 0 (throw)
+        2:   28-block  1
+    $$$$$:   28-block  2
+call    4 never executed
+        -:   29:
+function _ZN10UndoSterge6doUndoEv called 1 returned 100% blocks executed 100%
+        1:   30:    void doUndo() override {
+        1:   31:        repo.adauga(masinaStearsa);
+        1:   31-block  0
+call    0 returned 1
+        1:   32:    }
+        -:   33:};
+        -:   34:
+        -:   35:class UndoModifica : public ActiuneUndo {
+        -:   36:    Masina masinaVeche;
+        -:   37:    MasinaRepo& repo;
+        -:   38:public:
+function _ZN12UndoModificaC1ER10MasinaRepoR6Masina called 2 returned 100% blocks executed 80%
+        2:   39:    UndoModifica(MasinaRepo& masinaRepo, Masina& masina): repo {masinaRepo}, masinaVeche {masina} {}
+        2:   39-block  0
+call    0 returned 2
+call    1 returned 2
+branch  2 taken 2 (fallthrough)
+branch  3 taken 0 (throw)
+        2:   39-block  1
+    $$$$$:   39-block  2
+call    4 never executed
+        -:   40:
+function _ZN12UndoModifica6doUndoEv called 1 returned 100% blocks executed 100%
+        1:   41:    void doUndo() override {
+        1:   42:        repo.modifica(masinaVeche);
+        1:   42-block  0
+call    0 returned 1
+        1:   43:    }
+        -:   44:};
+        -:   45:#endif //UNDO_H
