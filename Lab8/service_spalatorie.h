@@ -17,6 +17,6 @@ public:
     void golesteLista();
     void generareLista(int nrTotal);
     void exportCSV(const std::string& fileName) const;
-    int nrMasini() const;
+    [[nodiscard]] int nrMasini() const;
 };
 #endif //SERVICE_SPALATORIE_H
