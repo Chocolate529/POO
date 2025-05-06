@@ -1,0 +1,2 @@
+# Hashes of file build rules.
+b522cd7ca17edba2362088baf55e7f9d Lab10_autogen/timestamp

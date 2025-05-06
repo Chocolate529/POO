@@ -1,0 +1,26 @@
+        -:    0:Source:C:/Users/lupse/CLionProjects/POO/Lab9/exceptii.h
+        -:    0:Graph:C:\Users\lupse\CLionProjects\POO\Lab9\cmake-build-debug-coverage\CMakeFiles\Lab6.dir\service_masina.cpp.gcno
+        -:    0:Data:C:\Users\lupse\CLionProjects\POO\Lab9\cmake-build-debug-coverage\CMakeFiles\Lab6.dir\service_masina.cpp.gcda
+        -:    0:Runs:1
+        -:    1://
+        -:    2:// Created by lupse on 4/14/2025.
+        -:    3://
+        -:    4:
+        -:    5:#ifndef EXCEPTII_H
+        -:    6:#define EXCEPTII_H
+        -:    7:#include <stdexcept>
+        -:    8:#include <string>
+        -:    9:
+        -:   10:class RepositoryException : public std::runtime_error {
+        -:   11:    public:
+        -:   12:    explicit RepositoryException(const std::string& message) : std::runtime_error(message) {}
+        -:   13:};
+        -:   14:class ServiceException : public std::runtime_error {
+        -:   15:public:
+function _ZN16ServiceExceptionC1ERKNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEE called 3 returned 100% blocks executed 100%
+        3:   16:    explicit ServiceException(const std::string& message) : std::runtime_error(message) {}
+        3:   16-block  0
+call    0 returned 3
+        -:   17:};
+        -:   18:
+        -:   19:#endif //EXCEPTII_H

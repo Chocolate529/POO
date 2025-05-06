@@ -1,0 +1,492 @@
+        -:    0:Source:C:/Users/lupse/CLionProjects/POO/Lab9/repo_masina.cpp
+        -:    0:Graph:C:\Users\lupse\CLionProjects\POO\Lab9\cmake-build-debug-coverage\CMakeFiles\Lab6.dir\repo_masina.cpp.gcno
+        -:    0:Data:C:\Users\lupse\CLionProjects\POO\Lab9\cmake-build-debug-coverage\CMakeFiles\Lab6.dir\repo_masina.cpp.gcda
+        -:    0:Runs:1
+        -:    1:#include "repo_masina.h"
+        -:    2:#include <fstream>
+        -:    3:#include <algorithm>
+        -:    4:#include <sstream>
+        -:    5:#include "exceptii.h"
+        -:    6:// Adăugăm o mașină în lista repo-ului
+function _ZN10MasinaRepo6adaugaERK6Masina called 19 returned 95% blocks executed 65%
+       19:    7:void MasinaRepo::adauga(const Masina& m) {
+        -:    8:    // Verificăm dacă mașina există deja în listă
+       19:    9:    if (std::find_if(masini.begin(), masini.end(),
+call    0 returned 19
+call    1 returned 19
+call    2 returned 19
+branch  3 taken 19 (fallthrough)
+branch  4 taken 0 (throw)
+    $$$$$:    9-block  0
+function _ZZN10MasinaRepo6adaugaERK6MasinaENKUlS2_E_clES2_ called 20 returned 100% blocks executed 100%
+       20:   10:        [&m](const Masina& masina) {
+       20:   11:            return masina == m;
+       20:   11-block  0
+call    0 returned 20
+       38:   12:        }) != masini.end()) {
+       19:   12-block  0
+call    0 returned 19
+       19:   12-block  1
+call    1 returned 19
+branch  2 taken 1 (fallthrough)
+branch  3 taken 18
+    $$$$$:   12-block  2
+call    4 never executed
+        3:   13:            throw RepositoryException("Masina deja existenta.");
+        1:   13-block  0
+call    0 returned 1
+        1:   13-block  1
+call    1 returned 1
+branch  2 taken 1 (fallthrough)
+branch  3 taken 0 (throw)
+        1:   13-block  2
+call    4 returned 1
+branch  5 taken 1 (fallthrough)
+branch  6 taken 0 (throw)
+        1:   13-block  3
+call    7 returned 1
+        1:   13-block  4
+call    8 returned 0
+    $$$$$:   13-block  5
+call    9 never executed
+    $$$$$:   13-block  6
+    $$$$$:   13-block  7
+    $$$$$:   13-block  8
+call   10 never executed
+        -:   14:        }
+       18:   15:    masini.push_back(m);  // Adăugăm mașina în lista dinamică
+       18:   15-block  0
+call    0 returned 18
+       18:   16:}
+        -:   17:
+        -:   18:// Ștergem o mașină după numărul de înmatriculare
+function _ZN10MasinaRepo6stergeERKNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEE called 7 returned 86% blocks executed 67%
+        7:   19:void MasinaRepo::sterge(const std::string& nrInmatriculare) {
+        7:   20:    const auto it = std::find_if(masini.begin(), masini.end(),
+        7:   20-block  0
+call    0 returned 7
+call    1 returned 7
+call    2 returned 7
+branch  3 taken 7 (fallthrough)
+branch  4 taken 0 (throw)
+function _ZZN10MasinaRepo6stergeERKNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEEENKUlRK6MasinaE_clESA_ called 11 returned 100% blocks executed 100%
+       11:   21:        [&nrInmatriculare](const Masina& m) {
+       11:   22:                return m.getNrInmatriculare() == nrInmatriculare;
+       11:   22-block  0
+call    0 returned 11
+call    1 returned 11
+        -:   23:        });
+        7:   24:    if (it != masini.end()) {
+        7:   24-block  0
+call    0 returned 7
+call    1 returned 7
+branch  2 taken 6 (fallthrough)
+branch  3 taken 1
+        6:   25:        masini.erase(it);
+        6:   25-block  0
+call    0 returned 6
+call    1 returned 6
+branch  2 taken 6 (fallthrough)
+branch  3 taken 0 (throw)
+    $$$$$:   25-block  1
+        -:   26:    } else {
+        3:   27:        throw RepositoryException("Masina inexistenta.");
+        1:   27-block  0
+call    0 returned 1
+        1:   27-block  1
+call    1 returned 1
+branch  2 taken 1 (fallthrough)
+branch  3 taken 0 (throw)
+        1:   27-block  2
+call    4 returned 1
+branch  5 taken 1 (fallthrough)
+branch  6 taken 0 (throw)
+        1:   27-block  3
+call    7 returned 1
+        1:   27-block  4
+call    8 returned 1
+    $$$$$:   27-block  5
+call    9 never executed
+    $$$$$:   27-block  6
+    $$$$$:   27-block  7
+    $$$$$:   27-block  8
+call   10 never executed
+        -:   28:    }
+        6:   29:}
+        6:   29-block  0
+        -:   30:
+        -:   31:// Modificăm detaliile unei mașini
+function _ZN10MasinaRepo8modificaERK6Masina called 6 returned 83% blocks executed 76%
+        6:   32:void MasinaRepo::modifica(const Masina& m){
+        6:   33:    const auto it = std::find_if(masini.begin(), masini.end(),
+        6:   33-block  0
+call    0 returned 6
+call    1 returned 6
+call    2 returned 6
+branch  3 taken 6 (fallthrough)
+branch  4 taken 0 (throw)
+function _ZZN10MasinaRepo8modificaERK6MasinaENKUlS2_E_clES2_ called 9 returned 100% blocks executed 100%
+        9:   34:        [&m](const Masina& masina) {
+        9:   35:            return masina == m;
+        9:   35-block  0
+call    0 returned 9
+        -:   36:        });
+        6:   37:    if (it != masini.end()) {
+        6:   37-block  0
+call    0 returned 6
+call    1 returned 6
+branch  2 taken 5 (fallthrough)
+branch  3 taken 1
+        5:   38:            it->setProducator(m.getProducator());
+        5:   38-block  0
+call    0 returned 5
+call    1 returned 5
+branch  2 taken 5 (fallthrough)
+branch  3 taken 0 (throw)
+        5:   38-block  1
+call    4 returned 5
+branch  5 taken 5 (fallthrough)
+branch  6 taken 0 (throw)
+        5:   39:            it->setModel(m.getModel());
+        5:   39-block  0
+call    0 returned 5
+call    1 returned 5
+branch  2 taken 5 (fallthrough)
+branch  3 taken 0 (throw)
+        5:   39-block  1
+call    4 returned 5
+branch  5 taken 5 (fallthrough)
+branch  6 taken 0 (throw)
+        5:   40:            it->setTip(m.getTip());
+        5:   40-block  0
+call    0 returned 5
+call    1 returned 5
+branch  2 taken 5 (fallthrough)
+branch  3 taken 0 (throw)
+        5:   40-block  1
+call    4 returned 5
+branch  5 taken 5 (fallthrough)
+branch  6 taken 0 (throw)
+        -:   41:    } else {
+        3:   42:        throw RepositoryException("Masina inexistenta.");
+        1:   42-block  0
+call    0 returned 1
+        1:   42-block  1
+call    1 returned 1
+branch  2 taken 1 (fallthrough)
+branch  3 taken 0 (throw)
+        1:   42-block  2
+call    4 returned 1
+branch  5 taken 1 (fallthrough)
+branch  6 taken 0 (throw)
+        1:   42-block  3
+call    7 returned 1
+        1:   42-block  4
+call    8 returned 1
+    $$$$$:   42-block  5
+call    9 never executed
+    $$$$$:   42-block  6
+    $$$$$:   42-block  7
+    $$$$$:   42-block  8
+call   10 never executed
+        -:   43:
+        -:   44:    }
+        5:   45:}
+        5:   45-block  0
+        -:   46:
+        -:   47:// Căutăm o mașină după numărul de înmatriculare
+function _ZNK10MasinaRepo5cautaERKNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEE called 10 returned 90% blocks executed 69%
+       10:   48:const Masina& MasinaRepo::cauta(const std::string& nrInmatriculare) const{
+        -:   49:
+       10:   50:    const auto& it = std::find_if(masini.begin(), masini.end(),
+       10:   50-block  0
+call    0 returned 10
+call    1 returned 10
+call    2 returned 10
+branch  3 taken 10 (fallthrough)
+branch  4 taken 0 (throw)
+function _ZZNK10MasinaRepo5cautaERKNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEEENKUlRK6MasinaE_clESA_ called 14 returned 100% blocks executed 100%
+       14:   51:        [&nrInmatriculare](const Masina& masina) {
+       14:   52:            return masina.getNrInmatriculare() == nrInmatriculare;
+       14:   52-block  0
+call    0 returned 14
+call    1 returned 14
+       10:   53:        });
+       10:   54:    if (it != masini.end()) {
+       10:   54-block  0
+call    0 returned 10
+call    1 returned 10
+branch  2 taken 9 (fallthrough)
+branch  3 taken 1
+       18:   55:        return *it;
+        9:   55-block  0
+call    0 returned 9
+        9:   55-block  1
+        -:   56:    }
+        3:   57:    throw RepositoryException("Masina inexistenta.");
+        1:   57-block  0
+call    0 returned 1
+        1:   57-block  1
+call    1 returned 1
+branch  2 taken 1 (fallthrough)
+branch  3 taken 0 (throw)
+        1:   57-block  2
+call    4 returned 1
+branch  5 taken 1 (fallthrough)
+branch  6 taken 0 (throw)
+        1:   57-block  3
+call    7 returned 1
+        1:   57-block  4
+call    8 returned 1
+    $$$$$:   57-block  5
+call    9 never executed
+    $$$$$:   57-block  6
+    $$$$$:   57-block  7
+    $$$$$:   57-block  8
+call   10 never executed
+        -:   58:}
+        -:   59:
+        -:   60:// const Masina &MasinaRepo::cautaIndex(int index) const {
+        -:   61://     if (index >= (int)masini.size() || index < 0) {
+        -:   62://         throw RepositoryException("Index inexistenta.");
+        -:   63://     }
+        -:   64://     return masini[index];
+        -:   65:// }
+        -:   66:
+        -:   67:// Returnăm toate mașinile
+function _ZNK10MasinaRepo6getAllEv called 30 returned 100% blocks executed 100%
+       30:   68:const std::vector<Masina>& MasinaRepo::getAll() const {
+       30:   69:    return masini;  // Returnăm lista de mașini ca referință constantă
+       30:   69-block  0
+        -:   70:}
+        -:   71:
+function _ZN14MasinaRepoFile12readFromFileEv called 2 returned 100% blocks executed 52%
+        2:   72:void MasinaRepoFile::readFromFile() {
+        2:   73:    std::ifstream in(fileName);
+        2:   73-block  0
+call    0 returned 2
+branch  1 taken 2 (fallthrough)
+branch  2 taken 0 (throw)
+        2:   74:    if (!in.is_open()) {
+        2:   74-block  0
+call    0 returned 2
+branch  1 taken 0 (fallthrough)
+branch  2 taken 2
+    #####:   75:        throw RepositoryException("Masina file not found.");
+    %%%%%:   75-block  0
+call    0 never executed
+    %%%%%:   75-block  1
+call    1 never executed
+branch  2 never executed (fallthrough)
+branch  3 never executed (throw)
+    %%%%%:   75-block  2
+call    4 never executed
+branch  5 never executed (fallthrough)
+branch  6 never executed (throw)
+    %%%%%:   75-block  3
+call    7 never executed
+    %%%%%:   75-block  4
+call    8 never executed
+    $$$$$:   75-block  5
+call    9 never executed
+    $$$$$:   75-block  6
+    $$$$$:   75-block  7
+    $$$$$:   75-block  8
+call   10 never executed
+        -:   76:    }
+        2:   77:    std::string line;
+        2:   77-block  0
+call    0 returned 2
+        4:   78:    while (std::getline(in, line)) {
+        4:   78-block  0
+call    0 returned 4
+branch  1 taken 4 (fallthrough)
+branch  2 taken 0 (throw)
+        4:   78-block  1
+call    3 returned 4
+branch  4 taken 4 (fallthrough)
+branch  5 taken 0 (throw)
+        4:   78-block  2
+branch  6 taken 2
+branch  7 taken 2 (fallthrough)
+        2:   79:        std::vector<std::string> values;
+        2:   80:        std::stringstream ss(line);
+        2:   80-block  0
+call    0 returned 2
+call    1 returned 2
+branch  2 taken 2 (fallthrough)
+branch  3 taken 0 (throw)
+        2:   81:        std::string value;
+        2:   81-block  0
+call    0 returned 2
+       10:   82:        while (std::getline(ss, value, ',')) {
+       10:   82-block  0
+call    0 returned 10
+branch  1 taken 10 (fallthrough)
+branch  2 taken 0 (throw)
+       10:   82-block  1
+call    3 returned 10
+branch  4 taken 10 (fallthrough)
+branch  5 taken 0 (throw)
+       10:   82-block  2
+branch  6 taken 8
+branch  7 taken 2 (fallthrough)
+        8:   83:            values.push_back(value);
+        8:   83-block  0
+call    0 returned 8
+branch  1 taken 8 (fallthrough)
+branch  2 taken 0 (throw)
+        -:   84:        }
+        2:   85:        MasinaRepo::adauga(Masina(values[0], values[1], values[2], values[3]));
+        2:   85-block  0
+call    0 returned 2
+call    1 returned 2
+call    2 returned 2
+call    3 returned 2
+call    4 returned 2
+branch  5 taken 2 (fallthrough)
+branch  6 taken 0 (throw)
+        2:   85-block  1
+call    7 returned 2
+branch  8 taken 2 (fallthrough)
+branch  9 taken 0 (throw)
+        2:   85-block  2
+call   10 returned 2
+    $$$$$:   85-block  3
+call   11 never executed
+    $$$$$:   85-block  4
+        2:   86:    }
+call    0 returned 2
+call    1 returned 2
+call    2 returned 2
+    $$$$$:   86-block  0
+call    3 never executed
+    $$$$$:   86-block  1
+call    4 never executed
+    $$$$$:   86-block  2
+call    5 never executed
+        2:   87:    in.close();
+        2:   87-block  0
+call    0 returned 2
+branch  1 taken 2 (fallthrough)
+branch  2 taken 0 (throw)
+        2:   88:}
+        2:   88-block  0
+call    0 returned 2
+call    1 returned 2
+    $$$$$:   88-block  1
+call    2 never executed
+    $$$$$:   88-block  2
+call    3 never executed
+        -:   89:
+function _ZN14MasinaRepoFile11writeToFileEv called 4 returned 100% blocks executed 89%
+        4:   90:void MasinaRepoFile::writeToFile() {
+        4:   91:    std::ofstream out(fileName);
+        4:   91-block  0
+call    0 returned 4
+branch  1 taken 4 (fallthrough)
+branch  2 taken 0 (throw)
+       10:   92:    for (const auto& m : getAll()) {
+        4:   92-block  0
+call    0 returned 4
+branch  1 taken 4 (fallthrough)
+branch  2 taken 0 (throw)
+        4:   92-block  1
+call    3 returned 4
+call    4 returned 4
+        6:   92-block  2
+call    5 returned 6
+        6:   92-block  3
+call    6 returned 6
+       10:   92-block  4
+call    7 returned 10
+branch  8 taken 6
+branch  9 taken 4 (fallthrough)
+        6:   93:        out << m.getNrInmatriculare() << "," << m.getProducator() << "," << m.getModel() << "," << m.getTip() << std::endl;
+call    0 returned 6
+branch  1 taken 6 (fallthrough)
+branch  2 taken 0 (throw)
+        6:   93-block  0
+call    3 returned 6
+branch  4 taken 6 (fallthrough)
+branch  5 taken 0 (throw)
+        6:   93-block  1
+call    6 returned 6
+branch  7 taken 6 (fallthrough)
+branch  8 taken 0 (throw)
+        6:   93-block  2
+call    9 returned 6
+branch 10 taken 6 (fallthrough)
+branch 11 taken 0 (throw)
+        6:   93-block  3
+call   12 returned 6
+branch 13 taken 6 (fallthrough)
+branch 14 taken 0 (throw)
+        6:   93-block  4
+call   15 returned 6
+branch 16 taken 6 (fallthrough)
+branch 17 taken 0 (throw)
+        6:   93-block  5
+call   18 returned 6
+branch 19 taken 6 (fallthrough)
+branch 20 taken 0 (throw)
+        6:   93-block  6
+call   21 returned 6
+branch 22 taken 6 (fallthrough)
+branch 23 taken 0 (throw)
+        6:   93-block  7
+call   24 returned 6
+branch 25 taken 6 (fallthrough)
+branch 26 taken 0 (throw)
+        6:   93-block  8
+call   27 returned 6
+branch 28 taken 6 (fallthrough)
+branch 29 taken 0 (throw)
+        6:   93-block  9
+call   30 returned 6
+branch 31 taken 6 (fallthrough)
+branch 32 taken 0 (throw)
+        6:   93-block 10
+call   33 returned 6
+branch 34 taken 6 (fallthrough)
+branch 35 taken 0 (throw)
+        -:   94:    }
+        4:   95:    out.close();
+        4:   95-block  0
+call    0 returned 4
+branch  1 taken 4 (fallthrough)
+branch  2 taken 0 (throw)
+        4:   96:}
+        4:   96-block  0
+call    0 returned 4
+    $$$$$:   96-block  1
+call    1 never executed
+        -:   97:
+function _ZN14MasinaRepoFile6adaugaERK6Masina called 2 returned 100% blocks executed 100%
+        2:   98:void MasinaRepoFile::adauga(const Masina& m) {
+        2:   99:    MasinaRepo::adauga(m);
+        2:   99-block  0
+call    0 returned 2
+        2:  100:    writeToFile();
+call    0 returned 2
+        2:  101:}
+        -:  102:
+function _ZN14MasinaRepoFile6stergeERKNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEE called 1 returned 100% blocks executed 100%
+        1:  103:void MasinaRepoFile::sterge(const std::string& nrInmatriculare) {
+        1:  104:    MasinaRepo::sterge(nrInmatriculare);
+        1:  104-block  0
+call    0 returned 1
+        1:  105:    writeToFile();
+call    0 returned 1
+        1:  106:}
+        -:  107:
+function _ZN14MasinaRepoFile8modificaERK6Masina called 1 returned 100% blocks executed 100%
+        1:  108:void MasinaRepoFile::modifica(const Masina& m) {
+        1:  109:    MasinaRepo::modifica(m);
+        1:  109-block  0
+call    0 returned 1
+        1:  110:    writeToFile();
+call    0 returned 1
+        1:  111:}
+        -:  112:
+        -:  113:

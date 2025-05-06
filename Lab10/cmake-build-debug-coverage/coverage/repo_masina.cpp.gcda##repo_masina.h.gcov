@@ -1,0 +1,57 @@
+        -:    0:Source:C:/Users/lupse/CLionProjects/POO/Lab9/repo_masina.h
+        -:    0:Graph:C:\Users\lupse\CLionProjects\POO\Lab9\cmake-build-debug-coverage\CMakeFiles\Lab6.dir\repo_masina.cpp.gcno
+        -:    0:Data:C:\Users\lupse\CLionProjects\POO\Lab9\cmake-build-debug-coverage\CMakeFiles\Lab6.dir\repo_masina.cpp.gcda
+        -:    0:Runs:1
+        -:    1:#pragma once
+        -:    2:#include "domeniu_masina.h"
+        -:    3:#include <vector>
+        -:    4:
+        -:    5:class MasinaRepo {
+        -:    6:private:
+        -:    7:    std::vector<Masina> masini;  // Înlocuim std::vector cu List<Masina>
+        -:    8:
+        -:    9:public:
+        -:   10:    virtual void adauga(const Masina& m);
+        -:   11:    virtual void sterge(const std::string& nrInmatriculare);
+        -:   12:    virtual void modifica(const Masina& m);
+        -:   13:    [[nodiscard]] virtual const Masina& cauta(const std::string& nrInmatriculare) const;
+        -:   14:    // [[nodiscard]] const Masina& cautaIndex(int index) const;
+        -:   15:    [[nodiscard]] virtual const std::vector<Masina>& getAll() const;  // Adăugăm cuvântul cheie const
+    #####:   16:    virtual ~MasinaRepo() = default;
+------------------
+_ZN10MasinaRepoD0Ev:
+function _ZN10MasinaRepoD0Ev called 0 returned 0% blocks executed 0%
+    #####:   16:    virtual ~MasinaRepo() = default;
+    %%%%%:   16-block  0
+call    0 never executed
+call    1 never executed
+------------------
+_ZN10MasinaRepoD1Ev:
+function _ZN10MasinaRepoD1Ev called 0 returned 0% blocks executed 0%
+    #####:   16:    virtual ~MasinaRepo() = default;
+    %%%%%:   16-block  0
+call    0 never executed
+------------------
+_ZN10MasinaRepoD2Ev:
+function _ZN10MasinaRepoD2Ev called 0 returned 0% blocks executed 0%
+    #####:   16:    virtual ~MasinaRepo() = default;
+    %%%%%:   16-block  0
+call    0 never executed
+------------------
+        -:   17:};
+        -:   18:
+        -:   19:
+        -:   20:class MasinaRepoFile: public MasinaRepo {
+        -:   21:private:
+        -:   22:    std::string& fileName;
+        -:   23:    void writeToFile();
+        -:   24:    void readFromFile();
+        -:   25:public:
+        -:   26:    explicit MasinaRepoFile(std::string& fileName):MasinaRepo() ,  fileName(fileName) {
+        -:   27:        readFromFile();
+        -:   28:    }
+        -:   29:    void adauga(const Masina& m) override;
+        -:   30:    void sterge(const std::string& nrInmatriculare) override;
+        -:   31:    void modifica(const Masina& m) override;
+        -:   32:
+        -:   33:};
