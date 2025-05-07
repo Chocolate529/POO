@@ -2,6 +2,7 @@
 // Created by lupse on 4/7/2025.
 //
 #pragma once
+#include <map>
 #include <memory>
 
 #include "repo_masina.h"
@@ -33,6 +34,7 @@ public:
     [[nodiscard]] std::vector<Masina> sorteazaMasiniNrInmatriculare() const;
     [[nodiscard]] std::vector<Masina> sorteazaMasiniTip() const;
     [[nodiscard]] std::vector<Masina> sorteazaMasiniProducatorModel() const;
+    [[nodiscard]] std::multimap<std::string, Masina> multimapMasiniByTip() const ;
 
     void undo();
     virtual ~MasinaService() = default;

@@ -2,9 +2,8 @@ cmake_minimum_required(VERSION 3.30)
 project(Lab10)
 
 set(CMAKE_CXX_STANDARD 20)
-
 set(CMAKE_INCLUDE_CURRENT_DIR ON)
-set(CMAKE_PREFIX_PATH "E:/Qt/6.9.0/mingw_64/lib/cmake")
+set(CMAKE_PREFIX_PATH "C:/Qt/6.9.0/mingw_64/lib/cmake")
 find_package(Qt6Core REQUIRED)
 find_package(Qt6Widgets REQUIRED)
 

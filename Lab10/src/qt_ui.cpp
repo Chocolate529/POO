@@ -44,6 +44,7 @@ void QtMasinaUI::adaugaGUI() {
                   service.adaugaMasina(numar.toStdString(), prod.toStdString(), model.toStdString(), tip.toStdString());
                   QMessageBox::information(dialog, "Operation Completed", "Masina adaugata cu succes!");
                   loadData();
+                  sondajeGUI();
                   dialog->accept();
             } catch (const std::exception& e) {
                   QMessageBox::warning(dialog, "Errore", e.what());
@@ -84,6 +85,7 @@ void QtMasinaUI::stergeGUI() {
                   service.stergeMasina(numar.toStdString());
                   QMessageBox::information(dialog, "Operation Completed", "Masina stearsa cu succes");
                   loadData();
+                  sondajeGUI();
                   dialog->accept();
             } catch (const std::exception& e) {
                 QMessageBox::warning(dialog, "Errore", e.what());
@@ -143,6 +145,7 @@ void QtMasinaUI::cautaGUI() {
                   foundTable->setItem(row, 3, new QTableWidgetItem(tip));
                   QMessageBox::information(dialog, "Operation Completed", "Masina gasita cu succes");
                   loadData();
+                  sondajeGUI();
             } catch (const std::exception& e) {
                 QMessageBox::warning(dialog, "Errore", e.what());
             }
@@ -190,6 +193,7 @@ void QtMasinaUI::modificaGUI() {
                   service.modificaMasina(numar.toStdString(), prod.toStdString(), model.toStdString(), tip.toStdString());
                   QMessageBox::information(dialog, "Operation completed", "Modificare realizata cu succes");
                   loadData();
+                  sondajeGUI();
                   dialog->accept();
             } catch (const std::exception& e) {
              QMessageBox::warning(dialog, "Errore", e.what());
@@ -268,6 +272,39 @@ void QtMasinaUI::filtrareGUI() {
       connect(btnCancel, &QPushButton::clicked, dialog, &QDialog::close);
       dialog->exec();
 }
+
+void clearButtonsFromLayout(QLayout* layout) {
+      for (int i = layout->count() - 1; i >= 0; --i) {
+            QLayoutItem* item = layout->itemAt(i);
+            QWidget* widget = item->widget();
+
+            if (widget && qobject_cast<QPushButton*>(widget)) {
+                  layout->takeAt(i);
+                  delete widget;
+                  delete item;
+            }
+      }
+}
+
+void QtMasinaUI::sondajeGUI() {
+      const auto dictionar = service.multimapMasiniByTip();
+      std::map<std::string, int> countMap;
+
+      for (const auto& [tip, _] : dictionar) {
+            countMap[tip]++;
+      }
+      clearButtonsFromLayout(sondajeLayout);
+
+      for (const auto& [tip, count] : countMap) {
+          //  std::cout << "Tip: " << tip << " -> " << count << " masini\n";
+            QPushButton* tipBtn = new QPushButton(QString::fromStdString( tip));
+            sondajeLayout->addWidget(tipBtn);
+            connect(tipBtn, &QPushButton::clicked, [=] {
+                  QMessageBox::information(this, "Sondaj " + tipBtn->text(), "Numarul de masini de acest este: " + QString::number(count));
+            });
+      }
+}
+
 // void QtMasinaUI::sortareUI() const{}
 // void QtMasinaUI::spalatorieUI() const{}
 void QtMasinaUI::loadData() {
@@ -307,7 +344,7 @@ void QtMasinaUI::initGUI() {
       layoutBtns->addWidget(new QPushButton("Spalatorie Masini"));
       layoutMain->addLayout(layoutBtns);
 
-
+      layoutMain->addLayout(sondajeLayout);
 
       resize(WINDOW_WIDTH, WINDOW_HEIGHT);
       move((SCREEN_WIDTH-WINDOW_WIDTH)/2, (SCREEN_HEIGHT-WINDOW_HEIGHT)/2);

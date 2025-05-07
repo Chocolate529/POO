@@ -52,10 +52,10 @@ RM = C:\Users\lupse\AppData\Local\Programs\CLion\bin\cmake\win\x64\bin\cmake.exe
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = C:\Users\lupse\CLionProjects\POO\Lab8
+CMAKE_SOURCE_DIR = "C:\Users\lupse\CLionProjects\git POO\POO\Lab8"
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = C:\Users\lupse\CLionProjects\POO\Lab8\cmake-build-debug
+CMAKE_BINARY_DIR = "C:\Users\lupse\CLionProjects\git POO\POO\Lab8\cmake-build-debug"
 
 # Include any dependencies generated for this target.
 include CMakeFiles/Lab6.dir/depend.make
@@ -69,102 +69,102 @@ include CMakeFiles/Lab6.dir/progress.make
 include CMakeFiles/Lab6.dir/flags.make
 
 CMakeFiles/Lab6.dir/main.cpp.obj: CMakeFiles/Lab6.dir/flags.make
-CMakeFiles/Lab6.dir/main.cpp.obj: C:/Users/lupse/CLionProjects/POO/Lab8/main.cpp
+CMakeFiles/Lab6.dir/main.cpp.obj: C:/Users/lupse/CLionProjects/git\ POO/POO/Lab8/main.cpp
 CMakeFiles/Lab6.dir/main.cpp.obj: CMakeFiles/Lab6.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=C:\Users\lupse\CLionProjects\POO\Lab8\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/Lab6.dir/main.cpp.obj"
-	C:\Users\lupse\AppData\Local\Programs\CLion\bin\mingw\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/Lab6.dir/main.cpp.obj -MF CMakeFiles\Lab6.dir\main.cpp.obj.d -o CMakeFiles\Lab6.dir\main.cpp.obj -c C:\Users\lupse\CLionProjects\POO\Lab8\main.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir="C:\Users\lupse\CLionProjects\git POO\POO\Lab8\cmake-build-debug\CMakeFiles" --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/Lab6.dir/main.cpp.obj"
+	C:\Users\lupse\AppData\Local\Programs\CLion\bin\mingw\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/Lab6.dir/main.cpp.obj -MF CMakeFiles\Lab6.dir\main.cpp.obj.d -o CMakeFiles\Lab6.dir\main.cpp.obj -c "C:\Users\lupse\CLionProjects\git POO\POO\Lab8\main.cpp"
 
 CMakeFiles/Lab6.dir/main.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/Lab6.dir/main.cpp.i"
-	C:\Users\lupse\AppData\Local\Programs\CLion\bin\mingw\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E C:\Users\lupse\CLionProjects\POO\Lab8\main.cpp > CMakeFiles\Lab6.dir\main.cpp.i
+	C:\Users\lupse\AppData\Local\Programs\CLion\bin\mingw\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "C:\Users\lupse\CLionProjects\git POO\POO\Lab8\main.cpp" > CMakeFiles\Lab6.dir\main.cpp.i
 
 CMakeFiles/Lab6.dir/main.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/Lab6.dir/main.cpp.s"
-	C:\Users\lupse\AppData\Local\Programs\CLion\bin\mingw\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S C:\Users\lupse\CLionProjects\POO\Lab8\main.cpp -o CMakeFiles\Lab6.dir\main.cpp.s
+	C:\Users\lupse\AppData\Local\Programs\CLion\bin\mingw\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "C:\Users\lupse\CLionProjects\git POO\POO\Lab8\main.cpp" -o CMakeFiles\Lab6.dir\main.cpp.s
 
 CMakeFiles/Lab6.dir/domeniu_masina.cpp.obj: CMakeFiles/Lab6.dir/flags.make
-CMakeFiles/Lab6.dir/domeniu_masina.cpp.obj: C:/Users/lupse/CLionProjects/POO/Lab8/domeniu_masina.cpp
+CMakeFiles/Lab6.dir/domeniu_masina.cpp.obj: C:/Users/lupse/CLionProjects/git\ POO/POO/Lab8/domeniu_masina.cpp
 CMakeFiles/Lab6.dir/domeniu_masina.cpp.obj: CMakeFiles/Lab6.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=C:\Users\lupse\CLionProjects\POO\Lab8\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/Lab6.dir/domeniu_masina.cpp.obj"
-	C:\Users\lupse\AppData\Local\Programs\CLion\bin\mingw\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/Lab6.dir/domeniu_masina.cpp.obj -MF CMakeFiles\Lab6.dir\domeniu_masina.cpp.obj.d -o CMakeFiles\Lab6.dir\domeniu_masina.cpp.obj -c C:\Users\lupse\CLionProjects\POO\Lab8\domeniu_masina.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir="C:\Users\lupse\CLionProjects\git POO\POO\Lab8\cmake-build-debug\CMakeFiles" --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/Lab6.dir/domeniu_masina.cpp.obj"
+	C:\Users\lupse\AppData\Local\Programs\CLion\bin\mingw\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/Lab6.dir/domeniu_masina.cpp.obj -MF CMakeFiles\Lab6.dir\domeniu_masina.cpp.obj.d -o CMakeFiles\Lab6.dir\domeniu_masina.cpp.obj -c "C:\Users\lupse\CLionProjects\git POO\POO\Lab8\domeniu_masina.cpp"
 
 CMakeFiles/Lab6.dir/domeniu_masina.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/Lab6.dir/domeniu_masina.cpp.i"
-	C:\Users\lupse\AppData\Local\Programs\CLion\bin\mingw\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E C:\Users\lupse\CLionProjects\POO\Lab8\domeniu_masina.cpp > CMakeFiles\Lab6.dir\domeniu_masina.cpp.i
+	C:\Users\lupse\AppData\Local\Programs\CLion\bin\mingw\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "C:\Users\lupse\CLionProjects\git POO\POO\Lab8\domeniu_masina.cpp" > CMakeFiles\Lab6.dir\domeniu_masina.cpp.i
 
 CMakeFiles/Lab6.dir/domeniu_masina.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/Lab6.dir/domeniu_masina.cpp.s"
-	C:\Users\lupse\AppData\Local\Programs\CLion\bin\mingw\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S C:\Users\lupse\CLionProjects\POO\Lab8\domeniu_masina.cpp -o CMakeFiles\Lab6.dir\domeniu_masina.cpp.s
+	C:\Users\lupse\AppData\Local\Programs\CLion\bin\mingw\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "C:\Users\lupse\CLionProjects\git POO\POO\Lab8\domeniu_masina.cpp" -o CMakeFiles\Lab6.dir\domeniu_masina.cpp.s
 
 CMakeFiles/Lab6.dir/repo_masina.cpp.obj: CMakeFiles/Lab6.dir/flags.make
-CMakeFiles/Lab6.dir/repo_masina.cpp.obj: C:/Users/lupse/CLionProjects/POO/Lab8/repo_masina.cpp
+CMakeFiles/Lab6.dir/repo_masina.cpp.obj: C:/Users/lupse/CLionProjects/git\ POO/POO/Lab8/repo_masina.cpp
 CMakeFiles/Lab6.dir/repo_masina.cpp.obj: CMakeFiles/Lab6.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=C:\Users\lupse\CLionProjects\POO\Lab8\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object CMakeFiles/Lab6.dir/repo_masina.cpp.obj"
-	C:\Users\lupse\AppData\Local\Programs\CLion\bin\mingw\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/Lab6.dir/repo_masina.cpp.obj -MF CMakeFiles\Lab6.dir\repo_masina.cpp.obj.d -o CMakeFiles\Lab6.dir\repo_masina.cpp.obj -c C:\Users\lupse\CLionProjects\POO\Lab8\repo_masina.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir="C:\Users\lupse\CLionProjects\git POO\POO\Lab8\cmake-build-debug\CMakeFiles" --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object CMakeFiles/Lab6.dir/repo_masina.cpp.obj"
+	C:\Users\lupse\AppData\Local\Programs\CLion\bin\mingw\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/Lab6.dir/repo_masina.cpp.obj -MF CMakeFiles\Lab6.dir\repo_masina.cpp.obj.d -o CMakeFiles\Lab6.dir\repo_masina.cpp.obj -c "C:\Users\lupse\CLionProjects\git POO\POO\Lab8\repo_masina.cpp"
 
 CMakeFiles/Lab6.dir/repo_masina.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/Lab6.dir/repo_masina.cpp.i"
-	C:\Users\lupse\AppData\Local\Programs\CLion\bin\mingw\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E C:\Users\lupse\CLionProjects\POO\Lab8\repo_masina.cpp > CMakeFiles\Lab6.dir\repo_masina.cpp.i
+	C:\Users\lupse\AppData\Local\Programs\CLion\bin\mingw\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "C:\Users\lupse\CLionProjects\git POO\POO\Lab8\repo_masina.cpp" > CMakeFiles\Lab6.dir\repo_masina.cpp.i
 
 CMakeFiles/Lab6.dir/repo_masina.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/Lab6.dir/repo_masina.cpp.s"
-	C:\Users\lupse\AppData\Local\Programs\CLion\bin\mingw\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S C:\Users\lupse\CLionProjects\POO\Lab8\repo_masina.cpp -o CMakeFiles\Lab6.dir\repo_masina.cpp.s
+	C:\Users\lupse\AppData\Local\Programs\CLion\bin\mingw\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "C:\Users\lupse\CLionProjects\git POO\POO\Lab8\repo_masina.cpp" -o CMakeFiles\Lab6.dir\repo_masina.cpp.s
 
 CMakeFiles/Lab6.dir/service_masina.cpp.obj: CMakeFiles/Lab6.dir/flags.make
-CMakeFiles/Lab6.dir/service_masina.cpp.obj: C:/Users/lupse/CLionProjects/POO/Lab8/service_masina.cpp
+CMakeFiles/Lab6.dir/service_masina.cpp.obj: C:/Users/lupse/CLionProjects/git\ POO/POO/Lab8/service_masina.cpp
 CMakeFiles/Lab6.dir/service_masina.cpp.obj: CMakeFiles/Lab6.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=C:\Users\lupse\CLionProjects\POO\Lab8\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object CMakeFiles/Lab6.dir/service_masina.cpp.obj"
-	C:\Users\lupse\AppData\Local\Programs\CLion\bin\mingw\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/Lab6.dir/service_masina.cpp.obj -MF CMakeFiles\Lab6.dir\service_masina.cpp.obj.d -o CMakeFiles\Lab6.dir\service_masina.cpp.obj -c C:\Users\lupse\CLionProjects\POO\Lab8\service_masina.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir="C:\Users\lupse\CLionProjects\git POO\POO\Lab8\cmake-build-debug\CMakeFiles" --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object CMakeFiles/Lab6.dir/service_masina.cpp.obj"
+	C:\Users\lupse\AppData\Local\Programs\CLion\bin\mingw\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/Lab6.dir/service_masina.cpp.obj -MF CMakeFiles\Lab6.dir\service_masina.cpp.obj.d -o CMakeFiles\Lab6.dir\service_masina.cpp.obj -c "C:\Users\lupse\CLionProjects\git POO\POO\Lab8\service_masina.cpp"
 
 CMakeFiles/Lab6.dir/service_masina.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/Lab6.dir/service_masina.cpp.i"
-	C:\Users\lupse\AppData\Local\Programs\CLion\bin\mingw\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E C:\Users\lupse\CLionProjects\POO\Lab8\service_masina.cpp > CMakeFiles\Lab6.dir\service_masina.cpp.i
+	C:\Users\lupse\AppData\Local\Programs\CLion\bin\mingw\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "C:\Users\lupse\CLionProjects\git POO\POO\Lab8\service_masina.cpp" > CMakeFiles\Lab6.dir\service_masina.cpp.i
 
 CMakeFiles/Lab6.dir/service_masina.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/Lab6.dir/service_masina.cpp.s"
-	C:\Users\lupse\AppData\Local\Programs\CLion\bin\mingw\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S C:\Users\lupse\CLionProjects\POO\Lab8\service_masina.cpp -o CMakeFiles\Lab6.dir\service_masina.cpp.s
+	C:\Users\lupse\AppData\Local\Programs\CLion\bin\mingw\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "C:\Users\lupse\CLionProjects\git POO\POO\Lab8\service_masina.cpp" -o CMakeFiles\Lab6.dir\service_masina.cpp.s
 
 CMakeFiles/Lab6.dir/ui.cpp.obj: CMakeFiles/Lab6.dir/flags.make
-CMakeFiles/Lab6.dir/ui.cpp.obj: C:/Users/lupse/CLionProjects/POO/Lab8/ui.cpp
+CMakeFiles/Lab6.dir/ui.cpp.obj: C:/Users/lupse/CLionProjects/git\ POO/POO/Lab8/ui.cpp
 CMakeFiles/Lab6.dir/ui.cpp.obj: CMakeFiles/Lab6.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=C:\Users\lupse\CLionProjects\POO\Lab8\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building CXX object CMakeFiles/Lab6.dir/ui.cpp.obj"
-	C:\Users\lupse\AppData\Local\Programs\CLion\bin\mingw\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/Lab6.dir/ui.cpp.obj -MF CMakeFiles\Lab6.dir\ui.cpp.obj.d -o CMakeFiles\Lab6.dir\ui.cpp.obj -c C:\Users\lupse\CLionProjects\POO\Lab8\ui.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir="C:\Users\lupse\CLionProjects\git POO\POO\Lab8\cmake-build-debug\CMakeFiles" --progress-num=$(CMAKE_PROGRESS_5) "Building CXX object CMakeFiles/Lab6.dir/ui.cpp.obj"
+	C:\Users\lupse\AppData\Local\Programs\CLion\bin\mingw\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/Lab6.dir/ui.cpp.obj -MF CMakeFiles\Lab6.dir\ui.cpp.obj.d -o CMakeFiles\Lab6.dir\ui.cpp.obj -c "C:\Users\lupse\CLionProjects\git POO\POO\Lab8\ui.cpp"
 
 CMakeFiles/Lab6.dir/ui.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/Lab6.dir/ui.cpp.i"
-	C:\Users\lupse\AppData\Local\Programs\CLion\bin\mingw\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E C:\Users\lupse\CLionProjects\POO\Lab8\ui.cpp > CMakeFiles\Lab6.dir\ui.cpp.i
+	C:\Users\lupse\AppData\Local\Programs\CLion\bin\mingw\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "C:\Users\lupse\CLionProjects\git POO\POO\Lab8\ui.cpp" > CMakeFiles\Lab6.dir\ui.cpp.i
 
 CMakeFiles/Lab6.dir/ui.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/Lab6.dir/ui.cpp.s"
-	C:\Users\lupse\AppData\Local\Programs\CLion\bin\mingw\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S C:\Users\lupse\CLionProjects\POO\Lab8\ui.cpp -o CMakeFiles\Lab6.dir\ui.cpp.s
+	C:\Users\lupse\AppData\Local\Programs\CLion\bin\mingw\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "C:\Users\lupse\CLionProjects\git POO\POO\Lab8\ui.cpp" -o CMakeFiles\Lab6.dir\ui.cpp.s
 
 CMakeFiles/Lab6.dir/teste.cpp.obj: CMakeFiles/Lab6.dir/flags.make
-CMakeFiles/Lab6.dir/teste.cpp.obj: C:/Users/lupse/CLionProjects/POO/Lab8/teste.cpp
+CMakeFiles/Lab6.dir/teste.cpp.obj: C:/Users/lupse/CLionProjects/git\ POO/POO/Lab8/teste.cpp
 CMakeFiles/Lab6.dir/teste.cpp.obj: CMakeFiles/Lab6.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=C:\Users\lupse\CLionProjects\POO\Lab8\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Building CXX object CMakeFiles/Lab6.dir/teste.cpp.obj"
-	C:\Users\lupse\AppData\Local\Programs\CLion\bin\mingw\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/Lab6.dir/teste.cpp.obj -MF CMakeFiles\Lab6.dir\teste.cpp.obj.d -o CMakeFiles\Lab6.dir\teste.cpp.obj -c C:\Users\lupse\CLionProjects\POO\Lab8\teste.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir="C:\Users\lupse\CLionProjects\git POO\POO\Lab8\cmake-build-debug\CMakeFiles" --progress-num=$(CMAKE_PROGRESS_6) "Building CXX object CMakeFiles/Lab6.dir/teste.cpp.obj"
+	C:\Users\lupse\AppData\Local\Programs\CLion\bin\mingw\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/Lab6.dir/teste.cpp.obj -MF CMakeFiles\Lab6.dir\teste.cpp.obj.d -o CMakeFiles\Lab6.dir\teste.cpp.obj -c "C:\Users\lupse\CLionProjects\git POO\POO\Lab8\teste.cpp"
 
 CMakeFiles/Lab6.dir/teste.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/Lab6.dir/teste.cpp.i"
-	C:\Users\lupse\AppData\Local\Programs\CLion\bin\mingw\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E C:\Users\lupse\CLionProjects\POO\Lab8\teste.cpp > CMakeFiles\Lab6.dir\teste.cpp.i
+	C:\Users\lupse\AppData\Local\Programs\CLion\bin\mingw\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "C:\Users\lupse\CLionProjects\git POO\POO\Lab8\teste.cpp" > CMakeFiles\Lab6.dir\teste.cpp.i
 
 CMakeFiles/Lab6.dir/teste.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/Lab6.dir/teste.cpp.s"
-	C:\Users\lupse\AppData\Local\Programs\CLion\bin\mingw\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S C:\Users\lupse\CLionProjects\POO\Lab8\teste.cpp -o CMakeFiles\Lab6.dir\teste.cpp.s
+	C:\Users\lupse\AppData\Local\Programs\CLion\bin\mingw\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "C:\Users\lupse\CLionProjects\git POO\POO\Lab8\teste.cpp" -o CMakeFiles\Lab6.dir\teste.cpp.s
 
 CMakeFiles/Lab6.dir/service_spalatorie.cpp.obj: CMakeFiles/Lab6.dir/flags.make
-CMakeFiles/Lab6.dir/service_spalatorie.cpp.obj: C:/Users/lupse/CLionProjects/POO/Lab8/service_spalatorie.cpp
+CMakeFiles/Lab6.dir/service_spalatorie.cpp.obj: C:/Users/lupse/CLionProjects/git\ POO/POO/Lab8/service_spalatorie.cpp
 CMakeFiles/Lab6.dir/service_spalatorie.cpp.obj: CMakeFiles/Lab6.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=C:\Users\lupse\CLionProjects\POO\Lab8\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Building CXX object CMakeFiles/Lab6.dir/service_spalatorie.cpp.obj"
-	C:\Users\lupse\AppData\Local\Programs\CLion\bin\mingw\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/Lab6.dir/service_spalatorie.cpp.obj -MF CMakeFiles\Lab6.dir\service_spalatorie.cpp.obj.d -o CMakeFiles\Lab6.dir\service_spalatorie.cpp.obj -c C:\Users\lupse\CLionProjects\POO\Lab8\service_spalatorie.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir="C:\Users\lupse\CLionProjects\git POO\POO\Lab8\cmake-build-debug\CMakeFiles" --progress-num=$(CMAKE_PROGRESS_7) "Building CXX object CMakeFiles/Lab6.dir/service_spalatorie.cpp.obj"
+	C:\Users\lupse\AppData\Local\Programs\CLion\bin\mingw\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/Lab6.dir/service_spalatorie.cpp.obj -MF CMakeFiles\Lab6.dir\service_spalatorie.cpp.obj.d -o CMakeFiles\Lab6.dir\service_spalatorie.cpp.obj -c "C:\Users\lupse\CLionProjects\git POO\POO\Lab8\service_spalatorie.cpp"
 
 CMakeFiles/Lab6.dir/service_spalatorie.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/Lab6.dir/service_spalatorie.cpp.i"
-	C:\Users\lupse\AppData\Local\Programs\CLion\bin\mingw\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E C:\Users\lupse\CLionProjects\POO\Lab8\service_spalatorie.cpp > CMakeFiles\Lab6.dir\service_spalatorie.cpp.i
+	C:\Users\lupse\AppData\Local\Programs\CLion\bin\mingw\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "C:\Users\lupse\CLionProjects\git POO\POO\Lab8\service_spalatorie.cpp" > CMakeFiles\Lab6.dir\service_spalatorie.cpp.i
 
 CMakeFiles/Lab6.dir/service_spalatorie.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/Lab6.dir/service_spalatorie.cpp.s"
-	C:\Users\lupse\AppData\Local\Programs\CLion\bin\mingw\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S C:\Users\lupse\CLionProjects\POO\Lab8\service_spalatorie.cpp -o CMakeFiles\Lab6.dir\service_spalatorie.cpp.s
+	C:\Users\lupse\AppData\Local\Programs\CLion\bin\mingw\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "C:\Users\lupse\CLionProjects\git POO\POO\Lab8\service_spalatorie.cpp" -o CMakeFiles\Lab6.dir\service_spalatorie.cpp.s
 
 # Object files for target Lab6
 Lab6_OBJECTS = \
@@ -190,7 +190,7 @@ Lab6.exe: CMakeFiles/Lab6.dir/build.make
 Lab6.exe: CMakeFiles/Lab6.dir/linkLibs.rsp
 Lab6.exe: CMakeFiles/Lab6.dir/objects1.rsp
 Lab6.exe: CMakeFiles/Lab6.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --bold --progress-dir=C:\Users\lupse\CLionProjects\POO\Lab8\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_8) "Linking CXX executable Lab6.exe"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --bold --progress-dir="C:\Users\lupse\CLionProjects\git POO\POO\Lab8\cmake-build-debug\CMakeFiles" --progress-num=$(CMAKE_PROGRESS_8) "Linking CXX executable Lab6.exe"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles\Lab6.dir\link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.
@@ -202,6 +202,6 @@ CMakeFiles/Lab6.dir/clean:
 .PHONY : CMakeFiles/Lab6.dir/clean
 
 CMakeFiles/Lab6.dir/depend:
-	$(CMAKE_COMMAND) -E cmake_depends "MinGW Makefiles" C:\Users\lupse\CLionProjects\POO\Lab8 C:\Users\lupse\CLionProjects\POO\Lab8 C:\Users\lupse\CLionProjects\POO\Lab8\cmake-build-debug C:\Users\lupse\CLionProjects\POO\Lab8\cmake-build-debug C:\Users\lupse\CLionProjects\POO\Lab8\cmake-build-debug\CMakeFiles\Lab6.dir\DependInfo.cmake "--color=$(COLOR)"
+	$(CMAKE_COMMAND) -E cmake_depends "MinGW Makefiles" "C:\Users\lupse\CLionProjects\git POO\POO\Lab8" "C:\Users\lupse\CLionProjects\git POO\POO\Lab8" "C:\Users\lupse\CLionProjects\git POO\POO\Lab8\cmake-build-debug" "C:\Users\lupse\CLionProjects\git POO\POO\Lab8\cmake-build-debug" "C:\Users\lupse\CLionProjects\git POO\POO\Lab8\cmake-build-debug\CMakeFiles\Lab6.dir\DependInfo.cmake" "--color=$(COLOR)"
 .PHONY : CMakeFiles/Lab6.dir/depend
 

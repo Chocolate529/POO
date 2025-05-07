@@ -38,7 +38,10 @@ private:
     const int DIALOG_WIDTH = static_cast<int>(SCREEN_WIDTH * BETA);
     const int DIALOG_HEIGHT = static_cast<int>(SCREEN_HEIGHT * BETA);
 
+
     QHBoxLayout* layoutMain = new QHBoxLayout();
+
+    QVBoxLayout* sondajeLayout = new QVBoxLayout();
     QVBoxLayout* layoutBtns = new QVBoxLayout();
     QPushButton* btnAdauga = new QPushButton("Adauga");
     QPushButton* btnSterge = new QPushButton("Sterge");
@@ -52,6 +55,7 @@ private:
     void filtrareGUI();
     // void sortareUI() const;
     // void spalatorieUI() const;
+    void sondajeGUI();
     void initGUI();
     void loadData();
     void initConnect();
@@ -59,6 +63,7 @@ public:
     explicit QtMasinaUI(MasinaService& srv, ServiceSpalatorie& spal): service{srv}, spalatorie{spal} {
         initGUI();
         loadData();
+        sondajeGUI();
         initConnect();
     }
 };

@@ -3,6 +3,7 @@
 //
 #include "service_masina.h"
 #include <algorithm>
+#include <map>
 
 #include "exceptii.h"
 using std::copy_if;
@@ -95,4 +96,12 @@ void MasinaService::undo() {
     }
     undoActions.back()->doUndo();
     undoActions.pop_back();
+}
+
+std::multimap<std::string, Masina> MasinaService::multimapMasiniByTip() const {
+    std::multimap<std::string, Masina> tipToMasini;
+    for (const auto& masina : getAllMasini()) {
+        tipToMasini.insert({masina.getTip(), masina});
+    }
+    return tipToMasini;
 }
