@@ -495,11 +495,15 @@ void QtMasinaUI::spalatorieGUI() {
                         return;
                   }
                   int nr = numar->text().toInt();
-                  spalatorie.generareLista(nr);
-                  masini_spalatorie = spalatorie.getAllMasini();
-                  updateTable();
-                  QMessageBox::information(dialogFillRandom,"Succes","Masini generate cu succes!");
-                  dialogFillRandom->close();
+                  try {
+                        spalatorie.generareLista(nr);
+                        masini_spalatorie = spalatorie.getAllMasini();
+                        updateTable();
+                        QMessageBox::information(dialogFillRandom,"Succes","Masini generate cu succes!");
+                        dialogFillRandom->close();
+                  } catch (const std::exception& ex) {
+                        QMessageBox::warning(dialogFillRandom, "Eroare", ex.what());
+                  }
             });
             connect(btnCancel, QPushButton::clicked, dialogFillRandom, &QDialog::close);
 
