@@ -221,11 +221,11 @@ void Teste::testMasinaService() {
 void Teste::testServiceSpalatorie() {
     MasinaRepo repo;
     MasinaService srv{repo};
-    ServiceSpalatorie spalatorie{repo};
+    ServiceSpalatorie spalatorie{srv};
     bool  exceptiePrinsa = false;
     try {
         spalatorie.generareLista(2);
-    } catch (const ServiceException&) {
+    } catch (const std::exception&) {
         exceptiePrinsa = true;
     }
     assert(exceptiePrinsa);
@@ -233,15 +233,17 @@ void Teste::testServiceSpalatorie() {
     srv.adaugaMasina("CJ02DEF", "VW", "Golf", "hatchback");
     srv.adaugaMasina("CJ03XYZ", "Audi", "A4", "sedan");
 
-    spalatorie.generareLista(1);
-    assert(spalatorie.nrMasini() == 1);
+
     // Test adaugare masina
     spalatorie.adaugaMasina("CJ01ABC");
-    assert(spalatorie.nrMasini() == 2);
+    assert(spalatorie.nrMasini() == 1);
 
     // Test golire
     spalatorie.golesteLista();
     assert(spalatorie.nrMasini() == 0);
+    spalatorie.generareLista(1);
+    assert(spalatorie.nrMasini() == 1);
+    spalatorie.golesteLista();
 
     // Test generare lista (când numărul este egal cu numărul total)
     spalatorie.generareLista(3);
@@ -263,7 +265,7 @@ void Teste::testServiceSpalatorie() {
     exceptiePrinsa = false;
     try {
         spalatorie.generareLista(100);
-    } catch (const ServiceException&) {
+    } catch (const std::exception&) {
         exceptiePrinsa = true;
     }
     assert(exceptiePrinsa);

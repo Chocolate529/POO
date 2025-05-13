@@ -43,8 +43,7 @@ void QtMasinaUI::adaugaGUI() {
             try {
                   service.adaugaMasina(numar.toStdString(), prod.toStdString(), model.toStdString(), tip.toStdString());
                   QMessageBox::information(dialog, "Operation Completed", "Masina adaugata cu succes!");
-                  loadData();
-                  sondajeGUI();
+                  refreshGUI(service.getAllMasini());
                   dialog->accept();
             } catch (const std::exception& e) {
                   QMessageBox::warning(dialog, "Errore", e.what());
@@ -84,8 +83,7 @@ void QtMasinaUI::stergeGUI() {
             try{
                   service.stergeMasina(numar.toStdString());
                   QMessageBox::information(dialog, "Operation Completed", "Masina stearsa cu succes");
-                  loadData();
-                  sondajeGUI();
+                  refreshGUI(service.getAllMasini());
                   dialog->accept();
             } catch (const std::exception& e) {
                 QMessageBox::warning(dialog, "Errore", e.what());
@@ -113,6 +111,8 @@ void QtMasinaUI::cautaGUI() {
       foundTable->setColumnCount(4);
       foundTable->setHorizontalHeaderLabels({"Numar \n Inmatriculare", "Producator", "Model", "Tip"});
       foundTable->horizontalHeader()->setSectionResizeMode(QHeaderView::Stretch);
+      foundTable->setEditTriggers(QAbstractItemView::NoEditTriggers);
+
       layoutCauta->addWidget(foundTable);
 
       auto* btnCauta = new QPushButton("Cauta");
@@ -144,8 +144,6 @@ void QtMasinaUI::cautaGUI() {
                   foundTable->setItem(row, 2, new QTableWidgetItem(model));
                   foundTable->setItem(row, 3, new QTableWidgetItem(tip));
                   QMessageBox::information(dialog, "Operation Completed", "Masina gasita cu succes");
-                  loadData();
-                  sondajeGUI();
             } catch (const std::exception& e) {
                 QMessageBox::warning(dialog, "Errore", e.what());
             }
@@ -192,8 +190,7 @@ void QtMasinaUI::modificaGUI() {
             try{
                   service.modificaMasina(numar.toStdString(), prod.toStdString(), model.toStdString(), tip.toStdString());
                   QMessageBox::information(dialog, "Operation completed", "Modificare realizata cu succes");
-                  loadData();
-                  sondajeGUI();
+                  refreshGUI(service.getAllMasini());
                   dialog->accept();
             } catch (const std::exception& e) {
              QMessageBox::warning(dialog, "Errore", e.what());
@@ -233,6 +230,8 @@ void QtMasinaUI::filtrareGUI() {
       filterTable->setColumnCount(4);
       filterTable->setHorizontalHeaderLabels({"Numar \n Inmatriculare", "Producator", "Model", "Tip"});
       filterTable->horizontalHeader()->setSectionResizeMode(QHeaderView::Stretch);
+      filterTable->setEditTriggers(QAbstractItemView::NoEditTriggers);
+
       layoutFiltrare->addWidget(filterTable);
 
       connect(btnFiltrare, &QPushButton::clicked, [=] {
@@ -294,7 +293,6 @@ void QtMasinaUI::sondajeGUI() {
             countMap[tip]++;
       }
       clearButtonsFromLayout(sondajeLayout);
-
       for (const auto& [tip, count] : countMap) {
           //  std::cout << "Tip: " << tip << " -> " << count << " masini\n";
             QPushButton* tipBtn = new QPushButton(QString::fromStdString( tip));
@@ -305,18 +303,222 @@ void QtMasinaUI::sondajeGUI() {
       }
 }
 
-// void QtMasinaUI::sortareUI() const{}
-// void QtMasinaUI::spalatorieUI() const{}
-void QtMasinaUI::loadData() {
+void QtMasinaUI::sortareGUI() {
+      QDialog* dialog = new QDialog();
+      dialog->setWindowTitle("Sortare");
+      dialog->resize(DIALOG_WIDTH, DIALOG_HEIGHT);
+
+      QVBoxLayout* layoutSortare = new QVBoxLayout(dialog);
+
+      QPushButton* btnSortNr = new QPushButton("Sortare dupa NrInmatriculare");
+      QPushButton* btnSortTip = new QPushButton("Sortare dupa Tip");
+      QPushButton* btnSortProdModel = new QPushButton("Sortare dupa Model");
+      QPushButton* btnExit = new QPushButton("Exit");
+      QVBoxLayout* btnSortLayout = new QVBoxLayout();
+      btnSortLayout->addWidget(btnSortNr);
+      btnSortLayout->addWidget(btnSortTip);
+      btnSortLayout->addWidget(btnSortProdModel);
+      btnSortLayout->addWidget(btnExit);
+      layoutSortare->addLayout(btnSortLayout);
+
+      connect(btnSortNr, &QPushButton::clicked, [=] {
+            refreshGUI(service.sorteazaMasiniNrInmatriculare());
+            dialog->accept();
+      });
+      connect(btnSortTip, &QPushButton::clicked, [=] {
+            refreshGUI( service.sorteazaMasiniTip());
+            dialog->accept();
+      });
+      connect(btnSortProdModel, &QPushButton::clicked, [=] {
+            refreshGUI(service.sorteazaMasiniProducatorModel());
+            dialog->accept();
+      });
+      connect(btnExit, &QPushButton::clicked, dialog, &QDialog::close);
+      dialog->exec();
+}
+void QtMasinaUI::spalatorieGUI() {
+      auto dialog = new QDialog();
+
+      dialog->setWindowTitle("Spalatorie");
+      dialog->resize(DIALOG_WIDTH, DIALOG_HEIGHT);
+
+      auto layoutWash = new QHBoxLayout(dialog);
+
+      auto tableWash = new QTableWidget(dialog);
+      tableWash->setColumnCount(4);
+      tableWash->setHorizontalHeaderLabels({"Numar \n Inmatriculare", "Producator", "Model", "Tip"});
+      tableWash->horizontalHeader()->setSectionResizeMode(QHeaderView::Stretch);
+      tableWash->setEditTriggers(QAbstractItemView::NoEditTriggers);
+      layoutWash->addWidget(tableWash);
+
+      auto btnLayout = new QVBoxLayout();
+      QPushButton*  btnAdaugaWash = new QPushButton("Adauga");
+      QPushButton* btnGoleste = new QPushButton("Goleste");
+      QPushButton* btnExport = new QPushButton("Export");
+      QPushButton* btnFillRandom = new QPushButton("Fill Random");
+
+      btnLayout->addWidget(btnAdaugaWash);
+      btnLayout->addWidget(btnGoleste);
+      btnLayout->addWidget(btnExport);
+      btnLayout->addWidget(btnFillRandom);
+
+      layoutWash->addLayout(btnLayout);
+
+      auto updateTable = [=]() {
+            tableWash->setRowCount(static_cast<int>(masini_spalatorie.size()));
+
+            int row = 0;
+            for (const auto& m : masini_spalatorie) {
+                  tableWash->setItem(row, 0, new QTableWidgetItem(QString::fromStdString(m.getNrInmatriculare())));
+                  tableWash->setItem(row, 1, new QTableWidgetItem(QString::fromStdString(m.getProducator())));
+                  tableWash->setItem(row, 2, new QTableWidgetItem(QString::fromStdString(m.getModel())));
+                  tableWash->setItem(row, 3, new QTableWidgetItem(QString::fromStdString(m.getTip())));
+                  row++;
+            }
+      };
+
+      connect(btnAdaugaWash, &QPushButton::clicked, [=] {
+            auto dialogAdd = new QDialog();
+            dialogAdd->setWindowTitle("Adauga");
+
+            auto layoutAddWash = new QVBoxLayout(dialogAdd);
+
+            auto formAdd = new QFormLayout();
+            auto nrInmatriculare = new QLineEdit();
+            formAdd->addRow("Numar Inmatriculare", nrInmatriculare);
+            layoutAddWash->addLayout(formAdd);
+
+            auto btnAdd = new QPushButton("Adauga");
+            auto btnCancel = new QPushButton("Cancel");
+            auto btnLayoutAdd = new QHBoxLayout();
+            btnLayoutAdd->addWidget(btnAdd);
+            btnLayoutAdd->addWidget(btnCancel);
+            layoutAddWash->addLayout(btnLayoutAdd);
+            connect(btnAdd, &QPushButton::clicked, [=]() {
+            try {
+                 if (nrInmatriculare->text().isEmpty()) {
+                        QMessageBox::warning(dialogAdd, "Eroare", "Nici un numar de inmatriculare!");
+                        return;
+                 }
+                std::string nr = nrInmatriculare->text().toStdString();
+                spalatorie.adaugaMasina(nr);
+                  masini_spalatorie = spalatorie.getAllMasini();
+                updateTable();
+                  QMessageBox::information(dialog, "Succes", "Masini adaugate in spalatorie!");
+                dialogAdd->close();
+            } catch (const std::exception& ex) {
+                QMessageBox::warning(dialogAdd, "Eroare", ex.what());
+            }
+        });
+
+            connect(btnCancel, &QPushButton::clicked, dialogAdd, &QDialog::close);
+            dialogAdd->exec();
+
+      });
+
+      connect(btnGoleste, QPushButton::clicked, [=]() {
+            masini_spalatorie.clear();
+            spalatorie.golesteLista();
+            updateTable();
+            QMessageBox::information(dialog, "Succes", "Masini sterse din spalatorie!");
+      });
+
+      connect(btnExport, QPushButton::clicked, [=]() {
+            auto dialogExport = new QDialog();
+            dialogExport->setWindowTitle("Export");
+
+            auto layoutExport = new QVBoxLayout(dialogExport);
+            auto formExport = new QFormLayout();
+
+            auto radioBtnLayout = new QHBoxLayout();
+            auto radioCsv = new QRadioButton("Csv");
+            auto radioHtml = new QRadioButton("Html");
+            radioCsv->setChecked(true);
+            radioBtnLayout->addWidget(radioCsv);
+            radioBtnLayout->addWidget(radioHtml);
+            layoutExport->addLayout(radioBtnLayout);
+
+            auto fileName = new QLineEdit();
+            formExport->addRow("Numele fisierului", fileName);
+            layoutExport->addLayout(formExport);
+
+            auto btnExportDialog = new QPushButton("Export");
+            auto btnCancel = new QPushButton("Cancel");
+            auto btnLayoutExport = new QHBoxLayout();
+            btnLayoutExport->addWidget(btnExportDialog);
+            btnLayoutExport->addWidget(btnCancel);
+            layoutExport->addLayout(btnLayoutExport);
+
+            connect(btnExportDialog, &QPushButton::clicked, [=]() {
+                  if (fileName->text().isEmpty()) {
+                        QMessageBox::warning(dialogExport, "Eroare", "Nici un nume de fisier!");
+                        return;
+                  }
+                  std::string numeFisier = fileName->text().toStdString();
+                  try {
+                        if (radioCsv->isChecked()) {
+                              spalatorie.exportCSV(numeFisier);
+                        } else {
+                              spalatorie.exportHTML(numeFisier);
+                        }
+                        QMessageBox::information(dialogExport, "Succes", "Export realizat cu succes");
+                        dialogExport->close();
+                  } catch (const std::exception& ex) {
+                        QMessageBox::warning(dialogExport, "Eroare", ex.what());
+                  }
+            });
+            connect(btnCancel, &QPushButton::clicked, dialogExport, &QDialog::close);
+            dialogExport->exec();
+      });
+
+      connect(btnFillRandom, QPushButton::clicked, [=]() {
+            auto dialogFillRandom = new QDialog();
+            dialogFillRandom->setWindowTitle("Fill Random");
+
+            auto layoutFill = new QVBoxLayout(dialogFillRandom);
+
+            auto formFill = new QFormLayout();
+            auto numar = new QLineEdit();
+            formFill->addRow("Numar de masini", numar);
+            layoutFill->addLayout(formFill);
+
+            auto btnLayoutFill = new QHBoxLayout();
+            auto btnFill = new QPushButton("Fill");
+            auto btnCancel = new QPushButton("Cancel");
+            btnLayoutFill->addWidget(btnFill);
+            btnLayoutFill->addWidget(btnCancel);
+            layoutFill->addLayout(btnLayoutFill);
+
+            connect(btnFill, QPushButton::clicked, [=]() {
+                  if (numar->text().isEmpty()) {
+                        QMessageBox::warning(dialogFillRandom, "Error", "Introduceti un numar!");
+                        return;
+                  }
+                  int nr = numar->text().toInt();
+                  spalatorie.generareLista(nr);
+                  masini_spalatorie = spalatorie.getAllMasini();
+                  updateTable();
+                  QMessageBox::information(dialogFillRandom,"Succes","Masini generate cu succes!");
+                  dialogFillRandom->close();
+            });
+            connect(btnCancel, QPushButton::clicked, dialogFillRandom, &QDialog::close);
+
+            dialogFillRandom->exec();
+      });
+
+      dialog->exec();
+}
+void QtMasinaUI::loadData(std::vector<Masina> v) {
+      masini_ui = v;
       tableWidget->clearContents();
-      tableWidget->setRowCount(service.getAllMasini().size());
+      tableWidget->setRowCount(static_cast<int>(service.getAllMasini().size()));
       tableWidget->setColumnCount(4);
       tableWidget->setHorizontalHeaderLabels({"Numar \n Inmatriculare","Producator",
                                                       "Model",  "Tip"});
       tableWidget->horizontalHeader()->setSectionResizeMode(QHeaderView::Stretch);
       tableWidget->resizeRowsToContents();
       int row = 0;
-      for (const auto& masina: service.getAllMasini()) {
+      for (const auto& masina: masini_ui) {
             QString numar = QString::fromStdString(masina.getNrInmatriculare());
             QString producator = QString::fromStdString(masina.getProducator());
             QString model = QString::fromStdString(masina.getModel());
@@ -330,24 +532,31 @@ void QtMasinaUI::loadData() {
 }
 
 
+
 void QtMasinaUI::initGUI() {
 
       setLayout(layoutMain);
       tableWidget->setEditTriggers(QAbstractItemView::NoEditTriggers);
       layoutMain->addWidget(tableWidget);
+      layoutMain->addWidget(btnRefresh);
+      connect(btnRefresh, &QPushButton::clicked, [=] {
+
+            refreshGUI(service.getAllMasini());
+      });
       layoutBtns->addWidget(btnAdauga);
       layoutBtns->addWidget(btnSterge);
       layoutBtns->addWidget(btnModifica);
       layoutBtns->addWidget(btnCauta);
       layoutBtns->addWidget(btnFiltrare);
-      layoutBtns->addWidget(new QPushButton("Sortare Masini"));
-      layoutBtns->addWidget(new QPushButton("Spalatorie Masini"));
+      layoutBtns->addWidget(btnSortare);
+      layoutBtns->addWidget(btnWash);
       layoutMain->addLayout(layoutBtns);
 
       layoutMain->addLayout(sondajeLayout);
 
       resize(WINDOW_WIDTH, WINDOW_HEIGHT);
       move((SCREEN_WIDTH-WINDOW_WIDTH)/2, (SCREEN_HEIGHT-WINDOW_HEIGHT)/2);
+      masini_ui = service.getAllMasini();
 
 }
 
@@ -357,4 +566,13 @@ void QtMasinaUI::initConnect() {
       connect(btnCauta, QPushButton::clicked, this, &QtMasinaUI::cautaGUI);
       connect(btnModifica, QPushButton::clicked, this, &QtMasinaUI::modificaGUI);
       connect(btnFiltrare, QPushButton::clicked, this, &QtMasinaUI::filtrareGUI);
+      connect(btnSortare, QPushButton::clicked, this, &QtMasinaUI::sortareGUI);
+      connect(btnWash, QPushButton::clicked, this, &QtMasinaUI::spalatorieGUI);
+}
+
+void QtMasinaUI::refreshGUI(std::vector<Masina> v) {
+
+      loadData(v);
+      sondajeGUI();
+
 }

@@ -19,12 +19,15 @@
 #include <QScreen>
 #include <QTWidgets/qtablewidget.h>
 #include "service_masina.h"
-
+#include "include/domeniu_masina.h"
 #include "service_spalatorie.h"
 #define ALPHA 0.5
 #define BETA 0.25
 class QtMasinaUI: public QWidget {
 private:
+    std::vector<Masina> masini_ui;
+    std::vector<Masina> masini_spalatorie;
+
     MasinaService& service;
     ServiceSpalatorie& spalatorie;
     QTableWidget* tableWidget = new QTableWidget;
@@ -43,27 +46,31 @@ private:
 
     QVBoxLayout* sondajeLayout = new QVBoxLayout();
     QVBoxLayout* layoutBtns = new QVBoxLayout();
+    QPushButton* btnRefresh = new QPushButton("Refresh");
     QPushButton* btnAdauga = new QPushButton("Adauga");
     QPushButton* btnSterge = new QPushButton("Sterge");
     QPushButton* btnCauta = new QPushButton("Cauta");
     QPushButton* btnModifica = new QPushButton("Modifica");
     QPushButton* btnFiltrare = new QPushButton("Filtrare");
+    QPushButton* btnSortare = new QPushButton("Sortare");
+    QPushButton* btnWash = new QPushButton("Spalatorie");
     void adaugaGUI();
     void stergeGUI();
     void modificaGUI();
     void cautaGUI();
     void filtrareGUI();
-    // void sortareUI() const;
-    // void spalatorieUI() const;
+    void sortareGUI() ;
+    void spalatorieGUI();
     void sondajeGUI();
     void initGUI();
-    void loadData();
+    void loadData(std::vector<Masina> v);
     void initConnect();
+    void refreshGUI(std::vector<Masina> v);
+
 public:
     explicit QtMasinaUI(MasinaService& srv, ServiceSpalatorie& spal): service{srv}, spalatorie{spal} {
         initGUI();
-        loadData();
-        sondajeGUI();
+        refreshGUI(service.getAllMasini());
         initConnect();
     }
 };

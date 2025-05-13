@@ -9,7 +9,7 @@
 #include "exceptii.h"
 #include <random>
 void ServiceSpalatorie::adaugaMasina(const std::string &nrInmatriculare) {
-    const Masina& masina = cautaMasina(nrInmatriculare);
+    const Masina& masina = srv.cautaMasina(nrInmatriculare);
     masiniSpalatorie.push_back(masina);
 }
 
@@ -27,7 +27,7 @@ void ServiceSpalatorie::exportCSV(const std::string& fileName) const {
 
 void ServiceSpalatorie::generareLista(int nrTotal) {
     masiniSpalatorie.clear();
-    std::vector masini{getAllMasini()};
+    std::vector masini{srv.getAllMasini()};
     if (masini.empty()) {
         throw ServiceException("Nu exista masini!");
     }

@@ -9,8 +9,14 @@
 #include "exceptii.h"
 #include <random>
 void ServiceSpalatorie::adaugaMasina(const std::string &nrInmatriculare) {
-    const Masina& masina = cautaMasina(nrInmatriculare);
-    masiniSpalatorie.push_back(masina);
+    const Masina& masina = srv.cautaMasina(nrInmatriculare);
+    if (std::find_if(masiniSpalatorie.begin(), masiniSpalatorie.end(),
+       [&masina](const Masina& m) {
+           return masina == m;
+       }) == masiniSpalatorie.end()) {
+        masiniSpalatorie.push_back(masina);
+
+       }
 }
 
 void ServiceSpalatorie::golesteLista() {
@@ -18,7 +24,7 @@ void ServiceSpalatorie::golesteLista() {
 }
 
 void ServiceSpalatorie::exportCSV(const std::string& fileName) const {
-    std::ofstream out(fileName);
+    std::ofstream out(fileName+".csv");
     for (const auto& masina : masiniSpalatorie) {
         out << masina.getNrInmatriculare() <<',' << masina.getProducator() <<
             ','<< masina.getModel() << ','<< masina.getTip()<< std::endl;
@@ -27,7 +33,7 @@ void ServiceSpalatorie::exportCSV(const std::string& fileName) const {
 
 void ServiceSpalatorie::generareLista(int nrTotal) {
     masiniSpalatorie.clear();
-    std::vector masini{getAllMasini()};
+    std::vector masini{srv.getAllMasini()};
     if (masini.empty()) {
         throw ServiceException("Nu exista masini!");
     }
@@ -40,8 +46,14 @@ void ServiceSpalatorie::generareLista(int nrTotal) {
     } else if (masini.size() > nrTotal) {
         while (nrMasini() < nrTotal) {
             const int rndNr = dis(gen);
-            if (std::find(masiniSpalatorie.begin(), masiniSpalatorie.end(),masini[rndNr]) == masiniSpalatorie.end()) {
-                masiniSpalatorie.push_back(masini[rndNr]);
+            const Masina& masina = masini[rndNr];
+            if (std::find(masiniSpalatorie.begin(), masiniSpalatorie.end(),masina) == masiniSpalatorie.end()) {
+                if (std::find_if(masiniSpalatorie.begin(), masiniSpalatorie.end(),
+                [&masina](const Masina& m) {
+                     return masina == m;
+                }) == masiniSpalatorie.end()) {
+                    masiniSpalatorie.push_back(masini[rndNr]);
+                }
             }
         }
     } else {
@@ -49,7 +61,31 @@ void ServiceSpalatorie::generareLista(int nrTotal) {
     }
 }
 
+void ServiceSpalatorie::exportHTML(const std::string& fileName) const {
+    std::ofstream out(fileName+".html");
+    out << "<!DOCTYPE html>\n<html>\n<head>\n<title>Masini Spalatorie</title>\n";
+    out << "<style>table {border-collapse: collapse;} th, td {border: 1px solid black; padding: 8px;}</style>\n";
+    out << "</head>\n<body>\n";
+    out << "<h1>Lista masini spalatorie</h1>\n";
+    out << "<table>\n";
+    out << "<tr><th>Nr. Inmatriculare</th><th>Producator</th><th>Model</th><th>Tip</th></tr>\n";
+
+    for (const auto& masina : masiniSpalatorie) {
+        out << "<tr>";
+        out << "<td>" << masina.getNrInmatriculare() << "</td>";
+        out << "<td>" << masina.getProducator() << "</td>";
+        out << "<td>" << masina.getModel() << "</td>";
+        out << "<td>" << masina.getTip() << "</td>";
+        out << "</tr>\n";
+    }
+
+    out << "</table>\n</body>\n</html>";
+}
+
 int ServiceSpalatorie::nrMasini() const {
     return static_cast<int>(masiniSpalatorie.size());
 }
 
+std::vector<Masina> ServiceSpalatorie::getAllMasini() const {
+    return masiniSpalatorie;
+}

@@ -7,16 +7,21 @@
 #include <vector>
 #include <fstream>
 #include "service_masina.h"
-class ServiceSpalatorie: public MasinaService {
+class ServiceSpalatorie{
 private:
     std::vector<Masina> masiniSpalatorie;
+    MasinaService& srv;
 public:
-    explicit ServiceSpalatorie(MasinaRepo& repo) : MasinaService(repo) {}
+    explicit ServiceSpalatorie(MasinaService& srv) : srv(srv) {}
 
     void adaugaMasina(const std::string& nrInmatriculare);
     void golesteLista();
     void generareLista(int nrTotal);
     void exportCSV(const std::string& fileName) const;
+    void exportHTML(const std::string& fileName) const ;
+
     [[nodiscard]] int nrMasini() const;
+    std::vector<Masina> getAllMasini() const ;
+
 };
 #endif //SERVICE_SPALATORIE_H

@@ -11,7 +11,7 @@ int main(int argc, char** argv) {
     MasinaRepoFile repoFile {fileName};
     // MasinaService service{repo};
     MasinaService service{repoFile};
-    ServiceSpalatorie spalatorie{repo};
+    ServiceSpalatorie spalatorie{service};
     MasinaUI ui{service, spalatorie};
     QApplication app(argc, argv);
     QtMasinaUI qt{service, spalatorie};
