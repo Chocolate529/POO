@@ -344,10 +344,8 @@ void QtMasinaUI::spalatorieGUI() {
 
       auto layoutWash = new QHBoxLayout(dialog);
 
-      auto tableWash = new QTableWidget(dialog);
-      tableWash->setColumnCount(4);
-      tableWash->setHorizontalHeaderLabels({"Numar \n Inmatriculare", "Producator", "Model", "Tip"});
-      tableWash->horizontalHeader()->setSectionResizeMode(QHeaderView::Stretch);
+      auto tableWash = new QListWidget(dialog);
+      tableWash->addItem({"Numar Inmatriculare | Producator | Model | Tip"});
       tableWash->setEditTriggers(QAbstractItemView::NoEditTriggers);
       layoutWash->addWidget(tableWash);
 
@@ -365,15 +363,13 @@ void QtMasinaUI::spalatorieGUI() {
       layoutWash->addLayout(btnLayout);
 
       auto updateTable = [=]() {
-            tableWash->setRowCount(static_cast<int>(masini_spalatorie.size()));
+            tableWash->clear();
+            tableWash->addItem({"Numar Inmatriculare | Producator | Model | Tip"});
 
-            int row = 0;
             for (const auto& m : masini_spalatorie) {
-                  tableWash->setItem(row, 0, new QTableWidgetItem(QString::fromStdString(m.getNrInmatriculare())));
-                  tableWash->setItem(row, 1, new QTableWidgetItem(QString::fromStdString(m.getProducator())));
-                  tableWash->setItem(row, 2, new QTableWidgetItem(QString::fromStdString(m.getModel())));
-                  tableWash->setItem(row, 3, new QTableWidgetItem(QString::fromStdString(m.getTip())));
-                  row++;
+                  QString linie = QString::fromStdString(m.getNrInmatriculare()+" | "
+                        +m.getProducator()+" | "+m.getModel()+" | "+m.getTip());
+                  tableWash->addItem(linie);
             }
       };
 
@@ -512,6 +508,12 @@ void QtMasinaUI::spalatorieGUI() {
 
       dialog->exec();
 }
+
+// void QtMasinaUI::showCar(int i, int j) {
+//       formLayout->addRow("i:", new QLineEdit(QString::number(i)));
+//       formLayout->addRow("j:", new QLineEdit(QString::number(j)));
+// }
+
 void QtMasinaUI::loadData(std::vector<Masina> v) {
       masini_ui = v;
       tableWidget->clearContents();
@@ -541,6 +543,8 @@ void QtMasinaUI::initGUI() {
 
       setLayout(layoutMain);
       tableWidget->setEditTriggers(QAbstractItemView::NoEditTriggers);
+      // viewLayout->addWidget(tableWidget);
+      // viewLayout->addLayout(formLayout);
       layoutMain->addWidget(tableWidget);
       layoutMain->addWidget(btnRefresh);
       connect(btnRefresh, &QPushButton::clicked, [=] {
@@ -572,6 +576,8 @@ void QtMasinaUI::initConnect() {
       connect(btnFiltrare, QPushButton::clicked, this, &QtMasinaUI::filtrareGUI);
       connect(btnSortare, QPushButton::clicked, this, &QtMasinaUI::sortareGUI);
       connect(btnWash, QPushButton::clicked, this, &QtMasinaUI::spalatorieGUI);
+
+      // connect(tableWidget, QTableWidget::cellClicked, this, &QtMasinaUI::showCar);
 }
 
 void QtMasinaUI::refreshGUI(std::vector<Masina> v) {

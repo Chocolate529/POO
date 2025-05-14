@@ -8,14 +8,14 @@ set(CMAKE_DEPENDS_LANGUAGES
 
 # The set of dependency files which are needed:
 set(CMAKE_DEPENDS_DEPENDENCY_FILES
-  "C:/Users/lupse/CLionProjects/POO/Lab10/main.cpp" "CMakeFiles/Lab10.dir/main.cpp.obj" "gcc" "CMakeFiles/Lab10.dir/main.cpp.obj.d"
-  "C:/Users/lupse/CLionProjects/POO/Lab10/src/console_ui.cpp" "CMakeFiles/Lab10.dir/src/console_ui.cpp.obj" "gcc" "CMakeFiles/Lab10.dir/src/console_ui.cpp.obj.d"
-  "C:/Users/lupse/CLionProjects/POO/Lab10/src/domeniu_masina.cpp" "CMakeFiles/Lab10.dir/src/domeniu_masina.cpp.obj" "gcc" "CMakeFiles/Lab10.dir/src/domeniu_masina.cpp.obj.d"
-  "C:/Users/lupse/CLionProjects/POO/Lab10/src/qt_ui.cpp" "CMakeFiles/Lab10.dir/src/qt_ui.cpp.obj" "gcc" "CMakeFiles/Lab10.dir/src/qt_ui.cpp.obj.d"
-  "C:/Users/lupse/CLionProjects/POO/Lab10/src/repo_masina.cpp" "CMakeFiles/Lab10.dir/src/repo_masina.cpp.obj" "gcc" "CMakeFiles/Lab10.dir/src/repo_masina.cpp.obj.d"
-  "C:/Users/lupse/CLionProjects/POO/Lab10/src/service_masina.cpp" "CMakeFiles/Lab10.dir/src/service_masina.cpp.obj" "gcc" "CMakeFiles/Lab10.dir/src/service_masina.cpp.obj.d"
-  "C:/Users/lupse/CLionProjects/POO/Lab10/src/service_spalatorie.cpp" "CMakeFiles/Lab10.dir/src/service_spalatorie.cpp.obj" "gcc" "CMakeFiles/Lab10.dir/src/service_spalatorie.cpp.obj.d"
-  "C:/Users/lupse/CLionProjects/POO/Lab10/src/teste.cpp" "CMakeFiles/Lab10.dir/src/teste.cpp.obj" "gcc" "CMakeFiles/Lab10.dir/src/teste.cpp.obj.d"
+  "C:/Users/lupse/CLionProjects/git POO/POO/Lab10/main.cpp" "CMakeFiles/Lab10.dir/main.cpp.obj" "gcc" "CMakeFiles/Lab10.dir/main.cpp.obj.d"
+  "C:/Users/lupse/CLionProjects/git POO/POO/Lab10/src/console_ui.cpp" "CMakeFiles/Lab10.dir/src/console_ui.cpp.obj" "gcc" "CMakeFiles/Lab10.dir/src/console_ui.cpp.obj.d"
+  "C:/Users/lupse/CLionProjects/git POO/POO/Lab10/src/domeniu_masina.cpp" "CMakeFiles/Lab10.dir/src/domeniu_masina.cpp.obj" "gcc" "CMakeFiles/Lab10.dir/src/domeniu_masina.cpp.obj.d"
+  "C:/Users/lupse/CLionProjects/git POO/POO/Lab10/src/qt_ui.cpp" "CMakeFiles/Lab10.dir/src/qt_ui.cpp.obj" "gcc" "CMakeFiles/Lab10.dir/src/qt_ui.cpp.obj.d"
+  "C:/Users/lupse/CLionProjects/git POO/POO/Lab10/src/repo_masina.cpp" "CMakeFiles/Lab10.dir/src/repo_masina.cpp.obj" "gcc" "CMakeFiles/Lab10.dir/src/repo_masina.cpp.obj.d"
+  "C:/Users/lupse/CLionProjects/git POO/POO/Lab10/src/service_masina.cpp" "CMakeFiles/Lab10.dir/src/service_masina.cpp.obj" "gcc" "CMakeFiles/Lab10.dir/src/service_masina.cpp.obj.d"
+  "C:/Users/lupse/CLionProjects/git POO/POO/Lab10/src/service_spalatorie.cpp" "CMakeFiles/Lab10.dir/src/service_spalatorie.cpp.obj" "gcc" "CMakeFiles/Lab10.dir/src/service_spalatorie.cpp.obj.d"
+  "C:/Users/lupse/CLionProjects/git POO/POO/Lab10/src/teste.cpp" "CMakeFiles/Lab10.dir/src/teste.cpp.obj" "gcc" "CMakeFiles/Lab10.dir/src/teste.cpp.obj.d"
   )
 
 # Targets to which this target links which contain Fortran sources.

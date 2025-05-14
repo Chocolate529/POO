@@ -52,10 +52,10 @@ RM = C:\Users\lupse\AppData\Local\Programs\CLion\bin\cmake\win\x64\bin\cmake.exe
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = C:\Users\lupse\CLionProjects\POO\Lab10
+CMAKE_SOURCE_DIR = "C:\Users\lupse\CLionProjects\git POO\POO\Lab10"
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = C:\Users\lupse\CLionProjects\POO\Lab10\cmake-build-debug
+CMAKE_BINARY_DIR = "C:\Users\lupse\CLionProjects\git POO\POO\Lab10\cmake-build-debug"
 
 # Include any dependencies generated for this target.
 include CMakeFiles/Lab10.dir/depend.make
@@ -70,123 +70,123 @@ include CMakeFiles/Lab10.dir/flags.make
 
 CMakeFiles/Lab10.dir/src/console_ui.cpp.obj: CMakeFiles/Lab10.dir/flags.make
 CMakeFiles/Lab10.dir/src/console_ui.cpp.obj: CMakeFiles/Lab10.dir/includes_CXX.rsp
-CMakeFiles/Lab10.dir/src/console_ui.cpp.obj: C:/Users/lupse/CLionProjects/POO/Lab10/src/console_ui.cpp
+CMakeFiles/Lab10.dir/src/console_ui.cpp.obj: C:/Users/lupse/CLionProjects/git\ POO/POO/Lab10/src/console_ui.cpp
 CMakeFiles/Lab10.dir/src/console_ui.cpp.obj: CMakeFiles/Lab10.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=C:\Users\lupse\CLionProjects\POO\Lab10\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/Lab10.dir/src/console_ui.cpp.obj"
-	C:\Users\lupse\AppData\Local\Programs\CLion\bin\mingw\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/Lab10.dir/src/console_ui.cpp.obj -MF CMakeFiles\Lab10.dir\src\console_ui.cpp.obj.d -o CMakeFiles\Lab10.dir\src\console_ui.cpp.obj -c C:\Users\lupse\CLionProjects\POO\Lab10\src\console_ui.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir="C:\Users\lupse\CLionProjects\git POO\POO\Lab10\cmake-build-debug\CMakeFiles" --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/Lab10.dir/src/console_ui.cpp.obj"
+	C:\Users\lupse\AppData\Local\Programs\CLion\bin\mingw\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/Lab10.dir/src/console_ui.cpp.obj -MF CMakeFiles\Lab10.dir\src\console_ui.cpp.obj.d -o CMakeFiles\Lab10.dir\src\console_ui.cpp.obj -c "C:\Users\lupse\CLionProjects\git POO\POO\Lab10\src\console_ui.cpp"
 
 CMakeFiles/Lab10.dir/src/console_ui.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/Lab10.dir/src/console_ui.cpp.i"
-	C:\Users\lupse\AppData\Local\Programs\CLion\bin\mingw\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E C:\Users\lupse\CLionProjects\POO\Lab10\src\console_ui.cpp > CMakeFiles\Lab10.dir\src\console_ui.cpp.i
+	C:\Users\lupse\AppData\Local\Programs\CLion\bin\mingw\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "C:\Users\lupse\CLionProjects\git POO\POO\Lab10\src\console_ui.cpp" > CMakeFiles\Lab10.dir\src\console_ui.cpp.i
 
 CMakeFiles/Lab10.dir/src/console_ui.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/Lab10.dir/src/console_ui.cpp.s"
-	C:\Users\lupse\AppData\Local\Programs\CLion\bin\mingw\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S C:\Users\lupse\CLionProjects\POO\Lab10\src\console_ui.cpp -o CMakeFiles\Lab10.dir\src\console_ui.cpp.s
+	C:\Users\lupse\AppData\Local\Programs\CLion\bin\mingw\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "C:\Users\lupse\CLionProjects\git POO\POO\Lab10\src\console_ui.cpp" -o CMakeFiles\Lab10.dir\src\console_ui.cpp.s
 
 CMakeFiles/Lab10.dir/src/domeniu_masina.cpp.obj: CMakeFiles/Lab10.dir/flags.make
 CMakeFiles/Lab10.dir/src/domeniu_masina.cpp.obj: CMakeFiles/Lab10.dir/includes_CXX.rsp
-CMakeFiles/Lab10.dir/src/domeniu_masina.cpp.obj: C:/Users/lupse/CLionProjects/POO/Lab10/src/domeniu_masina.cpp
+CMakeFiles/Lab10.dir/src/domeniu_masina.cpp.obj: C:/Users/lupse/CLionProjects/git\ POO/POO/Lab10/src/domeniu_masina.cpp
 CMakeFiles/Lab10.dir/src/domeniu_masina.cpp.obj: CMakeFiles/Lab10.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=C:\Users\lupse\CLionProjects\POO\Lab10\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/Lab10.dir/src/domeniu_masina.cpp.obj"
-	C:\Users\lupse\AppData\Local\Programs\CLion\bin\mingw\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/Lab10.dir/src/domeniu_masina.cpp.obj -MF CMakeFiles\Lab10.dir\src\domeniu_masina.cpp.obj.d -o CMakeFiles\Lab10.dir\src\domeniu_masina.cpp.obj -c C:\Users\lupse\CLionProjects\POO\Lab10\src\domeniu_masina.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir="C:\Users\lupse\CLionProjects\git POO\POO\Lab10\cmake-build-debug\CMakeFiles" --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/Lab10.dir/src/domeniu_masina.cpp.obj"
+	C:\Users\lupse\AppData\Local\Programs\CLion\bin\mingw\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/Lab10.dir/src/domeniu_masina.cpp.obj -MF CMakeFiles\Lab10.dir\src\domeniu_masina.cpp.obj.d -o CMakeFiles\Lab10.dir\src\domeniu_masina.cpp.obj -c "C:\Users\lupse\CLionProjects\git POO\POO\Lab10\src\domeniu_masina.cpp"
 
 CMakeFiles/Lab10.dir/src/domeniu_masina.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/Lab10.dir/src/domeniu_masina.cpp.i"
-	C:\Users\lupse\AppData\Local\Programs\CLion\bin\mingw\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E C:\Users\lupse\CLionProjects\POO\Lab10\src\domeniu_masina.cpp > CMakeFiles\Lab10.dir\src\domeniu_masina.cpp.i
+	C:\Users\lupse\AppData\Local\Programs\CLion\bin\mingw\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "C:\Users\lupse\CLionProjects\git POO\POO\Lab10\src\domeniu_masina.cpp" > CMakeFiles\Lab10.dir\src\domeniu_masina.cpp.i
 
 CMakeFiles/Lab10.dir/src/domeniu_masina.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/Lab10.dir/src/domeniu_masina.cpp.s"
-	C:\Users\lupse\AppData\Local\Programs\CLion\bin\mingw\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S C:\Users\lupse\CLionProjects\POO\Lab10\src\domeniu_masina.cpp -o CMakeFiles\Lab10.dir\src\domeniu_masina.cpp.s
+	C:\Users\lupse\AppData\Local\Programs\CLion\bin\mingw\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "C:\Users\lupse\CLionProjects\git POO\POO\Lab10\src\domeniu_masina.cpp" -o CMakeFiles\Lab10.dir\src\domeniu_masina.cpp.s
 
 CMakeFiles/Lab10.dir/src/qt_ui.cpp.obj: CMakeFiles/Lab10.dir/flags.make
 CMakeFiles/Lab10.dir/src/qt_ui.cpp.obj: CMakeFiles/Lab10.dir/includes_CXX.rsp
-CMakeFiles/Lab10.dir/src/qt_ui.cpp.obj: C:/Users/lupse/CLionProjects/POO/Lab10/src/qt_ui.cpp
+CMakeFiles/Lab10.dir/src/qt_ui.cpp.obj: C:/Users/lupse/CLionProjects/git\ POO/POO/Lab10/src/qt_ui.cpp
 CMakeFiles/Lab10.dir/src/qt_ui.cpp.obj: CMakeFiles/Lab10.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=C:\Users\lupse\CLionProjects\POO\Lab10\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object CMakeFiles/Lab10.dir/src/qt_ui.cpp.obj"
-	C:\Users\lupse\AppData\Local\Programs\CLion\bin\mingw\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/Lab10.dir/src/qt_ui.cpp.obj -MF CMakeFiles\Lab10.dir\src\qt_ui.cpp.obj.d -o CMakeFiles\Lab10.dir\src\qt_ui.cpp.obj -c C:\Users\lupse\CLionProjects\POO\Lab10\src\qt_ui.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir="C:\Users\lupse\CLionProjects\git POO\POO\Lab10\cmake-build-debug\CMakeFiles" --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object CMakeFiles/Lab10.dir/src/qt_ui.cpp.obj"
+	C:\Users\lupse\AppData\Local\Programs\CLion\bin\mingw\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/Lab10.dir/src/qt_ui.cpp.obj -MF CMakeFiles\Lab10.dir\src\qt_ui.cpp.obj.d -o CMakeFiles\Lab10.dir\src\qt_ui.cpp.obj -c "C:\Users\lupse\CLionProjects\git POO\POO\Lab10\src\qt_ui.cpp"
 
 CMakeFiles/Lab10.dir/src/qt_ui.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/Lab10.dir/src/qt_ui.cpp.i"
-	C:\Users\lupse\AppData\Local\Programs\CLion\bin\mingw\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E C:\Users\lupse\CLionProjects\POO\Lab10\src\qt_ui.cpp > CMakeFiles\Lab10.dir\src\qt_ui.cpp.i
+	C:\Users\lupse\AppData\Local\Programs\CLion\bin\mingw\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "C:\Users\lupse\CLionProjects\git POO\POO\Lab10\src\qt_ui.cpp" > CMakeFiles\Lab10.dir\src\qt_ui.cpp.i
 
 CMakeFiles/Lab10.dir/src/qt_ui.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/Lab10.dir/src/qt_ui.cpp.s"
-	C:\Users\lupse\AppData\Local\Programs\CLion\bin\mingw\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S C:\Users\lupse\CLionProjects\POO\Lab10\src\qt_ui.cpp -o CMakeFiles\Lab10.dir\src\qt_ui.cpp.s
+	C:\Users\lupse\AppData\Local\Programs\CLion\bin\mingw\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "C:\Users\lupse\CLionProjects\git POO\POO\Lab10\src\qt_ui.cpp" -o CMakeFiles\Lab10.dir\src\qt_ui.cpp.s
 
 CMakeFiles/Lab10.dir/src/repo_masina.cpp.obj: CMakeFiles/Lab10.dir/flags.make
 CMakeFiles/Lab10.dir/src/repo_masina.cpp.obj: CMakeFiles/Lab10.dir/includes_CXX.rsp
-CMakeFiles/Lab10.dir/src/repo_masina.cpp.obj: C:/Users/lupse/CLionProjects/POO/Lab10/src/repo_masina.cpp
+CMakeFiles/Lab10.dir/src/repo_masina.cpp.obj: C:/Users/lupse/CLionProjects/git\ POO/POO/Lab10/src/repo_masina.cpp
 CMakeFiles/Lab10.dir/src/repo_masina.cpp.obj: CMakeFiles/Lab10.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=C:\Users\lupse\CLionProjects\POO\Lab10\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object CMakeFiles/Lab10.dir/src/repo_masina.cpp.obj"
-	C:\Users\lupse\AppData\Local\Programs\CLion\bin\mingw\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/Lab10.dir/src/repo_masina.cpp.obj -MF CMakeFiles\Lab10.dir\src\repo_masina.cpp.obj.d -o CMakeFiles\Lab10.dir\src\repo_masina.cpp.obj -c C:\Users\lupse\CLionProjects\POO\Lab10\src\repo_masina.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir="C:\Users\lupse\CLionProjects\git POO\POO\Lab10\cmake-build-debug\CMakeFiles" --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object CMakeFiles/Lab10.dir/src/repo_masina.cpp.obj"
+	C:\Users\lupse\AppData\Local\Programs\CLion\bin\mingw\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/Lab10.dir/src/repo_masina.cpp.obj -MF CMakeFiles\Lab10.dir\src\repo_masina.cpp.obj.d -o CMakeFiles\Lab10.dir\src\repo_masina.cpp.obj -c "C:\Users\lupse\CLionProjects\git POO\POO\Lab10\src\repo_masina.cpp"
 
 CMakeFiles/Lab10.dir/src/repo_masina.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/Lab10.dir/src/repo_masina.cpp.i"
-	C:\Users\lupse\AppData\Local\Programs\CLion\bin\mingw\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E C:\Users\lupse\CLionProjects\POO\Lab10\src\repo_masina.cpp > CMakeFiles\Lab10.dir\src\repo_masina.cpp.i
+	C:\Users\lupse\AppData\Local\Programs\CLion\bin\mingw\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "C:\Users\lupse\CLionProjects\git POO\POO\Lab10\src\repo_masina.cpp" > CMakeFiles\Lab10.dir\src\repo_masina.cpp.i
 
 CMakeFiles/Lab10.dir/src/repo_masina.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/Lab10.dir/src/repo_masina.cpp.s"
-	C:\Users\lupse\AppData\Local\Programs\CLion\bin\mingw\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S C:\Users\lupse\CLionProjects\POO\Lab10\src\repo_masina.cpp -o CMakeFiles\Lab10.dir\src\repo_masina.cpp.s
+	C:\Users\lupse\AppData\Local\Programs\CLion\bin\mingw\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "C:\Users\lupse\CLionProjects\git POO\POO\Lab10\src\repo_masina.cpp" -o CMakeFiles\Lab10.dir\src\repo_masina.cpp.s
 
 CMakeFiles/Lab10.dir/src/service_masina.cpp.obj: CMakeFiles/Lab10.dir/flags.make
 CMakeFiles/Lab10.dir/src/service_masina.cpp.obj: CMakeFiles/Lab10.dir/includes_CXX.rsp
-CMakeFiles/Lab10.dir/src/service_masina.cpp.obj: C:/Users/lupse/CLionProjects/POO/Lab10/src/service_masina.cpp
+CMakeFiles/Lab10.dir/src/service_masina.cpp.obj: C:/Users/lupse/CLionProjects/git\ POO/POO/Lab10/src/service_masina.cpp
 CMakeFiles/Lab10.dir/src/service_masina.cpp.obj: CMakeFiles/Lab10.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=C:\Users\lupse\CLionProjects\POO\Lab10\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building CXX object CMakeFiles/Lab10.dir/src/service_masina.cpp.obj"
-	C:\Users\lupse\AppData\Local\Programs\CLion\bin\mingw\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/Lab10.dir/src/service_masina.cpp.obj -MF CMakeFiles\Lab10.dir\src\service_masina.cpp.obj.d -o CMakeFiles\Lab10.dir\src\service_masina.cpp.obj -c C:\Users\lupse\CLionProjects\POO\Lab10\src\service_masina.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir="C:\Users\lupse\CLionProjects\git POO\POO\Lab10\cmake-build-debug\CMakeFiles" --progress-num=$(CMAKE_PROGRESS_5) "Building CXX object CMakeFiles/Lab10.dir/src/service_masina.cpp.obj"
+	C:\Users\lupse\AppData\Local\Programs\CLion\bin\mingw\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/Lab10.dir/src/service_masina.cpp.obj -MF CMakeFiles\Lab10.dir\src\service_masina.cpp.obj.d -o CMakeFiles\Lab10.dir\src\service_masina.cpp.obj -c "C:\Users\lupse\CLionProjects\git POO\POO\Lab10\src\service_masina.cpp"
 
 CMakeFiles/Lab10.dir/src/service_masina.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/Lab10.dir/src/service_masina.cpp.i"
-	C:\Users\lupse\AppData\Local\Programs\CLion\bin\mingw\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E C:\Users\lupse\CLionProjects\POO\Lab10\src\service_masina.cpp > CMakeFiles\Lab10.dir\src\service_masina.cpp.i
+	C:\Users\lupse\AppData\Local\Programs\CLion\bin\mingw\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "C:\Users\lupse\CLionProjects\git POO\POO\Lab10\src\service_masina.cpp" > CMakeFiles\Lab10.dir\src\service_masina.cpp.i
 
 CMakeFiles/Lab10.dir/src/service_masina.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/Lab10.dir/src/service_masina.cpp.s"
-	C:\Users\lupse\AppData\Local\Programs\CLion\bin\mingw\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S C:\Users\lupse\CLionProjects\POO\Lab10\src\service_masina.cpp -o CMakeFiles\Lab10.dir\src\service_masina.cpp.s
+	C:\Users\lupse\AppData\Local\Programs\CLion\bin\mingw\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "C:\Users\lupse\CLionProjects\git POO\POO\Lab10\src\service_masina.cpp" -o CMakeFiles\Lab10.dir\src\service_masina.cpp.s
 
 CMakeFiles/Lab10.dir/src/service_spalatorie.cpp.obj: CMakeFiles/Lab10.dir/flags.make
 CMakeFiles/Lab10.dir/src/service_spalatorie.cpp.obj: CMakeFiles/Lab10.dir/includes_CXX.rsp
-CMakeFiles/Lab10.dir/src/service_spalatorie.cpp.obj: C:/Users/lupse/CLionProjects/POO/Lab10/src/service_spalatorie.cpp
+CMakeFiles/Lab10.dir/src/service_spalatorie.cpp.obj: C:/Users/lupse/CLionProjects/git\ POO/POO/Lab10/src/service_spalatorie.cpp
 CMakeFiles/Lab10.dir/src/service_spalatorie.cpp.obj: CMakeFiles/Lab10.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=C:\Users\lupse\CLionProjects\POO\Lab10\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Building CXX object CMakeFiles/Lab10.dir/src/service_spalatorie.cpp.obj"
-	C:\Users\lupse\AppData\Local\Programs\CLion\bin\mingw\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/Lab10.dir/src/service_spalatorie.cpp.obj -MF CMakeFiles\Lab10.dir\src\service_spalatorie.cpp.obj.d -o CMakeFiles\Lab10.dir\src\service_spalatorie.cpp.obj -c C:\Users\lupse\CLionProjects\POO\Lab10\src\service_spalatorie.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir="C:\Users\lupse\CLionProjects\git POO\POO\Lab10\cmake-build-debug\CMakeFiles" --progress-num=$(CMAKE_PROGRESS_6) "Building CXX object CMakeFiles/Lab10.dir/src/service_spalatorie.cpp.obj"
+	C:\Users\lupse\AppData\Local\Programs\CLion\bin\mingw\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/Lab10.dir/src/service_spalatorie.cpp.obj -MF CMakeFiles\Lab10.dir\src\service_spalatorie.cpp.obj.d -o CMakeFiles\Lab10.dir\src\service_spalatorie.cpp.obj -c "C:\Users\lupse\CLionProjects\git POO\POO\Lab10\src\service_spalatorie.cpp"
 
 CMakeFiles/Lab10.dir/src/service_spalatorie.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/Lab10.dir/src/service_spalatorie.cpp.i"
-	C:\Users\lupse\AppData\Local\Programs\CLion\bin\mingw\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E C:\Users\lupse\CLionProjects\POO\Lab10\src\service_spalatorie.cpp > CMakeFiles\Lab10.dir\src\service_spalatorie.cpp.i
+	C:\Users\lupse\AppData\Local\Programs\CLion\bin\mingw\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "C:\Users\lupse\CLionProjects\git POO\POO\Lab10\src\service_spalatorie.cpp" > CMakeFiles\Lab10.dir\src\service_spalatorie.cpp.i
 
 CMakeFiles/Lab10.dir/src/service_spalatorie.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/Lab10.dir/src/service_spalatorie.cpp.s"
-	C:\Users\lupse\AppData\Local\Programs\CLion\bin\mingw\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S C:\Users\lupse\CLionProjects\POO\Lab10\src\service_spalatorie.cpp -o CMakeFiles\Lab10.dir\src\service_spalatorie.cpp.s
+	C:\Users\lupse\AppData\Local\Programs\CLion\bin\mingw\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "C:\Users\lupse\CLionProjects\git POO\POO\Lab10\src\service_spalatorie.cpp" -o CMakeFiles\Lab10.dir\src\service_spalatorie.cpp.s
 
 CMakeFiles/Lab10.dir/src/teste.cpp.obj: CMakeFiles/Lab10.dir/flags.make
 CMakeFiles/Lab10.dir/src/teste.cpp.obj: CMakeFiles/Lab10.dir/includes_CXX.rsp
-CMakeFiles/Lab10.dir/src/teste.cpp.obj: C:/Users/lupse/CLionProjects/POO/Lab10/src/teste.cpp
+CMakeFiles/Lab10.dir/src/teste.cpp.obj: C:/Users/lupse/CLionProjects/git\ POO/POO/Lab10/src/teste.cpp
 CMakeFiles/Lab10.dir/src/teste.cpp.obj: CMakeFiles/Lab10.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=C:\Users\lupse\CLionProjects\POO\Lab10\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Building CXX object CMakeFiles/Lab10.dir/src/teste.cpp.obj"
-	C:\Users\lupse\AppData\Local\Programs\CLion\bin\mingw\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/Lab10.dir/src/teste.cpp.obj -MF CMakeFiles\Lab10.dir\src\teste.cpp.obj.d -o CMakeFiles\Lab10.dir\src\teste.cpp.obj -c C:\Users\lupse\CLionProjects\POO\Lab10\src\teste.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir="C:\Users\lupse\CLionProjects\git POO\POO\Lab10\cmake-build-debug\CMakeFiles" --progress-num=$(CMAKE_PROGRESS_7) "Building CXX object CMakeFiles/Lab10.dir/src/teste.cpp.obj"
+	C:\Users\lupse\AppData\Local\Programs\CLion\bin\mingw\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/Lab10.dir/src/teste.cpp.obj -MF CMakeFiles\Lab10.dir\src\teste.cpp.obj.d -o CMakeFiles\Lab10.dir\src\teste.cpp.obj -c "C:\Users\lupse\CLionProjects\git POO\POO\Lab10\src\teste.cpp"
 
 CMakeFiles/Lab10.dir/src/teste.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/Lab10.dir/src/teste.cpp.i"
-	C:\Users\lupse\AppData\Local\Programs\CLion\bin\mingw\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E C:\Users\lupse\CLionProjects\POO\Lab10\src\teste.cpp > CMakeFiles\Lab10.dir\src\teste.cpp.i
+	C:\Users\lupse\AppData\Local\Programs\CLion\bin\mingw\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "C:\Users\lupse\CLionProjects\git POO\POO\Lab10\src\teste.cpp" > CMakeFiles\Lab10.dir\src\teste.cpp.i
 
 CMakeFiles/Lab10.dir/src/teste.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/Lab10.dir/src/teste.cpp.s"
-	C:\Users\lupse\AppData\Local\Programs\CLion\bin\mingw\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S C:\Users\lupse\CLionProjects\POO\Lab10\src\teste.cpp -o CMakeFiles\Lab10.dir\src\teste.cpp.s
+	C:\Users\lupse\AppData\Local\Programs\CLion\bin\mingw\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "C:\Users\lupse\CLionProjects\git POO\POO\Lab10\src\teste.cpp" -o CMakeFiles\Lab10.dir\src\teste.cpp.s
 
 CMakeFiles/Lab10.dir/main.cpp.obj: CMakeFiles/Lab10.dir/flags.make
 CMakeFiles/Lab10.dir/main.cpp.obj: CMakeFiles/Lab10.dir/includes_CXX.rsp
-CMakeFiles/Lab10.dir/main.cpp.obj: C:/Users/lupse/CLionProjects/POO/Lab10/main.cpp
+CMakeFiles/Lab10.dir/main.cpp.obj: C:/Users/lupse/CLionProjects/git\ POO/POO/Lab10/main.cpp
 CMakeFiles/Lab10.dir/main.cpp.obj: CMakeFiles/Lab10.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=C:\Users\lupse\CLionProjects\POO\Lab10\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_8) "Building CXX object CMakeFiles/Lab10.dir/main.cpp.obj"
-	C:\Users\lupse\AppData\Local\Programs\CLion\bin\mingw\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/Lab10.dir/main.cpp.obj -MF CMakeFiles\Lab10.dir\main.cpp.obj.d -o CMakeFiles\Lab10.dir\main.cpp.obj -c C:\Users\lupse\CLionProjects\POO\Lab10\main.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir="C:\Users\lupse\CLionProjects\git POO\POO\Lab10\cmake-build-debug\CMakeFiles" --progress-num=$(CMAKE_PROGRESS_8) "Building CXX object CMakeFiles/Lab10.dir/main.cpp.obj"
+	C:\Users\lupse\AppData\Local\Programs\CLion\bin\mingw\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/Lab10.dir/main.cpp.obj -MF CMakeFiles\Lab10.dir\main.cpp.obj.d -o CMakeFiles\Lab10.dir\main.cpp.obj -c "C:\Users\lupse\CLionProjects\git POO\POO\Lab10\main.cpp"
 
 CMakeFiles/Lab10.dir/main.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/Lab10.dir/main.cpp.i"
-	C:\Users\lupse\AppData\Local\Programs\CLion\bin\mingw\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E C:\Users\lupse\CLionProjects\POO\Lab10\main.cpp > CMakeFiles\Lab10.dir\main.cpp.i
+	C:\Users\lupse\AppData\Local\Programs\CLion\bin\mingw\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "C:\Users\lupse\CLionProjects\git POO\POO\Lab10\main.cpp" > CMakeFiles\Lab10.dir\main.cpp.i
 
 CMakeFiles/Lab10.dir/main.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/Lab10.dir/main.cpp.s"
-	C:\Users\lupse\AppData\Local\Programs\CLion\bin\mingw\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S C:\Users\lupse\CLionProjects\POO\Lab10\main.cpp -o CMakeFiles\Lab10.dir\main.cpp.s
+	C:\Users\lupse\AppData\Local\Programs\CLion\bin\mingw\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "C:\Users\lupse\CLionProjects\git POO\POO\Lab10\main.cpp" -o CMakeFiles\Lab10.dir\main.cpp.s
 
 # Object files for target Lab10
 Lab10_OBJECTS = \
@@ -211,13 +211,13 @@ Lab10.exe: CMakeFiles/Lab10.dir/src/service_spalatorie.cpp.obj
 Lab10.exe: CMakeFiles/Lab10.dir/src/teste.cpp.obj
 Lab10.exe: CMakeFiles/Lab10.dir/main.cpp.obj
 Lab10.exe: CMakeFiles/Lab10.dir/build.make
-Lab10.exe: E:/Qt/6.9.0/mingw_64/lib/libQt6Widgets.a
-Lab10.exe: E:/Qt/6.9.0/mingw_64/lib/libQt6Gui.a
-Lab10.exe: E:/Qt/6.9.0/mingw_64/lib/libQt6Core.a
+Lab10.exe: C:/Qt/6.9.0/mingw_64/lib/libQt6Widgets.a
+Lab10.exe: C:/Qt/6.9.0/mingw_64/lib/libQt6Gui.a
+Lab10.exe: C:/Qt/6.9.0/mingw_64/lib/libQt6Core.a
 Lab10.exe: CMakeFiles/Lab10.dir/linkLibs.rsp
 Lab10.exe: CMakeFiles/Lab10.dir/objects1.rsp
 Lab10.exe: CMakeFiles/Lab10.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --bold --progress-dir=C:\Users\lupse\CLionProjects\POO\Lab10\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_9) "Linking CXX executable Lab10.exe"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --bold --progress-dir="C:\Users\lupse\CLionProjects\git POO\POO\Lab10\cmake-build-debug\CMakeFiles" --progress-num=$(CMAKE_PROGRESS_9) "Linking CXX executable Lab10.exe"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles\Lab10.dir\link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.
@@ -229,6 +229,6 @@ CMakeFiles/Lab10.dir/clean:
 .PHONY : CMakeFiles/Lab10.dir/clean
 
 CMakeFiles/Lab10.dir/depend:
-	$(CMAKE_COMMAND) -E cmake_depends "MinGW Makefiles" C:\Users\lupse\CLionProjects\POO\Lab10 C:\Users\lupse\CLionProjects\POO\Lab10 C:\Users\lupse\CLionProjects\POO\Lab10\cmake-build-debug C:\Users\lupse\CLionProjects\POO\Lab10\cmake-build-debug C:\Users\lupse\CLionProjects\POO\Lab10\cmake-build-debug\CMakeFiles\Lab10.dir\DependInfo.cmake "--color=$(COLOR)"
+	$(CMAKE_COMMAND) -E cmake_depends "MinGW Makefiles" "C:\Users\lupse\CLionProjects\git POO\POO\Lab10" "C:\Users\lupse\CLionProjects\git POO\POO\Lab10" "C:\Users\lupse\CLionProjects\git POO\POO\Lab10\cmake-build-debug" "C:\Users\lupse\CLionProjects\git POO\POO\Lab10\cmake-build-debug" "C:\Users\lupse\CLionProjects\git POO\POO\Lab10\cmake-build-debug\CMakeFiles\Lab10.dir\DependInfo.cmake" "--color=$(COLOR)"
 .PHONY : CMakeFiles/Lab10.dir/depend
 

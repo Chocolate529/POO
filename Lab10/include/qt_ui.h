@@ -66,7 +66,7 @@ private:
     void loadData(std::vector<Masina> v);
     void initConnect();
     void refreshGUI(std::vector<Masina> v);
-
+    // void showCar(int i, int j);
 public:
     explicit QtMasinaUI(MasinaService& srv, ServiceSpalatorie& spal): service{srv}, spalatorie{spal} {
         initGUI();
