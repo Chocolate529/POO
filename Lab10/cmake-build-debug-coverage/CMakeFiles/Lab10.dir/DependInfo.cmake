@@ -10,6 +10,8 @@ set(CMAKE_DEPENDS_LANGUAGES
 set(CMAKE_DEPENDS_DEPENDENCY_FILES
   "C:/Users/lupse/CLionProjects/POO/Lab10/main.cpp" "CMakeFiles/Lab10.dir/main.cpp.obj" "gcc" "CMakeFiles/Lab10.dir/main.cpp.obj.d"
   "C:/Users/lupse/CLionProjects/POO/Lab10/src/console_ui.cpp" "CMakeFiles/Lab10.dir/src/console_ui.cpp.obj" "gcc" "CMakeFiles/Lab10.dir/src/console_ui.cpp.obj.d"
+  "C:/Users/lupse/CLionProjects/POO/Lab10/src/cosCRUDGUI.cpp" "CMakeFiles/Lab10.dir/src/cosCRUDGUI.cpp.obj" "gcc" "CMakeFiles/Lab10.dir/src/cosCRUDGUI.cpp.obj.d"
+  "C:/Users/lupse/CLionProjects/POO/Lab10/src/cosReadOnlyGUI.cpp" "CMakeFiles/Lab10.dir/src/cosReadOnlyGUI.cpp.obj" "gcc" "CMakeFiles/Lab10.dir/src/cosReadOnlyGUI.cpp.obj.d"
   "C:/Users/lupse/CLionProjects/POO/Lab10/src/domeniu_masina.cpp" "CMakeFiles/Lab10.dir/src/domeniu_masina.cpp.obj" "gcc" "CMakeFiles/Lab10.dir/src/domeniu_masina.cpp.obj.d"
   "C:/Users/lupse/CLionProjects/POO/Lab10/src/qt_ui.cpp" "CMakeFiles/Lab10.dir/src/qt_ui.cpp.obj" "gcc" "CMakeFiles/Lab10.dir/src/qt_ui.cpp.obj.d"
   "C:/Users/lupse/CLionProjects/POO/Lab10/src/repo_masina.cpp" "CMakeFiles/Lab10.dir/src/repo_masina.cpp.obj" "gcc" "CMakeFiles/Lab10.dir/src/repo_masina.cpp.obj.d"

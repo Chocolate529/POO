@@ -21,6 +21,8 @@
 #include "service_masina.h"
 #include "include/domeniu_masina.h"
 #include "service_spalatorie.h"
+#include "cosCRUDGUI.h"
+#include "cosReadOnlyGUI.h"
 #define ALPHA 0.5
 #define BETA 0.25
 class QtMasinaUI: public QWidget {
@@ -53,7 +55,8 @@ private:
     QPushButton* btnModifica = new QPushButton("Modifica");
     QPushButton* btnFiltrare = new QPushButton("Filtrare");
     QPushButton* btnSortare = new QPushButton("Sortare");
-    QPushButton* btnWash = new QPushButton("Spalatorie");
+    QPushButton* btnWash = new QPushButton("Spalatorie CRUD");
+    QPushButton* btnWash2 = new QPushButton("SPalatorie Histogram");
     void adaugaGUI();
     void stergeGUI();
     void modificaGUI();
@@ -61,6 +64,7 @@ private:
     void filtrareGUI();
     void sortareGUI() ;
     void spalatorieGUI();
+    void spalatorieHistogram();
     void sondajeGUI();
     void initGUI();
     void loadData(std::vector<Masina> v);

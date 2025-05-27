@@ -3,7 +3,8 @@
 #include "include/console_ui.h"
 #include "include/teste.h"
 #include "include/qt_ui.h"
-
+#include "include/cosCRUDGUI.h"
+#include "include/cosReadOnlyGUI.h"
 int main(int argc, char** argv) {
     Teste::runTests();
     MasinaRepo repo;
@@ -16,6 +17,7 @@ int main(int argc, char** argv) {
     QApplication app(argc, argv);
     QtMasinaUI qt{service, spalatorie};
     qt.show();
+
     app.exec();
     // ui.run();
 }

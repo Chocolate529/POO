@@ -337,178 +337,13 @@ void QtMasinaUI::sortareGUI() {
       dialog->exec();
 }
 void QtMasinaUI::spalatorieGUI() {
-      auto dialog = new QDialog();
-
-      dialog->setWindowTitle("Spalatorie");
-      dialog->resize(DIALOG_WIDTH, DIALOG_HEIGHT);
-
-      auto layoutWash = new QHBoxLayout(dialog);
-
-      auto tableWash = new QListWidget(dialog);
-      tableWash->addItem({"Numar Inmatriculare | Producator | Model | Tip"});
-      tableWash->setEditTriggers(QAbstractItemView::NoEditTriggers);
-      layoutWash->addWidget(tableWash);
-
-      auto btnLayout = new QVBoxLayout();
-      QPushButton*  btnAdaugaWash = new QPushButton("Adauga");
-      QPushButton* btnGoleste = new QPushButton("Goleste");
-      QPushButton* btnExport = new QPushButton("Export");
-      QPushButton* btnFillRandom = new QPushButton("Fill Random");
-
-      btnLayout->addWidget(btnAdaugaWash);
-      btnLayout->addWidget(btnGoleste);
-      btnLayout->addWidget(btnExport);
-      btnLayout->addWidget(btnFillRandom);
-
-      layoutWash->addLayout(btnLayout);
-
-      auto updateTable = [=]() {
-            tableWash->clear();
-            tableWash->addItem({"Numar Inmatriculare | Producator | Model | Tip"});
-
-            for (const auto& m : masini_spalatorie) {
-                  QString linie = QString::fromStdString(m.getNrInmatriculare()+" | "
-                        +m.getProducator()+" | "+m.getModel()+" | "+m.getTip());
-                  tableWash->addItem(linie);
-            }
-      };
-
-      connect(btnAdaugaWash, &QPushButton::clicked, [=] {
-            auto dialogAdd = new QDialog();
-            dialogAdd->setWindowTitle("Adauga");
-
-            auto layoutAddWash = new QVBoxLayout(dialogAdd);
-
-            auto formAdd = new QFormLayout();
-            auto nrInmatriculare = new QLineEdit();
-            formAdd->addRow("Numar Inmatriculare", nrInmatriculare);
-            layoutAddWash->addLayout(formAdd);
-
-            auto btnAdd = new QPushButton("Adauga");
-            auto btnCancel = new QPushButton("Cancel");
-            auto btnLayoutAdd = new QHBoxLayout();
-            btnLayoutAdd->addWidget(btnAdd);
-            btnLayoutAdd->addWidget(btnCancel);
-            layoutAddWash->addLayout(btnLayoutAdd);
-            connect(btnAdd, &QPushButton::clicked, [=]() {
-            try {
-                 if (nrInmatriculare->text().isEmpty()) {
-                        QMessageBox::warning(dialogAdd, "Eroare", "Nici un numar de inmatriculare!");
-                        return;
-                 }
-                std::string nr = nrInmatriculare->text().toStdString();
-                spalatorie.adaugaMasina(nr);
-                  masini_spalatorie = spalatorie.getAllMasini();
-                updateTable();
-                  QMessageBox::information(dialog, "Succes", "Masini adaugate in spalatorie!");
-                dialogAdd->close();
-            } catch (const std::exception& ex) {
-                QMessageBox::warning(dialogAdd, "Eroare", ex.what());
-            }
-        });
-
-            connect(btnCancel, &QPushButton::clicked, dialogAdd, &QDialog::close);
-            dialogAdd->exec();
-
-      });
-
-      connect(btnGoleste, QPushButton::clicked, [=]() {
-            masini_spalatorie.clear();
-            spalatorie.golesteLista();
-            updateTable();
-            QMessageBox::information(dialog, "Succes", "Masini sterse din spalatorie!");
-      });
-
-      connect(btnExport, QPushButton::clicked, [=]() {
-            auto dialogExport = new QDialog();
-            dialogExport->setWindowTitle("Export");
-
-            auto layoutExport = new QVBoxLayout(dialogExport);
-            auto formExport = new QFormLayout();
-
-            auto radioBtnLayout = new QHBoxLayout();
-            auto radioCsv = new QRadioButton("Csv");
-            auto radioHtml = new QRadioButton("Html");
-            radioCsv->setChecked(true);
-            radioBtnLayout->addWidget(radioCsv);
-            radioBtnLayout->addWidget(radioHtml);
-            layoutExport->addLayout(radioBtnLayout);
-
-            auto fileName = new QLineEdit();
-            formExport->addRow("Numele fisierului", fileName);
-            layoutExport->addLayout(formExport);
-
-            auto btnExportDialog = new QPushButton("Export");
-            auto btnCancel = new QPushButton("Cancel");
-            auto btnLayoutExport = new QHBoxLayout();
-            btnLayoutExport->addWidget(btnExportDialog);
-            btnLayoutExport->addWidget(btnCancel);
-            layoutExport->addLayout(btnLayoutExport);
-
-            connect(btnExportDialog, &QPushButton::clicked, [=]() {
-                  if (fileName->text().isEmpty()) {
-                        QMessageBox::warning(dialogExport, "Eroare", "Nici un nume de fisier!");
-                        return;
-                  }
-                  std::string numeFisier = fileName->text().toStdString();
-                  try {
-                        if (radioCsv->isChecked()) {
-                              spalatorie.exportCSV(numeFisier);
-                        } else {
-                              spalatorie.exportHTML(numeFisier);
-                        }
-                        QMessageBox::information(dialogExport, "Succes", "Export realizat cu succes");
-                        dialogExport->close();
-                  } catch (const std::exception& ex) {
-                        QMessageBox::warning(dialogExport, "Eroare", ex.what());
-                  }
-            });
-            connect(btnCancel, &QPushButton::clicked, dialogExport, &QDialog::close);
-            dialogExport->exec();
-      });
-
-      connect(btnFillRandom, QPushButton::clicked, [=]() {
-            auto dialogFillRandom = new QDialog();
-            dialogFillRandom->setWindowTitle("Fill Random");
-
-            auto layoutFill = new QVBoxLayout(dialogFillRandom);
-
-            auto formFill = new QFormLayout();
-            auto numar = new QLineEdit();
-            formFill->addRow("Numar de masini", numar);
-            layoutFill->addLayout(formFill);
-
-            auto btnLayoutFill = new QHBoxLayout();
-            auto btnFill = new QPushButton("Fill");
-            auto btnCancel = new QPushButton("Cancel");
-            btnLayoutFill->addWidget(btnFill);
-            btnLayoutFill->addWidget(btnCancel);
-            layoutFill->addLayout(btnLayoutFill);
-
-            connect(btnFill, QPushButton::clicked, [=]() {
-                  if (numar->text().isEmpty()) {
-                        QMessageBox::warning(dialogFillRandom, "Error", "Introduceti un numar!");
-                        return;
-                  }
-                  int nr = numar->text().toInt();
-                  try {
-                        spalatorie.generareLista(nr);
-                        masini_spalatorie = spalatorie.getAllMasini();
-                        updateTable();
-                        QMessageBox::information(dialogFillRandom,"Succes","Masini generate cu succes!");
-                        dialogFillRandom->close();
-                  } catch (const std::exception& ex) {
-                        QMessageBox::warning(dialogFillRandom, "Eroare", ex.what());
-                  }
-            });
-            connect(btnCancel, QPushButton::clicked, dialogFillRandom, &QDialog::close);
-
-            dialogFillRandom->exec();
-      });
-
-      dialog->exec();
+     auto cos = new cosCRUDGUI(spalatorie);
+      cos->show();
 }
-
+void QtMasinaUI::spalatorieHistogram() {
+      auto histogram = new cosReadOnlyGUI(spalatorie);
+      histogram->show();
+}
 // void QtMasinaUI::showCar(int i, int j) {
 //       formLayout->addRow("i:", new QLineEdit(QString::number(i)));
 //       formLayout->addRow("j:", new QLineEdit(QString::number(j)));
@@ -558,6 +393,7 @@ void QtMasinaUI::initGUI() {
       layoutBtns->addWidget(btnFiltrare);
       layoutBtns->addWidget(btnSortare);
       layoutBtns->addWidget(btnWash);
+      layoutBtns->addWidget(btnWash2);
       layoutMain->addLayout(layoutBtns);
 
       layoutMain->addLayout(sondajeLayout);
@@ -576,7 +412,7 @@ void QtMasinaUI::initConnect() {
       connect(btnFiltrare, QPushButton::clicked, this, &QtMasinaUI::filtrareGUI);
       connect(btnSortare, QPushButton::clicked, this, &QtMasinaUI::sortareGUI);
       connect(btnWash, QPushButton::clicked, this, &QtMasinaUI::spalatorieGUI);
-
+      connect(btnWash2, QPushButton::clicked, this, &QtMasinaUI::spalatorieHistogram);
       // connect(tableWidget, QTableWidget::cellClicked, this, &QtMasinaUI::showCar);
 }
 

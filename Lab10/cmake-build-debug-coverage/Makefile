@@ -176,6 +176,54 @@ src/console_ui.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\Lab10.dir\build.make CMakeFiles/Lab10.dir/src/console_ui.cpp.s
 .PHONY : src/console_ui.cpp.s
 
+src/cosCRUDGUI.obj: src/cosCRUDGUI.cpp.obj
+.PHONY : src/cosCRUDGUI.obj
+
+# target to build an object file
+src/cosCRUDGUI.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Lab10.dir\build.make CMakeFiles/Lab10.dir/src/cosCRUDGUI.cpp.obj
+.PHONY : src/cosCRUDGUI.cpp.obj
+
+src/cosCRUDGUI.i: src/cosCRUDGUI.cpp.i
+.PHONY : src/cosCRUDGUI.i
+
+# target to preprocess a source file
+src/cosCRUDGUI.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Lab10.dir\build.make CMakeFiles/Lab10.dir/src/cosCRUDGUI.cpp.i
+.PHONY : src/cosCRUDGUI.cpp.i
+
+src/cosCRUDGUI.s: src/cosCRUDGUI.cpp.s
+.PHONY : src/cosCRUDGUI.s
+
+# target to generate assembly for a file
+src/cosCRUDGUI.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Lab10.dir\build.make CMakeFiles/Lab10.dir/src/cosCRUDGUI.cpp.s
+.PHONY : src/cosCRUDGUI.cpp.s
+
+src/cosReadOnlyGUI.obj: src/cosReadOnlyGUI.cpp.obj
+.PHONY : src/cosReadOnlyGUI.obj
+
+# target to build an object file
+src/cosReadOnlyGUI.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Lab10.dir\build.make CMakeFiles/Lab10.dir/src/cosReadOnlyGUI.cpp.obj
+.PHONY : src/cosReadOnlyGUI.cpp.obj
+
+src/cosReadOnlyGUI.i: src/cosReadOnlyGUI.cpp.i
+.PHONY : src/cosReadOnlyGUI.i
+
+# target to preprocess a source file
+src/cosReadOnlyGUI.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Lab10.dir\build.make CMakeFiles/Lab10.dir/src/cosReadOnlyGUI.cpp.i
+.PHONY : src/cosReadOnlyGUI.cpp.i
+
+src/cosReadOnlyGUI.s: src/cosReadOnlyGUI.cpp.s
+.PHONY : src/cosReadOnlyGUI.s
+
+# target to generate assembly for a file
+src/cosReadOnlyGUI.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Lab10.dir\build.make CMakeFiles/Lab10.dir/src/cosReadOnlyGUI.cpp.s
+.PHONY : src/cosReadOnlyGUI.cpp.s
+
 src/domeniu_masina.obj: src/domeniu_masina.cpp.obj
 .PHONY : src/domeniu_masina.obj
 
@@ -335,6 +383,12 @@ help:
 	@echo ... src/console_ui.obj
 	@echo ... src/console_ui.i
 	@echo ... src/console_ui.s
+	@echo ... src/cosCRUDGUI.obj
+	@echo ... src/cosCRUDGUI.i
+	@echo ... src/cosCRUDGUI.s
+	@echo ... src/cosReadOnlyGUI.obj
+	@echo ... src/cosReadOnlyGUI.i
+	@echo ... src/cosReadOnlyGUI.s
 	@echo ... src/domeniu_masina.obj
 	@echo ... src/domeniu_masina.i
 	@echo ... src/domeniu_masina.s

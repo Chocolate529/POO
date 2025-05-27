@@ -7,7 +7,8 @@
 #include <vector>
 #include <fstream>
 #include "service_masina.h"
-class ServiceSpalatorie{
+#include "observer.h"
+class ServiceSpalatorie : public Observable {
 private:
     std::vector<Masina> masiniSpalatorie;
     MasinaService& srv;
@@ -21,7 +22,7 @@ public:
     void exportHTML(const std::string& fileName) const ;
 
     [[nodiscard]] int nrMasini() const;
-    std::vector<Masina> getAllMasini() const ;
+    [[nodiscard]] std::vector<Masina> getAllMasini() const ;
 
 };
 #endif //SERVICE_SPALATORIE_H

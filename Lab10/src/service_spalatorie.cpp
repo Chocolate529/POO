@@ -15,12 +15,13 @@ void ServiceSpalatorie::adaugaMasina(const std::string &nrInmatriculare) {
            return masina == m;
        }) == masiniSpalatorie.end()) {
         masiniSpalatorie.push_back(masina);
-
+        notifyObservers();
        }
 }
 
 void ServiceSpalatorie::golesteLista() {
     masiniSpalatorie.clear();
+    notifyObservers();
 }
 
 void ServiceSpalatorie::exportCSV(const std::string& fileName) const {
@@ -32,7 +33,6 @@ void ServiceSpalatorie::exportCSV(const std::string& fileName) const {
 }
 
 void ServiceSpalatorie::generareLista(int nrTotal) {
-    masiniSpalatorie.clear();
     std::vector masini{srv.getAllMasini()};
     if (masini.empty()) {
         throw ServiceException("Nu exista masini!");
@@ -40,10 +40,15 @@ void ServiceSpalatorie::generareLista(int nrTotal) {
     std::mt19937 gen{std::random_device{}()};
     std::uniform_int_distribution<int> dis{0, static_cast<int>(masini.size())-1};
     if (masini.size() == nrTotal) {
+        masiniSpalatorie.clear();
+
         const auto seed = std::chrono::system_clock::now().time_since_epoch().count();
         std::shuffle(masini.begin(), masini.end(), std::default_random_engine(seed));
         masiniSpalatorie = masini;
+        notifyObservers();
     } else if (masini.size() > nrTotal) {
+        masiniSpalatorie.clear();
+
         while (nrMasini() < nrTotal) {
             const int rndNr = dis(gen);
             const Masina& masina = masini[rndNr];
@@ -56,6 +61,7 @@ void ServiceSpalatorie::generareLista(int nrTotal) {
                 }
             }
         }
+        notifyObservers();
     } else {
         throw ServiceException("Nu exista masini destule!");
     }

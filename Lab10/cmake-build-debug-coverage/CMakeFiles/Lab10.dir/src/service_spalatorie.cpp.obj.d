@@ -192,6 +192,7 @@ CMakeFiles/Lab10.dir/src/service_spalatorie.cpp.obj: \
  C:/Users/lupse/CLionProjects/POO/Lab10/include/repo_masina.h \
  C:/Users/lupse/CLionProjects/POO/Lab10/include/domeniu_masina.h \
  C:/Users/lupse/CLionProjects/POO/Lab10/include/undo.h \
+ C:/Users/lupse/CLionProjects/POO/Lab10/include/observer.h \
  C:/Users/lupse/AppData/Local/Programs/CLion/bin/mingw/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/algorithm \
  C:/Users/lupse/AppData/Local/Programs/CLion/bin/mingw/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/bits/stl_algo.h \
  C:/Users/lupse/AppData/Local/Programs/CLion/bin/mingw/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/bits/algorithmfwd.h \

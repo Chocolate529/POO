@@ -505,4 +505,26 @@ CMakeFiles/Lab10.dir/src/qt_ui.cpp.obj: \
  C:/Users/lupse/AppData/Local/Programs/CLion/bin/mingw/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/fstream \
  C:/Users/lupse/AppData/Local/Programs/CLion/bin/mingw/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/x86_64-w64-mingw32/bits/basic_file.h \
  C:/Users/lupse/AppData/Local/Programs/CLion/bin/mingw/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/x86_64-w64-mingw32/bits/c++io.h \
- C:/Users/lupse/AppData/Local/Programs/CLion/bin/mingw/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/bits/fstream.tcc
+ C:/Users/lupse/AppData/Local/Programs/CLion/bin/mingw/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/bits/fstream.tcc \
+ C:/Users/lupse/CLionProjects/POO/Lab10/include/observer.h \
+ C:/Users/lupse/CLionProjects/POO/Lab10/include/cosCRUDGUI.h \
+ E:/Qt/6.9.0/mingw_64/include/QtWidgets/QWidget \
+ E:/Qt/6.9.0/mingw_64/include/QtWidgets/qwidget.h \
+ E:/Qt/6.9.0/mingw_64/include/QtWidgets/QVBoxLayout \
+ E:/Qt/6.9.0/mingw_64/include/QtWidgets/qboxlayout.h \
+ E:/Qt/6.9.0/mingw_64/include/QtWidgets/QHBoxLayout \
+ E:/Qt/6.9.0/mingw_64/include/QtWidgets/QPushButton \
+ E:/Qt/6.9.0/mingw_64/include/QtWidgets/qpushbutton.h \
+ E:/Qt/6.9.0/mingw_64/include/QtWidgets/QListWidget \
+ E:/Qt/6.9.0/mingw_64/include/QtWidgets/qlistwidget.h \
+ E:/Qt/6.9.0/mingw_64/include/QtWidgets/QDialog \
+ E:/Qt/6.9.0/mingw_64/include/QtWidgets/qdialog.h \
+ E:/Qt/6.9.0/mingw_64/include/QtWidgets/QFormLayout \
+ E:/Qt/6.9.0/mingw_64/include/QtWidgets/qformlayout.h \
+ E:/Qt/6.9.0/mingw_64/include/QtWidgets/QLineEdit \
+ E:/Qt/6.9.0/mingw_64/include/QtWidgets/qlineedit.h \
+ E:/Qt/6.9.0/mingw_64/include/QtWidgets/QMessageBox \
+ E:/Qt/6.9.0/mingw_64/include/QtWidgets/qmessagebox.h \
+ C:/Users/lupse/CLionProjects/POO/Lab10/include/cosReadOnlyGUI.h \
+ E:/Qt/6.9.0/mingw_64/include/QtGui/QPainter \
+ E:/Qt/6.9.0/mingw_64/include/QtGui/qpainter.h
