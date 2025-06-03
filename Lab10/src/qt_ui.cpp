@@ -351,25 +351,7 @@ void QtMasinaUI::spalatorieHistogram() {
 
 void QtMasinaUI::loadData(std::vector<Masina> v) {
       masini_ui = v;
-      tableWidget->clearContents();
-      tableWidget->setRowCount(static_cast<int>(service.getAllMasini().size()));
-      tableWidget->setColumnCount(4);
-      tableWidget->setHorizontalHeaderLabels({"Numar \n Inmatriculare","Producator",
-                                                      "Model",  "Tip"});
-      tableWidget->horizontalHeader()->setSectionResizeMode(QHeaderView::Stretch);
-      tableWidget->resizeRowsToContents();
-      int row = 0;
-      for (const auto& masina: masini_ui) {
-            QString numar = QString::fromStdString(masina.getNrInmatriculare());
-            QString producator = QString::fromStdString(masina.getProducator());
-            QString model = QString::fromStdString(masina.getModel());
-            QString tip = QString::fromStdString(masina.getTip());
-            tableWidget->setItem(row, 0, new QTableWidgetItem(numar));
-            tableWidget->setItem(row, 1, new QTableWidgetItem(producator));
-            tableWidget->setItem(row, 2, new QTableWidgetItem(model));
-            tableWidget->setItem(row, 3, new QTableWidgetItem(tip));
-            row++;
-      }
+      model->setMasini(masini_ui);
 }
 
 
@@ -377,10 +359,10 @@ void QtMasinaUI::loadData(std::vector<Masina> v) {
 void QtMasinaUI::initGUI() {
 
       setLayout(layoutMain);
-      tableWidget->setEditTriggers(QAbstractItemView::NoEditTriggers);
       // viewLayout->addWidget(tableWidget);
       // viewLayout->addLayout(formLayout);
-      layoutMain->addWidget(tableWidget);
+      tableView->setModel(model);
+      layoutMain->addWidget(tableView);
       layoutMain->addWidget(btnRefresh);
       connect(btnRefresh, &QPushButton::clicked, [=] {
 

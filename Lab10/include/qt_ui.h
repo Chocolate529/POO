@@ -23,6 +23,7 @@
 #include "service_spalatorie.h"
 #include "cosCRUDGUI.h"
 #include "cosReadOnlyGUI.h"
+#include "table_model.h"
 #define ALPHA 0.5
 #define BETA 0.25
 class QtMasinaUI: public QWidget {
@@ -32,7 +33,8 @@ private:
 
     MasinaService& service;
     ServiceSpalatorie& spalatorie;
-    QTableWidget* tableWidget = new QTableWidget;
+    QTableView* tableView = new QTableView(this);
+    MyTableModel* model = new MyTableModel(this);
     QScreen* screen = QGuiApplication::primaryScreen();
     QRect screenGeometry = screen->geometry();
 

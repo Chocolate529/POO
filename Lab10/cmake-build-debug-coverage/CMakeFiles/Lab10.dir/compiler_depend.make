@@ -278,6 +278,7 @@ CMakeFiles/Lab10.dir/main.cpp.obj: C:/Users/lupse/CLionProjects/POO/Lab10/main.c
   C:/Users/lupse/CLionProjects/POO/Lab10/include/repo_masina.h \
   C:/Users/lupse/CLionProjects/POO/Lab10/include/service_masina.h \
   C:/Users/lupse/CLionProjects/POO/Lab10/include/service_spalatorie.h \
+  C:/Users/lupse/CLionProjects/POO/Lab10/include/table_model.h \
   C:/Users/lupse/CLionProjects/POO/Lab10/include/teste.h \
   C:/Users/lupse/CLionProjects/POO/Lab10/include/undo.h \
   E:/Qt/6.9.0/mingw_64/include/QtWidgets/QDialog \
@@ -290,6 +291,7 @@ CMakeFiles/Lab10.dir/main.cpp.obj: C:/Users/lupse/CLionProjects/POO/Lab10/main.c
   E:/Qt/6.9.0/mingw_64/include/QtCore/QRect \
   E:/Qt/6.9.0/mingw_64/include/QtCore/QSize \
   E:/Qt/6.9.0/mingw_64/include/QtCore/QSizeF \
+  E:/Qt/6.9.0/mingw_64/include/QtCore/QString \
   E:/Qt/6.9.0/mingw_64/include/QtCore/q17memory.h \
   E:/Qt/6.9.0/mingw_64/include/QtCore/q20functional.h \
   E:/Qt/6.9.0/mingw_64/include/QtCore/q20iterator.h \
@@ -482,6 +484,7 @@ CMakeFiles/Lab10.dir/main.cpp.obj: C:/Users/lupse/CLionProjects/POO/Lab10/main.c
   E:/Qt/6.9.0/mingw_64/include/QtWidgets/QListWidget \
   E:/Qt/6.9.0/mingw_64/include/QtWidgets/QMessageBox \
   E:/Qt/6.9.0/mingw_64/include/QtWidgets/QPushButton \
+  E:/Qt/6.9.0/mingw_64/include/QtWidgets/QTableView \
   E:/Qt/6.9.0/mingw_64/include/QtWidgets/QVBoxLayout \
   E:/Qt/6.9.0/mingw_64/include/QtWidgets/QWidget \
   E:/Qt/6.9.0/mingw_64/include/QtWidgets/qabstractbutton.h \
@@ -2022,6 +2025,7 @@ CMakeFiles/Lab10.dir/src/qt_ui.cpp.obj: C:/Users/lupse/CLionProjects/POO/Lab10/s
   C:/Users/lupse/CLionProjects/POO/Lab10/include/repo_masina.h \
   C:/Users/lupse/CLionProjects/POO/Lab10/include/service_masina.h \
   C:/Users/lupse/CLionProjects/POO/Lab10/include/service_spalatorie.h \
+  C:/Users/lupse/CLionProjects/POO/Lab10/include/table_model.h \
   C:/Users/lupse/CLionProjects/POO/Lab10/include/undo.h \
   E:/Qt/6.9.0/mingw_64/include/QtWidgets/QDialog \
   E:/Qt/6.9.0/mingw_64/include/QtWidgets/qdialog.h \
@@ -2033,6 +2037,7 @@ CMakeFiles/Lab10.dir/src/qt_ui.cpp.obj: C:/Users/lupse/CLionProjects/POO/Lab10/s
   E:/Qt/6.9.0/mingw_64/include/QtCore/QRect \
   E:/Qt/6.9.0/mingw_64/include/QtCore/QSize \
   E:/Qt/6.9.0/mingw_64/include/QtCore/QSizeF \
+  E:/Qt/6.9.0/mingw_64/include/QtCore/QString \
   E:/Qt/6.9.0/mingw_64/include/QtCore/q17memory.h \
   E:/Qt/6.9.0/mingw_64/include/QtCore/q20functional.h \
   E:/Qt/6.9.0/mingw_64/include/QtCore/q20iterator.h \
@@ -2225,6 +2230,7 @@ CMakeFiles/Lab10.dir/src/qt_ui.cpp.obj: C:/Users/lupse/CLionProjects/POO/Lab10/s
   E:/Qt/6.9.0/mingw_64/include/QtWidgets/QListWidget \
   E:/Qt/6.9.0/mingw_64/include/QtWidgets/QMessageBox \
   E:/Qt/6.9.0/mingw_64/include/QtWidgets/QPushButton \
+  E:/Qt/6.9.0/mingw_64/include/QtWidgets/QTableView \
   E:/Qt/6.9.0/mingw_64/include/QtWidgets/QVBoxLayout \
   E:/Qt/6.9.0/mingw_64/include/QtWidgets/QWidget \
   E:/Qt/6.9.0/mingw_64/include/QtWidgets/qabstractbutton.h \
@@ -2887,6 +2893,449 @@ CMakeFiles/Lab10.dir/src/service_spalatorie.cpp.obj: C:/Users/lupse/CLionProject
   C:/Users/lupse/CLionProjects/POO/Lab10/include/service_spalatorie.h \
   C:/Users/lupse/CLionProjects/POO/Lab10/include/undo.h
 
+CMakeFiles/Lab10.dir/src/table_model.cpp.obj: C:/Users/lupse/CLionProjects/POO/Lab10/src/table_model.cpp \
+  C:/Users/lupse/AppData/Local/Programs/CLion/bin/mingw/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/algorithm \
+  C:/Users/lupse/AppData/Local/Programs/CLion/bin/mingw/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/array \
+  C:/Users/lupse/AppData/Local/Programs/CLion/bin/mingw/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/atomic \
+  C:/Users/lupse/AppData/Local/Programs/CLion/bin/mingw/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/backward/auto_ptr.h \
+  C:/Users/lupse/AppData/Local/Programs/CLion/bin/mingw/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/backward/binders.h \
+  C:/Users/lupse/AppData/Local/Programs/CLion/bin/mingw/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/bit \
+  C:/Users/lupse/AppData/Local/Programs/CLion/bin/mingw/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/bits/algorithmfwd.h \
+  C:/Users/lupse/AppData/Local/Programs/CLion/bin/mingw/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/bits/align.h \
+  C:/Users/lupse/AppData/Local/Programs/CLion/bin/mingw/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/bits/alloc_traits.h \
+  C:/Users/lupse/AppData/Local/Programs/CLion/bin/mingw/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/bits/allocated_ptr.h \
+  C:/Users/lupse/AppData/Local/Programs/CLion/bin/mingw/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/bits/allocator.h \
+  C:/Users/lupse/AppData/Local/Programs/CLion/bin/mingw/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/bits/atomic_base.h \
+  C:/Users/lupse/AppData/Local/Programs/CLion/bin/mingw/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/bits/atomic_lockfree_defines.h \
+  C:/Users/lupse/AppData/Local/Programs/CLion/bin/mingw/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/bits/atomic_wait.h \
+  C:/Users/lupse/AppData/Local/Programs/CLion/bin/mingw/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/bits/basic_ios.h \
+  C:/Users/lupse/AppData/Local/Programs/CLion/bin/mingw/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/bits/basic_ios.tcc \
+  C:/Users/lupse/AppData/Local/Programs/CLion/bin/mingw/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/bits/basic_string.h \
+  C:/Users/lupse/AppData/Local/Programs/CLion/bin/mingw/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/bits/basic_string.tcc \
+  C:/Users/lupse/AppData/Local/Programs/CLion/bin/mingw/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/bits/char_traits.h \
+  C:/Users/lupse/AppData/Local/Programs/CLion/bin/mingw/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/bits/charconv.h \
+  C:/Users/lupse/AppData/Local/Programs/CLion/bin/mingw/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/bits/chrono.h \
+  C:/Users/lupse/AppData/Local/Programs/CLion/bin/mingw/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/bits/chrono_io.h \
+  C:/Users/lupse/AppData/Local/Programs/CLion/bin/mingw/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/bits/codecvt.h \
+  C:/Users/lupse/AppData/Local/Programs/CLion/bin/mingw/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/bits/concept_check.h \
+  C:/Users/lupse/AppData/Local/Programs/CLion/bin/mingw/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/bits/cpp_type_traits.h \
+  C:/Users/lupse/AppData/Local/Programs/CLion/bin/mingw/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/bits/cxxabi_forced.h \
+  C:/Users/lupse/AppData/Local/Programs/CLion/bin/mingw/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/bits/cxxabi_init_exception.h \
+  C:/Users/lupse/AppData/Local/Programs/CLion/bin/mingw/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/bits/enable_special_members.h \
+  C:/Users/lupse/AppData/Local/Programs/CLion/bin/mingw/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/bits/erase_if.h \
+  C:/Users/lupse/AppData/Local/Programs/CLion/bin/mingw/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/bits/exception.h \
+  C:/Users/lupse/AppData/Local/Programs/CLion/bin/mingw/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/bits/exception_defines.h \
+  C:/Users/lupse/AppData/Local/Programs/CLion/bin/mingw/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/bits/exception_ptr.h \
+  C:/Users/lupse/AppData/Local/Programs/CLion/bin/mingw/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/bits/functexcept.h \
+  C:/Users/lupse/AppData/Local/Programs/CLion/bin/mingw/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/bits/functional_hash.h \
+  C:/Users/lupse/AppData/Local/Programs/CLion/bin/mingw/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/bits/hash_bytes.h \
+  C:/Users/lupse/AppData/Local/Programs/CLion/bin/mingw/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/bits/hashtable.h \
+  C:/Users/lupse/AppData/Local/Programs/CLion/bin/mingw/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/bits/hashtable_policy.h \
+  C:/Users/lupse/AppData/Local/Programs/CLion/bin/mingw/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/bits/invoke.h \
+  C:/Users/lupse/AppData/Local/Programs/CLion/bin/mingw/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/bits/ios_base.h \
+  C:/Users/lupse/AppData/Local/Programs/CLion/bin/mingw/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/bits/istream.tcc \
+  C:/Users/lupse/AppData/Local/Programs/CLion/bin/mingw/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/bits/iterator_concepts.h \
+  C:/Users/lupse/AppData/Local/Programs/CLion/bin/mingw/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/bits/list.tcc \
+  C:/Users/lupse/AppData/Local/Programs/CLion/bin/mingw/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/bits/locale_classes.h \
+  C:/Users/lupse/AppData/Local/Programs/CLion/bin/mingw/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/bits/locale_classes.tcc \
+  C:/Users/lupse/AppData/Local/Programs/CLion/bin/mingw/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/bits/locale_conv.h \
+  C:/Users/lupse/AppData/Local/Programs/CLion/bin/mingw/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/bits/locale_facets.h \
+  C:/Users/lupse/AppData/Local/Programs/CLion/bin/mingw/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/bits/locale_facets.tcc \
+  C:/Users/lupse/AppData/Local/Programs/CLion/bin/mingw/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/bits/locale_facets_nonio.h \
+  C:/Users/lupse/AppData/Local/Programs/CLion/bin/mingw/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/bits/locale_facets_nonio.tcc \
+  C:/Users/lupse/AppData/Local/Programs/CLion/bin/mingw/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/bits/localefwd.h \
+  C:/Users/lupse/AppData/Local/Programs/CLion/bin/mingw/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/bits/max_size_type.h \
+  C:/Users/lupse/AppData/Local/Programs/CLion/bin/mingw/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/bits/memory_resource.h \
+  C:/Users/lupse/AppData/Local/Programs/CLion/bin/mingw/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/bits/memoryfwd.h \
+  C:/Users/lupse/AppData/Local/Programs/CLion/bin/mingw/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/bits/move.h \
+  C:/Users/lupse/AppData/Local/Programs/CLion/bin/mingw/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/bits/nested_exception.h \
+  C:/Users/lupse/AppData/Local/Programs/CLion/bin/mingw/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/bits/new_allocator.h \
+  C:/Users/lupse/AppData/Local/Programs/CLion/bin/mingw/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/bits/node_handle.h \
+  C:/Users/lupse/AppData/Local/Programs/CLion/bin/mingw/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/bits/ostream.tcc \
+  C:/Users/lupse/AppData/Local/Programs/CLion/bin/mingw/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/bits/ostream_insert.h \
+  C:/Users/lupse/AppData/Local/Programs/CLion/bin/mingw/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/bits/parse_numbers.h \
+  C:/Users/lupse/AppData/Local/Programs/CLion/bin/mingw/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/bits/postypes.h \
+  C:/Users/lupse/AppData/Local/Programs/CLion/bin/mingw/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/bits/predefined_ops.h \
+  C:/Users/lupse/AppData/Local/Programs/CLion/bin/mingw/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/bits/ptr_traits.h \
+  C:/Users/lupse/AppData/Local/Programs/CLion/bin/mingw/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/bits/quoted_string.h \
+  C:/Users/lupse/AppData/Local/Programs/CLion/bin/mingw/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/bits/range_access.h \
+  C:/Users/lupse/AppData/Local/Programs/CLion/bin/mingw/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/bits/ranges_algo.h \
+  C:/Users/lupse/AppData/Local/Programs/CLion/bin/mingw/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/bits/ranges_algobase.h \
+  C:/Users/lupse/AppData/Local/Programs/CLion/bin/mingw/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/bits/ranges_base.h \
+  C:/Users/lupse/AppData/Local/Programs/CLion/bin/mingw/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/bits/ranges_cmp.h \
+  C:/Users/lupse/AppData/Local/Programs/CLion/bin/mingw/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/bits/ranges_uninitialized.h \
+  C:/Users/lupse/AppData/Local/Programs/CLion/bin/mingw/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/bits/ranges_util.h \
+  C:/Users/lupse/AppData/Local/Programs/CLion/bin/mingw/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/bits/refwrap.h \
+  C:/Users/lupse/AppData/Local/Programs/CLion/bin/mingw/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/bits/requires_hosted.h \
+  C:/Users/lupse/AppData/Local/Programs/CLion/bin/mingw/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/bits/shared_ptr.h \
+  C:/Users/lupse/AppData/Local/Programs/CLion/bin/mingw/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/bits/shared_ptr_atomic.h \
+  C:/Users/lupse/AppData/Local/Programs/CLion/bin/mingw/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/bits/shared_ptr_base.h \
+  C:/Users/lupse/AppData/Local/Programs/CLion/bin/mingw/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/bits/specfun.h \
+  C:/Users/lupse/AppData/Local/Programs/CLion/bin/mingw/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/bits/sstream.tcc \
+  C:/Users/lupse/AppData/Local/Programs/CLion/bin/mingw/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/bits/std_abs.h \
+  C:/Users/lupse/AppData/Local/Programs/CLion/bin/mingw/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/bits/std_function.h \
+  C:/Users/lupse/AppData/Local/Programs/CLion/bin/mingw/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/bits/std_mutex.h \
+  C:/Users/lupse/AppData/Local/Programs/CLion/bin/mingw/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/bits/stl_algo.h \
+  C:/Users/lupse/AppData/Local/Programs/CLion/bin/mingw/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/bits/stl_algobase.h \
+  C:/Users/lupse/AppData/Local/Programs/CLion/bin/mingw/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/bits/stl_bvector.h \
+  C:/Users/lupse/AppData/Local/Programs/CLion/bin/mingw/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/bits/stl_construct.h \
+  C:/Users/lupse/AppData/Local/Programs/CLion/bin/mingw/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/bits/stl_function.h \
+  C:/Users/lupse/AppData/Local/Programs/CLion/bin/mingw/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/bits/stl_heap.h \
+  C:/Users/lupse/AppData/Local/Programs/CLion/bin/mingw/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/bits/stl_iterator.h \
+  C:/Users/lupse/AppData/Local/Programs/CLion/bin/mingw/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/bits/stl_iterator_base_funcs.h \
+  C:/Users/lupse/AppData/Local/Programs/CLion/bin/mingw/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/bits/stl_iterator_base_types.h \
+  C:/Users/lupse/AppData/Local/Programs/CLion/bin/mingw/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/bits/stl_list.h \
+  C:/Users/lupse/AppData/Local/Programs/CLion/bin/mingw/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/bits/stl_map.h \
+  C:/Users/lupse/AppData/Local/Programs/CLion/bin/mingw/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/bits/stl_multimap.h \
+  C:/Users/lupse/AppData/Local/Programs/CLion/bin/mingw/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/bits/stl_multiset.h \
+  C:/Users/lupse/AppData/Local/Programs/CLion/bin/mingw/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/bits/stl_numeric.h \
+  C:/Users/lupse/AppData/Local/Programs/CLion/bin/mingw/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/bits/stl_pair.h \
+  C:/Users/lupse/AppData/Local/Programs/CLion/bin/mingw/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/bits/stl_raw_storage_iter.h \
+  C:/Users/lupse/AppData/Local/Programs/CLion/bin/mingw/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/bits/stl_relops.h \
+  C:/Users/lupse/AppData/Local/Programs/CLion/bin/mingw/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/bits/stl_set.h \
+  C:/Users/lupse/AppData/Local/Programs/CLion/bin/mingw/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/bits/stl_tempbuf.h \
+  C:/Users/lupse/AppData/Local/Programs/CLion/bin/mingw/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/bits/stl_tree.h \
+  C:/Users/lupse/AppData/Local/Programs/CLion/bin/mingw/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/bits/stl_uninitialized.h \
+  C:/Users/lupse/AppData/Local/Programs/CLion/bin/mingw/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/bits/stl_vector.h \
+  C:/Users/lupse/AppData/Local/Programs/CLion/bin/mingw/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/bits/stream_iterator.h \
+  C:/Users/lupse/AppData/Local/Programs/CLion/bin/mingw/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/bits/streambuf.tcc \
+  C:/Users/lupse/AppData/Local/Programs/CLion/bin/mingw/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/bits/streambuf_iterator.h \
+  C:/Users/lupse/AppData/Local/Programs/CLion/bin/mingw/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/bits/string_view.tcc \
+  C:/Users/lupse/AppData/Local/Programs/CLion/bin/mingw/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/bits/stringfwd.h \
+  C:/Users/lupse/AppData/Local/Programs/CLion/bin/mingw/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/bits/uniform_int_dist.h \
+  C:/Users/lupse/AppData/Local/Programs/CLion/bin/mingw/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/bits/unique_ptr.h \
+  C:/Users/lupse/AppData/Local/Programs/CLion/bin/mingw/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/bits/unordered_map.h \
+  C:/Users/lupse/AppData/Local/Programs/CLion/bin/mingw/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/bits/unordered_set.h \
+  C:/Users/lupse/AppData/Local/Programs/CLion/bin/mingw/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/bits/uses_allocator.h \
+  C:/Users/lupse/AppData/Local/Programs/CLion/bin/mingw/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/bits/uses_allocator_args.h \
+  C:/Users/lupse/AppData/Local/Programs/CLion/bin/mingw/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/bits/utility.h \
+  C:/Users/lupse/AppData/Local/Programs/CLion/bin/mingw/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/bits/vector.tcc \
+  C:/Users/lupse/AppData/Local/Programs/CLion/bin/mingw/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/cassert \
+  C:/Users/lupse/AppData/Local/Programs/CLion/bin/mingw/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/cctype \
+  C:/Users/lupse/AppData/Local/Programs/CLion/bin/mingw/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/cerrno \
+  C:/Users/lupse/AppData/Local/Programs/CLion/bin/mingw/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/charconv \
+  C:/Users/lupse/AppData/Local/Programs/CLion/bin/mingw/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/chrono \
+  C:/Users/lupse/AppData/Local/Programs/CLion/bin/mingw/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/climits \
+  C:/Users/lupse/AppData/Local/Programs/CLion/bin/mingw/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/clocale \
+  C:/Users/lupse/AppData/Local/Programs/CLion/bin/mingw/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/cmath \
+  C:/Users/lupse/AppData/Local/Programs/CLion/bin/mingw/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/compare \
+  C:/Users/lupse/AppData/Local/Programs/CLion/bin/mingw/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/concepts \
+  C:/Users/lupse/AppData/Local/Programs/CLion/bin/mingw/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/cstddef \
+  C:/Users/lupse/AppData/Local/Programs/CLion/bin/mingw/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/cstdint \
+  C:/Users/lupse/AppData/Local/Programs/CLion/bin/mingw/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/cstdio \
+  C:/Users/lupse/AppData/Local/Programs/CLion/bin/mingw/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/cstdlib \
+  C:/Users/lupse/AppData/Local/Programs/CLion/bin/mingw/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/cstring \
+  C:/Users/lupse/AppData/Local/Programs/CLion/bin/mingw/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/ctime \
+  C:/Users/lupse/AppData/Local/Programs/CLion/bin/mingw/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/cwchar \
+  C:/Users/lupse/AppData/Local/Programs/CLion/bin/mingw/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/cwctype \
+  C:/Users/lupse/AppData/Local/Programs/CLion/bin/mingw/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/debug/assertions.h \
+  C:/Users/lupse/AppData/Local/Programs/CLion/bin/mingw/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/debug/debug.h \
+  C:/Users/lupse/AppData/Local/Programs/CLion/bin/mingw/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/exception \
+  C:/Users/lupse/AppData/Local/Programs/CLion/bin/mingw/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/ext/aligned_buffer.h \
+  C:/Users/lupse/AppData/Local/Programs/CLion/bin/mingw/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/ext/alloc_traits.h \
+  C:/Users/lupse/AppData/Local/Programs/CLion/bin/mingw/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/ext/atomicity.h \
+  C:/Users/lupse/AppData/Local/Programs/CLion/bin/mingw/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/ext/concurrence.h \
+  C:/Users/lupse/AppData/Local/Programs/CLion/bin/mingw/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/ext/numeric_traits.h \
+  C:/Users/lupse/AppData/Local/Programs/CLion/bin/mingw/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/ext/string_conversions.h \
+  C:/Users/lupse/AppData/Local/Programs/CLion/bin/mingw/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/ext/type_traits.h \
+  C:/Users/lupse/AppData/Local/Programs/CLion/bin/mingw/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/format \
+  C:/Users/lupse/AppData/Local/Programs/CLion/bin/mingw/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/functional \
+  C:/Users/lupse/AppData/Local/Programs/CLion/bin/mingw/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/initializer_list \
+  C:/Users/lupse/AppData/Local/Programs/CLion/bin/mingw/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/iomanip \
+  C:/Users/lupse/AppData/Local/Programs/CLion/bin/mingw/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/ios \
+  C:/Users/lupse/AppData/Local/Programs/CLion/bin/mingw/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/iosfwd \
+  C:/Users/lupse/AppData/Local/Programs/CLion/bin/mingw/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/istream \
+  C:/Users/lupse/AppData/Local/Programs/CLion/bin/mingw/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/iterator \
+  C:/Users/lupse/AppData/Local/Programs/CLion/bin/mingw/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/limits \
+  C:/Users/lupse/AppData/Local/Programs/CLion/bin/mingw/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/list \
+  C:/Users/lupse/AppData/Local/Programs/CLion/bin/mingw/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/locale \
+  C:/Users/lupse/AppData/Local/Programs/CLion/bin/mingw/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/map \
+  C:/Users/lupse/AppData/Local/Programs/CLion/bin/mingw/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/memory \
+  C:/Users/lupse/AppData/Local/Programs/CLion/bin/mingw/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/new \
+  C:/Users/lupse/AppData/Local/Programs/CLion/bin/mingw/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/numbers \
+  C:/Users/lupse/AppData/Local/Programs/CLion/bin/mingw/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/numeric \
+  C:/Users/lupse/AppData/Local/Programs/CLion/bin/mingw/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/optional \
+  C:/Users/lupse/AppData/Local/Programs/CLion/bin/mingw/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/ostream \
+  C:/Users/lupse/AppData/Local/Programs/CLion/bin/mingw/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/pstl/execution_defs.h \
+  C:/Users/lupse/AppData/Local/Programs/CLion/bin/mingw/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/pstl/glue_algorithm_defs.h \
+  C:/Users/lupse/AppData/Local/Programs/CLion/bin/mingw/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/pstl/glue_memory_defs.h \
+  C:/Users/lupse/AppData/Local/Programs/CLion/bin/mingw/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/pstl/glue_numeric_defs.h \
+  C:/Users/lupse/AppData/Local/Programs/CLion/bin/mingw/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/pstl/pstl_config.h \
+  C:/Users/lupse/AppData/Local/Programs/CLion/bin/mingw/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/ratio \
+  C:/Users/lupse/AppData/Local/Programs/CLion/bin/mingw/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/set \
+  C:/Users/lupse/AppData/Local/Programs/CLion/bin/mingw/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/span \
+  C:/Users/lupse/AppData/Local/Programs/CLion/bin/mingw/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/sstream \
+  C:/Users/lupse/AppData/Local/Programs/CLion/bin/mingw/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/stdexcept \
+  C:/Users/lupse/AppData/Local/Programs/CLion/bin/mingw/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/stdlib.h \
+  C:/Users/lupse/AppData/Local/Programs/CLion/bin/mingw/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/streambuf \
+  C:/Users/lupse/AppData/Local/Programs/CLion/bin/mingw/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/string \
+  C:/Users/lupse/AppData/Local/Programs/CLion/bin/mingw/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/string_view \
+  C:/Users/lupse/AppData/Local/Programs/CLion/bin/mingw/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/system_error \
+  C:/Users/lupse/AppData/Local/Programs/CLion/bin/mingw/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/tr1/bessel_function.tcc \
+  C:/Users/lupse/AppData/Local/Programs/CLion/bin/mingw/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/tr1/beta_function.tcc \
+  C:/Users/lupse/AppData/Local/Programs/CLion/bin/mingw/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/tr1/ell_integral.tcc \
+  C:/Users/lupse/AppData/Local/Programs/CLion/bin/mingw/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/tr1/exp_integral.tcc \
+  C:/Users/lupse/AppData/Local/Programs/CLion/bin/mingw/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/tr1/gamma.tcc \
+  C:/Users/lupse/AppData/Local/Programs/CLion/bin/mingw/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/tr1/hypergeometric.tcc \
+  C:/Users/lupse/AppData/Local/Programs/CLion/bin/mingw/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/tr1/legendre_function.tcc \
+  C:/Users/lupse/AppData/Local/Programs/CLion/bin/mingw/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/tr1/modified_bessel_func.tcc \
+  C:/Users/lupse/AppData/Local/Programs/CLion/bin/mingw/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/tr1/poly_hermite.tcc \
+  C:/Users/lupse/AppData/Local/Programs/CLion/bin/mingw/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/tr1/poly_laguerre.tcc \
+  C:/Users/lupse/AppData/Local/Programs/CLion/bin/mingw/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/tr1/riemann_zeta.tcc \
+  C:/Users/lupse/AppData/Local/Programs/CLion/bin/mingw/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/tr1/special_function_util.h \
+  C:/Users/lupse/AppData/Local/Programs/CLion/bin/mingw/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/tuple \
+  C:/Users/lupse/AppData/Local/Programs/CLion/bin/mingw/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/type_traits \
+  C:/Users/lupse/AppData/Local/Programs/CLion/bin/mingw/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/typeinfo \
+  C:/Users/lupse/AppData/Local/Programs/CLion/bin/mingw/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/unordered_map \
+  C:/Users/lupse/AppData/Local/Programs/CLion/bin/mingw/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/unordered_set \
+  C:/Users/lupse/AppData/Local/Programs/CLion/bin/mingw/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/utility \
+  C:/Users/lupse/AppData/Local/Programs/CLion/bin/mingw/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/variant \
+  C:/Users/lupse/AppData/Local/Programs/CLion/bin/mingw/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/vector \
+  C:/Users/lupse/AppData/Local/Programs/CLion/bin/mingw/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/version \
+  C:/Users/lupse/AppData/Local/Programs/CLion/bin/mingw/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/x86_64-w64-mingw32/bits/atomic_word.h \
+  C:/Users/lupse/AppData/Local/Programs/CLion/bin/mingw/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/x86_64-w64-mingw32/bits/c++allocator.h \
+  C:/Users/lupse/AppData/Local/Programs/CLion/bin/mingw/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/x86_64-w64-mingw32/bits/c++config.h \
+  C:/Users/lupse/AppData/Local/Programs/CLion/bin/mingw/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/x86_64-w64-mingw32/bits/c++locale.h \
+  C:/Users/lupse/AppData/Local/Programs/CLion/bin/mingw/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/x86_64-w64-mingw32/bits/cpu_defines.h \
+  C:/Users/lupse/AppData/Local/Programs/CLion/bin/mingw/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/x86_64-w64-mingw32/bits/ctype_base.h \
+  C:/Users/lupse/AppData/Local/Programs/CLion/bin/mingw/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/x86_64-w64-mingw32/bits/ctype_inline.h \
+  C:/Users/lupse/AppData/Local/Programs/CLion/bin/mingw/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/x86_64-w64-mingw32/bits/error_constants.h \
+  C:/Users/lupse/AppData/Local/Programs/CLion/bin/mingw/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/x86_64-w64-mingw32/bits/gthr-default.h \
+  C:/Users/lupse/AppData/Local/Programs/CLion/bin/mingw/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/x86_64-w64-mingw32/bits/gthr.h \
+  C:/Users/lupse/AppData/Local/Programs/CLion/bin/mingw/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/x86_64-w64-mingw32/bits/messages_members.h \
+  C:/Users/lupse/AppData/Local/Programs/CLion/bin/mingw/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/x86_64-w64-mingw32/bits/os_defines.h \
+  C:/Users/lupse/AppData/Local/Programs/CLion/bin/mingw/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/x86_64-w64-mingw32/bits/time_members.h \
+  C:/Users/lupse/AppData/Local/Programs/CLion/bin/mingw/lib/gcc/x86_64-w64-mingw32/13.1.0/include/limits.h \
+  C:/Users/lupse/AppData/Local/Programs/CLion/bin/mingw/lib/gcc/x86_64-w64-mingw32/13.1.0/include/mm_malloc.h \
+  C:/Users/lupse/AppData/Local/Programs/CLion/bin/mingw/lib/gcc/x86_64-w64-mingw32/13.1.0/include/stdarg.h \
+  C:/Users/lupse/AppData/Local/Programs/CLion/bin/mingw/lib/gcc/x86_64-w64-mingw32/13.1.0/include/stdbool.h \
+  C:/Users/lupse/AppData/Local/Programs/CLion/bin/mingw/lib/gcc/x86_64-w64-mingw32/13.1.0/include/stddef.h \
+  C:/Users/lupse/AppData/Local/Programs/CLion/bin/mingw/lib/gcc/x86_64-w64-mingw32/13.1.0/include/stdint.h \
+  C:/Users/lupse/AppData/Local/Programs/CLion/bin/mingw/lib/gcc/x86_64-w64-mingw32/13.1.0/include/syslimits.h \
+  C:/Users/lupse/AppData/Local/Programs/CLion/bin/mingw/x86_64-w64-mingw32/include/_mingw.h \
+  C:/Users/lupse/AppData/Local/Programs/CLion/bin/mingw/x86_64-w64-mingw32/include/_mingw_mac.h \
+  C:/Users/lupse/AppData/Local/Programs/CLion/bin/mingw/x86_64-w64-mingw32/include/_mingw_off_t.h \
+  C:/Users/lupse/AppData/Local/Programs/CLion/bin/mingw/x86_64-w64-mingw32/include/_mingw_secapi.h \
+  C:/Users/lupse/AppData/Local/Programs/CLion/bin/mingw/x86_64-w64-mingw32/include/_mingw_stat64.h \
+  C:/Users/lupse/AppData/Local/Programs/CLion/bin/mingw/x86_64-w64-mingw32/include/_mingw_stdarg.h \
+  C:/Users/lupse/AppData/Local/Programs/CLion/bin/mingw/x86_64-w64-mingw32/include/_timeval.h \
+  C:/Users/lupse/AppData/Local/Programs/CLion/bin/mingw/x86_64-w64-mingw32/include/assert.h \
+  C:/Users/lupse/AppData/Local/Programs/CLion/bin/mingw/x86_64-w64-mingw32/include/corecrt.h \
+  C:/Users/lupse/AppData/Local/Programs/CLion/bin/mingw/x86_64-w64-mingw32/include/corecrt_startup.h \
+  C:/Users/lupse/AppData/Local/Programs/CLion/bin/mingw/x86_64-w64-mingw32/include/corecrt_stdio_config.h \
+  C:/Users/lupse/AppData/Local/Programs/CLion/bin/mingw/x86_64-w64-mingw32/include/corecrt_wstdlib.h \
+  C:/Users/lupse/AppData/Local/Programs/CLion/bin/mingw/x86_64-w64-mingw32/include/crtdefs.h \
+  C:/Users/lupse/AppData/Local/Programs/CLion/bin/mingw/x86_64-w64-mingw32/include/ctype.h \
+  C:/Users/lupse/AppData/Local/Programs/CLion/bin/mingw/x86_64-w64-mingw32/include/errno.h \
+  C:/Users/lupse/AppData/Local/Programs/CLion/bin/mingw/x86_64-w64-mingw32/include/limits.h \
+  C:/Users/lupse/AppData/Local/Programs/CLion/bin/mingw/x86_64-w64-mingw32/include/locale.h \
+  C:/Users/lupse/AppData/Local/Programs/CLion/bin/mingw/x86_64-w64-mingw32/include/malloc.h \
+  C:/Users/lupse/AppData/Local/Programs/CLion/bin/mingw/x86_64-w64-mingw32/include/math.h \
+  C:/Users/lupse/AppData/Local/Programs/CLion/bin/mingw/x86_64-w64-mingw32/include/process.h \
+  C:/Users/lupse/AppData/Local/Programs/CLion/bin/mingw/x86_64-w64-mingw32/include/pthread.h \
+  C:/Users/lupse/AppData/Local/Programs/CLion/bin/mingw/x86_64-w64-mingw32/include/pthread_compat.h \
+  C:/Users/lupse/AppData/Local/Programs/CLion/bin/mingw/x86_64-w64-mingw32/include/pthread_signal.h \
+  C:/Users/lupse/AppData/Local/Programs/CLion/bin/mingw/x86_64-w64-mingw32/include/pthread_time.h \
+  C:/Users/lupse/AppData/Local/Programs/CLion/bin/mingw/x86_64-w64-mingw32/include/pthread_unistd.h \
+  C:/Users/lupse/AppData/Local/Programs/CLion/bin/mingw/x86_64-w64-mingw32/include/sdks/_mingw_ddk.h \
+  C:/Users/lupse/AppData/Local/Programs/CLion/bin/mingw/x86_64-w64-mingw32/include/sec_api/stdio_s.h \
+  C:/Users/lupse/AppData/Local/Programs/CLion/bin/mingw/x86_64-w64-mingw32/include/sec_api/stdlib_s.h \
+  C:/Users/lupse/AppData/Local/Programs/CLion/bin/mingw/x86_64-w64-mingw32/include/sec_api/string_s.h \
+  C:/Users/lupse/AppData/Local/Programs/CLion/bin/mingw/x86_64-w64-mingw32/include/sec_api/sys/timeb_s.h \
+  C:/Users/lupse/AppData/Local/Programs/CLion/bin/mingw/x86_64-w64-mingw32/include/sec_api/wchar_s.h \
+  C:/Users/lupse/AppData/Local/Programs/CLion/bin/mingw/x86_64-w64-mingw32/include/signal.h \
+  C:/Users/lupse/AppData/Local/Programs/CLion/bin/mingw/x86_64-w64-mingw32/include/stdarg.h \
+  C:/Users/lupse/AppData/Local/Programs/CLion/bin/mingw/x86_64-w64-mingw32/include/stddef.h \
+  C:/Users/lupse/AppData/Local/Programs/CLion/bin/mingw/x86_64-w64-mingw32/include/stdint.h \
+  C:/Users/lupse/AppData/Local/Programs/CLion/bin/mingw/x86_64-w64-mingw32/include/stdio.h \
+  C:/Users/lupse/AppData/Local/Programs/CLion/bin/mingw/x86_64-w64-mingw32/include/stdlib.h \
+  C:/Users/lupse/AppData/Local/Programs/CLion/bin/mingw/x86_64-w64-mingw32/include/string.h \
+  C:/Users/lupse/AppData/Local/Programs/CLion/bin/mingw/x86_64-w64-mingw32/include/swprintf.inl \
+  C:/Users/lupse/AppData/Local/Programs/CLion/bin/mingw/x86_64-w64-mingw32/include/sys/timeb.h \
+  C:/Users/lupse/AppData/Local/Programs/CLion/bin/mingw/x86_64-w64-mingw32/include/sys/types.h \
+  C:/Users/lupse/AppData/Local/Programs/CLion/bin/mingw/x86_64-w64-mingw32/include/time.h \
+  C:/Users/lupse/AppData/Local/Programs/CLion/bin/mingw/x86_64-w64-mingw32/include/vadefs.h \
+  C:/Users/lupse/AppData/Local/Programs/CLion/bin/mingw/x86_64-w64-mingw32/include/wchar.h \
+  C:/Users/lupse/AppData/Local/Programs/CLion/bin/mingw/x86_64-w64-mingw32/include/wctype.h \
+  C:/Users/lupse/CLionProjects/POO/Lab10/include/domeniu_masina.h \
+  C:/Users/lupse/CLionProjects/POO/Lab10/include/table_model.h \
+  E:/Qt/6.9.0/mingw_64/include/QtCore/QString \
+  E:/Qt/6.9.0/mingw_64/include/QtCore/q17memory.h \
+  E:/Qt/6.9.0/mingw_64/include/QtCore/q20functional.h \
+  E:/Qt/6.9.0/mingw_64/include/QtCore/q20iterator.h \
+  E:/Qt/6.9.0/mingw_64/include/QtCore/q20memory.h \
+  E:/Qt/6.9.0/mingw_64/include/QtCore/q20type_traits.h \
+  E:/Qt/6.9.0/mingw_64/include/QtCore/q20utility.h \
+  E:/Qt/6.9.0/mingw_64/include/QtCore/q23utility.h \
+  E:/Qt/6.9.0/mingw_64/include/QtCore/qabstractitemmodel.h \
+  E:/Qt/6.9.0/mingw_64/include/QtCore/qalgorithms.h \
+  E:/Qt/6.9.0/mingw_64/include/QtCore/qanystringview.h \
+  E:/Qt/6.9.0/mingw_64/include/QtCore/qarraydata.h \
+  E:/Qt/6.9.0/mingw_64/include/QtCore/qarraydataops.h \
+  E:/Qt/6.9.0/mingw_64/include/QtCore/qarraydatapointer.h \
+  E:/Qt/6.9.0/mingw_64/include/QtCore/qassert.h \
+  E:/Qt/6.9.0/mingw_64/include/QtCore/qatomic.h \
+  E:/Qt/6.9.0/mingw_64/include/QtCore/qatomic_cxx11.h \
+  E:/Qt/6.9.0/mingw_64/include/QtCore/qbasicatomic.h \
+  E:/Qt/6.9.0/mingw_64/include/QtCore/qbindingstorage.h \
+  E:/Qt/6.9.0/mingw_64/include/QtCore/qbytearray.h \
+  E:/Qt/6.9.0/mingw_64/include/QtCore/qbytearrayalgorithms.h \
+  E:/Qt/6.9.0/mingw_64/include/QtCore/qbytearraylist.h \
+  E:/Qt/6.9.0/mingw_64/include/QtCore/qbytearrayview.h \
+  E:/Qt/6.9.0/mingw_64/include/QtCore/qchar.h \
+  E:/Qt/6.9.0/mingw_64/include/QtCore/qcompare.h \
+  E:/Qt/6.9.0/mingw_64/include/QtCore/qcompare_impl.h \
+  E:/Qt/6.9.0/mingw_64/include/QtCore/qcomparehelpers.h \
+  E:/Qt/6.9.0/mingw_64/include/QtCore/qcompilerdetection.h \
+  E:/Qt/6.9.0/mingw_64/include/QtCore/qconfig.h \
+  E:/Qt/6.9.0/mingw_64/include/QtCore/qconstructormacros.h \
+  E:/Qt/6.9.0/mingw_64/include/QtCore/qcontainerfwd.h \
+  E:/Qt/6.9.0/mingw_64/include/QtCore/qcontainerinfo.h \
+  E:/Qt/6.9.0/mingw_64/include/QtCore/qcontainertools_impl.h \
+  E:/Qt/6.9.0/mingw_64/include/QtCore/qcontiguouscache.h \
+  E:/Qt/6.9.0/mingw_64/include/QtCore/qdarwinhelpers.h \
+  E:/Qt/6.9.0/mingw_64/include/QtCore/qdatastream.h \
+  E:/Qt/6.9.0/mingw_64/include/QtCore/qdebug.h \
+  E:/Qt/6.9.0/mingw_64/include/QtCore/qendian.h \
+  E:/Qt/6.9.0/mingw_64/include/QtCore/qexceptionhandling.h \
+  E:/Qt/6.9.0/mingw_64/include/QtCore/qflags.h \
+  E:/Qt/6.9.0/mingw_64/include/QtCore/qfloat16.h \
+  E:/Qt/6.9.0/mingw_64/include/QtCore/qforeach.h \
+  E:/Qt/6.9.0/mingw_64/include/QtCore/qfunctionaltools_impl.h \
+  E:/Qt/6.9.0/mingw_64/include/QtCore/qfunctionpointer.h \
+  E:/Qt/6.9.0/mingw_64/include/QtCore/qgenericatomic.h \
+  E:/Qt/6.9.0/mingw_64/include/QtCore/qglobal.h \
+  E:/Qt/6.9.0/mingw_64/include/QtCore/qglobalstatic.h \
+  E:/Qt/6.9.0/mingw_64/include/QtCore/qhash.h \
+  E:/Qt/6.9.0/mingw_64/include/QtCore/qhashfunctions.h \
+  E:/Qt/6.9.0/mingw_64/include/QtCore/qiodevicebase.h \
+  E:/Qt/6.9.0/mingw_64/include/QtCore/qitemselectionmodel.h \
+  E:/Qt/6.9.0/mingw_64/include/QtCore/qiterable.h \
+  E:/Qt/6.9.0/mingw_64/include/QtCore/qiterator.h \
+  E:/Qt/6.9.0/mingw_64/include/QtCore/qlatin1stringview.h \
+  E:/Qt/6.9.0/mingw_64/include/QtCore/qline.h \
+  E:/Qt/6.9.0/mingw_64/include/QtCore/qlist.h \
+  E:/Qt/6.9.0/mingw_64/include/QtCore/qlocale.h \
+  E:/Qt/6.9.0/mingw_64/include/QtCore/qlogging.h \
+  E:/Qt/6.9.0/mingw_64/include/QtCore/qmalloc.h \
+  E:/Qt/6.9.0/mingw_64/include/QtCore/qmap.h \
+  E:/Qt/6.9.0/mingw_64/include/QtCore/qmargins.h \
+  E:/Qt/6.9.0/mingw_64/include/QtCore/qmath.h \
+  E:/Qt/6.9.0/mingw_64/include/QtCore/qmetacontainer.h \
+  E:/Qt/6.9.0/mingw_64/include/QtCore/qmetatype.h \
+  E:/Qt/6.9.0/mingw_64/include/QtCore/qminmax.h \
+  E:/Qt/6.9.0/mingw_64/include/QtCore/qnamespace.h \
+  E:/Qt/6.9.0/mingw_64/include/QtCore/qnumeric.h \
+  E:/Qt/6.9.0/mingw_64/include/QtCore/qobject.h \
+  E:/Qt/6.9.0/mingw_64/include/QtCore/qobject_impl.h \
+  E:/Qt/6.9.0/mingw_64/include/QtCore/qobjectdefs.h \
+  E:/Qt/6.9.0/mingw_64/include/QtCore/qobjectdefs_impl.h \
+  E:/Qt/6.9.0/mingw_64/include/QtCore/qoverload.h \
+  E:/Qt/6.9.0/mingw_64/include/QtCore/qpair.h \
+  E:/Qt/6.9.0/mingw_64/include/QtCore/qpoint.h \
+  E:/Qt/6.9.0/mingw_64/include/QtCore/qprocessordetection.h \
+  E:/Qt/6.9.0/mingw_64/include/QtCore/qrect.h \
+  E:/Qt/6.9.0/mingw_64/include/QtCore/qrefcount.h \
+  E:/Qt/6.9.0/mingw_64/include/QtCore/qregularexpression.h \
+  E:/Qt/6.9.0/mingw_64/include/QtCore/qscopedpointer.h \
+  E:/Qt/6.9.0/mingw_64/include/QtCore/qscopeguard.h \
+  E:/Qt/6.9.0/mingw_64/include/QtCore/qset.h \
+  E:/Qt/6.9.0/mingw_64/include/QtCore/qshareddata.h \
+  E:/Qt/6.9.0/mingw_64/include/QtCore/qshareddata_impl.h \
+  E:/Qt/6.9.0/mingw_64/include/QtCore/qsharedpointer.h \
+  E:/Qt/6.9.0/mingw_64/include/QtCore/qsharedpointer_impl.h \
+  E:/Qt/6.9.0/mingw_64/include/QtCore/qsize.h \
+  E:/Qt/6.9.0/mingw_64/include/QtCore/qspan.h \
+  E:/Qt/6.9.0/mingw_64/include/QtCore/qstdlibdetection.h \
+  E:/Qt/6.9.0/mingw_64/include/QtCore/qstring.h \
+  E:/Qt/6.9.0/mingw_64/include/QtCore/qstringalgorithms.h \
+  E:/Qt/6.9.0/mingw_64/include/QtCore/qstringbuilder.h \
+  E:/Qt/6.9.0/mingw_64/include/QtCore/qstringconverter.h \
+  E:/Qt/6.9.0/mingw_64/include/QtCore/qstringconverter_base.h \
+  E:/Qt/6.9.0/mingw_64/include/QtCore/qstringfwd.h \
+  E:/Qt/6.9.0/mingw_64/include/QtCore/qstringlist.h \
+  E:/Qt/6.9.0/mingw_64/include/QtCore/qstringliteral.h \
+  E:/Qt/6.9.0/mingw_64/include/QtCore/qstringmatcher.h \
+  E:/Qt/6.9.0/mingw_64/include/QtCore/qstringtokenizer.h \
+  E:/Qt/6.9.0/mingw_64/include/QtCore/qstringview.h \
+  E:/Qt/6.9.0/mingw_64/include/QtCore/qswap.h \
+  E:/Qt/6.9.0/mingw_64/include/QtCore/qsysinfo.h \
+  E:/Qt/6.9.0/mingw_64/include/QtCore/qsystemdetection.h \
+  E:/Qt/6.9.0/mingw_64/include/QtCore/qtaggedpointer.h \
+  E:/Qt/6.9.0/mingw_64/include/QtCore/qtclasshelpermacros.h \
+  E:/Qt/6.9.0/mingw_64/include/QtCore/qtconfiginclude.h \
+  E:/Qt/6.9.0/mingw_64/include/QtCore/qtconfigmacros.h \
+  E:/Qt/6.9.0/mingw_64/include/QtCore/qtcore-config.h \
+  E:/Qt/6.9.0/mingw_64/include/QtCore/qtcoreexports.h \
+  E:/Qt/6.9.0/mingw_64/include/QtCore/qtcoreglobal.h \
+  E:/Qt/6.9.0/mingw_64/include/QtCore/qtdeprecationdefinitions.h \
+  E:/Qt/6.9.0/mingw_64/include/QtCore/qtdeprecationmarkers.h \
+  E:/Qt/6.9.0/mingw_64/include/QtCore/qtenvironmentvariables.h \
+  E:/Qt/6.9.0/mingw_64/include/QtCore/qtextstream.h \
+  E:/Qt/6.9.0/mingw_64/include/QtCore/qtformat_impl.h \
+  E:/Qt/6.9.0/mingw_64/include/QtCore/qtmetamacros.h \
+  E:/Qt/6.9.0/mingw_64/include/QtCore/qtnoop.h \
+  E:/Qt/6.9.0/mingw_64/include/QtCore/qtpreprocessorsupport.h \
+  E:/Qt/6.9.0/mingw_64/include/QtCore/qtresource.h \
+  E:/Qt/6.9.0/mingw_64/include/QtCore/qttranslation.h \
+  E:/Qt/6.9.0/mingw_64/include/QtCore/qttypetraits.h \
+  E:/Qt/6.9.0/mingw_64/include/QtCore/qtversion.h \
+  E:/Qt/6.9.0/mingw_64/include/QtCore/qtversionchecks.h \
+  E:/Qt/6.9.0/mingw_64/include/QtCore/qtypeinfo.h \
+  E:/Qt/6.9.0/mingw_64/include/QtCore/qtypes.h \
+  E:/Qt/6.9.0/mingw_64/include/QtCore/qutf8stringview.h \
+  E:/Qt/6.9.0/mingw_64/include/QtCore/qvariant.h \
+  E:/Qt/6.9.0/mingw_64/include/QtCore/qvarlengtharray.h \
+  E:/Qt/6.9.0/mingw_64/include/QtCore/qversiontagging.h \
+  E:/Qt/6.9.0/mingw_64/include/QtCore/qxptype_traits.h \
+  E:/Qt/6.9.0/mingw_64/include/QtCore/qyieldcpu.h \
+  E:/Qt/6.9.0/mingw_64/include/QtGui/qaction.h \
+  E:/Qt/6.9.0/mingw_64/include/QtGui/qbitmap.h \
+  E:/Qt/6.9.0/mingw_64/include/QtGui/qbrush.h \
+  E:/Qt/6.9.0/mingw_64/include/QtGui/qcolor.h \
+  E:/Qt/6.9.0/mingw_64/include/QtGui/qcursor.h \
+  E:/Qt/6.9.0/mingw_64/include/QtGui/qfont.h \
+  E:/Qt/6.9.0/mingw_64/include/QtGui/qfontinfo.h \
+  E:/Qt/6.9.0/mingw_64/include/QtGui/qfontmetrics.h \
+  E:/Qt/6.9.0/mingw_64/include/QtGui/qfontvariableaxis.h \
+  E:/Qt/6.9.0/mingw_64/include/QtGui/qicon.h \
+  E:/Qt/6.9.0/mingw_64/include/QtGui/qimage.h \
+  E:/Qt/6.9.0/mingw_64/include/QtGui/qkeysequence.h \
+  E:/Qt/6.9.0/mingw_64/include/QtGui/qpaintdevice.h \
+  E:/Qt/6.9.0/mingw_64/include/QtGui/qpalette.h \
+  E:/Qt/6.9.0/mingw_64/include/QtGui/qpixelformat.h \
+  E:/Qt/6.9.0/mingw_64/include/QtGui/qpixmap.h \
+  E:/Qt/6.9.0/mingw_64/include/QtGui/qpolygon.h \
+  E:/Qt/6.9.0/mingw_64/include/QtGui/qregion.h \
+  E:/Qt/6.9.0/mingw_64/include/QtGui/qrgb.h \
+  E:/Qt/6.9.0/mingw_64/include/QtGui/qrgba64.h \
+  E:/Qt/6.9.0/mingw_64/include/QtGui/qtgui-config.h \
+  E:/Qt/6.9.0/mingw_64/include/QtGui/qtguiexports.h \
+  E:/Qt/6.9.0/mingw_64/include/QtGui/qtguiglobal.h \
+  E:/Qt/6.9.0/mingw_64/include/QtGui/qtransform.h \
+  E:/Qt/6.9.0/mingw_64/include/QtGui/qvalidator.h \
+  E:/Qt/6.9.0/mingw_64/include/QtGui/qwindowdefs.h \
+  E:/Qt/6.9.0/mingw_64/include/QtGui/qwindowdefs_win.h \
+  E:/Qt/6.9.0/mingw_64/include/QtWidgets/QTableView \
+  E:/Qt/6.9.0/mingw_64/include/QtWidgets/qabstractitemdelegate.h \
+  E:/Qt/6.9.0/mingw_64/include/QtWidgets/qabstractitemview.h \
+  E:/Qt/6.9.0/mingw_64/include/QtWidgets/qabstractscrollarea.h \
+  E:/Qt/6.9.0/mingw_64/include/QtWidgets/qabstractslider.h \
+  E:/Qt/6.9.0/mingw_64/include/QtWidgets/qabstractspinbox.h \
+  E:/Qt/6.9.0/mingw_64/include/QtWidgets/qframe.h \
+  E:/Qt/6.9.0/mingw_64/include/QtWidgets/qrubberband.h \
+  E:/Qt/6.9.0/mingw_64/include/QtWidgets/qsizepolicy.h \
+  E:/Qt/6.9.0/mingw_64/include/QtWidgets/qslider.h \
+  E:/Qt/6.9.0/mingw_64/include/QtWidgets/qstyle.h \
+  E:/Qt/6.9.0/mingw_64/include/QtWidgets/qstyleoption.h \
+  E:/Qt/6.9.0/mingw_64/include/QtWidgets/qtabbar.h \
+  E:/Qt/6.9.0/mingw_64/include/QtWidgets/qtableview.h \
+  E:/Qt/6.9.0/mingw_64/include/QtWidgets/qtabwidget.h \
+  E:/Qt/6.9.0/mingw_64/include/QtWidgets/qtwidgets-config.h \
+  E:/Qt/6.9.0/mingw_64/include/QtWidgets/qtwidgetsexports.h \
+  E:/Qt/6.9.0/mingw_64/include/QtWidgets/qtwidgetsglobal.h \
+  E:/Qt/6.9.0/mingw_64/include/QtWidgets/qwidget.h
+
 CMakeFiles/Lab10.dir/src/teste.cpp.obj: C:/Users/lupse/CLionProjects/POO/Lab10/src/teste.cpp \
   C:/Users/lupse/AppData/Local/Programs/CLion/bin/mingw/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/algorithm \
   C:/Users/lupse/AppData/Local/Programs/CLion/bin/mingw/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/backward/auto_ptr.h \
@@ -3501,8 +3950,6 @@ C:/Users/lupse/AppData/Local/Programs/CLion/bin/mingw/x86_64-w64-mingw32/include
 
 C:/Users/lupse/AppData/Local/Programs/CLion/bin/mingw/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/bits/uniform_int_dist.h:
 
-E:/Qt/6.9.0/mingw_64/include/QtWidgets/qtwidgets-config.h:
-
 C:/Users/lupse/AppData/Local/Programs/CLion/bin/mingw/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/bits/unordered_map.h:
 
 C:/Users/lupse/AppData/Local/Programs/CLion/bin/mingw/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/x86_64-w64-mingw32/bits/ctype_inline.h:
@@ -3775,8 +4222,6 @@ C:/Users/lupse/AppData/Local/Programs/CLion/bin/mingw/lib/gcc/x86_64-w64-mingw32
 
 C:/Users/lupse/AppData/Local/Programs/CLion/bin/mingw/lib/gcc/x86_64-w64-mingw32/13.1.0/include/limits.h:
 
-E:/Qt/6.9.0/mingw_64/include/QtWidgets/qtabwidget.h:
-
 C:/Users/lupse/AppData/Local/Programs/CLion/bin/mingw/lib/gcc/x86_64-w64-mingw32/13.1.0/include/mm_malloc.h:
 
 C:/Users/lupse/AppData/Local/Programs/CLion/bin/mingw/lib/gcc/x86_64-w64-mingw32/13.1.0/include/stdarg.h:
@@ -3895,6 +4340,8 @@ C:/Users/lupse/CLionProjects/POO/Lab10/include/repo_masina.h:
 
 C:/Users/lupse/CLionProjects/POO/Lab10/include/service_spalatorie.h:
 
+C:/Users/lupse/CLionProjects/POO/Lab10/include/table_model.h:
+
 C:/Users/lupse/CLionProjects/POO/Lab10/include/teste.h:
 
 E:/Qt/6.9.0/mingw_64/include/QtGui/qfontvariableaxis.h:
@@ -3911,7 +4358,13 @@ E:/Qt/6.9.0/mingw_64/include/QtCore/QObject:
 
 E:/Qt/6.9.0/mingw_64/include/QtCore/QRect:
 
+E:/Qt/6.9.0/mingw_64/include/QtCore/qcoreapplication.h:
+
+E:/Qt/6.9.0/mingw_64/include/QtCore/QString:
+
 E:/Qt/6.9.0/mingw_64/include/QtCore/q17memory.h:
+
+E:/Qt/6.9.0/mingw_64/include/QtWidgets/QTableView:
 
 E:/Qt/6.9.0/mingw_64/include/QtCore/q20type_traits.h:
 
@@ -3956,8 +4409,6 @@ E:/Qt/6.9.0/mingw_64/include/QtCore/qcompilerdetection.h:
 E:/Qt/6.9.0/mingw_64/include/QtCore/qcontainerinfo.h:
 
 E:/Qt/6.9.0/mingw_64/include/QtCore/qcontainertools_impl.h:
-
-E:/Qt/6.9.0/mingw_64/include/QtCore/qcoreapplication.h:
 
 E:/Qt/6.9.0/mingw_64/include/QtCore/qnumeric.h:
 
@@ -4151,6 +4602,10 @@ E:/Qt/6.9.0/mingw_64/include/QtWidgets/qtabbar.h:
 
 E:/Qt/6.9.0/mingw_64/include/QtWidgets/qtableview.h:
 
+E:/Qt/6.9.0/mingw_64/include/QtWidgets/qtabwidget.h:
+
+E:/Qt/6.9.0/mingw_64/include/QtWidgets/qtwidgets-config.h:
+
 E:/Qt/6.9.0/mingw_64/include/QtWidgets/qtwidgetsexports.h:
 
 E:/Qt/6.9.0/mingw_64/include/QtWidgets/qtwidgetsglobal.h:
@@ -4164,5 +4619,7 @@ C:/Users/lupse/CLionProjects/POO/Lab10/src/repo_masina.cpp:
 C:/Users/lupse/CLionProjects/POO/Lab10/src/service_spalatorie.cpp:
 
 C:/Users/lupse/AppData/Local/Programs/CLion/bin/mingw/lib/gcc/x86_64-w64-mingw32/13.1.0/include/emmintrin.h:
+
+C:/Users/lupse/CLionProjects/POO/Lab10/src/table_model.cpp:
 
 C:/Users/lupse/CLionProjects/POO/Lab10/include/list.h:

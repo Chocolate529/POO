@@ -531,5 +531,10 @@ CMakeFiles/Lab10.dir/main.cpp.obj: \
  C:\Users\lupse\CLionProjects\POO\Lab10\include/cosReadOnlyGUI.h \
  E:/Qt/6.9.0/mingw_64/include/QtGui/QPainter \
  E:/Qt/6.9.0/mingw_64/include/QtGui/qpainter.h \
+ C:\Users\lupse\CLionProjects\POO\Lab10\include/table_model.h \
+ E:/Qt/6.9.0/mingw_64/include/QtWidgets/QTableView \
+ E:/Qt/6.9.0/mingw_64/include/QtWidgets/qtableview.h \
+ E:/Qt/6.9.0/mingw_64/include/QtCore/QString \
+ E:/Qt/6.9.0/mingw_64/include/QtCore/qstring.h \
  C:\Users\lupse\CLionProjects\POO\Lab10\include/cosCRUDGUI.h \
  C:\Users\lupse\CLionProjects\POO\Lab10\include/cosReadOnlyGUI.h

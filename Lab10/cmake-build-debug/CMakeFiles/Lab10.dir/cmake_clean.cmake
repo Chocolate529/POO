@@ -17,6 +17,8 @@ file(REMOVE_RECURSE
   "CMakeFiles/Lab10.dir/src/service_masina.cpp.obj.d"
   "CMakeFiles/Lab10.dir/src/service_spalatorie.cpp.obj"
   "CMakeFiles/Lab10.dir/src/service_spalatorie.cpp.obj.d"
+  "CMakeFiles/Lab10.dir/src/table_model.cpp.obj"
+  "CMakeFiles/Lab10.dir/src/table_model.cpp.obj.d"
   "CMakeFiles/Lab10.dir/src/teste.cpp.obj"
   "CMakeFiles/Lab10.dir/src/teste.cpp.obj.d"
   "Lab10.exe"

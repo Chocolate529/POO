@@ -17,6 +17,7 @@ set(CMAKE_DEPENDS_DEPENDENCY_FILES
   "C:/Users/lupse/CLionProjects/POO/Lab10/src/repo_masina.cpp" "CMakeFiles/Lab10.dir/src/repo_masina.cpp.obj" "gcc" "CMakeFiles/Lab10.dir/src/repo_masina.cpp.obj.d"
   "C:/Users/lupse/CLionProjects/POO/Lab10/src/service_masina.cpp" "CMakeFiles/Lab10.dir/src/service_masina.cpp.obj" "gcc" "CMakeFiles/Lab10.dir/src/service_masina.cpp.obj.d"
   "C:/Users/lupse/CLionProjects/POO/Lab10/src/service_spalatorie.cpp" "CMakeFiles/Lab10.dir/src/service_spalatorie.cpp.obj" "gcc" "CMakeFiles/Lab10.dir/src/service_spalatorie.cpp.obj.d"
+  "C:/Users/lupse/CLionProjects/POO/Lab10/src/table_model.cpp" "CMakeFiles/Lab10.dir/src/table_model.cpp.obj" "gcc" "CMakeFiles/Lab10.dir/src/table_model.cpp.obj.d"
   "C:/Users/lupse/CLionProjects/POO/Lab10/src/teste.cpp" "CMakeFiles/Lab10.dir/src/teste.cpp.obj" "gcc" "CMakeFiles/Lab10.dir/src/teste.cpp.obj.d"
   )
 

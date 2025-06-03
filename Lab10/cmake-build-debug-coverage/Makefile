@@ -344,6 +344,30 @@ src/service_spalatorie.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\Lab10.dir\build.make CMakeFiles/Lab10.dir/src/service_spalatorie.cpp.s
 .PHONY : src/service_spalatorie.cpp.s
 
+src/table_model.obj: src/table_model.cpp.obj
+.PHONY : src/table_model.obj
+
+# target to build an object file
+src/table_model.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Lab10.dir\build.make CMakeFiles/Lab10.dir/src/table_model.cpp.obj
+.PHONY : src/table_model.cpp.obj
+
+src/table_model.i: src/table_model.cpp.i
+.PHONY : src/table_model.i
+
+# target to preprocess a source file
+src/table_model.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Lab10.dir\build.make CMakeFiles/Lab10.dir/src/table_model.cpp.i
+.PHONY : src/table_model.cpp.i
+
+src/table_model.s: src/table_model.cpp.s
+.PHONY : src/table_model.s
+
+# target to generate assembly for a file
+src/table_model.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Lab10.dir\build.make CMakeFiles/Lab10.dir/src/table_model.cpp.s
+.PHONY : src/table_model.cpp.s
+
 src/teste.obj: src/teste.cpp.obj
 .PHONY : src/teste.obj
 
@@ -404,6 +428,9 @@ help:
 	@echo ... src/service_spalatorie.obj
 	@echo ... src/service_spalatorie.i
 	@echo ... src/service_spalatorie.s
+	@echo ... src/table_model.obj
+	@echo ... src/table_model.i
+	@echo ... src/table_model.s
 	@echo ... src/teste.obj
 	@echo ... src/teste.i
 	@echo ... src/teste.s
