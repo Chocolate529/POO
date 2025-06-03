@@ -1,0 +1,23 @@
+# ninja log v6
+11	1170	7694719246475607	untitled4_autogen/timestamp	41ef49764ed106ca
+11	1170	7694719246475607	untitled4_autogen/mocs_compilation.cpp	41ef49764ed106ca
+354	921	7694530499140061	CMakeFiles/untitled4.dir/tractor.cpp.obj	5e8c5f453dbbfa22
+263	739	7694551809326069	CMakeFiles/untitled4.dir/validator_tractor.cpp.obj	bfe43801edd6be87
+11	1170	7694719246475607	C:/Users/lupse/CLionProjects/AlgoritmicaGrafurilor/untitled4/cmake-build-debug/untitled4_autogen/timestamp	41ef49764ed106ca
+1179	4687	7694719247806413	CMakeFiles/untitled4.dir/main.cpp.obj	e1c99c24b03d765
+11	1170	7694719246475607	C:/Users/lupse/CLionProjects/AlgoritmicaGrafurilor/untitled4/cmake-build-debug/untitled4_autogen/mocs_compilation.cpp	41ef49764ed106ca
+1171	4665	7694719247720916	CMakeFiles/untitled4.dir/untitled4_autogen/mocs_compilation.cpp.obj	4962a866f42516a0
+5	854	7695565437539812	build.ninja	e0618744ae990731
+1185	5076	7694719247870368	CMakeFiles/untitled4.dir/gui.cpp.obj	adcad6da1cd33839
+216	944	7694552077511827	CMakeFiles/untitled4.dir/service_tractoare.cpp.obj	9269523b5a47af45
+205	953	7694548732789548	CMakeFiles/untitled4.dir/repo_tractor.cpp.obj	b70326b7bc091545
+5077	6076	7694719286786314	untitled4.exe	be586c3e2175137a
+17	1942	7695565467888407	untitled4_autogen/timestamp	41ef49764ed106ca
+17	1942	7695565467888407	untitled4_autogen/mocs_compilation.cpp	41ef49764ed106ca
+17	1942	7695565467888407	C:/Users/lupse/CLionProjects/AlgoritmicaGrafurilor/untitled4/cmake-build-debug/untitled4_autogen/timestamp	41ef49764ed106ca
+17	1942	7695565467888407	C:/Users/lupse/CLionProjects/AlgoritmicaGrafurilor/untitled4/cmake-build-debug/untitled4_autogen/mocs_compilation.cpp	41ef49764ed106ca
+1985	3117	7695565470118533	CMakeFiles/untitled4.dir/service_tractoare.cpp.obj	9269523b5a47af45
+1944	6910	7695565469718437	CMakeFiles/untitled4.dir/untitled4_autogen/mocs_compilation.cpp.obj	4962a866f42516a0
+1956	6919	7695565469838465	CMakeFiles/untitled4.dir/main.cpp.obj	e1c99c24b03d765
+1970	7294	7695565469978493	CMakeFiles/untitled4.dir/gui.cpp.obj	adcad6da1cd33839
+7294	8533	7695565523200480	untitled4.exe	be586c3e2175137a

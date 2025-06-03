@@ -1,0 +1,16 @@
+# ninja log v6
+6	302	7694500849990515	untitled3_autogen/timestamp	149cdccaa7edb654
+307	391	7694500850906182	CMakeFiles/untitled3.dir/untitled3_autogen/mocs_compilation.cpp.obj	9dd9bfb54e3c34fa
+6	302	7694500849990515	untitled3_autogen/mocs_compilation.cpp	149cdccaa7edb654
+6	302	7694500849990515	C:/Users/lupse/CLionProjects/AlgoritmicaGrafurilor/untitled3/cmake-build-debug/untitled3_autogen/timestamp	149cdccaa7edb654
+6	302	7694500849990515	C:/Users/lupse/CLionProjects/AlgoritmicaGrafurilor/untitled3/cmake-build-debug/untitled3_autogen/mocs_compilation.cpp	149cdccaa7edb654
+6	3479	7694501009010141	CMakeFiles/untitled3.dir/main.cpp.obj	5c5d4b0912519aa9
+5	879	7694501740807890	build.ninja	12ba9bbdaf06a5a
+6	920	7694501740807890	build.ninja	12ba9bbdaf06a5a
+11	239	7694503904917455	untitled3_autogen/timestamp	149cdccaa7edb654
+11	239	7694503904917455	untitled3_autogen/mocs_compilation.cpp	149cdccaa7edb654
+11	239	7694503904917455	C:/Users/lupse/CLionProjects/AlgoritmicaGrafurilor/untitled3/cmake-build-debug/untitled3_autogen/timestamp	149cdccaa7edb654
+11	239	7694503904917455	C:/Users/lupse/CLionProjects/AlgoritmicaGrafurilor/untitled3/cmake-build-debug/untitled3_autogen/mocs_compilation.cpp	149cdccaa7edb654
+240	3750	7694503907202592	CMakeFiles/untitled3.dir/main.cpp.obj	5c5d4b0912519aa9
+248	4504	7694503907281482	CMakeFiles/untitled3.dir/product_management.cpp.obj	2502b002e4baafee
+4505	5635	7694503949842577	untitled3.exe	337e4b24faa1378d
