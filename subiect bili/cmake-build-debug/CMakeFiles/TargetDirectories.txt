@@ -1,0 +1,5 @@
+C:/Users/lupse/CLionProjects/subiect bili/cmake-build-debug/CMakeFiles/subiect_bili.dir
+C:/Users/lupse/CLionProjects/subiect bili/cmake-build-debug/CMakeFiles/edit_cache.dir
+C:/Users/lupse/CLionProjects/subiect bili/cmake-build-debug/CMakeFiles/rebuild_cache.dir
+C:/Users/lupse/CLionProjects/subiect bili/cmake-build-debug/CMakeFiles/subiect_bili_autogen_timestamp_deps.dir
+C:/Users/lupse/CLionProjects/subiect bili/cmake-build-debug/CMakeFiles/subiect_bili_autogen.dir
